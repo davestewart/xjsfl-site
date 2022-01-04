@@ -1,11 +1,11 @@
 # xJSFL Site
 ## Intro
 
-This is an exported, static version of the old WordPress site for [xJSFL](https://github.com/davestewart/xjsfl):
+This is an exported, static version of the WordPress site for [xJSFL](https://github.com/davestewart/xjsfl):
 
 ![splash](splash.png)
 
-Rather than running on a traditional web host, it is now served statically by Vercel, making it faster and more secure – at the expense of a forum and being able to leave comments.
+It is a replacement for the old traditionally hosted site, now served statically by Vercel making it faster and more secure – at the expense of a forum and being able to leave comments.
 
 As very few people still use JSFL/xJSFL this isn't really an issue but rather than delete the site forever, I wanted some way to keep the docs available.
 
@@ -13,7 +13,7 @@ As very few people still use JSFL/xJSFL this isn't really an issue but rather th
 
 ### Online
 
-Visit the site at [xjsfl.com](https://xjsfl.com). 
+Visit the site at [xjsfl.com](https://xjsfl.com) or [xjsfl.vercel.app](https://xjsfl.vercel.app/). 
 
 ### Offline
 
