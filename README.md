@@ -13,7 +13,7 @@ As very few people still use JSFL/xJSFL this isn't really an issue but rather th
 
 ### Online
 
-Visit the site at [xjsfl.com](https://xjsfl.com) or [xjsfl.vercel.app](https://xjsfl.vercel.app/). 
+Visit the site at [xjsfl.vercel.app](https://xjsfl.vercel.app/). 
 
 ### Offline
 
