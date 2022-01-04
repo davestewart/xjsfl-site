@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Config (class) | xJSFL</title>
+		<meta name="description" content="An object-oriented wrapper for easily saving and loading settings">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/framework/config">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Config (class) | xJSFL">
+		<meta property="og:description" content="An object-oriented wrapper for easily saving and loading settings">
+		<meta property="og:url" content="http://xjsfl.com/support/api/framework/config">
+		<meta property="article:published_time" content="2011-07-04T05:01:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T16:33:49+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Config (class) | xJSFL">
+		<meta name="twitter:description" content="An object-oriented wrapper for easily saving and loading settings">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/526">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=526">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fframework%2Fconfig">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fframework%2Fconfig&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-526 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/framework/config" rel="bookmark" title="Permanent Link: Config (class)">Config (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/framework" rel="category tag">Framework</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The Config class is an object oriented wrapper for easily saving and loading settings.</p>
+<h3>Contents</h3>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<ul>
+		<li><a href="#summary">Summary</a></li>
+		<li><a href="#concept">Concept</a></li>
+		<li><a href="#usage">Usage</a></li>
+	</ul>
+	<li><a href="#api">API</a></li>
+	<ul>
+		<li><a href="#config">Config(pathOrURI, xml)</a></li>
+		<li><a href="#properties">Properties</a></li>
+		<ul>
+			<li><a href="#uri">uri</a></li>
+			<li><a href="#xml">xml</a></li>
+			<li><a href="#autosave">autosave</a></li>
+		</ul>
+<li><a href="#data-methods">Data methods</a></li>
+		<ul>
+			<li><a href="#set">set(path, value, append)</a></li>
+			<li><a href="#get">get(path)</a></li>
+			<li><a href="#remove">remove(path)</a></li>
+			<li><a href="#clear">clear()</a></li>
+		</ul>
+		<li><a href="#file-methods">File methods</a></li>
+		<ul>
+			<li><a href="#load">load()</a></li>
+			<li><a href="#save">save()</a></li>
+			<li><a href="#removefile">removeFile()</a></li>
+		</ul>
+		<li><a href="#utility-methods">Utility methods</a></li>
+		<ul>
+			<li><a href="#tostring">toString()</a></li>
+			<li><a href="#toxmlstring">toXMLString()</a></li>
+		</ul>
+	</ul>
+	<ul>
+	</ul>
+</ul>
+<h3>Concept</h3>
+<h4>Overview</h4>
+<p>The Config class provides a simple but powerful settings API, that:</p>
+<ul>
+	<li>Loads and saves settings from disk as XML</li>
+	<li>Supports the xJSFL  file-finding mechanism, so users can override module and core settings</li>
+	<li>Automatically saves the internal XML to disk when adding or updating values, via <a href="#set">set()</a>
+</li>
+	<li>Automatically parses values to the correct datatype, via <a href="#get">get()</a>
+</li>
+</ul>
+<h4>Automatically-found config items</h4>
+<p>The first thing to know about Config, is that it's been designed to work with xJSFL's <a href="/support/guides/framework-basics/framework-structure#cascading-file-structure">cascading file structure</a>, so that users can override module or core settings. As such:</p>
+<ol>
+	<li>Config instances are usually instantiated with <strong>just the filename</strong> of the related file you want to find</li>
+	<li>Config files should have <strong>unique names</strong>, so not toclash with other files in the system</li>
+</ol>
+<p>The following example automatically finds and loads the config file <strong>test.xml</strong>:</p>
+<pre class="prettyprint lang-javascript">var config = new Config('test'); // .xml is added automatically
+trace(config);</pre>
+<pre>[object Config path=&quot;F:/Users/Dave Stewart/AppData/Local/Adobe/Flash CS4/en/Configuration/xJSFL/config/test.xml&quot; rootnodes=0 exists=true]</pre>
+<p>What happens here is that xJSFL looks in each of the search paths in turn to find the file...</p>
+<ol>
+	<li>/Users/&lt;user&gt;/AppData/Local/Adobe/Flash CS4/en/Configuration/xJSFL/config/</li>
+	<li>/xJSFL/user/config/</li>
+	<li>/xJSFL/modules/&lt;module 1&gt;/config/</li>
+	<li>/xJSFL/modules/&lt;module 2&gt;/config/</li>
+	<li>/xJSFL/modules/&lt;module 3, etc&gt;/config/</li>
+	<li>/xJSFL/core/config/
+
+	</li>
+</ol>
+<p>...and returns the <strong>first found file</strong> matching the supplied config name. In the case above, the user had already created a file in the <strong>Flash/xJSFL/config/</strong> folder, so the file was found and returned. </p>
+<p>If an existing config file is NOT found, Config defaults to <strong>xJSFL/user/config/</strong> but does <strong>not yet create</strong> the file:</p>
+<pre>[object Config path="E:/Projects/xJSFL/user/config/test.xml&quot; rootnodes=0 exists=false]
+</pre>
+<h4>Absolutely-pathed config items</h4>
+<p>If you wish to create a config file that doesn't use the cascading file system, simply pass in an absolute path to the constructor:</p>
+<pre class="prettyprint lang-javascript">var config = new Config('c:/temp/test.xml');
+trace(config);</pre>
+<pre>[object Config path=&quot;<span class="prettyprint lang-javascript">c:/temp/test.xml</span>&quot; rootnodes=0 exists=false]</pre>
+<h3>Usage</h3>
+<p>Setting (including saving) config values is as simple as one line of code:</p>
+<pre class="prettyprint lang-javascript">var config = new Config('test');
+config.set('value', 5);
+
+trace('The new value is: ' + config.get('value'));
+trace('The XML is:\n' + config.toXMLString());</pre>
+<pre>The new value is: 5
+</pre>
+<pre>The XML is:
+&lt;config&gt;
+	&lt;value&gt;5&lt;/value&gt;
+&lt;/config&gt;
+</pre>
+<p>Getting values, is also a single line, and simple values (i.e. not complex XML) are parsed into their correct data types:</p>
+<pre class="prettyprint lang-javascript">var config = new Config('test').clear();
+config.set('value', 5);
+inspect([config.xml.value, config.get('value')]);</pre>
+<pre>Inspect: Number (depth:4, objects:0, values:0, time:0.0 seconds)
+--------------------------------------------------------------------------------
+5</pre>
+<h2>API</h2>
+<div class="method">
+	<h3 class="signature"><a name="Config" href="#Config">Config(configPath, xml)</a></h3>
+	<p class="description">Config class, loads and saves XML from the config folders</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">configPath</span> <span class="type">String</span> <span class="comment">The absolute or relative path to the config file</span>
+</li>
+				<li>
+<span class="name">xml</span> <span class="type">XML</span> <span class="comment">An XML object with which to populate the Config instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Creating a new Config instance will do one of 2 things:</p>
+	<ol>
+		<li>If the associated XML file <strong>doesn't</strong> exist, the Config instance will be created, without yet creating an XML file</li>
+		<li>If the associated XML file <strong>does</strong> exist, the file will be loaded and the data saved in the file will be available to use straight away</li>
+	</ol>
+	<p><span class="comment">Note that passing a relative file path will attempt to find the file in the cascading file structure, defaulting to <strong>user/config/</strong></span></p>
+	<p>The following example creates a new empty config file in the user folder:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('test');
+trace(config);</pre>
+	<pre>[object Config path="E:/Projects/xJSFL/user/config/test.xml" rootnodes=0 exists=false]
+</pre>
+	<p>Note that you can save config data to subfolders by specifying a path:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('settings/test');</pre>
+	<p class="prettyprint lang-javascript">There is no need to specify an <strong>.xml</strong> extension as Config files are XML by default, but if you do so, it will be ignored.<br>
+	</p>
+</div>
+<h2><a id="properties" name="properties" href="#properties">Properties</a></h2>
+<p class="description"></p>
+<div class="property">
+	<h3 class="signature"><a id="uri" name="uri" href="#uri">uri</a></h3>
+	<p class="description">The uri of the config instance </p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Object</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>&nbsp;</p>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="xml" name="xml" href="#xml">xml</a></h3>
+	<p class="description">The raw XML in the config object</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">XML</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+		</ul>
+	</div>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="autosave" name="autosave" href="#autosave">autosave</a></h3>
+	<p class="description">A flag to save data as soon as it is set()</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Boolean</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+		</ul>
+	</div>
+</div>
+<div class="method"></div>
+<h2><a id="data-methods" name="data-methods" href="#data-methods">Data methods</a></h2>
+<div class="method">
+	<h3 class="signature"><a name="set" href="#set">set(path, value)</a></h3>
+	<p class="description">Sets data on the wrapped XML data</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">path</span> <span class="type">String</span> <span class="comment">A dot-notation path to a node or attribute</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Value</span> <span class="comment">Any value that can be converted to a string</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">The current Config node</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example sets various properties and attributes on a new Config instance:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('settings/test');
+config
+	.set('app', 'xJSFL')                // root-level node (string)
+	.set('@id', 1)                      // root-level attribute (number)
+	.set('long.path.to.value', 'Hello') // compound path
+
+trace(config.toXMLString());</pre>
+	<pre>&lt;settings id="1"&gt;
+  &lt;app&gt;xJSFL&lt;/app&gt;
+  &lt;long&gt;
+    &lt;path&gt;
+      &lt;to&gt;
+        &lt;value&gt;Hello&lt;/value&gt;
+      &lt;/to&gt;
+    &lt;/path&gt;
+  &lt;/long&gt;
+&lt;/settings&gt;
+</pre>
+	<p>The following example attempts to set various datatypes:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('settings/test');
+config
+    .clear()
+    .set('string', '"Hello"')
+    .set('illegalstring', '&lt;Hello&gt;')
+    .set('number', 1)
+    .set('boolean', true)
+    .set('xml', &lt;name&gt;Dave&lt;/name&gt;)
+    .set('xmllist', new XMLList('&lt;icon id="1" /&gt;&lt;icon id="2" /&gt;&lt;icon id="3" /&gt;'))
+    .set('date', new Date())
+    .set('class', new Config('settings/config'))
+    .set('array', [1,2,3,4,5]);
+
+trace(config.toString(true));</pre>
+	<pre class="prettyprint lang-javascript">&lt;settings&gt;
+    &lt;string&gt;"Hello"&lt;/string&gt;
+    &lt;illegalstring&gt;&amp;lt;Hello&amp;gt;&lt;/illegalstring&gt;
+    &lt;number&gt;1&lt;/number&gt;
+    &lt;boolean&gt;true&lt;/boolean&gt;
+    &lt;xml&gt;
+        &lt;name&gt;Dave&lt;/name&gt;
+    &lt;/xml&gt;
+    &lt;xmllist&gt;
+        &lt;icon id="1"/&gt;
+        &lt;icon id="2"/&gt;
+        &lt;icon id="3"/&gt;
+    &lt;/xmllist&gt;
+    &lt;date&gt;Thu Jul 21 2011 17:43:05 GMT+0100 (GMT Daylight Time)&lt;/date&gt;
+    &lt;class&gt;[object Config path="xJSFL/user/config/settings/config.xml" nodes=0]&lt;/class&gt;
+    &lt;array&gt;1,2,3,4,5&lt;/array&gt;
+&lt;/settings&gt;</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a name="get" href="#get">get(path)</a></h3>
+	<p class="description">Gets the value of the specified node path</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">path</span> <span class="type">String</span> <span class="comment">A dot-notation String path to a node or attribute</span>
+</li>
+				<li>
+<span class="name">parse</span> <span class="type">Boolean</span> <span class="comment">A Boolean flag indicating that you want to parse the value to the currect datatype</span>
+</li>
+				<li>
+<span class="name">test</span> <span class="type">Boolean</span> <span class="comment">A Boolean flag to test the path exists, but trap and return an Error object if not</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">value</span> <span class="comment">The value of the node or attribute</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example gets a  node attribute:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('settings/test');
+config
+	.clear()
+	.set('some.setting.@id', 'Hello')
+
+trace(config.toXMLString());
+trace(config.get('some.setting.@id'));</pre>
+	<pre>&lt;settings&gt;
+  &lt;some&gt;
+    &lt;setting id="Hello"/&gt;
+  &lt;/some&gt;
+&lt;/settings&gt;
+</pre>
+	<pre>Hello</pre>
+	<p>The following example enters some values into the Config instance, then extracts them into a table, so you can see how the data types are parsed for simple node types:</p>
+	<pre class="prettyprint lang-javascript">// create a new config, and clear it
+	var config = new Config('test').clear();
+
+// set some values
+	config.set('@attr', 5);
+	config.set('a.b', 'hello');
+	config.set('c', <c attr="1">value</c>);
+
+// trace the XML
+	XML.prettyPrinting = true;
+	trace(config.toXMLString());
+
+// extract the values into a table
+	var data = [];
+	var nodes = ['a', 'a.b', 'c', '@attr', 'somenode'];
+	XML.prettyPrinting = false;
+	for each(var node in nodes)
+	{
+		var value	= config.get(node);
+		data.push({node:node, value:value, type:typeof value});
+	}
+	XML.prettyPrinting = true;
+
+// trace values
+	Table.print(data);</pre>
+	<pre>&lt;config attr=&quot;5&quot;&gt;
+	&lt;a&gt;
+		&lt;b&gt;hello&lt;/b&gt;
+	&lt;/a&gt;
+	&lt;c attr=&quot;1&quot;&gt;value&lt;/c&gt;
+&lt;/config&gt;</pre>
+<pre>
++----------+---------------------+-----------+
+| node     | value               | type      |
++----------+---------------------+-----------+
+| a        | &lt;a&gt;&lt;b&gt;hello&lt;/b&gt;&lt;/a&gt; | xml       |
+| a.b      | hello               | string    |
+| c        | value               | string    |
+| @attr    | 5                   | number    |
+| somenode | undefined           | undefined |
++----------+---------------------+-----------+</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="remove" name="remove" href="#remove">remove(path)</a></h3>
+	<p class="description">Removes the node from the Config instance's XML</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">path</span> <span class="type">String</span> <span class="comment">An xJSFL XML notation path to a node or attribute</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">The current Config instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example adds a new value, then removes one of its parent nodes:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('test').clear();
+config.set('a.b.c', 5);
+config.remove('a.b');
+trace(config.toXMLString());	</pre>
+	<pre>&lt;config&gt;
+	&lt;a/&gt;
+&lt;/config&gt;	</pre>
+</div>
+<div class="method"></div>
+<div class="method">
+	<h3 class="signature"><a name="clear" href="#clear">clear()</a></h3>
+	<p class="description">Clears all nodes inside the internal XML</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">The current Config node</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example clears the current config instance:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('test').clear();
+config.set('value', 5);
+config.clear();
+trace(config.toXMLString());</pre>
+	<pre>&lt;config /&gt;</pre>
+</div>
+<h2><a id="file-methods" name="file-methods" href="#file-methods">File methods</a></h2>
+<div class="method">
+	<h3 class="signature"><a href="#load" name="load" id="load">load()</a></h3>
+	<p class="description">Loads the XML config from disk</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">The current Config node</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>You normally won't need to call this method, as a Config instance's XML is loaded automatically from disk when first instantiated, however, the following example loads (or reloads) the related XML file:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('settings/test');
+// perhaps something happened here, like an external modification to config
+config.load();</pre>
+	<pre>[object Config path=&quot;E:/Projects/xJSFL/user/config/settings/test.xml&quot; rootnodes=5 exists=true]</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a href="#save" name="save" id="save">save()</a></h3>
+	<p class="description">Saves the internal XML to disk</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">The current Config node</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example saves the current config instance:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('test');
+config.save();
+trace(config);</pre>
+	<pre>[object Config path=&quot;E:/Projects/xJSFL/user/config/test.xml&quot; rootnodes=0 exists=true]
+</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="removefile" name="removefile" href="#removefile">removeFile()</a></h3>
+	<p class="description">Removes the config file from disk</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">The current Config node</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example removes the config item from disk:</p>
+	<pre class="prettyprint lang-javascript">var config = new Config('test');
+config.set('value', 5);
+trace(config);
+config.removeFile();
+trace(config);</pre>
+	<pre>[object Config path=&quot;E:/Projects/xJSFL/user/config/test.xml&quot; rootnodes=1 exists=true]
+[object Config path=&quot;E:/Projects/xJSFL/user/config/test.xml&quot; rootnodes=1 exists=false]	</pre>
+</div>
+<h2><a id="utility-methods" name="utility-methods" href="#utility-methods">Utility methods</a></h2>
+<div class="method">
+	<h3 class="signature"><a id="tostring" name="tostring" href="#tostring">toString()</a></h3>
+	<p class="description">Returns a String representation of the Config instance</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The String summary of the Config instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example traces a new, empty Config instance:</p>
+	<pre class="prettyprint lang-javascript">trace(new Config('test'));</pre>
+	<pre>[object Config path=&quot;E:/Projects/xJSFL/user/config/test.xml&quot; rootnodes=0 exists=false]</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="toxmlstring" name="toxmlstring" href="#toxmlstring">toXMLString()</a></h3>
+	<p class="description">Returns the pretty-printed XML contents</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The pretty-printed XML contents</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example traces a new, empty Config instance as an XML String:</p>
+	<pre class="prettyprint lang-javascript">trace(new Config('test').toXMLString());</pre>
+	<pre>&lt;config /&gt;</pre>
+</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

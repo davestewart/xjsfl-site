@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Moving around Flash | xJSFL</title>
+		<meta name="description" content="An introduction to navigating the Flash IDE using Context, and traversing items, layers, frames and elements using Iterators">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/guides/working-with-flash/moving-around-flash">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Moving around Flash | xJSFL">
+		<meta property="og:description" content="An introduction to navigating the Flash IDE using Context, and traversing items, layers, frames and elements using Iterators">
+		<meta property="og:url" content="http://xjsfl.com/support/guides/working-with-flash/moving-around-flash">
+		<meta property="article:published_time" content="2011-07-02T02:01:00+00:00">
+		<meta property="article:modified_time" content="2011-08-24T09:48:07+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Moving around Flash | xJSFL">
+		<meta name="twitter:description" content="An introduction to navigating the Flash IDE using Context, and traversing items, layers, frames and elements using Iterators">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/661">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=661">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fguides%2Fworking-with-flash%2Fmoving-around-flash">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fguides%2Fworking-with-flash%2Fmoving-around-flash&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-661 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/guides/working-with-flash/moving-around-flash" rel="bookmark" title="Permanent Link: Moving around Flash">Moving around Flash</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">02<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/guides/working-with-flash" rel="category tag">Working with Flash</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+			<h3>Overview</h3>
+<p>Traditionally, moving around in Flash has been done one of two main ways:</p>
+<ol>
+<li>
+<strong>fl.getDocumentDOM().getTimeline().etc.etc</strong> to locate specific elements</li>
+<li>
+<strong>i, j, k loops</strong> to iterate into layers, frames and elements</li>
+</ol>
+<p>xJSFL abstracts both the idea and code behind these concepts into two specific classes that allow you to navigate around Flash in a snap; <a href="#context">Context</a> and <a href="#iterators">Iterators</a>.</p>
+<h3>Context</h3>
+<p>Working with elements on the Flash stage can be simple if you're just running a few commands on the current selection, but can get complicated when you begin to consider the elements within the context of their <strong>Document</strong>, <strong>Timeline</strong>, <strong>Layer</strong> and <strong>Frame</strong> -- especially if any of these properties has to change as you run JSFL, perhaps from a Flash panel.</p>
+<p>For example, in a timeline that has 200 frames and 10 layers, with various carefully-placed keyframes, how do you easily reference where you are <em>in terms of code?</em></p>
+<blockquote class="pullquote pullquote_boxed">
+<p>I'm in <strong>game level 06.fla</strong>, editing library item <strong>Green spaceship</strong>, on layer <strong>jet exhaust</strong>, <strong>keyframe 4</strong> (at 23 frames in), with the <strong>flame_3</strong> instance selected</p>
+</blockquote>
+<p>To get round this problem, xJSFL has a class called <a href="/support/api/flash/context">Context</a>, which stores all these variables, and allows you to and navigate the IDE focus between contexts as you see fit.</p>
+<p>Creating a context is easy; you simply call a static method on the actual class, that returns a Context instance set to the current IDE settings:</p>
+<pre lang="javascript">var context = Context.create();</pre>
+<p>Or if you like, pass an existing reference in to start from somewhere specific:</p>
+<pre lang="javascript">var context = Context.from(frame);</pre>
+<p>You can then use the context object's properties as a shortcut to Flash timeline properties like so:</p>
+<pre lang="javascript">context.layer;        // access the actual Flash layer object
+context.frame;        // access the context's frame object
+context.keyframes;    // access the keyframes from within the current context's layer
+context.elements;     // access the elements within the context's frame</pre>
+<p>This is much easier and infinitely more flexible that writing (and rewriting) verbose JSFL such as:</p>
+<pre lang="javascript">fl.getDocumentDOM().getTimeline().layers[3].frames[25].elements;</pre>
+<p>Context also has various methods such as:</p>
+<pre lang="javascript">context.setLayer(3);  // update the context layer
+context.update();     // update the context to the current IDE context
+context.goto();       // force Flash to change the window and timeline to the supplied context</pre>
+<p>Context instances can be also be passed around, stored in Arrays, and serialized to and from XML (WIP) if contexts need to persist longer than the execution of a simple script.</p>
+<p>For full details on how to create, update and use contexts in other ways, see the API section on <a href="/support/api/flash/context">Context</a>.</p>
+<h3>Iterators</h3>
+<p>One of the more common workflows in Flash is to test every single element, on every single frame, in every single layer, and do something like rename them, or set their tint to red, or such like. It's not uncommon to see 3-level nested i, j, k loops in order to accomplish this, but the problem with that is it makes for rather hard-to-read and difficult to edit code:</p>
+<pre lang="javascript">// grab layers
+var layers = item.timeline.layers;
+
+// layer loop
+for ( var i = 0; i &lt; layers.length; i++ ) {
+	var layer = layers[i];
+
+	// frame loop
+	for ( var j = 0; j &lt; layer.frames.length; j++ ) {
+		var frame = layer.frames[j];
+
+		// element loop
+		for ( var k = 0; k &lt; frame.elements.length; k++ ) {
+			var element = frame.elements[k];
+			element.name = 'item_' + index;
+		}
+	}
+}</pre>
+<p>Enter the <a href="/support/api/flash/iterators">Iterators</a> class, designed to take the tedious legwork out of iterating over layers, frames and elements, as well as adding Documents and Items into the mix.</p>
+<p>Instead of writing 3-level (or for documents &amp; items, 5-level) loops, the Iterators class offers you a very simple API to iterate over any <strong>Documents</strong>,<strong> Items</strong>,<strong> Layers</strong>,<strong> Frames</strong> or<strong> Elements</strong>, going as deep as you like, and cancelling any level, or the full iteration, any time you like.</p>
+<p>For example, the above example would be easily accomplished with the following code:</p>
+<pre lang="javascript">// set up the callback function
+    function callback(element, index) {
+        element.name = 'item_' + index;
+    }
+
+// iterate!
+    Iterators.layers(item, null, null, callback);</pre>
+<p>Not only that, but if you decided you also wanted to process layers and frames -- such as renaming, or checking a layer is actually valid -- you could simply add in extra callbacks for layers and frames (that's what the previous null arguments are):</p>
+<pre lang="javascript">// set up the callback functions
+    function layerCallback(element) { ... }
+    function frameCallback(element) { ... }
+    function elementCallback(element) { ... }
+
+// iterate!
+    Iterators.layers(item, layerCallback, frameCallback, elementCallback);</pre>
+<p>Not only that but the <a href="/support/api/flash/iterators#frames">Iterators.frames()</a> method automatically skips non-keyframe frames, making it much more efficient than a traditional i, j, k loop.</p>
+<p>There are 5 main Iterators methods, for <strong>Document</strong>s, <strong>Timelines</strong>, <strong>Layers,</strong> <strong>Frames, </strong>and<strong> Elements</strong>, and each method can iterate as deep or as shallow as you like, simply by supplying (or not supplying) valid callbacks.</p>
+<h3>Next Steps</h3>
+<p><a href="/support/guides/working-with-flash/introduction-to-collections">Introduction to Collections</a></p>
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

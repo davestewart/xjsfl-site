@@ -1,0 +1,1475 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>File and Folder (classes) | xJSFL</title>
+		<meta name="description" content="Object-oriented file system classes">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/file/filesystem">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="File and Folder (classes) | xJSFL">
+		<meta property="og:description" content="Object-oriented file system classes">
+		<meta property="og:url" content="http://xjsfl.com/support/api/file/filesystem">
+		<meta property="article:published_time" content="2011-07-04T03:01:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T10:12:07+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="File and Folder (classes) | xJSFL">
+		<meta name="twitter:description" content="Object-oriented file system classes">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/523">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=523">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Ffile%2Ffilesystem">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Ffile%2Ffilesystem&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-523 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/file/filesystem" rel="bookmark" title="Permanent Link: File and Folder (classes)">File and Folder (classes)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/file" rel="category tag">File</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+	<h2>Overview</h2>
+	<h3>Summary</h3>
+	<p>The <a href="#File">File</a> and <a href="#Folder">Folder</a> classes allow you to work with files and folders in an intuitive, object-oriented manner, rather than using the FLfile class and its typically verbose API.</p>
+	<p>For core file loading, see the <a href="/support/api/core/xjsfl#xjsfl-file">xjsfl.file</a> object.</p>
+<h3>Contents</h3>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<ul>
+	<li><a href="#summary">Summary</a></li>
+	<li><a href="#features">Features</a></li>
+</ul>
+</ul>
+<h5><a href="#common-methods-and-properties">Common properties and methods</a></h5>
+<ul>
+	<li><a href="#common-properties">Common properties</a></li>
+	<ul>
+		<li><a href="#uri">uri</a></li>
+		<li><a href="#path">path</a></li>
+		<li><a href="#exists">exists</a></li>
+		<li><a href="#created">created</a></li>
+		<li><a href="#modified">modified</a></li>
+		<li><a href="#createdDate">createdDate</a></li>
+		<li><a href="#modifiedDate">modifiedDate</a></li>
+		<li><a href="#attributes">attributes</a></li>
+		<li><a href="#parent">parent</a></li>
+	</ul>
+<li><a href="#common-methods">Common methods</a></li>
+	<ul>
+		<li><a href="#remove">remove(skipConfirmation)</a></li>
+		<li><a href="#reveal">reveal()</a></li>
+		<li><a href="#toString">toString(path)</a></li>
+	</ul>
+</ul>
+<h5><a href="#File">File (class)</a></h5>
+<ul>
+	<li>
+<a href="#File.constructor">File(pathOrUri, contents)</a>	</li>
+	<li>
+<a href="#file-properties">File properties</a>
+		<ul>
+			<li><a href="#file.contents">contents</a></li>
+			<li><a href="#file.extension">extension</a></li>
+			<li><a href="#file.size">size</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="#file-methods">File methods</a>
+		<ul>
+			<li><a href="#file.open">open()</a></li>
+			<li><a href="#file.run">run()</a></li>
+			<li><a href="#file.copy">copy(uriCopy, overWrite)</a></li>
+			<li><a href="#file.write">write(data, append)</a></li>
+			<li><a href="#file.write">append(data)</a></li>
+			<li><a href="#file.save">save()</a></li>
+			<li>
+<a href="#file.rename">rename(name, extension, overwrite)</a>	</li>
+		</ul>
+	</li>
+</ul>
+<h5><a href="#Folder">Folder (class)</a></h5>
+<ul>
+	<li>
+<a href="#Folder.constructor">Folder(pathOrUri, create)</a>	</li>
+	<li>
+<a href="#folder-properties">Folder properties</a>
+		<ul>
+			<li><a href="#folder.contents">contents</a></li>
+			<li><a href="#folder.folders">folders</a></li>
+			<li><a href="#folder.files">files</a></li>
+			<li><a href="#folder.length">length</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="#folder-methods">Folder methods</a>
+		<ul>
+			<li><a href="#folder.open">open()</a></li>
+			<li><a href="#folder.each">each(callback, scope, itemType)</a></li>
+			<li>
+<a href="#folder.filter">filter(rx)</a>	</li>
+		</ul>
+	</li>
+</ul>
+<h3>Features</h3>
+	<h5>API</h5>
+	<p>The Filesystem API is intuitive and clear, and commands can be chained together as in this short example which creates, writes, copies, appends, and opens a text file:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt', 'Hello there');
+file
+	.copy('temp/test copy.txt')
+	.write(', and how are you today?', true)
+	.open();</pre>
+<h5>URI juggling</h5>
+<p>In addition, both classes support <a href="/support/guides/framework/file-handling#uri-juggling">URI juggling</a>, providing the following benefits:</p>
+<ul>
+	<li>Absolute or relative paths can be used</li>
+	<li>Platform or URI-format paths can be used</li>
+	<li>Relative paths are resolved to the xJSFL root</li>
+		<li>Folder {placeholder} variables are replaced</li>
+		<li>Windows backslashes are replaced with forward slashes</li>
+		<li>Erroneous multiple slashes are replaced with single slashes</li>
+		<li>Ancestor  paths (../) are resolved</li>
+</ul>
+<h5>Instantiation</h5>
+<p>Note that instantiating a File or Folder class with the <strong>new</strong> operator does NOT automatically create or modify the object on the hard disk  unless a second argument is supplied:</p>
+<ul>
+	<li>in the case of File, some data to save</li>
+	<li>in the case of Folder, a Boolean flag to create the Folder</li>
+</ul>
+<p>This allows you to create references to files or folders without modifying your hard disk.</p>
+<h2>Common properties and methods</h2>
+<p>Both the <a href="#File">File</a> and <a href="#Folder">Folder</a> classes have the following  base properties and methods:</p>
+
+<h5>Properties:</h5>
+<ul>
+	<li>Location: <a href="#uri">uri</a>,<a href="#path">path</a>, <a href="#name">name</a>, <a href="#path"></a><a href="#parent">parent</a>
+</li>
+	<li>Attributes: <a href="#exists">exists</a>, <a href="#attributes">attributes</a>
+</li>
+	<li>Dates: <a href="#created">created</a>, <a href="#modified">modified</a>, <a href="#createdDate">createdDate</a>, <a href="#modifiedDate">modifiedDate</a>
+</li>
+</ul>
+<h5>Methods:</h5>
+<ul>
+	<li><a href="#remove">remove</a></li>
+	<li><a href="#reveal">reveal</a></li>
+	<li><a href="#toString">toString</a></li>
+</ul>
+<div class="method"></div>
+
+
+<h2>Common properties</h2>
+<h4>Location</h4>
+<div class="property">
+<h3 class="signature"><a name="uri" id="uri" href="#uri">uri</a></h3>
+		<p class="description">The uri-formatted location of the File or Folder</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>The following example traces the item's URI (note that a physical File or Folder does not need to exist to return a URI):</p>
+		<pre class="prettyprint lang-javascript">trace(new File('temp/some file.txt').uri);</pre>
+		<pre>file:///E|/Projects/xJSFL/user/jsfl/temp/some%20file.txt</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a name="path" id="path" href="#path">path</a></h3>
+	<p class="description">The platform-specific path of the File or Folder</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example traces the item's platform-specific path (note that a physical File or Folder does not need to exist to return a path):</p>
+	<pre class="prettyprint lang-javascript">trace(new File('temp/some file.txt').path);</pre>
+	<pre>E:/Projects/xJSFL/user/jsfl/temp/some file.txt</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a name="name" id="name" href="#name">name</a></h3>
+	<p class="description">The name of the File or Folder</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example traces the item's platform-specific path (note that a physical File or Folder does not need to exist to return a path):</p>
+	<pre class="prettyprint lang-javascript">trace(new File('temp/some file.txt').name);</pre>
+	<pre>some file.txt</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a name="parent" id="parent" href="#parent">parent</a></h3>
+	<p class="description">The object's parent folder, or the same folder if the root</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Folder</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example instantiates a File object, then displays its parent (always a Folder):</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.parent);</pre>
+	<pre>[object Folder name=&quot;temp&quot; id=&quot;temp&quot; items=3]</pre>
+</div>
+
+	<h4>Attributes</h4>
+	<div class="property">
+		<h3 class="signature"><a name="exists" id="exists" href="#exists">exists</a></h3>
+		<p class="description">true if the File or Folder exists; false otherwise. </p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Boolean</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>Files or Folders can be instantiated in code, but do not return an <strong>exists</strong> flag unless:</p>
+		<ul>
+			<li>The item already exists on the hard drive</li>
+			<li>Data is saved to the File</li>
+		</ul>
+<p>The following example demonstrates a new File not  existing until data is saved:</p>
+		<pre class="prettyprint lang-javascript">
+var file = new File('temp/test.txt');
+trace(file.exists);
+
+file.save();
+trace(file.exists);</pre>
+<pre>false
+true</pre>
+	</div>
+<div class="property">
+	<h3 class="signature"><a name="attributes" id="attributes" href="#attributes">attributes</a></h3>
+		<p class="description">A string specifying values for the attribute(s) you want to set</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+				<li>
+<span class="name">Access:</span><span class="comment">Read and write</span>
+</li>
+			</ul>
+		</div>
+		<ul>
+			<li> N: No specific attribute</li>
+			<li>A: Ready for archiving (Windows only)</li>
+			<li> R: Read-only (on the Macintosh, read-only means “locked”)</li>
+			<li> W: Writable (overrides R)</li>
+			<li> H: Hidden (Windows only)</li>
+			<li> V: Visible (overrides H, Windows only)</li>
+		</ul>
+		<p>See <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7add.html">FLfile.setAttributes</a> for more information.</p>
+		<p>The following example creates and writes to a new File, then makes it read-only and attempts to write to it again (see File <a href="#file.write">write</a> for more info):</p>
+		<pre class="prettyprint lang-javascript">// instantiiate and save a new File
+	var file = new File('temp/test.txt');
+	var result = file.write('Hello');
+	trace(file.contents, file.attributes, result);
+
+// make the file read only, and attempt to write to it
+	file.attributes = 'RA';
+	var result = file.write('Goodbye');
+	trace(file.contents, file.attributes, result);		</pre>
+		<pre>Hello, A, [object File name=&quot;test.txt&quot;]
+Hello, RA, false</pre>
+	</div>
+<h4>Dates</h4>
+	<div class="property">
+		<h3 class="signature"><a name="created" id="created" href="#created">created</a></h3>
+		<p class="description">The number of seconds that have elapsed between January 1, 1970 and the time the file or folder was created</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Number</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>Example:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.created);</pre>
+		<pre>1311444313		</pre>
+	</div>
+
+	<div class="property">
+		<h3 class="signature"><a name="modified" id="modified" href="#modified">modified</a></h3>
+		<p class="description">The number of seconds that have elapsed between January 1, 1970 and the time the file or folder was last modified</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Number</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>Example:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.modified);</pre>
+		<pre>1311444313</pre>
+	</div>
+
+	<div class="property">
+		<h3 class="signature"><a name="createdDate" id="createdDate" href="#createdDate">createdDate</a></h3>
+		<p class="description">A JavaScript Date object that represents the date and time when the specified file or folder was created</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Date</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>Example:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.createdDate);</pre>
+		<pre>Sat Jul 23 2011 19:06:16 GMT+0100 (GMT Daylight Time)</pre>
+	</div>
+
+	<div class="property">
+		<h3 class="signature"><a name="modifiedDate" id="modifiedDate" href="#modifiedDate">modifiedDate</a></h3>
+		<p class="description">A JavaScript Date object that represents the date and time when the specified file or folder was last modified</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Date</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>Example:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.modifiedDate);</pre>
+		<pre>Sat Jul 23 2011 19:06:16 GMT+0100 (GMT Daylight Time)</pre>
+	</div>
+	<h2>Common methods</h2>
+	<div class="method">
+		<h3 class="signature"><a href="#remove" name="remove" id="remove">remove(skipConfirmation)</a></h3>
+		<p class="description">Deletes the File or Folder from the filesystem</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">skipConfirmation</span> <span class="type">Boolean</span> <span class="comment">An optional boolean to skip the user-confirmation window</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">A Boolean indicating if the item was deleted or not</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example creates a reference to the test file, then displays a confirmation box to remove the file:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+file.remove();	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a href="#file.reveal" name="reveal" id="reveal">reveal()</a></h3>
+		<p class="description">Reveals and selects the File or Folder in the Explorer or Finder</p>
+		<div class="function-meta">
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original File or Folder</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example reveals and selects a test file in the Explorer or Finder:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt')
+file.reveal();</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a href="#file.toString" name="toString" id="toString">toString(path)</a></h3>
+		<p class="description">A string representation of the File or Folder</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">path</span> <span class="type">Boolean</span> <span class="comment">A flag to show the full path, not just the name</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">A string containing the class and nam or path</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example displays a short summary of a test file:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file);</pre>
+		<pre>[object File name=&quot;test.txt&quot;]		</pre>
+		<p>The following example displays a longer summary of the same file using the path, rather than the name:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.toString(true));</pre>
+		<pre>[object File path=&quot;E:/Projects/xJSFL/temp/test.txt&quot;]</pre>
+	</div>
+<div class="property"></div>
+<h2><a name="File" id="File" href="#File">File (class)</a></h2>
+	<p>The File class is used to directly access, modify, and manipulate files on the hard disk. It has the following properties and methods:</p>
+	<h5>Constructor</h5>
+<ul>
+	<li><a href="#file">File(pathOrUri, contents, force)</a></li>
+	</ul>
+<h5>Properties</h5>
+<ul>
+	<li><a href="#file.contents">contents</a></li>
+	<li><a href="#file.extension">extension</a></li>
+	<li><a href="#file.size">size</a></li>
+	<li><a href="#file-writable">writable</a></li>
+	<li><a href="#file-saved">saved</a></li>
+</ul>
+<h5>Methods</h5>
+	<ul>
+		<li><a href="#open">open()</a></li>
+				<li><a href="#run">run()</a></li>
+				<li><a href="#copy">copy(trgURIOrPath, overWrite)</a></li>
+				<li><a href="#write">write(data, append)</a></li>
+				<li><a href="#append">append(data)</a></li>
+				<li><a href="#save">save(utf8)</a></li>
+				<li><a href="#reveal">reveal()</a></li>
+				<li><a href="#rename">rename(name, extension)</a></li>
+				<li><a href="#tostring">toString(name)</a></li>
+	</ul>
+<div class="method">
+<h3 class="signature"><a name="File.constructor" id="File.constructor" href="#File.constructor">File(pathOrUri, contents, force)</a></h3>
+		<p class="description">File class</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrUri</span> <span class="type">String</span> <span class="comment">The uri or path to the object</span>
+</li>
+					<li>
+<span class="name">contents</span> <span class="type">String</span> <span class="comment">An optional string contents of the file, or true to save a blank file</span>
+</li>
+					<li>
+<span class="name">force</span> <span class="type">Boolean</span> <span class="comment">An optional flag to force the file to be overwritten, if its already read-only</span>
+</li>
+
+				</ul>
+			</div>
+
+</div>
+	<p>The following example creates a reference only to a test file:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');</pre>
+
+	<p>The following example creates a reference and saves some data to the test file on the hard disk, creating the file if it doesn't exist, and overwriting the file if it does:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt', 'Hello World!');</pre>
+
+	<p>Note that creating a new File() reference with a URI that points to an existing file will affect the existing file. If you need to check if a file exists before modifying it, check the file <a href="#exists">exists</a> property.</p>
+	<p>The following example demonstrates creating a file in a folder that doesn't exist:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/this/is/a/new/file.txt', 'It worked!');
+trace(file.toString(true), file.contents);</pre>
+<pre>[object File path="E:/Projects/xJSFL/user/jsfl/temp/this/is/a/new/file.txt"], It worked!
+</pre>
+</div>
+
+<h2>File properties</h2>
+<div class="property">
+	<h3 class="signature"><a href="#file.contents" name="file.contents" id="file.contents">contents</a></h3>
+	<p class="description">Get or set the contents of the file</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span> and write</li>
+		</ul>
+	</div>
+	<p>The contents property is readable and writable, making it super easy to get and set the contents of files.</p>
+	<p>The following example writes a new string to a file, then reads the result back:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/contents.txt');
+file.contents = 'I am a new file!');
+trace(file.contents, file.createdDate);</pre>
+	<pre>I am a new file!, Sat Jul 23 2011 21:06:18 GMT+0100 (GMT Daylight Time)	</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a name="file.extension" id="file.extension" href="#file.extension">extension</a></h3>
+	<p class="description">Get the extension of the file</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example creates a file and traces the extension:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+trace(file.extension);</pre>
+	<pre>txt</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a name="file.size" id="file.size" href="#file.size">size</a></h3>
+	<p class="description">Get the size of the file</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Number</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example creates a file and traces its size:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/empty.txt').save();
+trace(file.size);</pre>
+	<pre>0</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="writable" name="writable" href="#file-writable">writable</a></h3>
+	<p class="description">Set or get the read-only state of the file</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Boolean</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read and write</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example demonstrates writing to a file, and the various results of <a href="#file-write">write()</a>, <a href="#file-written">written</a>, and <a href="#file-saved">saved</a>:</p>
+	<pre class="prettyprint lang-javascript">// clear the existing file<br>	var file = new File('writable.txt', '', true);<br>	<br>// create the new (unsaved) file reference<br>	var file = new File('writable.txt');<br>	<br>// check contents<br>	file.writable = false;<br>	var written = file.write('Hello!');<br>	<br>// results<br>	trace('Writing to unwritable file...');<br>	trace('contents: ' + file.contents);<br>	trace('writable: ' + file.writable);<br>	trace('written : ' + written);<br>	trace('saved:    ' + file.saved);<br>	<br>// set unwritable and attempt to write<br>	file.writable = true;<br>	var written = file.write('Goodbye!');<br>	<br>// results<br>	trace('\nWriting to writable file...');<br>	trace('contents: ' + file.contents)<br>	trace('writable: ' + file.writable);<br>	trace('written : ' + written);<br>	trace('saved:    ' + file.saved);</pre>
+	<pre>Writing to unwritable file...
+contents:
+writable: false
+written : false
+saved:    false
+
+Writing to writable file...
+contents: Goodbye!
+writable: true
+written : [object File   path="E:/Projects/xJSFL/dev/writable.txt" exists="true"]
+saved:    true</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="saved" name="writable" href="#file-saved">saved</a></h3>
+	<p class="description">Flag if the file has been saved</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Boolean</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>See the example <a href="#written">above</a> for the saved property in action.</p>
+</div>
+<h2>File methods</h2>
+
+<div class="method">
+<h3 class="signature"><a name="file.open" id="file.open" href="#file.open">open()</a></h3>
+		<p class="description">Opens the file in the associated application</p>
+	<div class="function-meta">
+
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original file</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Depending on the file extension the following action will be taken:</p>
+		<ul>
+			<li>
+<strong>fla</strong> - The file will be opened in the Flash as a Document</li>
+			<li>
+<strong>jsfl</strong> - The file will be opened in Flash as a Script</li>
+			<li>
+<strong>other</strong> - The file will be opened using the OS</li>
+		</ul>
+<p>The following example opens an .fla file in Flash:</p>
+		<pre class="prettyprint lang-javascript">new File(xjsfl.uri + 'modules/Code Examples/assets/fla/example assets.fla').open();</pre>
+</div>
+
+	<div class="method">
+		<h3 class="signature"><a name="file.run" id="file.run" href="#file.run">run()</a></h3>
+		<p class="description">Executes any JSFL file, or attempts to run any other file type via the OS</p>
+		<div class="function-meta">
+
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original file</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The <strong>run</strong> method is used to execute a file using the operating system associations. This can be used to open such files as text files, ActionScript files, or Excel documents.</p>
+		<p>Note that running this command via either Komodo or Flash <strong>before</strong> the application is open, will lock the calling application until the target application is closed (on Windows at least).</p>
+		<p>The following example creates, saves, and runs a CSV file:</p>
+		<pre class="prettyprint lang-javascript">new File('temp/figures.csv', 'a,b,c,d,e\r\n1,2,3,4,5').run();
+</pre>
+</div>
+
+	<div class="method">
+		<h3 class="signature"><a name="file.copy" id="file.copy" href="#file.copy">copy(uriCopy, overwrite)</a></h3>
+		<p class="description">Copies the file to a new location</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">uriCopy</span> <span class="type">String</span> <span class="comment">The new uri to copy the file to. Can be a folder or file.</span>
+</li>
+					<li>
+<span class="name">overwrite</span> <span class="type">Boolean</span> <span class="comment">Optional Boolean indicating whether the target file should be overwritten if it exists, defaults to false</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">A new File object if the operation was successful</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example copies a source file to a new folder (created automatically) and renames it:</p>
+		<pre class="prettyprint lang-javascript">var src = new File('temp/test.txt', 'Hello World!');
+var trg = src.copy('temp/copied/test copy.txt');
+trace(trg, trg.contents);</pre>
+		<pre>[object File name="test.txt"], Hello		</pre>
+</div>
+
+<div class="method">
+		<h3 class="signature"><a name="file.write" id="file.write" href="#file.write">write(data, append)</a></h3>
+		<p class="description">Write or append data to the file</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">data</span> <span class="type">String</span> <span class="comment">The data to append to the file</span>
+</li>
+					<li>
+<span class="name">append</span> <span class="type">Boolean</span> <span class="comment">An optional flag to append, rather than overwrite the file</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original file</span>
+</li>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">A Boolean false if the operation failed</span>
+</li>
+
+				</ul>
+			</div>
+</div>
+		<p>The following example creates a file, then writes data to it:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+file.write('this is a new file');
+
+trace(file.contents);</pre>
+	<pre>this is a new file</pre>
+	</div>
+<div class="method">
+	<h3 class="signature"><a name="append" id="append" href="#file.append">append(data)</a></h3>
+	<p class="description">Append data to the file</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">data</span> <span class="type">String</span> <span class="comment">The data to append to the file</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original file</span>
+</li>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">A Boolean false if the operation failed</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates a file, then appends data to it in a series of operations:</p>
+	<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+var words  = 'this is a new file'.split(' ');
+
+for each(var word in words)
+{
+    file.append(word + '-');
+}
+
+trace(file.contents);</pre>
+	<pre>this-is-a-new-file-</pre>
+</div>
+
+<div class="method">
+<h3 class="signature"><a name="file.save" id="file.save" href="#file.save">save()</a></h3>
+		<p class="description">Saves the file</p>
+		<div class="function-meta">
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original file</span>
+</li>
+
+				</ul>
+			</div>
+	</div>
+	<p>The following example creates and saves a blank file:</p>
+<pre class="prettyprint lang-javascript">new File('temp/blank.txt').save();
+</pre>
+</div>
+<div class="method" style="display:none">
+<h3 class="signature"><a name="file.rename" id="file.rename" href="#file.rename">rename(name, extension, overwrite)</a></h3>
+		<p class="description">Rename the file. You can optionally omit the name and just provide an extension to only rename the extension</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">The new name for the file (you can omit the extension)</span>
+</li>
+					<li>
+<span class="name">extension</span> <span class="type">String</span> <span class="comment">The new etension for the file</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">File</span> <span class="comment">The original file</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example renames the filename only:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+file.rename(name, extension, overwrite);</pre>
+		<pre></pre>
+		<p>The following example renames the filename only:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('temp/test.txt');
+file.rename(name, extension, overwrite);</pre>
+		<pre></pre>
+		<p>The following example renames the filename only:</p>
+		<pre class="prettyprint lang-javascript">var file = new File('user/temp/test.txt');
+file.rename(name, extension, overwrite);</pre>
+		<pre></pre>
+</div>
+<div class="property"></div>
+
+
+
+
+<h2><a name="Folder" id="Folder" href="#Folder">Folder (class)</a></h2>
+	<p>The Folder class is used to directly access, modify, and manipulate files on the hard disk. It has the following properties and methods:</p>
+	<h5>Constructor</h5>
+	<ul>
+		<li><a href="#folder">Folder(pathOrURI, create)</a></li>
+	</ul>
+	<h5>Properties</h5>
+	<ul>
+	<li><a href="#folder-contents">contents</a></li>
+				<li><a href="#folder-folders">folders</a></li>
+				<li><a href="#folder-files">files</a></li>
+				<li><a href="#folder-uris">uris</a></li>
+
+				<li><a href="#length">length</a></li>
+	</ul>
+	<h5>Methods</h5>
+	<ul>
+		<li><a href="#Folder">constructor</a></li>
+		<li><a href="#folder.open">open</a></li>
+		<li><a href="#copy">copy(toPathOrURI)</a></li>
+		<li><a href="#folder.each">each</a></li>
+		<li><a href="#folder.filter">filter</a></li>
+	</ul>
+<div class="method">
+<h3 class="signature"><a name="Folder.constructor" id="Folder.constructor" href="#Folder.constructor">Folder(pathOrUri, create)</a></h3>
+		<p class="description">Folder class</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrUri</span> <span class="type">String</span> <span class="comment">The uri or path to the object</span>
+</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<p>The following example creates a reference only to a test folder:</p>
+	<pre class="prettyprint lang-javascript">var folder = new Folder('temp/new folder');</pre>
+	<p>The following example creates a reference and creates a new folder:</p>
+	<pre class="prettyprint lang-javascript">var folder = new Folder('temp/new folder', true);	</pre>
+	<p>Note that you can create entire path structures just by supplying the full path:</p>
+	<pre class="prettyprint lang-javascript">var folder = new Folder('temp/this/is/a/new/folder', true);
+trace(folder.toString(true));</pre>
+		<pre>[object Folder path="E:/Projects/xJSFL/user/jsfl/temp/this/is/a/new/folder"]		</pre>
+</div>
+
+	<h2>Folder properties</h2>
+	<div class="property">
+		<h3 class="signature"><a name="folder.contents" id="folder.contents" href="#folder.contents">contents</a></h3>
+		<p class="description">The folder's files and folders</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Array</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>The following example returns an Array of all File and Folder items in the <strong>temp</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">var folder = new Folder('temp');
+trace(folder.contents.join('\n'));</pre>
+		<pre>[object File name=&quot;contents.txt&quot;]
+[object File name=&quot;dom.txt&quot;]
+[object File name=&quot;empty.txt&quot;]
+[object File name=&quot;figures.csv&quot;]
+[object File name=&quot;readme.txt&quot;]
+[object File name=&quot;test copy.txt&quot;]
+[object File name=&quot;test.txt&quot;]
+[object Folder name=&quot;test&quot; items=1]</pre>
+	</div>
+	<div class="property">
+		<h3 class="signature"><a name="folder.folders" id="folder.folders" href="#folder.folders">folders</a></h3>
+		<p class="description">The folder's subfolders only</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Array</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>The following example returns an Array of all Folder items in the <strong>temp</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">var folder = new Folder('temp');
+trace(folder.contents.join('\n'));</pre>
+		<pre>[object Folder name=&quot;test&quot; items=1]	</pre>
+	</div>
+<div class="property">
+		<h3 class="signature"><a name="folder.files" id="folder.files" href="#folder.files">files</a></h3>
+		<p class="description">The folder's files only</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Array</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>The following example returns an Array of File items in the <strong>temp</strong> folder:</p>
+	<pre class="prettyprint lang-javascript">var folder = new Folder('temp');
+trace(folder.files.join('\n'));</pre>
+		<pre>[object File name=&quot;contents.txt&quot;]
+[object File name=&quot;dom.txt&quot;]
+[object File name=&quot;empty.txt&quot;]
+[object File name=&quot;figures.csv&quot;]
+[object File name=&quot;readme.txt&quot;]
+[object File name=&quot;test copy.txt&quot;]
+[object File name=&quot;test.txt&quot;]</pre>
+	</div>
+<div class="property">
+		<h3 class="signature"><a id="uris" name="uris" href="#uris">uris</a></h3>
+		<p class="description">The folder's contents as a list of absoulte uris</p>
+	<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Array</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+			</ul>
+	</div>
+	<p>The following example  returns an Array of URI strings of items in the <strong>temp</strong> folder::</p>
+	<pre class="prettyprint lang-javascript">var folder = new Folder('temp');
+list(folder.uris);</pre>
+	<pre>List: Array (depth:1, objects:0, values:8, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "file:///E|Projects/xJSFL/dev/temp/contents.txt"
+	 1: "file:///E|Projects/xJSFL/dev/temp/dom.txt"
+	 2: "file:///E|Projects/xJSFL/dev/temp/empty.txt"
+	 3: "file:///E|Projects/xJSFL/dev/temp/figures.csv"
+	 4: "file:///E|Projects/xJSFL/dev/temp/readme.txt"
+	 5: &quot;file:///E|Projects/xJSFL/dev/temp/test/&quot;
+	 6: &quot;file:///E|Projects/xJSFL/dev/temp/test copy.txt&quot;
+	 7: "file:///E|Projects/xJSFL/dev/temp/test.txt"</pre>
+</div>
+	<div class="property">
+		<h3 class="signature"><a name="folder.length" id="folder.length" href="#folder.length">length</a></h3>
+		<p class="description">The number of items (both files and folders) in the folder</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Number</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read-only</span>
+</li>
+			</ul>
+		</div>
+		<p>The following example :</p>
+		<pre class="prettyprint lang-javascript">var folder = new Folder('temp');
+trace(folder.length);</pre>
+		<pre>8</pre>
+</div>
+	<h2>Folder methods</h2>
+
+<div class="method">
+<h3 class="signature"><a name="folder.open" id="folder.open" href="#folder.open">open()</a></h3>
+		<p class="description">Opens the folder in the Explorer / Finder</p>
+		<div class="function-meta">
+
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Folder</span> <span class="comment">The original Folder</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This is an alias for <a href="#reveal">reveal</a>.</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="copy" name="copy" href="#copy">copy(toPathOrURI)</a></h3>
+	<p class="description">Copy the folder to a new uri</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">toUri</span> <span class="type">String</span> <span class="comment">The URI to copy to</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Folder</span> <span class="comment">The original folder</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p><strong>Note that this method currently only works on Windows machines.</strong></p>
+	<p>The following example copies a folder to a folder called &quot;temp 2&quot;:</p>
+	<pre class="prettyprint lang-javascript">var folder = new Folder('temp');<br>var copy = folder.copy('temp 2');<br>trace(copy);</pre>
+	<pre>[object Folder path=&quot;E:/xJSFL/dev/temp 2/&quot; items=10 exists=&quot;true&quot;]	</pre>
+</div>
+<p>&nbsp;</p>
+<div class="method">
+<h3 class="signature"><a name="folder.each" id="folder.each" href="#folder.each">each(callback, scope, itemType)</a></h3>
+		<p class="description">Calls a function on each element in the collection</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">A callback function to fire on each element</span>
+</li>
+					<li>
+<span class="name">itemType</span> <span class="type">String</span> <span class="comment">Optionally limit the iteration to files or folders. Leave blank for all content</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An array of Files and/or Folders</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example iterates over the contents of the <strong>temp</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">new Folder('temp').each( function(element, index){ trace(index, element); } );</pre>
+		<pre>0, [object File name="contents.txt"]
+1, [object File name="dom.txt"]
+2, [object File name="empty.txt"]
+3, [object File name="figures.csv"]
+4, [object File name="readme.txt"]
+5, [object File name="test copy.txt"]
+6, [object File name="test.txt"]
+7, [object Folder name="this" items=1]</pre>
+	</div>
+
+	<div class="method">
+		<h3 class="signature"><a name="folder.filter" id="folder.filter" href="#folder.filter">filter(rx)</a></h3>
+		<p class="description">Return a filtered array of the folder's contents, matching against the filenames</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pattern</span> <span class="type">RegExp</span> <span class="comment">A RegExp filename pattern</span>
+</li>
+					<li>
+<span class="name">pattern</span> <span class="type">String</span> <span class="comment">A String filename pattern, wildcards allowed</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An array of Filesystem objects</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example returns only the text files of a Folder:</p>
+		<pre class="prettyprint lang-javascript">var files = new Folder('temp').filter(/\.txt$/)
+for each(var item in files)
+{
+	trace(item);
+}</pre>
+		<pre>[object File name="contents.txt"]
+[object File name="dom.txt"]
+[object File name="empty.txt"]
+[object File name="readme.txt"]
+[object File name="test copy.txt"]
+[object File name="test.txt"]</pre>
+	</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

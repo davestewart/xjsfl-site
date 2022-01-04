@@ -1,0 +1,2337 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>XUL (library) | xJSFL</title>
+		<meta name="description" content="OO library for creating and managing XUL dialogs">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/ui/xul">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="XUL (library) | xJSFL">
+		<meta property="og:description" content="OO library for creating and managing XUL dialogs">
+		<meta property="og:url" content="http://xjsfl.com/support/api/ui/xul">
+		<meta property="article:published_time" content="2011-07-04T09:01:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T10:15:07+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="XUL (library) | xJSFL">
+		<meta name="twitter:description" content="OO library for creating and managing XUL dialogs">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; XUL (library) Comments Feed" href="/support/api/ui/xul/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/534">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=534">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fui%2Fxul">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fui%2Fxul&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-534 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/ui/xul" rel="bookmark" title="Permanent Link: XUL (library)">XUL (library)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><a href="/support/api/ui/xul#comments" class="comments-link"><strong>6</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/ui" rel="category tag">UI</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+
+<h2>Overview</h2>
+<p>The XUL class is a powerful and flexible wrapper for Flash's XMLUI, allowing the developer to create and manage native XMLUI (XUL) user interfaces with a standardized set of controls, and an external API allowing you to interact with both the dialog and controls in an object-oriented manner.</p>
+<h3>Contents</h3>
+<p>Note that XUL is a <strong>HUGE</strong> class, conceptually and practically! The following links will help you navigate the Background and API sections:</p>
+	<h5><a href="#background">Background</a></h5>
+	<ul>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#basic-usage-example">Basic usage example</a></li>
+		<li><a href="#feature-examples">More advanced feature examples</a></li>
+		<li><a href="#how-the-xul-class-works">How the XUL class works</a></li>
+	</ul>
+	<h5><a href="/assets/html/complete/undefined">API</a></h5>
+<ul>
+	<li><a href="#properties">Properties</a></li>
+	<li><a href="#instantiation">Instantiation</a></li>
+	<li>
+<a href="#adding-controls">Adding controls</a>
+		<ul>
+			<li><a href="#adding-controls">Adding controls manually</a></li>
+			<li><a href="#adding-controls-via-shorthand">Adding controls and properties via shorthand</a></li>
+			<li><a href="#adding-controls">Adding standard XUL controls</a></li>
+			<li><a href="#custom-content">Adding custom Flash and XML</a></li>
+		</ul>
+	</li>
+	<li><a href="#setting-properties">Setting properties</a></li>
+	<li><a href="#adding-events">Adding events</a></li>
+	<li><a href="#showing">Showing the dialog</a></li>
+</ul>
+<h3>Summary</h3>
+	<h5>XUL family</h5>
+<p>The XUL family is made up of 3 main classes:</p>
+	<ul>
+		<li>
+<a href="/support/api/ui/xul">XUL</a> - builds, creates and manages XUL dialogs</li>
+		<li>
+<a href="/support/api/ui/xul-control">XULControl</a> - an object-oriented way to interact with UI controls</li>
+		<li>
+<a href="/support/api/ui/xul-event">XULEvent</a> - an object-oriented Event class to handle system and user events in the XMLUI dialog</li>
+	</ul>
+<h5>Feature list</h5>
+<p>Used together, the XUL family offers the following functionality over and above building XMLUI dialogs manually:</p>
+<p><strong>Creation</strong></p>
+<ul>
+<li>Powerful API allows for creation of all control types through code</li>
+<li>Shorthand declaration of controls, i.e. "checkbox:Do something=5,button:Press Me"</li>
+<li>Create dialogs directly from functions</li>
+<li>No need to write, save and manage raw XML files</li>
+<li>Custom XML can be used if necessary</li>
+</ul>
+<p><strong>Dialog &amp; Controls</strong></p>
+<ul>
+
+	<li>A standard control layout consisting of a column of left-hand labels &amp; right-hand controls</li>
+	<li>New control types, such as checkbox groups</li>
+</ul>
+<p><strong>Interaction</strong></p>
+<ul>
+<li>XULEvents allow true OO handling of events</li>
+<li>XULControl class allows for true OO manipulation of controls</li>
+<li>Basic validation requires all fields to be entered</li>
+</ul>
+<p><strong>Results</strong></p>
+<ul>
+	<li>Automatically call accept or cancel functions</li>
+	<li>Values returned as values, not strings</li>
+</ul>
+<h3><a id="basic-usage-example" name="basic-usage-example" href="#basic-usage-example">Basic usage example</a></h3>
+<p>The task of a dialog is to collect user input as values and do something with them, typically handing them straight into a function.</p>
+<p>As such,  a typical use case might go something like the following:</p>
+<ul>
+	<li>Create a function to do something with the user input</li>
+	<li>
+<a href="#create">Instantiate</a> a XUL instance</li>
+	<li>
+<a href="#add">Add</a> controls to the XUL instance</li>
+	<li>Call the XUL <a href="#show">show()</a> method, passing in a reference to the function</li>
+</ul>
+<p>In code, that looks like the following:</p>
+<pre class="prettyprint lang-javascript">function test(a, b, c)
+{
+    trace('You chose ' + [a, b, c]);
+}
+
+var xul = new XUL('Test dialog');
+xul
+    .addTextbox('Value A')
+    .addSlider('Value B')
+    .addCheckbox('Value C')
+    .show(test)</pre>
+<p>Running that code would build the following dialog (note that an .fla needs to be open before displaying a XUL dialog):</p>
+<p><img class="shadow" title="xul-test" src="/wp-content/uploads/xul-test.png" alt="" width="240" height="174"></p>
+<p>Filling in the values and clicking OK would give something like the following result:</p>
+<pre>You chose &quot;hello&quot;,30,true
+</pre>
+<h3><a id="feature-examples" name="feature-examples" href="#feature-examples">Feature examples</a></h3>
+<p>The following code snippets are variations on the previous (basic) example, to quickly demonstrate some of the XUL functionality:</p>
+<h5>Values</h5>
+<p>The usual return type from an XMLUI dialog is an array of Strings. The XUL class provides an additional property <a href="#values">values</a> which returns actual data types, rather than simple Strings:</p>
+<pre class="prettyprint lang-javascript">// run previous code, then...
+Output.inspect(xul.values);</pre>
+<pre>Inspect: Object (depth:4, objects:0, values:4, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+   valuea: "Hello"
+   valueb: 30
+   valuec: true</pre>
+<h5>UI from function</h5>
+<p>For creating dialogs quickly and simply, perhaps for testing or the Snippets panel, you can simply pass a callback function into the static <a href="#create">create()</a> method of the XUL class, which creates a simple textbox-based dialog from the function's arguments:</p>
+<pre class="prettyprint lang-javascript">XUL.create(test, test);</pre>
+<p><img class="shadow" title="xul-create-function" src="/wp-content/uploads/xul-create-function.png" alt="" width="240" height="177"></p>
+<h5>Shorthand</h5>
+<p>Typing out a load of JSFL code just to create a dialog can be laborious, so the XUL class gives you an alternative to quickly create sophisticated dialog using <a href="#adding-controls-via-shorthand">shorthand</a> creation of controls:</p>
+<pre class="prettyprint lang-javascript">XUL
+    .create('text:Value A,numeric:Value B,checkbox:Value C')
+    .show(test);</pre>
+<p><img class="shadow" title="xul-test" src="/wp-content/uploads/xul-test.png" alt="" width="240" height="174"></p>
+<h5>Events</h5>
+<p>The XUL class supports the addition and management of proper object-oriented <a href="/support/api/ui/xulevent">events</a> through the API, rather than manually adding attributes to the original XML definition for the XUL dialog. Use the <a href="#addEvent">addEvent()</a> method to add events and handlers in an object-oriented manner (note that unfortunately due to the Adobe implementation of XUL, only some controls support event handling):</p>
+<pre class="prettyprint lang-javascript">function onChange(event)
+{
+    trace(event.control.value);
+}
+
+XUL
+    .create('a, b, c')
+    .addEvent('a', 'change', onChange)
+    .show();</pre>
+<p><img class="shadow" title="xul-create-event" src="/wp-content/uploads/xul-create-event.png" alt="" width="240" height="177"></p>
+<pre>H
+He
+Hel
+Hell
+Hello</pre>
+<h3><a id="how-the-xul-class-works" name="how-the-xul-class-works" href="#how-the-xul-class-works">How the XUL class works</a></h3>
+<h5>Overview</h5>
+<p>If you've written any XUL code in the past, you probably know that it can be a fairly involved process, with scant documentation and what feels like a somewhat limited and sometimes convoluted API.</p>
+<p>The XUL class' primary aim is to abstract away the complication of manually building XML files, and at the same time seeking to solve as many inconsistencies as possible with the native API.</p>
+<p>The following headings lay out XUL's main abstractions, and how it does it.</p>
+<h5>Building the XML dialog code</h5>
+<p>In order to successfully abstract the task of adding controls to an empty dialog shell, XUL sacrifices completely open flexibility for the tried-and-tested 2 column grid, with labels on the left and controls on the right. It does this by loading pre-written XML from a template file, using the &lt;grid&gt; and &lt;rows&gt; elements. Each of the <a href="#add-controls">addControl()</a> methods then adds a new row to the XML, building the final XML code that will become a XUL dialog.</p>
+<h5>Saving and  showing the dialog</h5>
+<p>On top of not needing to write any XML code yourself, the class also saves you the bother of saving and reloading it. Whenever you call <a href="#show">xul.show()</a>, the class finalizes any existing internal XML, then saves it to <strong>xJSFL/core/ui</strong>, before loading the code and showing the dialog.</p>
+<h5>Validating and returning values</h5>
+<p>Upon clicking the OK button in the dialog, the values in the dialog are first validated to make sure they are not blank (except if optional) and if so, the dialog box is re-shown. When the values are finally filled in, the dialog is allowed to close.</p>
+<p>Finally, the usual <strong>String</strong> settings returned from the dialog are converted into their appropriate data types, such as <strong>Number</strong>, <strong>Boolean</strong>, and even <strong>Arrays</strong> (see <a href="/support/api/core/xjsfl#utils.parseValue">xjsfl.parseValue()</a> for more details).</p>
+<h5>Adding and handling Events</h5>
+<p>Native JSFL provides event handling via special XML attributes (command, change, etc) on the XML control nodes. xJSFL abstracts this so you add events and event-handlers in a more familiar way using the <a href="#addEvent">addEvent()</a> method, as well as adding some extra initialization handlers. Internally, the correct attributes are added to the XML, and internal callbacks are routed through the XUL core before finally building an Event object which is passed to the originally-supplied external callback.</p>
+<p>For more information see the <a href="/support/api/ui/xul-event">XULEvent</a> class.</p>
+<h5>Accessing controls</h5>
+<p>From within event handling code, you can access both the control that spawned the event, as well as the other controls on in the XUL dialog. Instead of using <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-77b4.html">xmlui.set</a> and <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-77b9.html">xmlui.get</a> methods, you now simply access the controls as if they were actual objects, i.e. <strong>event.control.value</strong>. Of course, there is no such <em>new</em> control element, but by wrapping all control-related functionality in a new XULControl class, the aim of object-orientation is achieved.</p>
+<p>For more information see the <a href="/support/api/ui/xul-control">XULControl</a> class.</p>
+<h5>Last words</h5>
+<p>It should be noted that the native Adobe XUL implementation not-only somewhat limited, but there are features or functions that simply appear broken or unimplemented. xJSFL XUL does its best to work around these, but at the time of development, there are still omissions or inconsistencies that appear to be impossible to overcome.</p>
+<h2>API</h2>
+<p>The XUL API is quite large, so the API has been broken into the following sections:</p>
+<ul>
+	<li><a href="#properties">Properties</a></li>
+	<li><a href="#instantiation">Instantiation</a></li>
+	<li>
+<a href="#adding-controls">Adding controls</a>
+		<ul>
+			<li><a href="#adding-controls">Adding controls manually</a></li>
+			<li><a href="#adding-controls-via-shorthand">Adding controls and properties via shorthand</a></li>
+			<li><a href="#adding-controls">Adding standard XUL controls</a></li>
+			<li><a href="#custom-content">Adding custom Flash and XML</a></li>
+		</ul>
+	</li>
+	<li><a href="#setting-properties">Setting properties</a></li>
+	<li><a href="#adding-events">Adding events</a></li>
+	<li><a href="#showing">Showing the dialog</a></li>
+</ul>
+<h2><a id="properties" name="properties" href="#properties">Properties</a></h2>
+<p>The XUL instance has the following public properties:</p>
+<div class="property">
+	<h3 class="signature"><a id="controls" name="controls" href="#controls">controls</a></h3>
+	<p class="description">The array of XULControls that exist in the XUL dialog</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">type</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example lists the ids of the <a href="/support/api/ui/xulcontrol">XULControl</a> instances that are created and assigned to the <strong>controls</strong> property on XUL instantiation:</p>
+	<pre class="prettyprint lang-javascript">function onInitialize(event)
+{
+	for each(var control in this.controls)
+	{
+		trace(control.id + ':' + control.value);
+	}
+}
+
+var xul = XUL
+	.factory('textbox:text=Hello there,checkbox:state=true,dropdown:Options=[One,Two,Three]')
+	.addEvent('initialize', onInitialize)
+	.show();</pre>
+	<pre>text:Hello there
+state:true
+options:One</pre>
+</div>
+
+<div class="property">
+	<h3 class="signature"><a id="settings" name="settings" href="#settings">settings</a></h3>
+	<p class="description">The raw settings generated by Flash when the dialog is closed</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">type</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example creates a dialog then outputs the raw settings after the user clicks OK:</p>
+	<pre class="prettyprint lang-javascript">var xul = XUL
+	.factory('textbox:Name,slider:Value,checkboxes:Elements=[Movieclip,Graphic,Button],dropdown:Options=[One,Two,Three]')
+	.show();
+
+Output.inspect(xul.settings);</pre>
+	<p><img src="/wp-content/uploads/xul-properties.png"></p>
+	<pre>Inspect: Object (depth:4, objects:0, values:8, time:0.0 seconds)
+-------------------------------------------------------------------------
+object => Object
+	 name: "Dave"
+	 value: "50"
+	 elements[Movieclip]: "true"
+	 elements[Graphic]: "true"
+	 elements[Button]: "false"
+	 options: "Two"
+	 xulid: "0"
+	 dismiss: "accept"
+	</pre>
+</div>
+
+<div class="property">
+	<h3 class="signature"><a id="values" name="values" href="#values">values</a></h3>
+	<p class="description">The parsed values converted from the setting object, when the dialog is closed</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">type</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>The <strong>values</strong> property differs from <a href="#settings">settings</a> as xJSFL automatically parses the raw <strong>String</strong> settings into the appropriate data types using <a href="/support/api/core/xjsfl#utils.parseValue">xjsfl.utils.parseValue</a>, and additionally, checkbox groups are parsed into Arrays.</p>
+	<p>The following example creates a dialog then outputs the parsed values after the user clicks OK:</p>
+	<pre class="prettyprint lang-javascript">var xul = XUL
+	.factory('textbox:Name,slider:Value,checkboxes:Elements=[Movieclip,Graphic,Button],dropdown:Options=[One,Two,Three]')
+	.show();
+
+Output.inspect(xul.values);</pre>
+	<p><img src="/wp-content/uploads/xul-properties.png" alt="">
+
+	</p>
+	<pre>Inspect: Object (depth:4, objects:1, values:6, time:0.0 seconds)
+-------------------------------------------------------------------------
+object => Object
+	 name: "Dave"
+	 value: 50
+	[elements] => Array
+		 0: "Movieclip"
+		 1: "Graphic"
+	 options: "Two"
+	 accept: true</pre>
+	<p>Note that if the user cancels, values will return <strong>null</strong>.<br>
+	</p>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="xml" name="xml" href="#xml">xml</a></h3>
+	<p class="description">The XML generated by the class to create the XUL dialog</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">type</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example creates a dialog then outputs the XML created after the user clicks OK:</p>
+	<pre class="prettyprint lang-javascript">var xul = XUL
+	.factory('textbox:Name,slider:Value,checkboxes:Elements=[Movieclip,Graphic,Button],dropdown:Options=[One,Two,Three]')
+	.show();
+
+trace(xul.xml);</pre>
+	<p><img src="/wp-content/uploads/xul-properties.png" alt="">
+
+	</p>
+	<pre>&lt;dialog id="dialog" title=" xJSFL" buttons="accept,cancel"&gt;
+    &lt;content&gt;
+        &lt;grid&gt;
+            &lt;columns id="columns"&gt;
+                &lt;column flex="1"/&gt;
+                &lt;column flex="2"/&gt;
+            &lt;/columns&gt;
+            &lt;rows id="controls"&gt;
+                &lt;row template="textbox"&gt;
+                    &lt;label value="Name:" width="80"/&gt;
+                    &lt;textbox class="control" id="name" value="" maxlength="" prompt="" size="" multiline="false" width="" flex="1" oncreate="xjsfl.ui.handleEvent('{xulid}', 'create', 'name')" onchange="xjsfl.ui.handleEvent('{xulid}', 'change', 'name')"/&gt;
+                &lt;/row&gt;
+                &lt;row template="popupslider"&gt;
+                    &lt;label value="Value:" width="80"/&gt;
+                    &lt;popupslider class="control" id="value" value="0" minvalue="0" maxvalue="100" orientation="horz" tabindex="" width="60" flex="" oncreate="xjsfl.ui.handleEvent('{xulid}', 'create', 'value')"/&gt;
+                &lt;/row&gt;
+                &lt;row template="checkboxgroup"&gt;
+                    &lt;label value="Elements:" width="80"/&gt;
+                    &lt;vbox class="control" groupbox="true"&gt;
+                        &lt;checkbox class="control" id="elements[Movieclip]" label="Movieclip" checked="true" tabindex="" acceskey="" value="Movieclip" selected="true" oncreate="xjsfl.ui.handleEvent('{xulid}', 'create', 'elements[Movieclip]')"/&gt;
+                        &lt;checkbox class="control" id="elements[Graphic]" label="Graphic" checked="true" tabindex="" acceskey="" value="Graphic" oncreate="xjsfl.ui.handleEvent('{xulid}', 'create', 'elements[Graphic]')"/&gt;
+                        &lt;checkbox class="control" id="elements[Button]" label="Button" checked="true" tabindex="" acceskey="" value="Button" oncreate="xjsfl.ui.handleEvent('{xulid}', 'create', 'elements[Button]')"/&gt;
+                    &lt;/vbox&gt;
+                &lt;/row&gt;
+                &lt;row template="menulist"&gt;
+                    &lt;label value="Options:" width="80"/&gt;
+                    &lt;menulist class="control" id="options" editable="" width="" flex="1" tabindex="" oncreate="xjsfl.ui.handleEvent('{xulid}', 'create', 'options')" onsetfocus="xjsfl.ui.handleEvent('{xulid}', 'setfocus', 'options')" onchange="xjsfl.ui.handleEvent('{xulid}', 'change', 'options')"&gt;
+                        &lt;menupop class="control" id="menupop"&gt;
+                            &lt;menuitem label="One" value="One" selected="true"/&gt;
+                            &lt;menuitem label="Two" value="Two"/&gt;
+                            &lt;menuitem label="Three" value="Three"/&gt;
+                        &lt;/menupop&gt;
+                    &lt;/menulist&gt;
+                &lt;/row&gt;
+            &lt;/rows&gt;
+        &lt;/grid&gt;
+    &lt;/content&gt;
+    &lt;script&gt;xjsfl.ui.handleEvent({xulid}, 'initialize');&lt;/script&gt;
+    &lt;textbox id="xulid" value="{xulid}" visible="false"/&gt;
+&lt;/dialog&gt;</pre>
+</div>
+<h2><a id="instantiation" name="instantiation" href="#instantiation">API - Instantiation</a></h2>
+<div class="method">
+	<h3 class="signature"><a id="XUL" name="XUL" href="#XUL">XUL(title)</a></h3>
+	<p class="description">XUL constructor</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">title</span> <span class="type">String</span> <span class="comment">The title of the new dialog</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">A new XUL instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates a XUL instance, with the title "Test Dialog", then shows it:</p>
+	<pre class="prettyprint lang-javascript">var xul = new XUL("Test Dialog");
+xul.show();</pre>
+<img src="/wp-content/uploads/xul-constructor.png" class="shadow"> </div>
+<div class="method">
+	<h3 class="signature"><a id="factory" name="factory" href="#factory">factory(props)</a></h3>
+	<p class="description">Static convenience method to instantiate and return a new chainable XUL instance</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">props</span> <span class="type">String</span> <span class="comment">An optional shorthand controls String</span>
+</li>
+				<li>
+<span class="name">props</span> <span class="type">XML</span> <span class="comment">An XML object of valid XUL</span>
+</li>
+				<li>
+<span class="name">props</span> <span class="type">Function</span> <span class="comment">An optional Function</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">A XUL class</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The <strong>static</strong> factory method provides the starting point for a chain of commands. The following example creates, adds a control (see <a href="#adding-controls-via-shorthand">shorthand</a> declaration) and shows the dialog in one line of code:</p>
+<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory('textbox:Some Value')
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-factory.png" class="shadow"></p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="create" name="create" href="#create">create(props, accept, cancel)</a></h3>
+	<p class="description">Static convenience method to create and show interface in one call, returning any submitted values</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">props</span> <span class="type">String</span> <span class="comment">A String of shorthand controls</span>
+</li>
+				<li>
+<span class="name">props</span> <span class="type">Function</span> <span class="comment">A Function, the parameters of which will map to dialog controls</span>
+</li>
+				<li>
+<span class="name">accept</span> <span class="type">Function</span> <span class="comment">An optional callback function to be called when the user clicks the OK button</span>
+</li>
+				<li>
+<span class="name">cancel</span> <span class="type">Function</span> <span class="comment">An optional callback function to be called when the user clicks the Cancel button</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">An Object containing the accepted values, or null if the user cancels the dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The <strong>static</strong> create method is a quick-fire way to build and display a dialog, then respond to user input, all in one line of code.</p>
+	<p>The following example creates a dialog, adds some textboxes (see <a href="#adding-controls-via-shorthand">shorthand</a> declaration) then traces the result to the Output panel:</p>
+	<pre class="prettyprint lang-javascript">
+function accept(one, two, three)
+{
+	trace([one, two, three].join(' '));
+}
+
+XUL.create('One,Two,Three', accept);</pre>
+	<p><img src="/wp-content/uploads/xul-create.png" class="shadow"></p>
+	<pre>hello there user!</pre>
+	<p>Note that the parameters passed to the callback function are the ordered values of the dialog controls themselves, therefore your callback function will require as many parameters as there are controls.</p>
+	<p>Create also allows you to pass in a single function from which to create the UI with, which it does by parsing the arguments of the function, and creating textboxes per argument.</p>
+	<p>Finally, you can pass only a <strong>function</strong> to create() if you wish, which will build a textbox control per function argument, validate the input, then pass the results to the supplied function for processing:</p>
+	<pre class="prettyprint lang-javascript">
+XUL.create(accept);</pre>
+</div>
+<h2><a id="adding-controls" name="adding-controls" href="#adding-controls">API - Adding controls</a></h2>
+<h3>Adding controls manually</h3>
+<p>Controls can be added to XUL instances using any of the addControl() methods, which allow you to add explicit <strong>label</strong>, <strong>id</strong>, <strong>attributes</strong>, <strong>validation</strong> and <strong>event handlers</strong>. You can also add controls using <a href="#adding-controls-via-shorthand">shorthand</a> expressions, which allow for much quicker adding of controls at the expense of flexibility, however shorthand declaration is often more than enough to get you started.</p>
+<p> <strong>Note</strong> that validation is not yet implemented in the xJSFL API, so the validation parameter is at the moment, redundant, and may be removed in future versions. Currently validation is limited to required fields only.</p>
+<p>The following  methods are available for adding controls:</p>
+<p><strong>Single-value controls</strong></p>
+	<ul>
+		<li><a href="#addTextbox">addTextbox</a></li>
+		<li><a href="#addSlider">addSlider</a></li>
+		<li><a href="#addCheckbox">addCheckbox</a></li>
+		<li><a href="#addColorchip">addColorchip</a></li>
+
+		<li><a href="#addFile">addFile</a></li>
+		<li><a href="#addButton">addButton</a></li>
+</ul>
+<p><strong>Multiple-value  controls</strong></p>
+<ul>
+	<li><a href="#addListbox">addListbox</a></li>
+	<li><a href="#addDropdown">addDropdown</a></li>
+	<li><a href="#addRadiogroup">addRadiogroup</a></li>
+	<li><a href="#addCheckboxgroup">addCheckboxgroup</a></li>
+	<li><a href="#addTargetlist">addTargetlist</a></li>
+</ul>
+<p><strong>Layout or presentation</strong></p>
+<ul>
+<li><a href="#addSeparator">addSeparator</a></li>
+	<li><a href="#addSpacer">addSpacer</a></li>
+	<li><a href="#addLabel">addLabel</a></li>
+	<li>
+<a href="#addScript">addScript</a>	</li>
+</ul>
+<p><strong>Custom content</strong></p>
+<ul>
+	<li><a href="#setFlash">setFlash</a></li>
+	<li><a href="#setXML">setXML</a></li>
+</ul>
+<h3><a id="adding-controls-via-shorthand" name="adding-controls-via-shorthand" href="#adding-controls-via-shorthand">Adding controls and properties via shorthand</a></h3>
+<p>The XUL class also allows you to add controls using the <a href="#add">add()</a> method and custom shorthand declaration, rather than specific addControl methods. Whilst shorthand lacks the complete customisation that the full methods afford you, they are great for quickly creating dialogs with enough functionality to get started.</p>
+<p>The shorthand syntax defines the following (ordered) parameters:</p>
+<ol>
+	<li>The control type <em>(control:)</em>
+</li>
+	<li>The control label <em>(Any text)</em>
+</li>
+	<li>The control value <em>(=some value)</em>
+</li>
+</ol>
+<p>In code, the format of the shorthand notation looks like this:</p>
+<pre>control:Label=value</pre>
+<p>The following rules also apply:</p>
+<ul>
+	<li>The control <strong>type</strong> is optional, defaulting to textbox if not supplied</li>
+	<li>Controls may have multiple control types, i.e. text, textbox, textarea</li>
+	<li>
+<strong>Labels</strong> define both internal ids and named return parameters for controls, so must be unique</li>
+	<li>Control <strong>values</strong> are also optional, and may be supplied as Strings, Numbers, Arrays or Object syntax (depending on the control)</li>
+	<li>
+<strong>Multiple</strong> controls may be added by delimiting with commas</li>
+	<li>
+<strong>Separators</strong> may be added using the pipe ( | ) character</li>
+	<li>
+<strong>title</strong>, <strong>width</strong> and <strong>columns</strong> may be given using the format <strong>property:value</strong>
+</li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="add" name="add" href="#add">add(str)</a></h3>
+	<p class="description">Add control using shorthand notation</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">str</span> <span class="type">String</span> <span class="comment">A string of the format "type:Label=values,type:Label=values, ..."</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>As mentioned above, the add() method allows you to add both controls and properties in an expressive, shorthand manner.</p>
+	<p>The following example demonstrates some typical shorthand expressions:</p>
+	<pre>Name=Dave
+button:Click Me!
+radiogroup:Options=[1,2,3,4]
+dropdown:Options={one:1,two:2,three:3,four:4}
+Value 1,Value 2,Value 3
+numeric:Size (pixels), numeric:Width (pixels), numeric:Alpha (%),title:Adjust object size</pre>
+	<p><img src="/wp-content/uploads/xul-shorthand.png"></p>
+	<p>In the examples that follow, the appropriate shorthand declaration(s) will be shown alongside the explicit addControl method, where appropriate.
+
+	</p>
+</div>
+<p>&nbsp;</p>
+<div class="method">
+<h3 class="signature"><a id="addTextbox" name="addTextbox" href="#addTextbox">addTextbox(label, id, attributes, validation, events)</a></h3>
+		<p class="description">Add a Textbox control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes [multiline, prompt, size]</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example adds a multiline text box:</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addTextbox('Text', 'name', {multiline:true})
+    .show();</pre>
+	<p><img src="/wp-content/uploads/XUL-addText.png" class="shadow"></p>
+	<p>The following examples create various types of textbox via shorthand declaration:</p>
+		<pre class="prettyprint lang-javascript">XUL.create('Enter some text'); // no control type defaults to textbox
+XUL.create('text:Text');
+XUL.create('text:Text=This is some text'); // adds some default text
+XUL.create('textbox:Text');
+XUL.create('textfield:Text');
+XUL.create('textarea:Text'); // textarea creates a multiline textbox
+</pre>
+		<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+		<ul>
+			<li>text</li>
+			<li>textfield</li>
+			<li>textbox</li>
+			<li>textarea (a multiline text box)<br>
+		</li>
+		</ul>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addSlider" name="addSlider" href="#addSlider">addSlider(label, id, values, attributes, validation, events)</a></h3>
+		<p class="description">Add a Popupslider control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">values</span> <span class="type">Array</span> <span class="comment">An optional Array of values [default, min, max]</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example creates 3 sliders:</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addSlider('Red', 'red', [0, 0, 255])
+    .addSlider('Green', 'green', [0, 0, 255])
+    .addSlider('Blue', 'blue', [0, 0, 255])
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-addslider.png" class="shadow"></p>
+<p>The following examples create various sliders via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('slider:Red=[0,0,255]');
+XUL.create('popupslider:Red=[50,0,255]'); // set a default value of 50
+XUL.create('numeric:Red=[50,0,255]'); // use the alternative "numeric" keyword</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>slider</li>
+	<li>popupslider</li>
+	<li>numeric</li>
+</ul>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addCheckbox" name="addCheckbox" href="#addCheckbox">addCheckbox(label, id, attributes, validation)</a></h3>
+		<p class="description">Add a Checkbox control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes [checked]</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example adds a checkbox to a XUL dialog:</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addCheckbox('State', null, {checked:false})
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-addcheckbox.png" class="shadow"></p>
+<p>The following examples create checked and unchecked checkboxes via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('checkbox:State'); // checkboxes via shorthand declaration are unchecked by default
+XUL.create('checkbox:State=true');
+XUL.create('checkbox:State=false');</pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addColorchip" name="addColorchip" href="#addColorchip">addColorchip(label, id, attributes, validation, events)</a></h3>
+		<p class="description">Add a Colorchip control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes [format]</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example :</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addColorchip('Color 1', 'c1', {value:'0xFF0000'})
+    .addColorchip('Color 2', 'c2', {value:'#00FF00'})
+    .addColorchip('Color 3', 'c3', {value:255})
+    .show();
+</pre>
+		<p><img src="/wp-content/uploads/xul-colorchip.png" class="shadow"></p>
+<p>The following example create a colorchip via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('colorchip:Color 1=#FF0000,colorchip:Color 2=#00FF00,colorchip:Color 3=#0000FF');</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>color</li>
+	<li>colorchip</li>
+	<li>colorpicker</li>
+</ul>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addFile" name="addFile" href="#addFile">addFile(label, id, attributes, validation, events)</a></h3>
+		<p class="description">Add a Choosefile control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example creates a dialog with both open and save fields:</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addFile('Open file');
+    .addFile('Save file', null, {type:'save'});
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-file.png" class="shadow"></p>
+<p>The following examples creates the same dialog via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('file:Open file,save:Save file');
+</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>file</li>
+	<li>choosefile</li>
+	<li>openfile</li>
+	<li>savefile</li>
+	<li>save<br>
+	</li>
+</ul>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="addButton" name="addButton" href="#addButton">addButton(label, id, attributes, events)</a></h3>
+		<p class="description">Add a Button control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example adds a button to the UI and binds and event handler to it in the same call (alternatively you could use <a href="#addEvent">addEvent()</a>):</p>
+		<pre class="prettyprint lang-javascript">function onClick(event)
+{
+	this.controls.waiting.value = new Date()
+}
+
+XUL
+    .factory()
+    .addButton('Click me!', 'button', {width:200}, {click:onClick})
+    .addTextbox('Waiting...')
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-button.png" class="shadow"></p>
+<p>The following example creates a button via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('button:Click me!');</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="addListbox" name="addListbox" href="#addListbox">addListbox(label, id, values, attributes, validation, events)</a></h3>
+		<p class="description">Add a Listbox control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example uses both Array and Object types to build a couple of listbox controls. Note that the object names will be mapped to labels, as in the second control::</p>
+		<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+    .addListbox('Options 1', null, [1, 2, 3, 4])
+    .addListbox('Options 2', null, {'One':1, 'Two':2, 'Three':3, 'Four':4 })
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-listbox.png" class="shadow"></p>
+<p>The returned values of the dialog would be as follows:</p>
+<pre>Inspect: Object (depth:4, objects:0, values:3, time:0.0 seconds)
+----------------------------------------------------------------
+object => Object
+	 options1: 1
+	 options2: 4
+	 accept: true</pre>
+<p>The following example creates the same dialog as above via shorthand declaration (note that the object declaration does not need any additional quotes):</p>
+<pre class="prettyprint lang-javascript">XUL.create("listbox:Options 1=[1,2,3,4], listbox:Options 2={One:1, Two:2, Three:3, Four:4 }");</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>listbox</li>
+	<li>list</li>
+</ul>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addDropdown" name="addDropdown" href="#addDropdown">addDropdown(label, id, values, attributes, validation, events)</a></h3>
+		<p class="description">Add a Menulist control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example uses both Array and Object types to build a couple of dropdown controls. Note that the object names will be mapped to labels, as in the second control::</p>
+		<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+    .addDropdown('Options 1', null, [1, 2, 3, 4])
+    .addDropdown('Options 2', null, {'One':1, 'Two':2, 'Three':3, 'Four':4 })
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-dropdown.png" class="shadow"></p>
+<p>The returned values of the dialog would be as follows:</p>
+<pre>Inspect: Object (depth:4, objects:0, values:3, time:0.0 seconds)
+----------------------------------------------------------------
+object =&gt; Object
+	 options1: 1
+	 options2: 4
+	 accept: true</pre>
+<p>The following example creates the same dialog as above via shorthand declaration (note that the object declaration does not need any additional quotes):</p>
+<pre class="prettyprint lang-javascript">XUL.create("dropdown:Options 1=[1,2,3,4], dropdown:Options 2={One:1, Two:2, Three:3, Four:4 }");</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>dropdown</li>
+	<li>menulist</li>
+</ul>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addRadiogroup" name="addRadiogroup" href="#addRadiogroup">addRadiogroup(label, id, values, attributes)</a></h3>
+		<p class="description">Add a RadioGroup to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example uses both Array and Object types to build a couple of radiogroup controls. Note that the object names will be mapped to labels, as in the second control::</p>
+		<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+    .addRadiogroup('Options 1', null, [1, 2, 3, 4])
+    .addRadiogroup('Options 2', null, {'One':1, 'Two':2, 'Three':3, 'Four':4 })
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-radios.png" class="shadow"></p>
+<p>The following example creates the same dialog as above via shorthand declaration (note that the object declaration does not need any additional quotes):</p>
+<pre class="prettyprint lang-javascript">XUL.create("radio:Options 1=[1,2,3,4], radio:Options 2={One:1, Two:2, Three:3, Four:4 }");
+</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>radiogroup</li>
+	<li>radios</li>
+	<li>radio<br>
+	</li>
+</ul>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="addCheckboxgroup" name="addCheckboxgroup" href="#addCheckboxgroup">addCheckboxgroup(label, id, values, attributes, validation)</a></h3>
+		<p class="description">Add a CheckboxGroup to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The checkbox group control is a new control unique to xJSFL, that allows you to select multiple values, and have the results returned as an Array. </p>
+		<p>The following example uses both Array and Object types to build a couple of listbox controls. Note that the object names will be mapped to labels, as in the second control::</p>
+		<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+    .addCheckboxgroup('Options 1', null, ['Movieclip', 'Graphic', 'Button'])
+    .addCheckboxgroup('Options 2', null, {'Movieclip':1, 'Graphic':2, 'Button':3})
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-checkboxes.png" class="shadow"></p>
+<p>&nbsp;</p>
+<p>The returned values of the dialog would be as follows:</p>
+<pre>Inspect: Object (depth:4, objects:2, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+    [options1] => Array
+         0: "Movieclip"
+         1: "Graphic"
+    [options2] => Array
+         0: 2
+         1: 3
+     accept: true</pre>
+<p>The following example creates the same dialog as above via shorthand declaration (note that the object declaration does not need any additional quotes):</p>
+<pre class="prettyprint lang-javascript">XUL.create("checkboxes:Options 1=[1,2,3,4], checkboxes:Options 2={One:1, Two:2, Three:3, Four:4 }");</pre>
+<p>Note that the following keywords are all acceptable in shorthand declaration:</p>
+<ul>
+	<li>checkboxgroup</li>
+	<li>checkboxes</li>
+</ul>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addTargetlist" name="addTargetlist" href="#addTargetlist">addTargetlist(label, id, attributes, validation, events)</a></h3>
+		<p class="description">Add a Targetlist control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+					<li>
+<span class="name">validation</span> <span class="type">Object</span> <span class="comment">Optional validation properties</span>
+</li>
+					<li>
+<span class="name">events</span> <span class="type">Object</span> <span class="comment">Optional event callbacks</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example :</p>
+		<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+    .addTargetlist('Element', 'element', {width:300})
+    .show();</pre>
+		<p><img src="/wp-content/uploads/xul-targetlist.png" class="shadow"></p>
+<p>The following example creates the same dialog as above via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('targetlist:Element');</pre>
+	</div>
+
+	<div class="method">
+		<h3>Missing methods</h3>
+		<p>The following methods are currently broken, so are not yet documented:</p>
+		<ul>
+			<li>addSeparator()</li>
+			<li>addSpacer()</li>
+			<li>addLabel()</li>
+			<li>addXML()</li>
+		</ul>
+	</div>
+
+
+<div style="display:none">
+
+	<div class="method">
+		<h3 class="signature"><a id="addXML" name="addXML" href="#addXML">addXML(xml, breakOutOfRows, dontParse)</a></h3>
+		<p class="description">Adds XML to the rows tag of the UI xml. If the XML, XMLList, or String doesn't contain a row, it will be created automatically</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">xml</span> <span class="type">XML</span> <span class="comment">An XML
+						<row>
+					</row></span>
+</li>
+					<li>
+<span class="name">xml</span> <span class="type">XMLList</span> <span class="comment">An XMLList of
+						<row>
+						s</row></span>
+</li>
+					<li>
+<span class="name">xml</span> <span class="type">String</span> <span class="comment">A String of XML</span>
+</li>
+					<li>
+<span class="name">breakOutOfRows</span> <span class="type">String</span> <span class="comment">An optional Boolean to break out of rows, and just add vanilla XML to the dialog</span>
+</li>
+					<li>
+<span class="name">dontParse</span> <span class="type">Boolean</span> <span class="comment">Internal flag to indicate to the function not to process the XML for control info</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example :</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addXML(xml, breakOutOfRows, dontParse)
+    .show();</pre>
+		<p><img src="/support/api/ui/XUL.html" class="shadow"></p>
+<p>The following examples create various types of via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('');</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="addSeparator" name="addSeparator" href="#addSeparator">addSeparator(label)</a></h3>
+		<p class="description">Add a separator element to the dialog</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">An optional labial to add beneath the separator</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p><strong>Note: this method is currently broken.</strong></p>
+		<p>The following example adds two textboxes with a separator between them:</p>
+		<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+	.addTextbox('Hello')
+    .addSeparator()
+	.addTextbox('Goodbye')
+    .show();</pre>
+		<p><img src="/support/api/ui/XUL.html" class="shadow"></p>
+<p>The following example creates the same dialog as above via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('Hello,|,Goodbye');</pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="addSpacer" name="addSpacer" href="#addSpacer">addSpacer()</a></h3>
+		<p class="description">Add a spacer element to the dialog</p>
+		<div class="function-meta">
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example :</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addSpacer()
+    .show();</pre>
+		<p><img src="/support/api/ui/XUL.html" class="shadow"></p>
+<p>The following example creates the same dialog as above via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('');</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="addLabel" name="addLabel" href="#addLabel">addLabel(label, id)</a></h3>
+		<p class="description">Add a Label control to the UI</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">A label for the UI item</span>
+</li>
+					<li>
+<span class="name">id</span> <span class="type">String</span> <span class="comment">An optional id, otherwise derived from the label</span>
+</li>
+					<li>
+<span class="name">attributes</span> <span class="type">Object</span> <span class="comment">Optional attributes</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p><strong>Note: this method is currently broken.</strong></p>
+		<p>The following example adds a full-width label to the dialog, above a textbox:</p>
+		<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .addLabel('This is a very long label')
+    .addTextbox('Enter some text')
+    .show();</pre>
+		<p><img src="/support/api/ui/XUL.html" class="shadow"></p>
+<p>The following example creates the same dialog as above via shorthand declaration:</p>
+<pre class="prettyprint lang-javascript">XUL.create('label:This is a very long label,Enter some text');</pre>
+	</div>
+
+</div>
+
+
+<h2><a id="custom-content" name="custom-content" href="#custom-content">API - Setting custom content</a></h2>
+<div class="method">
+	<h3 class="signature"><a id="setFlash" name="setFlash" href="#setFlash">setFlash(src, width, height, properties)</a></h3>
+	<p class="description">Replaces the standard controls with a Flash control</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">source</span> <span class="type">String</span> <span class="comment">Source path to the SWF, relative to the XML saved location</span>
+</li>
+				<li>
+<span class="name">width</span> <span class="type">Number</span> <span class="comment">The width of the SWF</span>
+</li>
+				<li>
+<span class="name">height</span> <span class="type">Number</span> <span class="comment">The height of the SWF</span>
+</li>
+				<li>
+<span class="name">properties</span> <span class="type">Array</span> <span class="comment">An array of property names to be created</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The setFlash() method is used to completely replace the templated layout of the XUL dialog with a custom Flash UI. The Flash UI should be built in Flash, and in order to send values back to the JSFL environment, the following command should be called in the SWF for each named value:	</p>
+	<pre class="prettyprint lang-javascript">MMExecute('fl.xmlui.set("' +name+ '", "' +value+ '")');</pre>
+	<p>The following example creates a custom flash UI, and creates <strong>text</strong>, <strong>value</strong>, and <strong>color</strong> &lt;property&gt; nodes in the XML, ready for population from the SWF:</p>
+	<pre class="prettyprint lang-javascript">var xul = XUL
+    .factory()
+    .setFlash('user/testing/ui.swf', 400, 200, ['text', 'value', 'color'])
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-flash.png" alt="" class="shadow"></p>
+	<p>The returned values of the dialog would be as follows:</p>
+<pre>Inspect: Object (depth:4, objects:0, values:4, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+	 text: "hello there"
+	 value: 5
+	 color: "#00FFFF"
+	 accept: true</pre>
+</div>
+
+
+<div class="method">
+	<h3 class="signature"><a id="setXML" name="setXML" href="#setXML">setXML(xml)</a></h3>
+	<p class="description">Replace the standard XML dialog template</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">xml</span> <span class="type">String</span> <span class="comment">An XML String containing dialog controls</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Set XML allows you to assign your own XML to the XUL dialog, which is then parsed and the XML controls converted to xJSFL XULControls, which can then receive events and validation.</p>
+	<p>The following example sets two custom textboxes, then adds some native xJSFL XULEvents to pick up their values, and finally, validates.</p>
+	<pre class="prettyprint lang-javascript">function onChange(event)
+{
+    trace(event.control.id + ':' + event.control.value);
+}
+
+var xul = XUL
+    .factory()
+    .setXML('&lt;hbox&gt;&lt;textbox id="one" width="200" /&gt;&lt;textbox id="two" width="200" /&gt;&lt;/hbox&gt;')
+    .addEvent('one two', 'change', onChange)
+    .show();
+
+Output.inspect(xul.values);</pre>
+	<p><img src="/wp-content/uploads/xul-setxml.png" class="shadow"></p>
+<p>Upon typing in the text boxes, you can see that the event handlers see the controls as if they were added through the native XUL <strong>add</strong> methods.</p>
+<pre>one:o
+one:on
+one:one
+two:t
+two:tw
+two:two</pre>
+<p>Finally, the dialog returns valid values:</p>
+<pre>Inspect: Object (depth:4, objects:0, values:3, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+	 one: "one"
+	 two: "two"
+	 accept: true</pre>
+</div>
+
+
+
+<h2><a id="setting-properties" name="setting-properties" href="#setting-properties">API - Setting properties</a></h2>
+<p>The following properties can be set on the XUL instance:</p>
+<ul>
+	<li>
+<a href="#setValues">setValues</a> - set the initial values of the XUL dialog</li>
+	<li>
+<a href="#setColumns">setColumns</a> - set the width of the left and right columns</li>
+	<li>
+<a href="#setButtons">setButtons</a> - set the OK and Cancel buttons</li>
+	<li>
+<a href="#setTitle">setTitle</a> - set the title of the dialog</li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="setValues" name="setValues" href="#setValues">setValues(values)</a></h3>
+	<p class="description">Sets the initial values of controls in the dialog</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">values</span> <span class="type">Object</span> <span class="comment">A hash of control:value values</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p><strong>Note</strong> that checkbox groups are not yet supported.</p>
+	<p>The following example creates a small dialog and sets the values on the radiogroup:</p>
+	<pre class="prettyprint lang-javascript">XUL
+    .factory('radios:Options=[Movieclip,Graphic,Button],checkbox:Delete')
+    .setValues({options:'Graphic','delete':true})
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-setvalues.png"><br>
+		<br>
+	</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="setTitle" name="setTitle" href="#setTitle">setTitle(title)</a></h3>
+	<p class="description">Set the title of the dialog</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">title</span> <span class="type">String</span> <span class="comment">A String title</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example sets the title of a new dialog to "Test Dialog":</p>
+	<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .setTitle('Test dialog')
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-constructor.png" alt="" class="shadow"></p>
+	<p>The following examples achieves the same result via shorthand declaration:</p>
+	<pre>XUL.add('title:Test Dialog');</pre>
+</div>
+
+<div class="method">
+	<h3 class="signature"><a id="setButtons" name="setButtons" href="#setButtons">setButtons(str)</a></h3>
+	<p class="description">Set the default buttons of the XMLUI dialog</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">str</span> <span class="type">String</span> <span class="comment">A comma delimited string of valid button types [accept,cancel]</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example hides the default buttons and adds an alternative button, which alerts the value of a textbox using an event handler, then closes the dialog:</p>
+	<pre class="prettyprint lang-javascript">function onClick(event)
+{
+	alert('The value of the textbox is: ' + this.controls.value.value);
+	this.close();
+}
+
+XUL
+    .factory()
+    .setButtons('')
+	.addTextbox('Enter a value', 'value')
+	.addButton('Click me!', 'button')
+	.addEvent('button', 'click', onClick)
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-setbuttons.png" class="shadow"></p>
+</div>
+
+
+<div class="method">
+	<h3 class="signature"><a id="setColumns" name="setColumns" href="#setColumns">setColumns(columns)</a></h3>
+	<p class="description">Set the widths of the dialog's columns</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">columns</span> <span class="type">Array</span> <span class="comment">An array of Number pixel widths</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p><strong>Note that setColumns is currently broken. It will be fixed once the documentation is complete</strong></p>
+	<p>The following examples creates a very wide right-hand column:</p>
+	<pre class="prettyprint lang-javascript">XUL
+    .factory()
+    .setColumns([100,500])
+    .addTextbox('Very long value')
+    .show();</pre>
+	<p><img src="/support/api/ui/XUL.html" class="shadow"></p>
+	<p>The following examples achieves the same result via shorthand declaration:</p>
+	<pre class="prettyprint lang-javascript">XUL.create('columns:[100,500]');</pre>
+</div>
+
+
+
+<h2><a id="adding-events" name="adding-events" href="#adding-events">API - Adding events</a></h2>
+<div class="method">
+	<h3 class="signature"><a id="addEvent" name="addEvent" href="#addEvent">addEvent(ids, types, callback)</a></h3>
+	<p class="description">Add (or actually, set) a event callback for an id</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">ids</span> <span class="type">String</span> <span class="comment">The id(s) of the element to register the callback for</span>
+</li>
+				<li>
+<span class="name">types</span> <span class="type">String</span> <span class="comment">The type(s) of callback. Values can be [create, change, click, setfocus]. Separate multiple types with spaces or commas if required</span>
+</li>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">The callback to call. Format must be function(event){ ... }</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Events and event handlers can be added for some, not all of the JSFL XUL control types. Events are added using the signature above, and are handled using a callback with a single <a href="/support/api/ui/xul-event">XULEvent</a> parameter, typically called, <strong>event</strong>.	</p>
+	<p>The following example sets events for all the control types that support them, then outputs their structure to the Output panel:</p>
+	<pre class="prettyprint lang-javascript">function onEvent(event)
+{
+	clear();
+	this.xml = this.content = '[HIDDEN]'; // remove for clarity
+	Output.inspect(event, 'Event', {'function':false}, 2);
+	if(event.control)
+	{
+		Output.inspect(event.control.value, 'Value');
+	}
+}
+
+XUL
+    .factory()
+	.add('Text,color:Color,list:Options=[1,2,3],dropdown:Values=[a,b,c],button:Click Me!')
+    .addEvent('initialize', onEvent)
+    .addEvent('text color', 'change', onEvent)
+    .addEvent('options values', 'change onsetfocus', onEvent)
+    .addEvent('clickme', 'click', onEvent)
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-addevent.png" class="shadow"></p>
+<p>Upon updating or clicking the controls in the dialog, the following output would occur:</p>
+<pre>Event: XULEvent (depth:2, objects:9, values:15, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => XULEvent
+	 type: "change"
+	[control] => XULControl
+		 id: "options"
+		 type: "listbox"
+		 enumerable: true
+		 combo: true
+		 value: 1
+		[element] => Object
+	[xul] => XUL
+		 xml: "[HIDDEN]"
+		[controls] => Object
+		 settings: null
+		[events] => Object
+		[rules] => Object
+		[columns] => Array
+		 error: null
+		 id: 0
+		 title: "xJSFL"
+		 content: "[HIDDEN]"
+		 built: true
+		 separator: "<separator></separator><grid><columns><column flex="1"></column><column flex="2"></column></columns><rows>"
+		 open: false
+		[values] => Object
+		 constructor: [ SKIPPING! ]
+	[xmlui] => XMLUI
+
+
+Value: Number (depth:4, objects:0, values:0, time:0.0 seconds)
+--------------------------------------------------------------------------------
+1</rows></grid></pre>
+<p>More details can be found on the <a href="/support/api/ui/xul-event">XULEvent</a> page.<br>
+</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="setEventScope" name="setEventScope" href="#setEventScope">setEventScope(scope)</a></h3>
+	<p class="description">Set the scope in which events will run</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">The object in which you want events to be called in</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>When event handlers are added using <a href="#addEvent">addEvent()</a>, their event handlers are called when the event is fired. By default, this is set to the window object, but you can set a different scope if you want, such as another object or instance.</p>
+<p>The following example sets the event scope to an object with the property <strong>lib</strong>, so the this in the callback function will refer to the lib object itself, rather than the window:</p>
+	<pre class="prettyprint lang-javascript">lib =
+{
+	name:'lib',
+	onEvent:function(event)
+	{
+		trace('Scope test:' + this.name);
+	}
+}
+
+XUL
+    .factory()
+	.setEventScope(lib)
+	.add('button:Click Me!')
+    .addEvent('clickme', 'click', lib.onEvent)
+    .show();</pre>
+	<p>The result of clicking the button traces the name of the object to the output panel:</p>
+<pre>Scope test:lib</pre>
+<p>If the events' scope  was not set to <strong>lib</strong>, the scope would remain scoped to <strong>window</strong>, and the callback would fail:</p>
+<pre>Scope test:undefined</pre>
+</div>
+<h2><a id="showing" name="showing" href="#showing">API - Showing the dialog</a></h2>
+<div class="method">
+	<h3 class="signature"><a id="saveAs" name="saveAs" href="#saveAs">saveAs(uri)</a></h3>
+	<p class="description">Save the dialog in a particular location so custom Flash controls can reference the src attribute properly</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">uri</span> <span class="type">String</span> <span class="comment">A valid URI of where to save the dialog's XML file</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">The XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>There are occasions when you may wish for the physical XML code to be saved elsewhere that <strong>xJSFL/core/ui</strong>, for example when using <a href="#setflash">setFlash()</a></p>
+	<p>The following example saves the dialog to the user folder before showing:</p>
+	<pre class="prettyprint lang-javascript">XUL
+    .factory()
+	.add('text:This is a custom textbox')
+    .saveAs('user/ui/dialog.xml')
+    .show();</pre>
+	<p><img src="/wp-content/uploads/xul-saveas-folder.png" class="shadow border"></p>
+<p>&nbsp;</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="show" name="show" href="#show">show(accept, cancel)</a></h3>
+	<p class="description">Shows the XUL dialog</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">accept</span> <span class="type">Function</span> <span class="comment">An optional function to run when the user presses the dialog OK button</span>
+</li>
+				<li>
+<span class="name">cancel</span> <span class="type">Function</span> <span class="comment">An optional function to run when the user presses the dialog Cancel button </span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">XUL</span> <span class="comment">the XUL dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The show function is always the final call in chain of commands, and shows the final XUL dialog. show() also allows you to pass in 2 optional parameters, which are callbacks to be called on the user pressing OK, or cancel. The parameters passed to the <strong>accept</strong> callback are the values of the interface controls in the order that they were created.	</p>
+	<p>The following example creates two numeric text boxes and passes the values automatically to an <strong>accept</strong> callback when the user clicks OK, or calls a <strong>cancel</strong> callback if the user cancels:</p>
+	<pre class="prettyprint lang-javascript">function accept(a, b)
+{
+	trace('The product of the values is ' + a * b);
+}
+
+function cancel()
+{
+	trace('We will never know the sum of those numbers!')
+}
+
+XUL.factory()
+	.setTitle('Callbacks')
+	.addSlider('Value 1', 'value1', Math.floor(Math.random() * 100))
+	.addSlider('Value 2', 'value2', Math.floor(Math.random() * 100))
+	.show(accept, cancel);</pre>
+	<p><img src="/wp-content/uploads/xul-show.png" class="shadow"></p>
+<p>Clicking OK calls the accept callback, and shows the following message:</p>
+<pre>The product of the values is 2916
+</pre>
+<p>Clicking Cancel calls the cancel callback, and shows the following message:</p>
+<pre>We will never know the sum of those numbers!</pre>
+<p>The alternative to supplying callbacks to the show() method is to simply retrieve the settings or values from the xul instance itself, and do something meaningful with them:</p>
+<pre class="prettyprint lang-javascript">
+trace('The product of the values is ' + xul.values.a * xul.values.b);<br></pre>
+<pre>The product of the values is 2916 </pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="close" name="close" href="#close">close(state)</a></h3>
+	<p class="description">Closes the dialog</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">state</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to close and accept (true) or cancel (unsupplied or false) the dialog</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates some controls, hides the standard buttons, and closes the dialog using a click event:</p>
+	<pre class="prettyprint lang-javascript">function onClose(event)
+{
+	this.close(true);
+}
+
+var xul = XUL
+	.factory()
+	.add('checkbox:State,button:Close')
+	.addEvent('close', 'click', onClose)
+	.setButtons()
+	.show();
+
+Output.inspect(xul.values);</pre>
+	<p><img src="/wp-content/uploads/xul-close1.png"></p>
+	<p>Once the dialog is closed, the script continues with any subsequent commands:</p>
+	<pre class="prettyprint lang-javascript">Inspect: Object (depth:4, objects:0, values:2, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	 state: true
+	 accept: true&nbsp;
+</pre>
+</div>
+
+
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">6 Responses to XUL (library)</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-1052">
+
+		<div id="comment-1052">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/74becd4075ed59a317fad29fe7ee553e?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/74becd4075ed59a317fad29fe7ee553e?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Raven Alef</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/ui/xul#comment-1052">February 20, 2013 at 11:28 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>The example for Events <a href="/support/api/ui/XUL#events" rel="nofollow ugc">http://www.xjsfl.com/support/api/ui/XUL#events</a> doesn&#8217;t work.  It looks like create() only returns a generic object.  If you use .factory() that does work.</p>
+<p>function onChange(event)<br>
+{<br>
+    trace(event.control.value);<br>
+}</p>
+<p>XUL<br>
+	.factory(&#8216;a, b, c&#8217;)<br>
+	.addEvent(&#8216;a&#8217;, &#8216;change&#8217;, onChange)<br>
+	.show();</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1346">
+
+		<div id="comment-1346">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/4573ab698aed5a439dd921b97802498e?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/4573ab698aed5a439dd921b97802498e?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Klaus L</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/ui/xul#comment-1346">August 9, 2013 at 10:28 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Checkboxes: No matter what I squeeze in as attributes, or what method I use to generate a dialog: state of checkbox is always &#8220;checked&#8221;.</p>
+<p>Example from above: XUL.factory().addCheckbox(&#8216;State&#8217;, null, {checked:&#8221;false&#8221;});<br>
+produces a checked CB (under Flash CC).</p>
+<p> Reverted back to standard XML-dialog-handling without xJSFL. Maybe something wrong with Flash CC?</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1347">
+
+		<div id="comment-1347">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/ui/xul#comment-1347">August 9, 2013 at 10:45 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Yeah, unfortunately, CC creates checkboxes checked by default. I submitted a bug for this, so I&#8217;ll chase that up.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1348">
+
+		<div id="comment-1348">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/4573ab698aed5a439dd921b97802498e?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/4573ab698aed5a439dd921b97802498e?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Klaus L</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/ui/xul#comment-1348">August 9, 2013 at 11:05 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>hey, thanx for the quick reply! thought it was &#8220;all new-Flash CC&#8221;. You&#8217;ve got a donate button? really like to shove over some bucks as like your work. I don&#8217;t do PayPal though (after bad encounters), but if Paypal would be the only way, I&#8217;d figure something out :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1349">
+
+		<div id="comment-1349">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/ui/xul#comment-1349">August 9, 2013 at 11:30 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Ah, thanks Klaus!</p>
+<p>Actually funding the framework is something I&#8217;ve been thinking about a lot more recently, as I&#8217;m being pulled in all sorts of directions. Keep an eye on me on twitter, and I&#8217;ll announce something as soon as I know what I&#8217;m doing.</p>
+<p>Cheers again,<br>
+Dave</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-9206">
+
+		<div id="comment-9206">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/9fd562b378c433ef5499e29a6d1c0bee?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/9fd562b378c433ef5499e29a6d1c0bee?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Vitalii</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/ui/xul#comment-9206">January 18, 2021 at 3:06 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>How can I save a format of a string for textBox. For example, I need to forward the text &#8220;0123456789&#8221; and now it converts to &#8220;123456789&#8221;.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

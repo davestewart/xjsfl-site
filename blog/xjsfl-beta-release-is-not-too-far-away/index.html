@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>xJSFL Beta release is not too far away… | xJSFL</title>
+		<meta name="description" content="You&#039;re probably used to my &quot;it&#039;s not quite ready yet&quot; updates, so here&#039;s another one, albeit with much less uncertainty than previous posts. I presented at the LFPUG a few weeks ago, and it was great for many reasons. To see the presentation and download the slides, click here. The audio&#039;s not the best, it […]">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/blog/xjsfl-beta-release-is-not-too-far-away">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="xJSFL Beta release is not too far away… | xJSFL">
+		<meta property="og:description" content="You&#039;re probably used to my &quot;it&#039;s not quite ready yet&quot; updates, so here&#039;s another one, albeit with much less uncertainty than previous posts. I presented at the LFPUG a few weeks ago, and it was great for many reasons. To see the presentation and download the slides, click here. The audio&#039;s not the best, it […]">
+		<meta property="og:url" content="http://xjsfl.com/blog/xjsfl-beta-release-is-not-too-far-away">
+		<meta property="article:published_time" content="2011-05-11T11:09:00+00:00">
+		<meta property="article:modified_time" content="2011-07-10T23:41:31+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="xJSFL Beta release is not too far away… | xJSFL">
+		<meta name="twitter:description" content="You&#039;re probably used to my &quot;it&#039;s not quite ready yet&quot; updates, so here&#039;s another one, albeit with much less uncertainty than previous posts. I presented at the LFPUG a few weeks ago, and it was great for many reasons. To see the presentation and download the slides, click here. The audio&#039;s not the best, it […]">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; xJSFL Beta release is not too far away&#8230; Comments Feed" href="/blog/xjsfl-beta-release-is-not-too-far-away/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/316">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=316">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fblog%2Fxjsfl-beta-release-is-not-too-far-away">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fblog%2Fxjsfl-beta-release-is-not-too-far-away&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-316 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/blog/xjsfl-beta-release-is-not-too-far-away" rel="bookmark" title="Permanent Link: xJSFL Beta release is not too far away&#8230;">xJSFL Beta release is not too far away&#8230;</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">11<strong>May</strong>2011</span>
+					<span class="comment-container"><a href="/blog/xjsfl-beta-release-is-not-too-far-away#comments" class="comments-link"><strong>5</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/blog" rel="category tag">Blog</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+			<p>You're probably used to my "it's not quite ready yet" updates, so here's another one, albeit with much less uncertainty than previous posts.</p>
+<p>I presented at the <a href="http://www.lfpug.com/28th-april-2011-28042011/">LFPUG</a> a few weeks ago, and it was great for many reasons. To see the presentation and download the slides, <a href="http://www.lfpug.com/introducing-xjsfl/">click here</a>. The audio's not the best, it was fairly freeform, and I didn't show as much of the framework as I would have liked, but there you go.</p>
+<p>Firstly, it was a great impetus to move the framework on to a stage where it HAD to work in front of an audience. Secondly, the physical process of presenting really made it clear to me which bits of the whole JavaScript / JSFL relationship were not fully understood by users. And thirdly, questions and feedback about WHAT JSFL can and can't do made it clear that many users still aren't clear on the role of JSFL within Flash, let alone xJSFL.</p>
+<p>There's definitely going to be as much communication and design work to to be done as there is programming, that's for sure.</p>
+<p>Just for fun, here's the final element I ended up demoing at the talk. Everything you see below is happening live, on the stage, and in the authoring environment:</p>
+<p><object width="572" height="318" classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,40,0"><param name="src" value="http://www.youtube.com/v/CL1Hee80zl4">
+<embed width="572" height="318" type="application/x-shockwave-flash" src="http://www.youtube.com/v/CL1Hee80zl4"></object></p>
+<p>It's not really representative of what the framework delivers, but it is a bit of fun, and hopefully shows what the ecosystem of using a decent editor and thinking more freely about JSFL can achieve.</p>
+<p>Anyway - onto the framework progress, as that's pretty much what most of you will be interested in.</p>
+<h3>xJSFL core and bootstrap process</h3>
+<p>The xJSFL core, which includes folder structure, core libraries, file loading and running is now pretty much locked down. Here's how it works:</p>
+<ul>
+<li>xJSFL can be installed to any folder on your hard drive. You're no longer have to install to some ridiculous path like C:\Users\User\AppData\Local\Adobe\Flash CS4\en\Configuration\Commands</li>
+<li>Once installed, xJSFL boots automatically on Flash startup, loading and copying JSFL scripts to the xJSFL extension. My xJFSL bootup currently looks like this:</li>
+</ul>
+<pre>&gt; xjsfl: running core bootstrap...
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/xjsfl.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/libraries/output.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/libraries/class.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/libraries/filesystem.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/libraries/collections.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/libraries/config.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/core/jsfl/libraries/module.jsfl"
+&gt; xjsfl: loading "&lt;xjsfl&gt;/modules/Snippets/jsfl/Snippets.jsfl"
+&gt; xjsfl: setting environment variables
+&gt; xjsfl: running user bootstrap...
+&gt; xjsfl: loaded!</pre>
+<ul>
+<li>Once these scripts are loaded, they're available for as long as Flash is open, whether you run a script externally (which is normally sandboxed per execution), from a command, or from within a Flash panel.</li>
+<li>The trick is to initialize the current namespace you're running in with the following command:</li>
+</ul>
+<pre>xjsfl.init(this);</pre>
+<ul>
+<li>That essentially copies any pre-registered classes / global methods to the namespace passed to init (usually, window).</li>
+</ul>
+<p>There is also a core and user bootstrap. The core bootstrap loads the core framework files, in the correct order, so everything is available to you when you run your own JSFL scripts, as you can see above. This is how it looks:</p>
+<pre lang="javascript">try
+{
+	// feedback
+		fl.outputPanel.clear();
+		fl.trace('&gt; xjsfl: running core bootstrap...');
+
+	// load framework
+		fl.trace('&gt; xjsfl: loading "/core/jsfl/xjsfl.jsfl"');
+		fl.runScript(xjsfl.uri +'core/jsfl/xjsfl.jsfl');
+
+	// libraries
+		xjsfl.classes.load
+		([
+			'output',
+			'class',
+			'filesystem',
+			'collections',
+			'config',
+			'module'
+		]);
+
+	// modules
+		xjsfl.modules.load
+		([
+			'Snippets',
+		]);
+
+}
+catch(err)
+{
+	fl.runScript(xjsfl.uri + 'core/jsfl/libraries/output.jsfl');
+	Output.error(err);
+}</pre>
+<p>Note how classes and modules are loaded by name alone. The framework automatically works out how to find them if you don't supply a path, as they reside in a structured directory format.</p>
+<p>There's also a <em>user</em> bootstrap, which runs after the core bootstrap. This allows you to run / register files or libraries you use often in your own JSFL development. Again, load once, use often.</p>
+<h3>Module framework</h3>
+<p>The next thing I want to tell you about is the module framework. It took a while to really nail this one down, but I think I'm at a stage where I can safely say "this is how it's going to be".</p>
+<p>First of all, what is a module? Well, at the moment, its definition is this:</p>
+<ul>
+<li>A self-contained collection of  files, that can include
+<ul>
+<li>core JSFL code</li>
+<li>JSFL libraries</li>
+<li>user interface files (XUL definitions or SWF panels)</li>
+<li>preferences (saved as XML files)</li>
+<li>assets, such as icons, templates, or FLAs</li>
+<li>any other files</li>
+</ul>
+</li>
+</ul>
+<p>An example of a module is the Snippets panel that comes with xJSFL. It holds the following files, that all interact together to provide rich functionality via a Flash panel:</p>
+<ul>
+<li>An assets folder, that contains over 2000 png icons</li>
+<li>An icons.xml file that contains an index of all the icons</li>
+<li>The main Snippets.jsfl file that extends the xJSFL Module Object (which contains common module code, such as preferences functionality), to which Snippets adds about 15 methods that will be accessed from the Flash Panel via the Snippets namespace @ xjsfl.modules.snippets</li>
+<li>The main Snippets SWF panel that is copied to the Flash WindowSWF folder on boot. This panel provides the front-end interface to all the functionality in the core JSFL module. The panel itself is compiled from a small set of standard AS3 classes to provide standardised (x)JSFL access.</li>
+</ul>
+<p>The key breakthrough with modules, is that JSFL code now stays where it should - namely, in JSFL files on the hard disk, not in some bastardised MMExecute() multi-escaped quotes clusterfuck. Instead, what you do when using Flash panels is to mirror the JSFL API of your module in ActionScript, extending the xJSFL AS3 Module class.</p>
+<p>In the case of Snippets, both the AS3 class and the JSFL library have exactly the same methods, so you know when you call browseFolder(path) in AS3, the appropriate browseFolder(path) method in your library will be called.</p>
+<p>This approach basically standardises both the AS3 (Flash panel) and JavaScript (JSFL) sides of the MMExecute connection. It's exactly the same principle as you'd use when communicating with a server in Flash Remoting. You set up your API on both the server and the client, then use API calls to get tasks done at either end.</p>
+<p>You probably read a minute ago about preferences, and this is one of the aspects I'm most pleased about.</p>
+<p>Preferences are built into xJSFL as a class type. You simply declare a Config object, then read or write to its XML component using standard E4X just as you would in AS3. Yes - the SpiderMonkey engine allows you to write XML natively!</p>
+<p>The Config class then wraps this functionality and takes care of where to save and load the XML from within the xJSFL framework filestructure.At the moment, there are two Config types, Settings and Data. They perform and are interacted with the same way - but Settings are easier to set up and have a few defaults that Data do not.</p>
+<p>Honestly - it could not be easier (note that this code is JSFL, NOT ActionScript):</p>
+<pre lang="javascript">var settings = new Config('user');
+settings.xml.@name = 'Dave';
+settings.save();</pre>
+<p>Of course, this being E4X, you can do anything you can do in AS3, such a expressions, queries, you name it.</p>
+<h3>Komodo Edit macros</h3>
+<p>Quite a few people at the LFPUG were surprised with the choice of Komodo Edit as my editor of choice for JSFL, namely, as they had never heard of it, and a lot of people are using Eclipse with FDT.</p>
+<p>Now, I've nothing against Eclipse, but it's a fairly lumbering leviathon, whereas Komodo is both much lighter-weight and just so much easier to build new functionality into.</p>
+<p>In fact, a large part of my talk was dedicated to showing the fantastic features of Komodo, such as:</p>
+<ul>
+<li>Language completion</li>
+<li>Plugins, such as New Source Tree</li>
+<li>Live feedback on errors</li>
+<li>Intelligent typing</li>
+<li>Snippets</li>
+<li>JavaScript macro functionality</li>
+</ul>
+<p>Just to finish off, I thought I would share with you the three publishing macros I've developed for Komodo that will really make your JSFL testing fly:</p>
+<ol>
+<li>
+<strong>Run File (CTRL + Enter)</strong> - saves and runs the current JSFL tab in the editor</li>
+<li>
+<strong>Run Project (CTRL + SHIFT + Enter) </strong>- saves all open files, then runs the left-most JSFL tab in the editor. This allows you to work on a library, for example, but run the main file in the project by placing on the very left</li>
+<li>
+<strong>Run File on Selected Library Items (CTRL + SHIFT + Alt + Enter)</strong> - we've all been there. You have 250 illustrator graphics brought in, and you need to make identical updates on all of them. Well, now you can perfect the JSFL on the open library item, then  when ready, have the script run on any selected items, all without writing any extra code, such as mucking about with i-loops, copy/paste or runScript().</li>
+</ol>
+<p>So that's it!</p>
+<p>I hope it's not too annoying for you to have me dangle this stuff on a string in front of your faces, and after all this time I hope you are still somewhat interested in JSFL. It's going to be an exciting time for JSFL again soon! I hope you'll be there when xJSFL is finally released, in I hope the next 6 weeks or so.</p>
+<p>Cheers,<br>
+Dave</p>
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">5 Responses to xJSFL Beta release is not too far away&#8230;</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-64">
+
+		<div id="comment-64">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/a56e20581b10542c3c66d1468ef152b0?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a56e20581b10542c3c66d1468ef152b0?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://timmcleod.com/" rel="external nofollow ugc" class="url">Tim McLeod</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/xjsfl-beta-release-is-not-too-far-away#comment-64">May 11, 2011 at 11:45 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Nifty, can&#8217;t wait!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-65">
+
+		<div id="comment-65">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/b28c54608965139b5dea3f4d9fc46189?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/b28c54608965139b5dea3f4d9fc46189?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">goliatone</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/xjsfl-beta-release-is-not-too-far-away#comment-65">May 11, 2011 at 12:56 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Good news!<br>
+Still a long wait, thou ;)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-66">
+
+		<div id="comment-66">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.davestewart.co.uk/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/xjsfl-beta-release-is-not-too-far-away#comment-66">May 11, 2011 at 1:03 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>It is&#8230; I can&#8217;t deny that! I think it will be well worth it though :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-67">
+
+		<div id="comment-67">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/571a8f641cd0afa56af4ff5fd94dba38?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/571a8f641cd0afa56af4ff5fd94dba38?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.wundes.com/" rel="external nofollow ugc" class="url">John Wundes</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/xjsfl-beta-release-is-not-too-far-away#comment-67">May 11, 2011 at 4:05 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Thanks for all your hard work on this.  Very much looking forward to playing with the new release.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-68">
+
+		<div id="comment-68">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/c44b1dad1d53befa06b6cdd89f80fa0c?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/c44b1dad1d53befa06b6cdd89f80fa0c?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.action-on-line.fr/" rel="external nofollow ugc" class="url">Stéphane Mor</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/xjsfl-beta-release-is-not-too-far-away#comment-68">May 11, 2011 at 4:51 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hi,</p>
+<p>Thanks for keeping us posted!</p>
+<p>Hope to hear from you again soon.<br>
+Stéphane</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

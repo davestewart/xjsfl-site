@@ -1,0 +1,857 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Events (library &amp; classes) | xJSFL</title>
+		<meta name="description" content="Safely manages addition and removal of event listeners">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/flash/events">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Events (library &amp; classes) | xJSFL">
+		<meta property="og:description" content="Safely manages addition and removal of event listeners">
+		<meta property="og:url" content="http://xjsfl.com/support/api/flash/events">
+		<meta property="article:published_time" content="2011-07-04T04:03:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T15:49:40+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Events (library &amp; classes) | xJSFL">
+		<meta name="twitter:description" content="Safely manages addition and removal of event listeners">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/527">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=527">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fflash%2Fevents">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fflash%2Fevents&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-527 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/flash/events" rel="bookmark" title="Permanent Link: Events (library &#038; classes)">Events (library &#038; classes)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/flash" rel="category tag">Flash</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+<h2>Overview</h2>
+<h3>Summary </h3>
+An object-oriented event system allowing the AS3 developer a more familiar way to use events in JSFL.
+<h3>Contents</h3>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<ul>
+		<li><a href="#summary">Summary </a></li>
+		<li><a href="#concept">Concept</a></li>
+		<li><a href="#event-types">Event types</a></li>
+		<li><a href="#native-jsfl-event-model-limitations">Native JSFL event model limitations</a></li>
+	</ul>
+<li><a href="#api">Event API</a></li>
+	<ul>
+		<li><a href="#add">add(type, callback, name, scope)</a></li>
+		<li><a href="#remove">remove(type, name)</a></li>
+		<li><a href="#removeAll">removeAll(type)</a></li>
+		<li><a href="#get">get(type, name)</a></li>
+	</ul>
+	<li><a href="#event-classes">Event classes</a></li>
+	<ul>
+		<li><a href="#DocumentEvent">DocumentEvent(type)</a></li>
+		<li><a href="#LayerEvent">LayerEvent()</a></li>
+		<li><a href="#FrameEvent">FrameEvent()</a></li>
+		<li><a href="#MouseEvent">MouseEvent()</a></li>
+	</ul>
+</ul>
+<h3>Concept</h3>
+<p>Flash's standard event mechanism is a simple callback-based event model, which allows the developer to add events via string, and have a callback (event handler) called when the event fires:</p>
+<pre class="prettyprint lang-javascript">var eventId = fl.addEventListener("documentClosed", onDocumentClosed);</pre>
+<p>However, there are a few problems with the standard Flash event handler implementation:</p>
+<ul>
+	<li>It's impossible to keep track of (and therefore remove) listener ids between external script executions (i.e. in development)</li>
+	<li>No information about the event is passed to the event handler function</li>
+	<li>There's no overall management of registered event handlers</li>
+</ul>
+<p>xJSFL's Event library and classes attempt to answer these shortcomings with a standard <a href="#api">Event model</a> and <a href="#classes">Event classes</a> similar to AS3's, as well as the ability to add, remove and get events by event and type - and all between external calls.</p>
+<h3>Usage</h3>
+<h5>Adding an event handler to fire on an event</h5>
+<p>The main difference with registering an event handle function between JSFL and xJSFL is that with xJSFL <em>you</em> supply the <strong>eventId</strong> you want to keep track of:</p>
+<pre class="prettyprint lang-javascript">function onDocumentChanged(event)
+{
+    trace(event.document.name);
+}
+
+xjsfl.events.add(DocumentEvent.CHANGED, onDocumentChanged, 'onDocumentChanged');</pre>
+<p>Note that the <em>function name</em> and the <em>eventId name</em> are <strong>not</strong> related, nor do they have to be the same. It is the string <strong>name</strong> that is used to add and remove the callback - the callback itself is merely stored as a reference.</p>
+<h5>What to do within the event handler</h5>
+<p>Once the handler is added, and when an appropriate event is fired within Flash, the handler is called and from within you have access to the properties at the time of the event, via the <a href="#event-classes">event</a> object.</p>
+<p>Bear in mind though that due to some inherent <a href="#native-jsfl-event-model-limitations">limitations</a> of the Flash event model, these cannot always be relied on to return a <strong>true</strong> state of the Flash environment at the time of the event.</p>
+<h5>Updating and removing the event handler</h5>
+<p>When it comes to updating the event handler you can simply add it again with the <strong>same</strong> name, or if at any point you want to remove the event handler, you simply call the <a href="#remove">remove()</a> method with the type and name of the previously-added handler:</p>
+<pre class="prettyprint lang-javascript">
+xjsfl.events.remove(DocumentEvent.CHANGED, 'onDocumentChanged');
+</pre>
+<h3>Event types</h3>
+<p>Rather than simply calling an event handler function with no information about the event that took place, the xJSFL Event model defines specific <a href="#event-classes">Event classes</a>, instances of which are passed to event handler functions in a manner already familiar to AS3 developer.</p>
+<p>
+	<style type="text/css">td, th { text-align: left; }</style>
+</p>
+<table cellspacing="0" cellpadding="0" width="100%" style="margin:20px 0px">
+	<thead>
+		<tr>
+			<th width="15%">Event</th>
+			<th width="15%"> Type</th>
+			<th width="">Description</th>
+			<th width="10%">CS Version</th>
+			<th width="20%">Event Constant</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Document</td>
+			<td>publish</td>
+			<td>A document is about to be published</td>
+			<td>5.5</td>
+			<td width="335">DocumentEvent.PUBLISH</td>
+		</tr>
+		<tr>
+			<td>Document</td>
+			<td>published</td>
+			<td>A document was published</td>
+			<td>5.5</td>
+			<td width="335">DocumentEvent.PUBLISHED</td>
+		</tr>
+		<tr>
+			<td>Document</td>
+			<td>saved</td>
+			<td>A document was saved</td>
+			<td>5.5</td>
+			<td>DocumentEvent.SAVED</td>
+		</tr>
+		<tr>
+			<td>Document</td>
+			<td>new</td>
+			<td>A new document was created</td>
+			<td>4</td>
+			<td>DocumentEvent.NEW</td>
+		</tr>
+		<tr>
+			<td>Document</td>
+			<td>opened</td>
+			<td>A document was opened</td>
+			<td>4</td>
+			<td>DocumentEvent.OPENED</td>
+		</tr>
+		<tr>
+			<td>Document</td>
+			<td>closed</td>
+			<td>A document was closed</td>
+			<td>4</td>
+			<td>DocumentEvent.CLOSED</td>
+		</tr>
+		<tr>
+			<td>Document</td>
+			<td>changed</td>
+			<td>A new document was opened or tabbed to</td>
+			<td>4</td>
+			<td>DocumentEvent.CHANGED</td>
+		</tr>
+		<tr>
+			<td>Layer</td>
+			<td>changed</td>
+			<td>A new layer selection was made</td>
+			<td>4</td>
+			<td>LayerEvent.CHANGED</td>
+		</tr>
+		<tr>
+			<td>Frame</td>
+			<td>changed</td>
+			<td>A new frame selection was made</td>
+			<td>4</td>
+			<td>FrameEvent.CHANGED</td>
+		</tr>
+		<tr>
+			<td>Mouse</td>
+			<td>move</td>
+			<td>The mouse was moved</td>
+			<td>4</td>
+			<td>MouseEvent.MOVE</td>
+		</tr>
+	</tbody>
+</table>
+<p>These event instances  have both a specific <strong>type</strong>, as well as a common <strong>name</strong> property that maps directly to the standard eventType strings as accepted by the standard fl<a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fb6.html">.addEventlistener()</a> function. Note however that the xJSFL Event constant names are slightly differently to the Flash event strings.</p>
+<p>Additional properties are specific to each <a href="#event-classes">event class</a>.</p>
+<h3>Native JSFL event model limitations</h3>
+<div class="avia-box alert rounded full"><span class="avia-innerbox">Unfortunately, due to the way Flash seems to  order Frame event handlers, there are some severe limitations to Flash's native event model.</span></div>
+<p>The JSAPI appears to fire a frameChanged event <strong>before</strong> it has updated the document / timeline properties, which results in frame Events reporting the <em>previous</em> document and timeline.</p>
+<p>At the moment, I don't know how to solve this. I've experimented with lastParam properties,	comparing the Date of the callback, firing events in order with pre and post handlers,	attempting to force a document update by calling flash or document methods first, but so far every route has been a dead end. It may just be that it's not possible.</p>
+<p>Other limitations include:</p>
+<ul>
+	<li>Although "frameChanged" fires when you edit a new symbol, the	document properties do not update in time, so again, you end up with the wrong document/timeline data fed into the Event.</li>
+	<li>
+<strong>timeline.getSelectedframes()</strong> often returns nothing from within an event handler, so is effectively useless for interactive tools relying on the current frame selection.</li>
+	<li>Multiple events can be fired for what seem like single events to the user - for example, selecting the same layer fires a layer event once, but selecting a new layer fires a layer event twice, with <strong>timeline.currentLayer</strong> reporting the same layer for both events.</li>
+</ul>
+<p>If you can live with these fairly annoying limitations, you may be able to get some mileage out of at least the Document, Layer &amp; Mouse events.</p>
+<h2><a id="api" name="api" href="#api">Event API</a></h2>
+<p>The event API is the central place to add and remove event handler functions.</p>
+<div class="method">
+	<h3 class="signature"><a id="add" name="add" href="#add">add(type, callback, name, scope)</a></h3>
+	<p class="description">Add an event handler function for a particular event type</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">A String Event constant</span>
+</li>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">A callback function to be fired when the event happens</span>
+</li>
+				<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">A named id with which to get, delete or overwrite the callback</span>
+</li>
+				<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">An optional scope in which to call the callback function</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example traces the name of the current document when the user creates or changes the document in the Flash IDE, and also overwrites any current <strong>DocumentEvent.CHANGED</strong> handlers:</p>
+	<pre class="prettyprint lang-javascript">function onDocumentChanged(event)
+{
+    trace(event.document.name);
+}
+xjsfl.events.add(DocumentEvent.CHANGED, onDocumentChanged, 'onDocumentChanged');</pre>
+	<pre>// On changing the current document
+Untitled-2</pre>
+	<p>If you need to register a method on an object that needs to self-reference, be user to pass in the scope:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.events.add(DocumentEvent.CHANGED, handlers.onDocumentChanged, 'onDocumentChanged', handlers);
+</pre>
+	<p class="prettyprint lang-javascript">Note that as event handler names could be overwritten by <strong>any</strong> running JSFL code, you should take the trouble to <strong>namespace</strong> them if making tools for collaborative environments.</p>
+	<p class="prettyprint lang-javascript">The following example sets a namespaced  event handler name from within a module (and necessarily sets the scope as well):</p>
+	<pre class="prettyprint lang-javascript">xjsfl.events.add(DocumentEvent.CHANGED, this.onDocumentChanged, 'myModule.onDocumentChanged', this);</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="remove" name="remove" href="#remove">remove(type, name)</a></h3>
+	<p class="description">Remove an event handler function for a single or all event types</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">A String Event constant</span>
+</li>
+				<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">The name of a previously-registered callback</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example removes an existing named handler:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.events.remove(DocumentEvent.CHANGED, 'onDocumentChanged');</pre>
+	<p>You can also remove handlers of the same name from multiple event types by passing the name of a single event handler.</p>
+	<p>The following example removes handlers registered using the name <span class="prettyprint lang-javascript"><strong>documentHandler</strong></span> from <strong>all</strong> event types:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.events.remove('documentHandler');</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="removeAll" name="removeAll" href="#removeAll">removeAll(type)</a></h3>
+	<p class="description">Remove all event handler functions for a single, or all event types</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">An optional String Event constant</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example removes all existing <strong>DocumentEvent.CHANGED</strong> handlers:</p>
+<pre class="prettyprint lang-javascript">xjsfl.events.removeAll(DocumentEvent.CHANGED);</pre>
+	<p>The following example removes all existing handlers, for all event types:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.events.removeAll();</pre>
+	<p class="prettyprint lang-javascript">Note that you should never remove event handlers by type in final production code as other modules may be reliant on handlers they previously added.<br>
+	</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="get" name="get" href="#get">get(type, name)</a></h3>
+	<p class="description">Get a reference to an event handler function for an event type</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">A String Event constant</span>
+</li>
+				<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">A name of a previously-registered callback</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Function</span> <span class="comment">An event handler function or null if it doesn't exist</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example retrieves the function assigned as 'onMouseMove' for the MouseEvent.MOVE event:</p>
+	<pre class="prettyprint lang-javascript">var callback = xjsfl.events.get(MouseEvent.MOVE, 'onMouseMove');
+trace(callback);</pre>
+	<pre>function onMouseMove(event)
+{
+    trace(event);
+}</pre>
+</div>
+<h2>Event classes</h2>
+<p>This section describes the Event classes that will be dispatched from the main <a href="#api">xjsfl.event</a> library.</p>
+<div class="method">
+	<h3 class="signature"><a id="DocumentEvent" name="DocumentEvent" href="#DocumentEvent">DocumentEvent(type)</a></h3>
+	<p class="description">An object representing a the JSFL Event that fires when a user interacts with a document</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Properties:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The type of event</span>
+</li>
+				<li>
+<span class="name">document</span> <span class="type">Document</span> <span class="comment">The Document object the event occurred in</span>
+</li>
+			</ul>
+		</div>
+		<div class="params">
+			<p>Event types</p>
+			<ul>
+				<li>CS4:</li>
+				<ul>
+					<li>
+<span class="name">NEW</span> <span class="comment">A new document was created</span>
+</li>
+					<li>
+<span class="name">OPENED</span> <span class="comment">A document was opened</span>
+</li>
+					<li>
+<span class="name">CLOSED</span> <span class="comment">A document was closed</span>
+</li>
+					<li>
+<span class="name">CHANGED</span> <span class="comment">A new document was opened or tabbed to</span>
+</li>
+				</ul>
+			</ul>
+			<ul>
+				<li>CS5:</li>
+				<ul>
+					<li>
+<span class="name">PUBLISH</span> <span class="comment">A document is about to be published</span>
+</li>
+					<li>
+<span class="name">PUBLISHED</span> <span class="comment">A document was published</span>
+</li>
+					<li>
+<span class="name">SAVED</span> <span class="comment">A document was saved</span>
+</li>
+				</ul>
+			</ul>
+		</div>
+	</div>
+	<p>The following example traces the name of a new document, when created:</p>
+	<pre class="prettyprint lang-javascript">function onDocumentNew(event)
+{
+    trace(event.document.name);
+}
+xjsfl.events.add(DocumentEvent.NEW, onDocumentNew);</pre>
+	<pre>// On creating a new document
+Untitled-1</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="LayerEvent" name="LayerEvent" href="#LayerEvent">LayerEvent()</a></h3>
+	<p class="description">An object representing a the JSFL Event that fires when a user changes a layer</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Properties:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The type of event, which is always 'changed'</span>
+</li>
+				<li>
+<span class="name">document</span> <span class="type">Document</span> <span class="comment">The Document object the event occurred in</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Timeline</span> <span class="comment">The Timeline object the event occurred on</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Layer</span> <span class="comment">The Layer object the event occurred on</span>
+</li>
+			</ul>
+		</div>
+		<div class="params">
+			<p>Event types:</p>
+			<ul>
+				<li>
+<span class="name">CHANGED</span> <span class="comment">A new layer selection was made</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example adds an event handler to be called every time a different layer is selected (this includes changing documents and timelines), or a new layer is created:</p>
+	<pre class="prettyprint lang-javascript">function onLayerChanged(event)
+{
+    trace(event);
+}
+xjsfl.events.add(LayerEvent.CHANGED, onLayerChanged);</pre>
+	<pre>// On changing layer, or creating a new layer
+[object LayerEvent timeline="Scene 1" layer="Layer 2"]</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="FrameEvent" name="FrameEvent" href="#FrameEvent">FrameEvent()</a></h3>
+	<p class="description">An object representing a the JSFL Event that fires when a user changes a frame</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Properties:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The type of event, which is always 'changed'</span>
+</li>
+				<li>
+<span class="name">document</span> <span class="type">Document</span> <span class="comment">The Document object the event occurred in</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Timeline</span> <span class="comment">The Timeline object the event occurred on</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Layer</span> <span class="comment">The Layer object the event occurred on</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">Frame</span> <span class="comment">The Frame object the event occurred on</span>
+</li>
+			</ul>
+		</div>
+		<div class="params">
+			<p>Event types:</p>
+			<ul>
+				<li>
+<span class="name">CHANGED</span> <span class="comment">A new frame selection was made</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example adds an event handler to be called every time a different frame is selected (this includes changing documents, timelines and layers), or a new frame is created:</p>
+	<pre class="prettyprint lang-javascript">function onFrameChanged(event)
+{
+    trace(event);
+}
+xjsfl.events.add(FrameEvent.CHANGED, onFrameChanged);</pre>
+	<pre>// On changing frame, or creating a new frame
+[object FrameEvent timeline="Scene 1" layer="Layer 2" frame="11"]</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="MouseEvent" name="MouseEvent" href="#MouseEvent">MouseEvent()</a></h3>
+	<p class="description">An object representing a the JSFL Event that fires when a user move the mouse</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Properties:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The type of event, which is always 'move'</span>
+</li>
+				<li>
+<span class="name">shift</span> <span class="type">Boolean</span> <span class="comment">A flag indicating if the SHIFT key is down</span>
+</li>
+				<li>
+<span class="name">ctrl</span> <span class="type">Boolean</span> <span class="comment">A flag indicating if the CTRL key is down</span>
+</li>
+				<li>
+<span class="name">alt</span> <span class="type">Boolean</span> <span class="comment">A flag indicating if the ALT key is down</span>
+</li>
+				<li>
+<span class="name">x</span> <span class="type">Number</span> <span class="comment">The x location in pixels of the mouse on the Flash stage</span>
+</li>
+				<li>
+<span class="name">y</span> <span class="type">Number</span> <span class="comment">The y location in pixels of the mouse on the Flash stage</span>
+</li>
+			</ul>
+		</div>
+		<div class="params">
+			<p>Event types:</p>
+			<ul>
+				<li>
+<span class="name">MOVE</span> <span class="comment">The mouse was moved</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example adds an event handler to be called every time the mouse is moved:</p>
+	<pre class="prettyprint lang-javascript">function onMouseMove(event)
+{
+    trace(event);
+}
+xjsfl.events.add(MouseEvent.MOVE, onMouseMove);</pre>
+	<pre>// On moving the mouse
+[object MouseEvent x="424.95" y="7" shift="false" ctrl="false" alt="false"]
+</pre>
+</div>
+<div class="method"> </div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

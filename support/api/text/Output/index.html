@@ -1,0 +1,767 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Output (library) | xJSFL</title>
+		<meta name="description" content="Logging, introspection, and a variety of printing and formatting methods">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/text/output">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Output (library) | xJSFL">
+		<meta property="og:description" content="Logging, introspection, and a variety of printing and formatting methods">
+		<meta property="og:url" content="http://xjsfl.com/support/api/text/output">
+		<meta property="article:published_time" content="2011-07-04T08:01:00+00:00">
+		<meta property="article:modified_time" content="2012-06-25T18:20:20+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Output (library) | xJSFL">
+		<meta name="twitter:description" content="Logging, introspection, and a variety of printing and formatting methods">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/529">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=529">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Ftext%2Foutput">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Ftext%2Foutput&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-529 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/text/output" rel="bookmark" title="Permanent Link: Output (library)">Output (library)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/text" rel="category tag">Text</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The Output library provides logging functionality, object introspection, and a variety of printing and formatting methods. You will typically use the library in development, to inspect variables, or perhaps to save data to file for reporting or logging tasks.</p>
+<h3>Contents</h3>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<ul>
+<li><a href="#summary">Summary</a></li>
+</ul>
+<li><a href="#api">API</a></li>
+<ul>
+<li><a href="#props">props(obj, output)</a></li>
+<li><a href="#list">list(arr, properties, label, output)</a></li>
+<li><a href="#inspect">inspect(obj, $depth, $label, $functions, $options, $callback)</a></li>
+<li><a href="#folder">folder(value, depth, output)</a></li>
+</ul> </ul>
+<h2>API</h2>
+<div class="method">
+	<h3 class="signature"><a id="props" name="props" href="#props">props(obj, output)</a></h3>
+	<p class="description">Converts a typical [object Object] string into an [object Class value="1" property="2"] string</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any object that can be converted to a String</span>
+</li>
+				<li>
+<span class="name">output</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean idicating to output the result to the Output panel</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name"> </span> <span class="type">String</span> <span class="comment">A String representation of the object and its properties</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Debug the contents of an object and output to the Output panel:</p>
+	<pre class="prettyprint lang-javascript">var obj = {a:null, b:1, c:'Hello'};
+trace(Output.props(obj));</pre>
+	<pre>[object Object a=null b=1 c="Hello"]</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="list" name="list" href="#list">list(arr, properties, label, output)</a></h3>
+	<p class="description">Lists the properties of an object in a human-readable format</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">arr</span> <span class="type">Array</span> <span class="comment">An Array of objects with selected properties you wish to list</span>
+</li>
+				<li>
+<span class="name">arr</span> <span class="type">Object</span> <span class="comment">An object whose properties you wish to list</span>
+</li>
+				<li>
+<span class="name">properties</span> <span class="type">String</span> <span class="comment">An optional property to list, defaults to 'name'</span>
+</li>
+				<li>
+<span class="name">properties</span> <span class="type">Array</span> <span class="comment">An optional Array of properties</span>
+</li>
+				<li>
+<span class="name">label</span> <span class="type">String</span> <span class="comment">An optional String label, defaults to &quot;List&quot;</span>
+</li>
+				<li>
+<span class="name">output</span> <span class="type">Boolean</span> <span class="comment">An optional boolean to indicate output type: true=debug, false=return, undefined=output</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name"> </span> <span class="type">String</span> <span class="comment">A String list of the object's properties</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example lists the contents of an arbitrary Array:</p>
+	<pre class="prettyprint lang-javascript">list(['Dave', 'Steve', 'John']);</pre>
+	<pre>List: Array (depth:1, objects:0, values:3, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "Dave"
+	 1: "Steve"
+	 2: "John"</pre>
+	<p>Here's the same result with a selection:</p>
+	<pre class="prettyprint lang-javascript">list($selection);</pre>
+	<pre>List: Array (depth:1, objects:0, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "[object SymbolInstance]"
+	 1: "[object SymbolInstance]"
+	 2: "[object SymbolInstance]"
+	 3: "[object SymbolInstance]"
+	 4: "[object SymbolInstance]"</pre>
+<p>As you can see, that's not that helpful, so list() allows you to pass in further parameters to customise the output. The following example lists the names of the objects in the selection:</p>
+<pre class="prettyprint lang-javascript">list($selection, 'name');</pre>
+<pre>List: Array (depth:1, objects:0, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	 0: &quot;item_01&quot;
+	 1: &quot;item_02&quot;
+	 2: &quot;item_03&quot;
+	 3: &quot;item_04&quot;
+	 4: &quot;item_05&quot;</pre>
+<p>Alternatively, you can pass in an Array of property names, and the output is output hierarchically:</p>
+	<pre class="prettyprint lang-javascript">list($selection, ['name', 'x']);</pre>
+	<pre>
+List: Array (depth:2, objects:5, values:10, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; Array
+		 0: &quot;item_01&quot;
+		 1: 30
+	[1] =&gt; Array
+		 0: &quot;item_02&quot;
+		 1: 85
+	[2] =&gt; Array
+		 0: &quot;item_03&quot;
+		 1: 140
+	[3] =&gt; Array
+		 0: &quot;item_04&quot;
+		 1: 195
+	[4] =&gt; Array
+		 0: &quot;item_05&quot;
+		 1: 250</pre>
+	<p>Note that Output.list() has also been aliased as a global function, <a href="/support/api/core/globals#debugging">list()</a>:</p>
+<pre class="prettyprint lang-javascript">list($selection);</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="inspect" name="inspect" href="#inspect">inspect(obj, $depth, $label, $debug, $filters, $callback)</a></h3>
+	<p class="description">Output object to Output panel in hierarchical format (note that $ arguments are optional, and can be passed in any order)</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any Object or value</span>
+</li>
+				<li>
+<span class="name">$depth</span> <span class="type">Number</span> <span class="comment">An optional max depth to recurse to (defaults to 3)</span>
+</li>
+				<li>
+<span class="name">$label</span> <span class="type">String</span> <span class="comment">An optional String label (defaults to &quot;Inspect&quot;)</span>
+</li>
+				<li>
+<span class="name">$functions</span> <span class="type">Boolean</span> <span class="comment">An optional boolean to process functions. Defaults to false</span>
+</li>
+				<li>
+<span class="name">$options</span> <span class="type">Object</span> <span class="comment">An optional options object. Keys may be:
+					<ul>
+						<li><span class="comment"> ignore: A String or Array of object types to ignore. Valid values are 'object', 'string', 'array', 'number', 'xml', 'object', 'boolean', 'function', 'undefined', 'null'.</span></li>
+						<li><span class="comment"> print:	A Boolean to instruct the outputter to print or not print the values to the Output panel. Defaults to true.</span></li>
+						<li><span class="comment"> debug:	A Boolean indicating to trace the output as it happens. Defaults to false. </span></li>
+						<li><span class="comment"> private: A Boolean indicating to process or skip private (_underscored) properties. Defaults to false.</span></li>
+					</ul>
+					</span>
+				</li>
+				<li>
+<span class="name">$callback</span> <span class="type">Function</span> <span class="comment">An optional output function in case you want to do any custom processing of the data</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">A String hierarchy of the object's properties</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The $ arguments of this method are derived using parameter type-shifting, that is, each argument is a different datatype, so they can be supplied in any order. This leaves you flexible to apply some or many properties as you see fit, without having to enter default values.</p>
+	<p>The following example Inspects the current library's items, with a custom label, and limits the inspection depth to 3 levels:</p>
+	<pre class="prettyprint lang-javascript">Output.inspect($library.items, 'Library items', 3);</pre>
+	<pre>Library items: Array (depth:4, objects:39, values:120, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; SymbolItem
+		[timeline] =&gt; Timeline
+			 name: "star graphic"
+			[layers] =&gt; Array
+				[0] =&gt; Layer
+			 frameCount: 1
+			 currentFrame: 0
+			 layerCount: 1
+			 currentLayer: 0
+			[bindings] =&gt; Array
+		 symbolType: "movie clip"
+		 sourceFilePath: ""
+		 sourceLibraryName: undefined
+		 sourceAutoUpdate: undefined
+		 scalingGrid: false
+		[scalingGridRect] =&gt; Object
+			 left: -2147483.648
+			 top: -2147483.648
+			 right: -2147483.648
+			 bottom: -2147483.648
+		 itemType: "movie clip"
+		 name: "star graphic"
+		 linkageExportForAS: false
+		 linkageExportForRS: false
+		 linkageImportForRS: false
+		 linkageExportInFirstFrame: undefined
+
+		 // additional properties truncated</pre>
+	<p>Note that Output.inspect() has also been aliased as a global function, <a href="/support/api/core/globals#debugging">inspect()</a>:</p>
+	<pre class="prettyprint lang-javascript">inspect($selection);
+</pre>
+	<p class="prettyprint lang-javascript">Note that functions are ignored by default when inspecting objects or classes, so you need to pass true if you want to see a class' methods:</p>
+	<pre class="prettyprint lang-javascript">inspect(new Template());
+inspect(new Template(), true);</pre>
+	<pre>Inspect: Template (depth:4, objects:0, values:6, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Template
+	 uri: ""
+	 input: ""
+	 output: ""
+	 data: null
+	 options: null
+	 _indent: ""
+</pre>
+<pre>
+Inspect: Template (depth:4, objects:0, values:13, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Template
+	 uri: ""
+	 input: ""
+	 output: ""
+	 data: null
+	 options: null
+	 _indent: ""
+	 load: function (pathOrURI)
+	 save: function (pathOrURI, overwrite)
+	 set: function (data, value, append)
+	 indent: function (indent)
+	 render: function (_stack)
+	 clone: function ()
+	 toString: function ()</pre>
+<p class="prettyprint lang-javascript">Finally, know that if a property is parsed that causes an error, there will be no output, as the method stores the output until the end and does one, single trace (for performance reasons).</p>
+<p class="prettyprint lang-javascript">If you get JavaScript errors (but no  output) when tracing objects, it's likely that a single property is causing an error, so you should pass an <strong>options</strong> parameter with the <strong>debug</strong> property set as <strong>true</strong>, so you can see which property is causing the error:</p>
+<pre class="prettyprint lang-javascript">inspect(window);<br>inspect(window, {debug:true});</pre>
+<pre>The following JavaScript error(s) occurred:
+
+Open a Flash document (FLA) before running this script.</pre>
+<pre>
+Debug: Window
+--------------------------------------------------------------------------------
+	object => Window
+		[flash] => Flash
+			 appName: "Flash MX2"
+			 appVersion: ""
+			 systemScript: "en"
+			 tools: [ SKIPPING! ]
+			[drawingLayer] => drawingLayer
+				 sampleProperty: "foo"
+			[Math] => mathObject
+
+			<strong>...other properties omitted...</strong>
+
+					 MP3MediumStereo: 1
+					 MP3MediumMono: 2
+					 MP3BestStereo: 3
+					 MP3BestMono: 4
+				[hardwareAccelleration] => Object
+					 none: 0
+					 direct: 1
+					 cpu: 2
+			[utils] => Object
+			[prototype] => PublishProfile
+				[file] => Object
+The following JavaScript error(s) occurred:
+
+At line 225 of file "PublishProfile.jsfl":
+TypeError: this.parent is not a function</pre>
+<p>In this case here, it looks as if I need to add a check in the PublishProfile class for any getters (which are parsed as properties, but they are actually functions, so execute code and can throw errors) that call <strong>this.parent()</strong>. I did that, corrected the issue, and the output completed like so:</p>
+<pre>
+
+			<strong>...other properties omitted...</strong>
+
+					[XUL] => Class
+					[Source] => Class
+					[Timer] => Class
+			[modules] => Object
+			[ui] => Object
+				[dialogs] => Array
+			[events] => Events
+				[handlers] => Object
+					[documentPublished] => Object
+					[documentSaved] => Object
+					[documentNew] => Object
+					[documentOpened] => Object
+					[documentClosed] => Object
+					[documentChanged] => Object
+					[layerChanged] => Object
+					[frameChanged] => Object
+					[mouseMove] => Object
+
+ (depth:4, objects:1256, values:2262, time:5.4 seconds)&nbsp;</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="folder" name="folder" href="#folder">folder(value, depth, output)</a></h3>
+	<p class="description">View the hierarchy of a folder</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">A valid folder path</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Folder</span> <span class="comment">An existing folder object</span>
+</li>
+				<li>
+<span class="name">depth</span> <span class="type">Number</span> <span class="comment">An optional max depth to recurse to (defaults to 3)</span>
+</li>
+				<li>
+<span class="name">output</span> <span class="type">Boolean</span> <span class="comment">An optional boolean to indicate outputting or not (defaults to true)</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name"> </span> <span class="type">String</span> <span class="comment">The String hierarchy of the folder</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Output.folder() is actually a wrapper around <a href="/support/api/utils/utils#walkfolder">Utils.walkFolder()</a>, with a callback that outputs the file and folder names as a textual tree structure.</p>
+	<p>The following example outputs the xJSFL user folder to the default 3 levels deep (note the // shortcut to the xJSFL root folder, as outlined in <a href="/support/guides/framework-basics/file-handling#uri-juggling">URI Juggling</a>):</p>
+	<pre class="prettyprint lang-javascript">Output.folder('//user/');</pre>
+	<pre>/user
+	/assets
+		/readme.txt
+	/config
+		/data
+			/readme.txt
+		/settings
+			/readme.txt
+			/test.xml
+			/user.xml
+			/xjsfl.xml
+		/templates
+			/readme.txt
+	/jsfl
+		/bootstrap.jsfl
+		/libraries
+			/readme.txt
+		/snippets
+			/Demo
+			/Development
+			/Instances
+			/Library
+			/Stage
+	/temp
+		/dom.txt
+		/readme.txt
+	/ui
+		/readme.txt</pre>
+</div>
+
+
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

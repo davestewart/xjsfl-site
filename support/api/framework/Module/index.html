@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Module (class) | xJSFL</title>
+		<meta name="description" content="Base class used to create and manage xJSFL Modules">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/framework/module">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Module (class) | xJSFL">
+		<meta property="og:description" content="Base class used to create and manage xJSFL Modules">
+		<meta property="og:url" content="http://xjsfl.com/support/api/framework/module">
+		<meta property="article:published_time" content="2011-07-04T05:04:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T16:34:00+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Module (class) | xJSFL">
+		<meta name="twitter:description" content="Base class used to create and manage xJSFL Modules">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/528">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=528">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fframework%2Fmodule">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fframework%2Fmodule&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-528 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/framework/module" rel="bookmark" title="Permanent Link: Module (class)">Module (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/framework" rel="category tag">Framework</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The Module class is the base class for creating <a href="/support/guides/extensibility/overview">xJSFL Modules</a>, which are collections of interrelated files grouped by folder, and managed by a central JSFL class - the actual <em>Module</em> itself.</p>
+<h3>Contents</h3>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<ul>
+		<li><a href="#summary">Summary</a></li>
+		<li><a href="#concept">Concept</a></li>
+		<li><a href="#usage">Usage</a></li>
+	</ul>
+	<li><a href="#api">API</a></li>
+	<ul>
+		<li><a href="#module">Module(namespace, properties, window)</a></li>
+		<li><a href="#properties">Properties</a></li>
+		<ul>
+			<li><a href="#namespace">namespace</a></li>
+			<li><a href="#name">name</a></li>
+			<li><a href="#uri">uri</a></li>
+			<li><a href="#panel">panel</a></li>
+		</ul>
+		<li><a href="#methods">Methods</a></li>
+		<ul>
+			<li><a href="#loadconfig">loadConfig(path)</a></li>
+			<li><a href="#call">call()</a></li>
+			<li><a href="#log">log(message, lineBefore)</a></li>
+			<li><a href="#getwindow">getWindow()</a></li>
+			<li><a href="#tostring">toString()</a></li>
+		</ul>
+	</ul>
+</ul>
+<h3>Concept</h3>
+<p>Managing files in JSFL is traditionally done by placing them all in separate files within the main Flash config folder, but this is not a particularly convenient way to structure your projects. xJSFL lets you place code, settings, assets, and flash elements, such as SWF panels into a <strong>single folder</strong> that is managed by the framework and treated as a single, structured entity.</p>
+<p>The xJSFL <strong>Module</strong> class acts as the JSFL entry point to your own functionality, and is usually accessed via AS3 from its own SWF panel, via the AS3 Module framework.</p>
+<p>The Module class is essentially abstract, and it's up to the developer to add new functionality as required by the module in question.</p>
+<h3>Usage</h3>
+<h4>Resources</h4>
+<p>See the following sections for detailed information on Module concepts and practical how-to code:</p>
+<ul>
+	<li><a href="/support/guides/extensibility/overview">Guides: Extending xJSFL</a></li>
+	<li><a href="/support/guides/extensibility/modules">Guides: Combining multiple scripts into stand-alone Modules</a></li>
+	<li><a href="/category/support/tutorials/modules">Tutorials: Modules</a></li>
+</ul>
+<p>Also, see the <strong>Sample Module</strong> and <strong>Snippets</strong> module that ship with xJSFL in the modules folder for real, live code.</p>
+<h2>API</h2>
+<div class="method">
+	<h3 class="signature"><a id="module" name="module" href="#module">Module(namespace, properties, window)</a></h3>
+	<p class="description">Base module class used to create xJSFL modules,</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">namespace</span> <span class="type">String</span> <span class="comment">The namespace of the module in the xjsfl.modules object, i.e. &quot;Keyframer&quot;</span>
+</li>
+				<li>
+<span class="name">properties</span> <span class="type">Object</span> <span class="comment">The properties and methods of the object. Supply a constructor with &quot;init:function(){ ... }&quot;</span>
+</li>
+				<li>
+<span class="name">window</span> <span class="type">Window</span> <span class="comment">The current window object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Note that creating a new module is a 4-part process. You will need:</p>
+	<ol>
+		<li>The module <a href="/support/guides/extensibility/overview">folder</a>
+</li>
+		<li>An XML  <a href="/support/guides/extensibility/modules#xml-manifest">manifest</a> file</li>
+		<li>The JSFL <a href="/support/guides/extensibility/modules#anatomy-of-a-module">bootstrap</a> file</li>
+		<li>The JSFL <a href="/support/guides/extensibility/modules#jsfl-module">module</a> file</li>
+	</ol>
+<p>See the <a href="/support/guides/extensibility/modules#anatomy-of-a-module">Anatomy of a module</a> section in <a href="/support/guides/extensibility/modules">Combining multiple scripts into stand-alone Modules</a> for full details.</p>
+	<p>Once, this is all in place, the process of creating a new module is as follows:</p>
+	<ol>
+		<li>Create a native Object, on which you define the properties that will later become the module's properties. You can add a constructor function here, by creating a property called init, and assigning it to a function.</li>
+		<li>Create and register the new module via the the  <a href="/support/api/core/xjsfl#modules-create" data-mce-href="/support/api/core/xjsfl#modules-create">xjsfl.module.create()</a> function, passing it the name, properties, and the current window object.</li>
+	</ol>
+<p>The system will then associate the module code with its manifest, then create, register and return the new module instance.</p>
+<p>The following example creates a hypothetical Test module, which runs immediately on being created: </p>
+	<pre class="prettyprint lang-javascript">
+// set the properties for the module
+var Test =
+{
+    init:function()
+    {
+        trace('Module &quot;xjsfl.modules.' +this.name+ '&quot; initialized...');
+        this.megatrace();
+    },
+
+    megatrace:function()
+    {
+        trace('I am ' + this.name.toUpperCase() + '!');
+    }
+}
+
+// create the module
+Test = xjsfl.modules.create('Test', Test, this);</pre>
+	<pre>Module &quot;xjsfl.modules.Test&quot; initialized...
+I am TEST!	</pre>
+</div>
+<h2><a id="properties" name="properties" href="#properties">Properties</a></h2>
+<p class="description">The following properties are defined </p>
+<div class="property">
+	<h3 class="signature"><a id="namespace" name="namespace" href="#namespace">namespace</a></h3>
+	<p class="description">The JSFL namespace of the module</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>	</li>
+		</ul>
+	</div>
+	<p>This property is defined by the developer when creating the module</p>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="name" name="name" href="#name">name</a></h3>
+	<p class="description">The given name of the module</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p> This property is defined by the developer when creating the module</p>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="uri" name="uri" href="#uri">uri</a></h3>
+	<p class="description">The URI to the module's root folder</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+<span class="function-meta"> The URI is derived when the module is instantiated, by matching the manifest file to the namespace</span> </div>
+<div class="property">
+	<h3 class="signature"><a id="panel" name="panel" href="#panel">panel</a></h3>
+	<p class="description">A reference to the panel, if it exists</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">SWFPanel</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+</ul>
+</div>
+<span class="function-meta"> The panel property is defined only if the manifest file declares a panel property</span> </div>
+<h2><a id="methods" name="methods" href="#methods">Methods</a></h2>
+<p class="description"></p>
+<div class="method">
+	<h3 class="signature"><a id="loadconfig" name="loadconfig" href="#loadconfig">loadConfig(path)</a></h3>
+	<p class="description">Load a named module Config file object, either a default, or a specific object</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">pathOrURI</span> <span class="type">String</span> <span class="comment">The absolute or relative path to the config file. Passing a relative file path will attempt to find the file in the cascading file structure, defaulting to //user/config/ModuleName.xml</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Config</span> <span class="comment">A new Config instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The loadConfig() method is provided as a convenience function to load configuration files into the module. By default, no config files are loaded, so it is up to the developer to add this code.</p>
+	<p>The following example creates a module named Test, and upon loading, immediately attempts to load its corresponding config file into a new <a href="/support/api/framework/Config">Config</a> instance:</p>
+<pre class="prettyprint lang-javascript">
+// set the properties for the module
+var Test =
+{
+    data:null,
+
+    init:function()
+    {
+        // with no path parameter, the module loads the default config, named
+        // after the module's namespace (in this case Test.xml)
+        this.data = this.loadConfig();
+
+        // once loaded, the data (a Config instance) can be interrogated
+        this.showData();
+    },
+
+    showData:function()
+    {
+        trace(this.data.get('settings'));
+    }
+}
+
+// create the module
+Test = xjsfl.modules.create(Test', Test, this);</pre>
+<pre class="prettyprint lang-javascript">&lt;settings&gt;
+    &lt;setting name=&quot;one&quot; value=&quot;1&quot; /&gt;
+    &lt;setting name=&quot;two&quot; value=&quot;2&quot; /&gt;
+    &lt;setting name=&quot;three&quot; value=&quot;3&quot; /&gt;
+&lt;/settings&gt;</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="call" name="call" href="#call">call()</a></h3>
+	<p class="description">Calls an externally-registered function in the module's panel. Note that the number of arguments MUST match the registered function</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">The result of the call, or undefined if there's no panel</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Functions registered in an AS3 Flash panel as externally-accessible using <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/external/ExternalInterface.html#addCallback()">ExternalInterface.addCallback()</a> can be called from JSFL using <a href="http://help.adobe.com/en_US/flash/cs/extend/WS4B030CF7-0681-47e3-9E2C-9A6D799980AA.html">swfPanel.call()</a>. Module makes all the connections internally and provides a simple call() function so you can have 2-way feedback to your own Flash panels.</p>
+	<p>The following example calls a theoretical &quot;doSomething&quot; method inside the module's Flash panel, with the parameters 1, 2 and 3:</p>
+	<pre class="prettyprint lang-javascript">// called internally in the Sample Module
+var result = this.call('externalFunction', 'Hello!');
+this.log(result);</pre>
+	<pre>&gt; Sample Module: result: &quot;function called!&quot;</pre>
+See the <strong>Sample Module</strong> module in the modules folder for a working code example.</div>
+<div class="method">
+	<h3 class="signature"><a id="log" name="log" href="#log">log(message, lineBefore)</a></h3>
+	<p class="description">Log a message to the listener, prefixed with the module's name</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">message</span> <span class="type">String</span> <span class="comment">The message to log to the listener</span>
+</li>
+				<li>
+<span class="name">lineBefore</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to trace a blank line before the message</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example :</p>
+	<pre class="prettyprint lang-javascript">var module = xjsfl.modules.getModule('Sample');
+module.log('Doing something');</pre>
+	<pre>&gt; Sample Module: Doing something</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="getwindow" name="getwindow" href="#getwindow">getWindow()</a></h3>
+	<p class="description">Gets the Window object of the module</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Window</span> <span class="comment">The module's window object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Each SWF panel runs in its own window, with its own persistent scope, and sometimes its necessary to peek in to see what the variables are doing.</p>
+	<p>The following example gets the window of the Sample module, and inspects the:</p>
+	<pre class="prettyprint lang-javascript">var module = xjsfl.modules.getModule('Sample');
+trace(window === module.getWindow());</pre>
+	<pre>false</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="tostring" name="tostring" href="#tostring">toString()</a></h3>
+	<p class="description">Returns a string representation of the module</p>
+	<div class="function-meta"></div>
+	<p>The following example :</p>
+	<pre class="prettyprint lang-javascript">var module = xjsfl.modules.getModule('Sample');
+trace(module);	</pre>
+	<pre>[object Module name=&quot;Sample&quot; path=&quot;E:/Projects/xJSFL/modules/Sample/&quot;]	</pre>
+</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

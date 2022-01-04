@@ -1,0 +1,272 @@
+Testing  
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  folder
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  folder/
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  ./filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  ../filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() 1: some/path/to/../filename.txt 
+ > correct() 2: some/path/filename.txt 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  ../../filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() 1: some/path/to/../../filename.txt 
+ > correct() 2: some/path/../filename.txt 
+ > correct() 1: some/path/../filename.txt 
+ > correct() 2: some/filename.txt 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  ./.././../filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() 1: some/path/to/./.././../filename.txt 
+ > correct() 2: some/path/to/./../filename.txt 
+ > correct() 1: some/path/to/./../filename.txt 
+ > correct() 2: some/path/to/filename.txt 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  some path/to/filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  some path\to\filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  /filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  //script root/filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  C:/path/to/filename.txt
+ > toURI() : start 
+ > toURI() : context 
+
+Testing  C:\path\to\filename.txt
+ > toURI() : start 
+ > toURI() : context 
+
+Testing  Macintosh HD:long path/to/filename.txt
+ > toURI() : start 
+ > toURI() : context 
+
+Testing  Macintosh HD:/long path/to/filename.txt
+ > toURI() : start 
+ > toURI() : context 
+
+Testing  ./a/b/c/d/../../filename.txt
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() 1: some/path/to/./a/b/c/d/../../filename.txt 
+ > correct() 2: some/path/to/./a/b/c/../filename.txt 
+ > correct() 1: some/path/to/./a/b/c/../filename.txt 
+ > correct() 2: some/path/to/./a/b/filename.txt 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  file:///E|/05%20-%20Commercial%20Projects/xJSFL/3%20-%20development/xJSFL/
+ > toURI() : start 
+
+Testing  file:///F|/Users/Dave%20Stewart/AppData/Local/Adobe/Flash%20CS4/en/Configuration/
+ > toURI() : start 
+
+Testing  file:///C|/path/to/filename.txt
+ > toURI() : start 
+
+Testing  file:///C:/path/to/filename.txt
+ > toURI() : start 
+
+Testing  file:///path to/filename.txt
+ > toURI() : start 
+
+Testing  file:///filename.txt
+ > toURI() : start 
+
+Testing  {user}path/to/file.txt
+ > toURI() : start 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  {user}/path/to/file.txt
+ > toURI() : start 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  {flash}path/to/file.txt
+ > toURI() : start 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  {flash}/path/to/file.txt
+ > toURI() : start 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  {flash}../path/to/file.txt
+ > toURI() : start 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() 1: F|/Users/Dave%20Stewart/AppData/Local/Adobe/Flash%20CS4/en/Configuration/../path/to/file.txt 
+ > correct() 2: F|/Users/Dave%20Stewart/AppData/Local/Adobe/Flash%20CS4/en/path/to/file.txt 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  F:\Users\Dave Stewart\AppData\Local\Adobe\Flash CS4\en\Configuration\
+ > toURI() : start 
+ > toURI() : context 
+
+Testing  /
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  //
+ > toURI() : start 
+ > toURI() : context 
+ > toURI() : finish 
+ > correct() : file 
+ > correct() : backslashes 
+ > correct() : doubleslashes 
+ > correct() : ../ 
+ > correct() : ./ 
+ > correct() : %20 
+
+Testing  C:/
+ > toURI() : start 
+ > toURI() : context 
+
+Testing  C:
+ > toURI() : start 
+ > toURI() : context 
+

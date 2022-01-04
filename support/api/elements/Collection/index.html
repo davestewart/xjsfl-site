@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Collection (class) | xJSFL</title>
+		<meta name="description" content="Powerful Array-like classes for manipulating authoring-time elements">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/elements/collection">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Collection (class) | xJSFL">
+		<meta property="og:description" content="Powerful Array-like classes for manipulating authoring-time elements">
+		<meta property="og:url" content="http://xjsfl.com/support/api/elements/collection">
+		<meta property="article:published_time" content="2011-07-04T02:04:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T16:24:09+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Collection (class) | xJSFL">
+		<meta name="twitter:description" content="Powerful Array-like classes for manipulating authoring-time elements">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; Collection (class) Comments Feed" href="/support/api/elements/collection/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/512">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=512">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Felements%2Fcollection">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Felements%2Fcollection&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-512 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/elements/collection" rel="bookmark" title="Permanent Link: Collection (class)">Collection (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><a href="/support/api/elements/collection#comments" class="comments-link"><strong>1</strong> Comment</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/elements" rel="category tag">Elements</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The Collection class and its subclasses are Array-like classes designed to collate and modify groups of related elements, mainly within the Flash visual environment such as Elements and items.</p>
+<h3>Contents</h3>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<ul>
+		<li><a href="#summary">Summary</a></li>
+		<li><a href="#concept">Concept</a></li>
+		<li><a href="#usage">Usage</a></li>
+	</ul>
+	<li>
+<a href="#api">API</a>
+		<ul>
+			<li><a href="#collection">Collection(elements)</a></li>
+			<li>
+<a href="#api-properties">Properties</a>
+				<ul>
+					<li><a href="#elements">elements</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#standard-methods">Standard methods</a>
+				<ul>
+					<li><a href="#each">each(callback, params, scope)</a></li>
+					<li><a href="#reach">reach(callback, params, scope)</a></li>
+					<li><a href="#indexof">indexOf(element, fromIndex)</a></li>
+					<li><a href="#get">get(index)</a></li>
+					<li><a href="#find">find(value, property)</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#manipulation-methods">Manipulation methods</a>
+				<ul>
+					<li><a href="#add">add(elements)</a></li>
+					<li><a href="#remove">remove(elementsOrValue, property)</a></li>
+					<li><a href="#filter">filter(callback, thisObject)</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#editing-functions">Editing functions</a>
+				<ul>
+					<li><a href="#attr">attr(prop, value)</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#utility-methods">Utility methods</a>
+				<ul>
+					<li><a href="#sort">sort()</a></li>
+					<li><a href="#list">list()</a></li>
+					<li><a href="#call">call(callback, …params)</a></li>
+					<li><a href="#apply">apply(callback, params, scope)</a></li>
+					<li>
+<a href="#tostring">toString()</a>			</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<h3>Concept</h3>
+<p>The (completed) classes in this group include:</p>
+<ul>
+	<li>
+<a href="/support/api/elements/collections/elementcollection">ElementCollection</a> - groups and modifies stage elements</li>
+	<li>
+<a href="/support/api/elements/collections/itemcollection">ItemCollection</a> - groups and modified Library items</li>
+	<li>
+<a href="/category/support/api/elements/collections">Collection</a> - provides core methods used by the Collection subclasses</li>
+</ul>
+<p>Each collection stores an Array of elements of a particular kind (e.g. stage instances, or library items), and allows you to modify them en-masse (for example renaming, arranging, or changing the color of) with built-in methods specific to each Collection type.</p>
+<p>The core Collection class, which this article discusses, provides a set of base methods for iterating over and modifying the Array of elements each of the subclasses contains, and are used mainly by the methods declared in these subclasses.</p>
+<p>More information on Collections and their background can be found in the <a href="/support/guides/working-with-flash/introduction-to-collections">Introduction to Collections</a> page.</p>
+<h3>Usage</h3>
+<h5>Basics</h5>
+<p>Collections are typically instantiated using the <strong>new</strong> keyword, and are then modified using built-in <strong>methods</strong> on each collection type, as in the following hypothetical example:</p>
+<pre class="prettyprint lang-javascript">var collection = new Collection(items);
+collection.doSomething();</pre>
+<p>A concrete example of the above would be using an <a href="/support/api/elements/elementcollection">ElementCollection</a> to sequentially rename selected stage elements:</p>
+<pre class="prettyprint lang-javascript">var collection = new ElementCollection($selection);
+collection.rename('clip');</pre>
+<h5>Chaining</h5>
+<p>Note that <strong>all</strong> collection methods return the current (or a modified) collection, so it's possible to chain commands as in the following example:</p>
+<pre class="prettyprint lang-javascript">var collection = new Collection(dom.library.selectedItems);
+collection
+    .rename('Bitmap')
+    .attr('allowSmoothing', true);</pre>
+<p>See the support pages for both the <a href="/support/api/elements/item-selector">Item Selector</a> and <a href="/support/api/elements/element-selector">Element Selector</a> for more information.</p>
+<h2>API </h2>
+<p>The base Collection class provides core functionality for all Collection classes. As such, most of the examples on this page will simply use an array of Strings to demonstrate the functionality.</p>
+<div class="property">
+	<h3 class="signature"><a id="collection" name="collection" href="#collection">Collection</a></h3>
+	<p class="description">Base Collection class with core methods to iterate over and manipulate elements</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">elements</span> <span class="type">Array</span> <span class="comment">An array of elements</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates a collection:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection('one', 'two', 'three');
+trace(collection);</pre>
+	<pre>[object Collection length=3]</pre>
+</div>
+<h2>Properties</h2>
+<div class="property">
+	<h3 class="signature"><a id="elements" name="elements" href="#elements">elements</a></h3>
+	<p class="description">The internal elements of the collection</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Array</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>The elements property of a collection is its internal array of elements or items that are modified by the collection's methods. </p>
+	<p>Usually, you won't access this directly, but it will be modified by collection methods, or your own callbacks, via <a href="#each">each()</a> or other methods. The following example traces the elements array's length to the Output panel:</p>
+	<pre class="prettyprint lang-javascript">var collection = $('*');
+trace(collection.elements.length);</pre>
+	<pre>5</pre>
+</div>
+<h2>Standard Methods</h2>
+<p>The standard methods are used to iterate over and find elements in the collection.</p>
+<ul>
+	<li><a href="#each">each(callback, params, scope)</a></li>
+	<li><a href="#reach">reach(callback, params, scope)</a></li>
+	<li><a href="#indexof">indexOf(element, fromIndex)</a></li>
+	<li><a href="#get">get(index)</a></li>
+	<li><a href="#find">find(element)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="each" name="each" href="#each">each(callback, arguments)</a></h3>
+	<p class="description">Calls a function on each element in the collection in forward order</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">A callback function to fire on each iteraction</span>
+</li>
+				<li>
+<span class="name">params</span> <span class="type">Array</span> <span class="comment">An optional array of parameters to pass to the callback function</span>
+</li>
+				<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">An optional scope object, defaults to the collection</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example modifies items in the collection in the order they were added:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+collection.reach( function(element, index, elements){ trace(element); } );</pre>
+	<pre>one
+two
+three</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="reach" name="reach" href="#reach">reach(callback, arguments)</a></h3>
+	<p class="description">Calls a function on each element in the collection in reverse order</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">A callback function to fire on each iteraction</span>
+</li>
+				<li>
+<span class="name">params</span> <span class="type">Array</span> <span class="comment">An optional array of parameters to pass to the callback function</span>
+</li>
+				<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">An optional scope object, defaults to the collection</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Processing elements in reverse order is usually necessary when deleting elements from the collection.</p>
+	<p>For the sake of brevity, the following example traces the items in the collection in reverse order:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+collection.reach( function(element, index, elements){ trace(element); } );</pre>
+	<pre>three
+two
+one</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="indexOf" name="indexOf" href="#indexOf">indexOf(element, fromIndex)</a></h3>
+	<p class="description">Returns the first index at which a given element can be found in the array, or -1 if it is not present</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">element</span> <span class="type">Object</span> <span class="comment">Element to locate in the array</span>
+</li>
+				<li>
+<span class="name">fromIndex</span> <span class="type">Number</span> <span class="comment">Optional index at which to begin the search. Defaults to 0, i.e. the whole array will be searched. If the index is greater than or equal to the length of the array, -1 is returned, i.e. the array will not be searched. If negative, it is taken as the offset from the end of the array. Note that even when the index is negative, the array is still searched from front to back. If the calculated index is less than 0, the whole array will be searched.</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Number</span> <span class="comment">The first index at which the element is found, or -1 if it is not present</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example displays the 0-based index of the item &quot;two&quot;:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+trace(collection.indexOf('two'));</pre>
+	<pre>1</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="get" name="get" href="#get">get(index)</a></h3>
+	<p class="description">Gets an element from the collection</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">index</span> <span class="type">Number</span> <span class="comment">Gets the nth object in the collection</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">An object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example returns the second item in the collection:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+trace(collection.get(1));</pre>
+	<pre>two</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="find2" name="find" href="#find">find(value, property)</a></h3>
+	<p class="description">Finds and returns elements (by name, or other property) within the collection</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">A String (wildcards allowed) name or property value</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">RegExp</span> <span class="comment">A RegExp name or property value</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Value</span> <span class="comment">Any value</span>
+</li>
+				<li>
+<span class="name">property</span> <span class="type">String</span> <span class="comment">The name of a property to match against. Defaults to &quot;name&quot;</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An array of matching elements</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example finds and returns the reference to the element named &quot;star3&quot;:</p>
+	<pre class="prettyprint lang-javascript">
+var collection = new Collection($selection);
+var star = collection.find('star3').pop();
+trace(star);</pre>
+	<pre>[object SymbolInstance]</pre>
+	<p>The following example uses a wildcard to identify all elements whose names start with the word &quot;star&quot;, then selects them on stage:</p>
+	<pre class="prettyprint lang-javascript">
+var collection = new Collection($selection);
+$selection = collection.find('star*');</pre>
+	<p>The following example uses a Regular Expression to find and return all elements whose names end with 1, 2, or 3. Note that the <a href="/support/api/elements/ElementCollection">ElementCollection</a> is returned using the <a href="/support/api/elements/ElementSelector">ElementSelector</a> function:</p>
+	<pre class="prettyprint lang-javascript">
+var elements = $('*').find(/[123]$/);</pre>
+	<p>Note that by default, the property matched in all find operations is <strong>name</strong>, but the second argument allows you to use an alternative property. </p>
+	<p>In this example, an array of graphic objects is passed in, then the ones which are set to <strong>play once</strong> are returned from the find() operation:</p>
+	<pre class="prettyprint lang-javascript">
+var collection = new Collection(graphics);
+var elements = collection.find('play once', 'loop');
+list(elements);</pre>
+	<pre>[object ElementCollection length=3]: Array (depth:1, objects:0, values:3, time:0.0 seconds)
+-------------------------------------------------------------------------------------------
+array => Array
+	 0: "item: 2 - elements/shapes/square"
+	 1: "item: 2 - elements/shapes/triangle"
+	 2: "item: 2 - elements/shapes/square"&nbsp;</pre>
+	<p>Whilst this is a good way to grab items from an existing collection, creating a new collection from scratch could be more-easily accomplished using the <a href="/support/api/elements/ElementSelector">ElementSelector</a> and an <a href="/support/api/elements/Selectors#attribute">attribute</a> expression:</p>
+	<pre class="prettyprint lang-javascript">
+var collection = $('[loop=play once]');	</pre>
+</div>
+<h2>Manipulation Methods</h2>
+<p>The manipulation methods allow you to alter the content of the collection programatically.</p>
+<ul>
+	<li><a href="#add">add(elements)</a></li>
+	<li><a href="#remove">remove(startIndex, deleteCount)</a></li>
+	<li><a href="#filter">filter(callback, thisObject)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="add" name="add" href="#add">add(elements)</a></h3>
+	<p class="description">Adds elements to the collection</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">elements</span> <span class="type">Array</span> <span class="comment">Adds elements to the collection</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example adds some new items to the collection:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+collection
+    .add([4,5,6])
+    .list();</pre>
+	<pre>[object Collection length=6]: Array (depth:1, objects:0, values:6, time:0.0 seconds)
+------------------------------------------------------------------------------------
+array =&gt; Array
+	 0: &quot;one&quot;
+	 1: &quot;two&quot;
+	 2: &quot;three&quot;
+	 3: 4
+	 4: 5
+	 5: 6</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="remove" name="remove" href="#remove">remove(elementsOrValue, property)</a></h3>
+	<p class="description">Removes elements from the collection</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">elementsOrValue</span> <span class="type">Array</span> <span class="comment">An Array of elements</span>
+</li>
+				<li>
+<span class="name">elementsOrValue</span> <span class="type">String</span> <span class="comment">A String (wildcards allowed) name or property value to find elements by</span>
+</li>
+				<li>
+<span class="name">elementsOrValue</span> <span class="type">RegExp</span> <span class="comment">A RegExp name or property value to find elements by</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Value</span> <span class="comment">Any value</span>
+</li>
+				<li>
+<span class="name">property</span> <span class="type">String</span> <span class="comment">The name of a property to match against. Defaults to &quot;name&quot;</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates then removes elements from the collection:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection([1, 2, 3, 4, 5]);
+collection
+	.list()
+	.remove([1, 3, 5])
+	.list();</pre>
+	<pre>[object Collection length=5]: Array (depth:1, objects:0, values:5, time:0.0 seconds)
+------------------------------------------------------------------------------------
+array =&gt; Array
+	 0: 1
+	 1: 2
+	 2: 3
+	 3: 4
+	 4: 5
+
+
+[object Collection length=2]: Array (depth:1, objects:0, values:2, time:0.0 seconds)
+------------------------------------------------------------------------------------
+array =&gt; Array
+	 0: 2
+	 1: 4</pre>
+	<p>You can also remove elements from the collection in exactly the same way as the <a href="#find">find()</a> method works to identify elements to remove.</p>
+<p>The following example, first selects all elements on the stage, then removes only the stars:</p>
+<pre class="prettyprint lang-javascript">var collection = new Collection(starsAndSquares);
+collection
+	.list('All elements')
+	.remove('star*')
+	.list('Squares only');</pre>
+	<pre>All elements: Array (depth:1, objects:0, values:8, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "name: star4"
+	 1: "name: star3"
+	 2: "name: star2"
+	 3: "name: star1"
+	 4: "name: square4"
+	 5: "name: square3"
+	 6: "name: square2"
+	 7: "name: square1"
+
+
+Squares only: Array (depth:1, objects:0, values:4, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "name: square4"
+	 1: "name: square3"
+	 2: "name: square2"
+	 3: "name: square1"</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="filter" name="filter" href="#filter">filter(callback, thisObject)</a></h3>
+	<p class="description">Filters the collection using a callback function</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">Function to test each element of the array</span>
+</li>
+				<li>
+<span class="name">thisObject</span> <span class="type">Object</span> <span class="comment">Object to use as this when executing callback</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example filters out any elements with the letter "w" in them:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+collection
+    .filter( function(element){ return element.indexOf('w') == -1; } )
+    .list();</pre>
+	<pre>[object Collection length=2]: Array (depth:1, objects:0, values:2, time:0.0 seconds)
+------------------------------------------------------------------------------------
+array => Array
+	 0: "one"
+	 1: "three"</pre>
+</div>
+<h2>Editing Methods</h2>
+<p>The editing methods allow you to update the properties of elements in the collection.</p>
+<ul>
+	<li><a href="#attr">attr(prop, value)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="attr" name="attr" href="#attr">attr(name, value)</a></h3>
+	<p class="description">Modifies a particular attribute on all items in the collection</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">prop</span> <span class="type">Object</span> <span class="comment">An object containing name:value pairs of attribute to modify</span>
+</li>
+				<li>
+<span class="name">prop</span> <span class="type">String</span> <span class="comment">The name of the attribute to modify</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Value</span> <span class="comment">A value attribute value</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Function</span> <span class="comment">A callback function that returns a value, of the format function(element, index, elements);</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The current Collection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>As this method modifies the properties of objects, stage elements will be used instead of strings for the examples. Before running the examples, create or drag some movieclip instances into random positions on the stage.</p>
+	<p>The following example modifies the "y" property of selected elements to position them  100px from the top:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection($selection);
+collection.attr('y', 100);</pre>
+	<p>The following example modifies 2 properties at the same time, using an <strong>Object</strong> of named values:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection($selection);
+collection.attr( {'y':100, rotation:45} );</pre>
+	<p>The following example modifies the "x" property of selected elements, using a callback <strong>function</strong> to position them sequentially from  left to right on stage:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection($selection);
+collection.attr( 'x', function(element, index, elements){ return index * 100; } );</pre>
+	<p>A similar result could also be achieved using <a href="#each">each()</a>:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection($selection);
+collection.each( function(element, index, elements){ element.x = index * 100; } );</pre>
+</div>
+<div class="method"></div>
+<h2>Utility Methods</h2>
+<p>The utility methods allow you to </p>
+<ul>
+<li><a href="#sort">sort()</a></li>
+	<li><a href="#list">list()</a></li>
+
+	<li><a href="#call">call(callback, …params)</a></li>
+	<li><a href="#apply">apply(callback, params, scope)</a></li>
+	<li><a href="#tostring">toString()</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="sort" name="sort" href="#sort">sort()</a></h3>
+	<p class="description">Sorts the internal elements of a collection</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example sorts the collection:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection([5, 4, 3, 2, 1]);
+collection
+    .list()
+    .sort()
+    .list();</pre>
+	<pre>Unsorted: Array (depth:1, objects:0, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: 5
+	 1: 4
+	 2: 3
+	 3: 2
+	 4: 1
+
+
+Sorted: Array (depth:1, objects:0, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: 1
+	 1: 2
+	 2: 3
+	 3: 4
+	 4: 5</pre>
+</div>
+<p>&nbsp;</p>
+<div class="method">
+	<h3 class="signature"><a id="list" name="list" href="#list">list()</a></h3>
+	<p class="description">Utility function to list the contents of the collection</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The  original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example lists the contents of a collection:</p>
+	<pre class="prettyprint lang-javascript">new Collection(['one', 'two', 'three']).list();</pre>
+	<pre>[object Collection length=2]: Array (depth:1, objects:0, values:2, time:0.0 seconds)
+------------------------------------------------------------------------------------
+array =&gt; Array
+	 0: "one"
+	 1: "two"
+	 2: "three"</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="call" name="call" href="#call">call(callback, ...params)</a></h3>
+	<p class="description">A chainable utility function to call an external callback function a single time</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">Function to call</span>
+</li>
+				<li>
+<span class="name">...params</span> <span class="type">Parameters</span> <span class="comment">Additional parameters passed after the first argument</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The call() method allows you to call a single arbitrary function as part of a chain of commands. The function could be one of your own custom functions, or even a method on the current collection should you see fit.	Function parameters are added after the callback reference as additional mthod arguments.</p>
+	<p>The following example calls the native <strong>trace</strong> function, passing in the collection's elements, then calls an additional collection method, simply to demonstrate chaining:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+var value = collection
+    .call(trace, collection.elements)
+    .get(0);
+
+trace(value);</pre>
+	<pre>one,two,three
+one</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="apply" name="apply" href="#apply">apply(callback, params, scope)</a></h3>
+	<p class="description">A chainable utility function to call an external callback function a single time</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">Function to call</span>
+</li>
+				<li>
+<span class="name">params</span> <span class="type">Array</span> <span class="comment">Optional arguments to be passed to the callback</span>
+</li>
+				<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">An optional scope to run the function in, default to the collection</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Collection</span> <span class="comment">The original Collection object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The apply() method has exactly the same function as the <a href="#call">call()</a> method, allowing you to call a single function as part of a chain of commands, but passes the callback parameters as an Array, an optionally allows you to set the scope of the call as well.</p>
+	<p>The following example calls a trace method on an object, the first scoped to the collection (by default) and the second scoped to the object:</p>
+	<pre class="prettyprint lang-javascript">var obj =
+{
+	elements:['x', 'y', 'z'],
+	trace:function(a, b)
+	{
+		trace(a, b, this.elements);
+	}
+}
+
+var collection = new Collection(['one', 'two', 'three']);
+
+var value = collection
+    .apply(obj.trace, ['a', 'b']) // will trace the collection's elements
+    .apply(obj.trace, ['a', 'b'], obj) // will trace obj's elements
+    .get(0);
+
+trace(value);</pre>
+	<pre>a, b, one,two,three
+a, b, x,y,z
+one</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="toString" name="toString" href="#toString">toString()</a></h3>
+	<p class="description">Return a string representation of the collection</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">A string representation of the collection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example demonstrates the result of tracing a collection:</p>
+	<pre class="prettyprint lang-javascript">var collection = new Collection(['one', 'two', 'three']);
+trace(collection);</pre>
+	<pre>[object Collection length=3]
+</pre>
+</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">One Response to Collection (class)</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-904">
+
+		<div id="comment-904">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/d8434ae620f7a9fdaf0ed34d9f15293a?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d8434ae620f7a9fdaf0ed34d9f15293a?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.chrisinch.com/" rel="external nofollow ugc" class="url">Chris</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/elements/collection#comment-904">October 12, 2012 at 2:07 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>The example for the &#8220;each()&#8221; method is actually using &#8220;reach()&#8221;</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

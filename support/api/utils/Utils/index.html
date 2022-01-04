@@ -1,0 +1,2963 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Utils (library) | xJSFL</title>
+		<meta name="description" content="An extensive static library of general purpose programming functionality">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/utils/utils">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Utils (library) | xJSFL">
+		<meta property="og:description" content="An extensive static library of general purpose programming functionality">
+		<meta property="og:url" content="http://xjsfl.com/support/api/utils/utils">
+		<meta property="article:published_time" content="2011-07-04T10:06:45+00:00">
+		<meta property="article:modified_time" content="2012-06-25T18:21:25+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Utils (library) | xJSFL">
+		<meta name="twitter:description" content="An extensive static library of general purpose programming functionality">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/931">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=931">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Futils%2Futils">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Futils%2Futils&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-931 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/utils/utils" rel="bookmark" title="Permanent Link: Utils (library)">Utils (library)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/utils" rel="category tag">Utilities</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+	<h2>Overview</h2>
+
+
+	<h3>Summary</h3>
+	<p>The Utils library provides a static library of utility functions for accomplishing many different tasks in JSFL.</p>
+
+	<h3>Contents</h3>
+	<ul>
+		<li><a href="#overview">Overview</a></li>
+		<ul>
+			<li><a href="#summary">Summary</a></li>
+			<li><a href="#concept">Concept</a></li>
+			<li><a href="#usage">Usage</a></li>
+		</ul>
+		<li><a href="#api">API</a></li>
+		<ul>
+			<li><a href="#utils">Utils</a></li>
+			<li><a href="#object-methods">Object methods</a></li>
+			<ul>
+				<li><a href="#isobject">isObject(value)</a></li>
+				<li><a href="#getkeys">getKeys(obj)</a></li>
+				<li><a href="#clone">clone(obj)</a></li>
+				<li><a href="#clone">clone(obj)</a></li>
+				<li><a href="#extend">extend(obj, source)</a></li>
+				<li><a href="#combine">combine(keys, values)</a></li>
+				<li><a href="#makehash">makeHash(obj, defaultValue)</a></li>
+				<li><a href="#walk">walk(rootElement, fnChild, fnContents, scope)</a></li>
+			</ul>
+			<li><a href="#oop-methods">OOP methods</a></li>
+			<ul>
+				<li><a href="#gettype">getType(obj)</a></li>
+				<li><a href="#getclass">getClass(obj)</a></li>
+				<li><a href="#getprototypechain">getPrototypeChain(obj, includeSource)</a></li>
+				<li><a href="#getarguments">getArguments(args, startIndex, endIndex)</a></li>
+				<li><a href="#getparams">getParams(fn, args)</a></li>
+				<li><a href="#parsefunction">parseFunction(fn)</a></li>
+			</ul>
+			<li><a href="#array-methods">Array methods</a></li>
+			<ul>
+				<li><a href="#isarray">isArray(obj)</a></li>
+				<li><a href="#toarray">toArray(value, delim)</a></li>
+				<li><a href="#touniquearray">toUniqueArray(arr, prop)</a></li>
+				<li><a href="#sort">sort(arr, reverse, caseInsensitive)</a></li>
+				<li><a href="#sorton">sortOn(arr, prop, alpha)</a></li>
+				<li><a href="#diff">diff(arr1, arr2, type)</a></li>
+			</ul>
+			<li><a href="#value-methods">Value methods</a></li>
+			<ul>
+				<li><a href="#getvalues">getValues(input, prop, option)</a></li>
+				<li><a href="#getnearestvalue">getNearestValue(values, value, returnIndex)</a></li>
+				<li><a href="#getextremevalues">getExtremeValues(elements, prop, returnElement)</a></li>
+				<li><a href="#getdeepvalue">getDeepValue(obj, path)</a></li>
+				<li><a href="#setdeepvalue">setDeepValue(obj, path, properties)</a></li>
+				<li><a href="#randomizevalue">randomizeValue(value, modifier)</a></li>
+				<li><a href="#randomvalue">randomValue(a, b, round)</a></li>
+			</ul>
+			<li><a href="#string-methods">String methods</a></li>
+			<ul>
+				<li><a href="#pad">pad(value, length, chr, right)</a></li>
+				<li><a href="#columnizetext">columnizeText(text, padding, delimiter, useSpaces, tabWidth)</a></li>
+				<li><a href="#parsevalue">parseValue(value, trim)</a></li>
+				<li><a href="#parseexpression">parseExpression(expression, delimiter, nestStart, nestEnd)</a></li>
+			</ul>
+			<li><a href="#regexp-methods">RegExp methods</a></li>
+			<ul>
+				<li><a href="#match">match(str, rxGlobal, matchNames, captureIndex)</a></li>
+				<li><a href="#rxescape">rxEscape(value)</a></li>
+				<li><a href="#rxunescape">rxUnescape(value)</a></li>
+				<li><a href="#makewildcard">makeWildcard(value)</a></li>
+			</ul>
+			<li><a href="#file-and-uri-methods">File and URI methods</a></li>
+			<ul>
+				<li><a href="#glob">glob(globPathOrURI, searchableOnly, asPaths, debug)</a></li>
+				<li><a href="#geturis">getURIs(folder, $depth, $filesOnly, $filter, $extensions)</a></li>
+				<li><a href="#getfirstvaliduri">getFirstValidURI(uris)</a></li>
+				<li><a href="#getsearchableuris">getSearchableURIs(pathOrURI, itemType, returnPaths)</a></li>
+				<li><a href="#issearchable">isSearchable(pathOrURI)</a></li>
+				<li><a href="#walkfolder">walkFolder(folder, $callback, $maxDepth, $returnURIs)</a></li>
+				<li><a href="#maketree">makeTree(paths)</a></li>
+			</ul>
+			<li><a href="#framework-methods">Framework methods</a></li>
+			<ul>
+				<li><a href="#getpanel">getPanel(name)</a></li>
+				<li><a href="#getstack">getStack(error, shorten)</a></li>
+				<li><a href="#bind">bind(scope, fn)</a></li>
+			</ul>
+
+		</ul>
+	</ul>
+<h2>API</h2>
+	<h2>
+<a id="object-methods" name="object-methods" href="#object-methods">Object methods</a>	</h2>
+<ul>
+	<li><a href="#isobject">isObject(value)</a></li>
+	<li><a href="#getkeys">getKeys(obj)</a></li>
+	<li><a href="#clone">clone(obj)</a></li>
+	<li><a href="#clone">clone(obj)</a></li>
+	<li><a href="#extend">extend(obj, source)</a></li>
+	<li><a href="#combine">combine(keys, values)</a></li>
+	<li><a href="#makehash">makeHash(obj, defaultValue)</a></li>
+	<li>
+<a href="#walk">walk(rootElement, fnChild, fnContents, scope)</a>	</li>
+</ul>
+<div class="method">
+<h3 class="signature"><a id="isobject" name="isobject" href="#isobject">isObject(value)</a></h3>
+		<p class="description">Checks if the object is a true Object or not</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any object that needs to be checked if it's a true Object</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">True or false</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example compares various values against <strong>typeof</strong> to see if they are true objects or not:</p>
+	<pre class="prettyprint lang-javascript">var data = [];
+var values =
+{
+	'undefined': undefined,
+	'null':      null,
+	'number':    1,
+	'boolean':   true,
+	'string':   'hello',
+	'array':    [1, 2, 3],
+	'object':   {a:1, b:2, c:3},
+	'date':     new Date(),
+	'template': new Template()
+};
+
+for(var name in values)
+{
+	data.push({name:name, 'typeof':typeof values[name], 'isObject':Utils.isObject(values[name])});
+}
+
+Table.print(data);</pre>
+	<pre>+-----------+-----------+----------+
+| name      | typeof    | isObject |
++-----------+-----------+----------+
+| undefined | undefined | false    |
+| null      | object    | false    |
+| number    | number    | false    |
+| boolean   | boolean   | false    |
+| string    | string    | false    |
+| array     | object    | false    |
+| object    | object    | true     |
+| date      | object    | false    |
+| template  | object    | true     |
++-----------+-----------+----------+</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getkeys" name="getkeys" href="#getkeys">getKeys(obj)</a></h3>
+		<p class="description">Get an object's keys, or all the keys from an Array of Objects,</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any object with iterable properties</span>
+</li>
+					<li>
+<span class="name">obj</span> <span class="type">Array</span> <span class="comment">An Array of objects with iterable properties</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An array of key names</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This example gets the keys from a single object:</p>
+		<pre class="prettyprint lang-javascript">Utils.getKeys($library.items[0]);</pre>
+		<pre>Inspect: Array (depth:4, objects:0, values:10, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	 0: &quot;itemType&quot;
+	 1: &quot;name&quot;
+	 2: &quot;linkageExportForAS&quot;
+	 3: &quot;linkageExportForRS&quot;
+	 4: &quot;linkageImportForRS&quot;
+	 5: &quot;linkageExportInFirstFrame&quot;
+	 6: &quot;linkageIdentifier&quot;
+	 7: &quot;linkageClassName&quot;
+	 8: &quot;linkageBaseClass&quot;
+	 9: &quot;linkageURL&quot;</pre>
+		<p>This example gets the unique keys from an Array of objects:</p>
+		<pre class="prettyprint lang-javascript">Utils.getKeys($library.items);</pre>
+		<pre>Inspect: Array (depth:4, objects:0, values:17, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	 0: &quot;itemType&quot;
+	 1: &quot;name&quot;
+	 2: &quot;linkageExportForAS&quot;
+	 3: &quot;linkageExportForRS&quot;
+	 4: &quot;linkageImportForRS&quot;
+	 5: &quot;linkageExportInFirstFrame&quot;
+	 6: &quot;linkageIdentifier&quot;
+	 7: &quot;linkageClassName&quot;
+	 8: &quot;linkageBaseClass&quot;
+	 9: &quot;linkageURL&quot;
+	 10: &quot;timeline&quot;
+	 11: &quot;symbolType&quot;
+	 12: &quot;sourceFilePath&quot;
+	 13: &quot;sourceLibraryName&quot;
+	 14: &quot;sourceAutoUpdate&quot;
+	 15: &quot;scalingGrid&quot;
+	 16: &quot;scalingGridRect&quot;		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="clone" name="clone" href="#clone">clone(obj)</a></h3>
+		<p class="description">Clones and object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">The object reference</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">The object cloned</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example compares the difference between <strong>reassigning</strong> and <strong>cloning</strong> an object:</p>
+	<pre class="prettyprint lang-javascript">var obj1 = {a:1, b:2, c:3};
+var obj2 = obj1
+var obj3 = Utils.clone(obj1);
+
+obj1.a = 100; // update a value on the original object
+
+inspect([obj1, obj2, obj3])</pre>
+	<pre>Inspect: Array (depth:4, objects:3, values:9, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	[0] => Object
+		 a: 100
+		 b: 2
+		 c: 3
+	[1] => Object
+		 a: 100
+		 b: 2
+		 c: 3
+	[2] => Object
+		 a: 1
+		 b: 2
+		 c: </pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="extend" name="extend" href="#extend">extend(obj, source)</a></h3>
+		<p class="description">Extends an object or array with more properties or elements,,</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">A source Object to be extended</span>
+</li>
+					<li>
+<span class="name">source</span> <span class="type">Object</span> <span class="comment">The properties to be added</span>
+</li>
+					<li>
+<span class="name">obj</span> <span class="type">Array</span> <span class="comment">A source Array to be extended</span>
+</li>
+					<li>
+<span class="name">source</span> <span class="type">Array</span> <span class="comment">The elements to be added</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">The modified object</span>
+</li>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">The modified array</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Extend an object with new properties:</p>
+		<pre class="prettyprint lang-javascript">Utils.extend({a:1, b:2, c:3}, {d:4, e:5, f:6});</pre>
+		<pre>{a:1, b:2, c:3, d:4, e:5, f:6}</pre>
+		<p>Extend an array with new elements:</p>
+		<pre class="prettyprint lang-javascript">Utils.extend([1,2,3], [4,5,6]);</pre>
+		<pre>[1, 2, 3, 4, 5, 6]</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="combine" name="combine" href="#combine">combine(keys, values)</a></h3>
+		<p class="description">Combines keys and values to make a new populated Object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">keys</span> <span class="type">Array</span> <span class="comment">An array of key names</span>
+</li>
+					<li>
+<span class="name">keys</span> <span class="type">String</span> <span class="comment">A string of key names</span>
+</li>
+					<li>
+<span class="name">values</span> <span class="type">Array</span> <span class="comment">An array of values</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">An Object containing the values assigned to keys</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example combines:</p>
+	<pre class="prettyprint lang-javascript">var keys = ['one', 'two', 'three']
+var keys = 'one, two, three'; // alternative format - words are split on commas and trimmed
+var values = [1, 2, 3];
+inspect(Utils.combine(keys, values));	</pre>
+	<pre>Inspect: Object (depth:4, objects:0, values:3, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	 one: 1
+	 two: 2
+	 three: 3</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="makehash" name="makehash" href="#makehash">makeHash(obj, defaultValue)</a></h3>
+		<p class="description">Makes a Hash object from a source value</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">String</span> <span class="comment">An anything delimited string of words</span>
+</li>
+					<li>
+<span class="name">obj</span> <span class="type">Array</span> <span class="comment">An array of words</span>
+</li>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any iterable object or instance</span>
+</li>
+					<li>
+<span class="name">defaultValue</span> <span class="type">Value</span> <span class="comment">An optional default value for the hash's keys. Defaults to false</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">An Object of name:true pairs</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example :</p>
+	<pre class="prettyprint lang-javascript">var keys = 'option1, option2, option3';
+var hash = Utils.makeHash(keys);
+inspect(hash);	</pre>
+	<pre>Inspect: Object (depth:4, objects:0, values:3, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	 option1: false
+	 option2: false
+	 option3: false
+</pre>
+	<p>Alternatively, you can pass in any object with existing properties, and use them as the basis for your new hash:</p>
+	<pre class="prettyprint lang-javascript">var hash = Utils.makeHash(new LibraryItem(), null);
+inspect(hash);</pre>
+	<pre>Inspect: Object (depth:4, objects:0, values:11, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	 itemType: null
+	 name: null
+	 linkageExportForAS: null
+	 linkageExportForRS: null
+	 linkageImportForRS: null
+	 linkageExportInFirstFrame: null
+	 linkageIdentifier: null
+	 linkageClassName: null
+	 linkageBaseClass: null
+	 linkageURL: null
+	 shortName: null	</pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="walk" name="walk" href="#walk">walk(rootElement, fnChild, fnContents, scope)</a></h3>
+		<p class="description">Generic function to recurse a data structure, processing nodes and children with callbacks</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">rootElement</span> <span class="type">Object</span> <span class="comment">The root element to start processing on</span>
+</li>
+					<li>
+<span class="name">fnChild</span> <span class="type">Function</span> <span class="comment">A callback function to call on child elements</span>
+</li>
+					<li>
+<span class="name">fnContents</span> <span class="type">Function</span> <span class="comment">An optional callback function which should return an object which can be processed for its contents, i.e. folder.contents</span>
+</li>
+					<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">An optional Object on which to appy "this" scope to</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">value</span> <span class="comment">The result of the passed fnChild function</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example walks both an Array and an Object:</p>
+	<pre class="prettyprint lang-javascript">var arr = [1, 2, 3, 4, [5, 6, 7, 8, [9, 10, 11, 12, 13], 14, 15, 16, 17], 18, 19, 20, 21];
+var obj = {a:1, b:2, c:3, d:4, e:{a:5, b:6, c:7, d:8, e:{a:9, b:10, c:11, d:12, e:13}, f:14, g:15, h:16, i:17}, f:18, g:19, h:20, i:21 };
+
+function process(value, index, depth)
+{
+	trace('\t'.repeat(depth) + '[' +index+ '] ' + '&quot;' + value + '&quot;');
+}
+
+Utils.walk(arr, processChild);</pre>
+	<pre>[0] &quot;1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21&quot;
+	[0] &quot;1&quot;
+	[1] &quot;2&quot;
+	[2] &quot;3&quot;
+	[3] &quot;4&quot;
+	[4] &quot;5,6,7,8,9,10,11,12,13,14,15,16,17&quot;
+		[0] &quot;5&quot;
+		[1] &quot;6&quot;
+		[2] &quot;7&quot;
+		[3] &quot;8&quot;
+		[4] &quot;9,10,11,12,13&quot;
+			[0] &quot;9&quot;
+			[1] &quot;10&quot;
+			[2] &quot;11&quot;
+			[3] &quot;12&quot;
+			[4] &quot;13&quot;
+		[5] &quot;14&quot;
+		[6] &quot;15&quot;
+		[7] &quot;16&quot;
+		[8] &quot;17&quot;
+	[5] &quot;18&quot;
+	[6] &quot;19&quot;
+	[7] &quot;20&quot;
+	[8] &quot;21&quot;</pre>
+	<pre>[0] &quot;[object Object]&quot;
+	[a] &quot;1&quot;
+	[b] &quot;2&quot;
+	[c] &quot;3&quot;
+	[d] &quot;4&quot;
+	[e] &quot;[object Object]&quot;
+		[a] &quot;5&quot;
+		[b] &quot;6&quot;
+		[c] &quot;7&quot;
+		[d] &quot;8&quot;
+		[e] &quot;[object Object]&quot;
+			[a] &quot;9&quot;
+			[b] &quot;10&quot;
+			[c] &quot;11&quot;
+			[d] &quot;12&quot;
+			[e] &quot;13&quot;
+		[f] &quot;14&quot;
+		[g] &quot;15&quot;
+		[h] &quot;16&quot;
+		[i] &quot;17&quot;
+	[f] &quot;18&quot;
+	[g] &quot;19&quot;
+	[h] &quot;20&quot;
+	[i] &quot;21&quot;
+</pre>
+	<p>You can also provide a second function, that can be used to get the contents of <em>custom</em> objects should they not be interable using a standard loop.</p>
+	<p>This example processes the contents of Folder objects on the hard drive:</p>
+	<pre class="prettyprint lang-javascript">
+// the function to process the children
+	function process(element, index, depth)
+	{
+		trace ('\t'.repeat(depth) + '/' + element.name);
+	}
+
+// the function to identify the children
+	function getContents(element)
+	{
+		return element instanceof Folder ? element.contents : null;
+	}
+
+// start processing
+	var folder = new Folder('{user}temp/');
+	Utils.walk (folder, process, getContents)</pre>
+	<pre>/temp
+	/a
+		/new
+			/folder
+				/test.jsfl
+	/document.doc
+	/hello
+		/hello.txt
+		/test.txt
+	/some file.as
+	/spreadsheet-edit.csv
+	/test copy.txt
+	/test.jsfl
+	/this
+		/is
+			/a
+				/new
+					/file.txt	</pre>
+</div>
+		<h2><a id="oop-methods" name="oop-methods" href="#oop-methods">OOP methods</a></h2>
+<ul>
+	<li><a href="#gettype">getType(obj)</a></li>
+	<li><a href="#getclass">getClass(obj)</a></li>
+	<li><a href="#getprototypechain">getPrototypeChain(obj, includeSource)</a></li>
+	<li><a href="#getarguments">getArguments(args, startIndex, endIndex)</a></li>
+	<li><a href="#getparams">getParams(fn, args)</a></li>
+	<li>
+<a href="#parsefunction">parseFunction(fn)</a> </li>
+</ul>
+
+	<div class="method">
+		<h3 class="signature"><a id="gettype" name="gettype" href="#gettype">getType(obj)</a></h3>
+		<p class="description">A better typeof function</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any object or value</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The type of the object</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The <strong>typeof</strong> operator in JavaScript is <a href="http://javascriptweblog.wordpress.com/2011/08/08/fixing-the-javascript-typeof-operator/">a little unreliable</a> about what it returns, so geType() attempts to do a better job of it.</p>
+		<p>The following example gets the type for a variety of input values (and also demonstrates <a href="#getclass">Utils.getClass()</a>):</p>
+	<pre class="prettyprint lang-javascript">var data = [];
+var values =
+{
+	// null
+		'undefined' : undefined,
+		'null'      : null,
+
+	// Native
+		'Number'    : 1,
+		'Boolean'   : true,
+		'String'    : 'hello',
+		'RegExp'    : /a-z/,
+		'Array'     : [1, 2, 3],
+		'Object'    : {a:1, b:2, c:3},
+		'Function'  : function(){},
+		'XML'       : &lt;a value=&quot;1&quot; /&gt;,
+		'Error'     : new Error(),
+		'Date'      : new Date(),
+		'Math'      : Math,
+		'Window'    : window,
+
+	// JSFL
+		'Timeline'  : $timeline,
+		'Document'  : $dom,
+
+	// xJSFL
+		'JSON'      : JSON,
+		'Template'  : new Template(),
+		'Timer'     : new Timer(),
+};
+
+for(var name in values)
+{
+	data.push
+	(
+		{
+			'value':name,
+			'Object.toString':String(values[name]),
+			'typeof':typeof values[name],
+			'Utils.getType':Utils.getType(values[name]),
+			'Utils.getClass':Utils.getClass(values[name]),
+		}
+	);
+}
+
+Table.print(data);</pre>
+	<pre>+-----------+-------------------------------------------------------+-----------+---------------+----------------+
+| value     | Object.toString                                       | typeof    | Utils.getType | Utils.getClass |
++-----------+-------------------------------------------------------+-----------+---------------+----------------+
+| undefined | undefined                                             | undefined | undefined     | null           |
+| null      | null                                                  | object    | null          | null           |
+| Number    | 1                                                     | number    | number        | Number         |
+| Boolean   | true                                                  | boolean   | boolean       | Boolean        |
+| String    | hello                                                 | string    | string        | String         |
+| RegExp    | /a-z/                                                 | function  | regexp        | RegExp         |
+| Array     | 1,2,3                                                 | object    | array         | Array          |
+| Object    | [object Object]                                       | object    | object        | Object         |
+| Function  | function () {...                                      | function  | function      | Function       |
+| XML       | &lt;root&gt;...                                             | xml       | xml           | XML            |
+| Error     | Error                                                 | object    | error         | Error          |
+| Date      | Wed Aug 08 2012 21:07:30 GMT+0100 (GMT Daylight Time) | object    | date          | Date           |
+| Math      | [object Math]                                         | object    | math          | Math           |
+| window    | [object Window]                                       | object    | window        | Window         |
+| Timeline  | [object Timeline]                                     | object    | timeline      | Timeline       |
+| Document  | [object Document]                                     | object    | document      | Document       |
+| JSON      | [class JSON]                                          | object    | object        | JSON           |
+| Template  | [object Template path=""]                             | object    | object        | Template       |
+| Timer     | [object Timer time="0 milliseconds"]                  | object    | object        | Timer          |
++-----------+-------------------------------------------------------+-----------+---------------+----------------+    </pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getclass" name="getclass" href="#getclass">getClass(obj)</a></h3>
+		<p class="description">Attempts to get the class of an object as a string.</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">value</span> <span class="comment">Any value</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The class name of the value i.e. 'String', 'Date', 'CustomClass'</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The getClass() method attempts to get the class name of an object using a variety of methods:</p>
+		<ol>
+			<li>The native class of an object, i.e. <strong>Number, String, Date</strong>
+</li>
+			<li>The value contained within the object's toString() method, where the return value is of the format <strong>[object ClassName ... ]</strong>
+</li>
+			<li>The name of the function used to <strong>construct</strong> the object</li>
+			<li>Defaults to <strong>Object</strong> or returns <strong>null</strong> if the value is null or undefined</li>
+		</ol>
+<p>See the example above in <a href="#gettype">Utils.getType()</a> for the comparison between typeof, Utils.getType() and Utils.getClass().<br>
+</p>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="getprototypechain" name="getprototypechain" href="#getprototypechain">getPrototypeChain(obj, includeSource)</a></h3>
+		<p class="description">Gets the prototype chain of an object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">An instantiated object</span>
+</li>
+					<li>
+<span class="name">includeSource</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to include the original object</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of the original instantation object</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example gets the prototype chain for an ElementCollection:</p>
+	<pre class="prettyprint lang-javascript">var collection = $('*');
+inspect(Utils.getPrototypeChain(collection), 1);	</pre>
+	<pre>Inspect: Array (depth:1, objects:5, values:0, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; ElementCollection
+	[1] =&gt; Collection
+	[2] =&gt; Object
+	[3] =&gt; Object
+	[4] =&gt; Object</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getarguments" name="getarguments" href="#getarguments">getArguments(args, startIndex, endIndex)</a></h3>
+		<p class="description">Get the arguments of a function as an Array</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">args</span> <span class="type">Arguments</span> <span class="comment">An arguments object</span>
+</li>
+					<li>
+<span class="name">startIndex</span> <span class="type">Number</span> <span class="comment">Optional index of the argument from which to start from</span>
+</li>
+					<li>
+<span class="name">endIndex</span> <span class="type">Number</span> <span class="comment">Optional index of the argument at which to end</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of parameters</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Often in callback functions, or when using Function.apply() you'll need the arguments of the current function as an Array.</p>
+		<p>The following example grabs arguments b and c as a 2-element Array:</p>
+		<pre class="prettyprint lang-javascript">
+function test(a, b, c, d)
+{
+	var values = Utils.getArguments(arguments, 1, 3);
+}</pre>
+		<pre>[5, 6]		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getparams" name="getparams" href="#getparams">getParams(fn, args)</a></h3>
+		<p class="description">Get the arguments of a function as an Object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">fn</span> <span class="type">Function</span> <span class="comment">A function</span>
+</li>
+					<li>
+<span class="name">args</span> <span class="type">Arguments</span> <span class="comment">The function instance's arguments</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">An object containing the named function arguments</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example gets the named parameters of a function call:</p>
+	<pre class="prettyprint lang-javascript">function test(a, b, c, d, e)
+{
+	inspect(Utils.getParams(test, arguments));
+}
+
+test(1, 2, 3);</pre>
+	<pre>Inspect: Object (depth:4, objects:0, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	 a: 1
+	 b: 2
+	 c: 3
+	 d: undefined
+	 e: undefined	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="parsefunction" name="parsefunction" href="#parsefunction">parseFunction(fn)</a></h3>
+		<p class="description">Parses a function source into an object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">fn</span> <span class="type">Function</span> <span class="comment">A reference to a function</span>
+</li>
+					<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">An optional name function for anonymous functions</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Object</span> <span class="comment">An Object with name and params properties</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example parses a function into component parts:</p>
+	<pre class="prettyprint lang-javascript">inspect(Utils.parseFunction(inspect, 'inspect'));	</pre>
+	<pre>Inspect: Object (depth:4, objects:1, values:8, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	 signature: &quot;function (obj, $depth, $label, $functions, $options, $callback)&quot;
+	 name: &quot;inspect&quot;
+	[params] =&gt; Array
+		 0: &quot;obj&quot;
+		 1: &quot;$depth&quot;
+		 2: &quot;$label&quot;
+		 3: &quot;$functions&quot;
+		 4: &quot;$options&quot;
+		 5: &quot;$callback&quot;</pre>
+	</div>
+		<h2><a id="array-methods" name="array-methods" href="#array-methods">Array methods</a></h2>
+<ul>
+	<li><a href="#isarray">isArray(obj)</a></li>
+	<li><a href="#toarray">toArray(value, delim)</a></li>
+	<li><a href="#touniquearray">toUniqueArray(arr, prop)</a></li>
+	<li><a href="#sort">sort(arr, reverse, caseInsensitive)</a></li>
+	<li><a href="#sorton">sortOn(arr, prop, alpha)</a></li>
+	<li><a href="#diff">diff(arr1, arr2, type)</a></li>
+</ul>
+<div class="method">
+<h3 class="signature"><a id="isarray" name="isarray" href="#isarray">isArray(obj)</a></h3>
+		<p class="description">Checks if the object is a true Array or not</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">Any object that needs to be checked if it's a true Array</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">True or false</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This method is useful when checking Array-like objects, for example function arguments or Array subclasses: </p>
+		<pre class="prettyprint lang-javascript">
+function test()
+{
+    trace(Utils.isArray(arguments));
+}
+test(1, 2, 3);</pre>
+		<pre class="prettyprint lang-javascript">false		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="toarray" name="toarray" href="#toarray">toArray(value, delim)</a></h3>
+		<p class="description">Turns a single string of tokens into an array of trimmed tokens, by splitting at non-word characters, or a supplied delimiter,,It either returns an existing array, splits a string at delimiters, or wraps the single value in an array,</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">A string</span>
+</li>
+					<li>
+<span class="name">delim</span> <span class="type">RegExp</span> <span class="comment">An optional RegExp with which to split the input string, defaults to any non-word character</span>
+</li>
+					<li>
+<span class="name">delim</span> <span class="type">String</span> <span class="comment">An optional character with which to split the string</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">A new Array</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This example trims and splits a string on non-word characters, the default:</p>
+		<pre class="prettyprint lang-javascript">Utils.toArray('  one | two  |   three |  four    |  five  ');</pre>
+		<pre>['one', 'two', 'three', 'four', 'five']</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="touniquearray" name="touniquearray" href="#touniquearray">toUniqueArray(arr, prop)</a></h3>
+		<p class="description">Returns a unique array without any duplicate items,</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">arr</span> <span class="type">Array</span> <span class="comment">Any array</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">String</span> <span class="comment">An optional property (if an Array of Objects is passed) to compare against</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">A unique array</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This example returns a unique array from the supplied argument:</p>
+		<pre class="prettyprint lang-javascript">Utils.toUniqueArray([1,2,2,2,3,3,4,2,1]);</pre>
+		<pre>[1, 2, 3, 4]</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="sort" name="sort" href="#sort">sort(arr, reverse, caseInsensitive)</a></h3>
+		<p class="description">Basic numeric Array sort function (native sort() sorts by string)</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">arr</span> <span class="type">Array</span> <span class="comment">An array to sort</span>
+</li>
+					<li>
+<span class="name">reverse</span> <span class="type">Boolean</span> <span class="comment">An optional flag to sort in reverse (descending) order</span>
+</li>
+					<li>
+<span class="name">caseInsensitive</span> <span class="type">Boolean</span> <span class="comment">An optional flag to sort case insensitively</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">The sorted Array</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The standard <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects/Array/sort">Array.sort()</a> sorts alphabetically only, whereas this methods sorts numerically.</p>
+		<p>The following example sorts an array of random numbers in reverse:</p>
+		<pre class="prettyprint lang-javascript">sort([1,5,2,9,13,6], true);</pre>
+		<pre>13, 9, 6, 5, 2, 1</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="sorton" name="sorton" href="#sorton">sortOn(arr, prop, alpha)</a></h3>
+		<p class="description">Optimized Array sortOn method, for sorting Arrays by child property. This function modifies the input Array</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">arr</span> <span class="type">Array</span> <span class="comment">An Array of Objects</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">String</span> <span class="comment">A property name to sort on; defaults to 'name'</span>
+</li>
+					<li>
+<span class="name">alpha</span> <span class="type">Boolean</span> <span class="comment">An optional flag to sort alphabetically</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">The sorted Array)</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This example sorts the library items array, which by default is unsorted:</p>
+		<pre>items/Folder
+items
+items/Button
+items/Graphic
+items/MovieClip		</pre>
+		<pre class="prettyprint lang-javascript">var items = $library.items;
+Utils.sortOn(items, 'name');</pre>
+		<pre>items
+items/Button
+items/Folder
+items/Graphic
+items/MovieClip</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="diff" name="diff" href="#diff">diff(arr1, arr2, type)</a></h3>
+		<p class="description">Returns the difference between two arrays</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">arr1</span> <span class="type">Array</span> <span class="comment">The first Array</span>
+</li>
+					<li>
+<span class="name">arr2</span> <span class="type">Array</span> <span class="comment">The second Array</span>
+</li>
+					<li>
+<span class="name">type</span> <span class="type">Number</span> <span class="comment">An optional index to change the returned elements: -1 for array 1 elements not found in array 2, 0 for those found in both, and 1 for those in array 2 not found in array 1; defaults to -1</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">The resulting Array</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example traces the various differences between 2 Arrays:</p>
+	<pre class="prettyprint lang-javascript">var A = [1,2,3,4,5,6,7,8];
+var B =         [5,6,7,8,9,10,11,12];
+
+trace('Only A : ' + Utils.diff(A, B, -1));
+trace('Common : ' + Utils.diff(A, B, 0));
+trace('Only B : ' + Utils.diff(A, B, 1));</pre>
+	<pre>Only A : 1,2,3,4
+Common : 5,6,7,8
+Only B : 9,10,11,12</pre>
+	</div>
+<h2><a id="value-methods" name="value-methods" href="#value-methods">Value methods</a></h2>
+		<ul>
+			<li><a href="#getvalues">getValues(input, prop, option)</a></li>
+			<li><a href="#getnearestvalue">getNearestValue(values, value, returnIndex)</a></li>
+			<li><a href="#getextremevalues">getExtremeValues(elements, prop, returnElement)</a></li>
+			<li><a href="#getdeepvalue">getDeepValue(obj, path)</a></li>
+			<li><a href="#setdeepvalue">setDeepValue(obj, path, properties)</a></li>
+			<li><a href="#randomizevalue">randomizeValue(value, modifier)</a></li>
+			<li>
+<a href="#randomvalue">randomValue(a, b, round)</a>	</li>
+		</ul>
+	<div class="method">
+		<h3 class="signature"><a id="getvalues" name="getvalues" href="#getvalues">getValues(input, prop, option)</a></h3>
+		<p class="description">Get an Array of values from an Object, or an Array of Arrays/Objects from an Array of Objects,</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">input</span> <span class="type">Array</span> <span class="comment">An Object or an array of Objects</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">String</span> <span class="comment">The name of a property to collect</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">Function</span> <span class="comment">A callback function of the format function propertyName(element){ return element.property }</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">Array</span> <span class="comment">The names of properties to collect</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">Boolean</span> <span class="comment">A Boolean indicates you want to collect ALL properties</span>
+</li>
+					<li>
+<span class="name">option</span> <span class="type">Boolean</span> <span class="comment">If passing and returning a single object, pass true to make it unique. If returning a 2D array, pass true to return Objects</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">A new 1D or 2D Array</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This method is a fairly powerful solution to grabbing nested values from Objects or elements inside Arrays, and is useful for analysis, collection and filtering of multiple objects and their properties.</p>
+		<p>This example gets the names of the items in the library:</p>
+		<pre class="prettyprint lang-javascript">Utils.getValues(items, 'name');</pre>
+		<pre>items/Folder
+items
+items/Button
+items/Graphic
+items/MovieClip</pre>
+		<p>This example gets several properties of items in the library:</p>
+		<pre class="prettyprint lang-javascript">Utils.getValues(items, ['name','itemType']);</pre>
+		<pre>Inspect: Array (depth:4, objects:5, values:10, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; Array
+		 0: &quot;items&quot;
+		 1: &quot;folder&quot;
+	[1] =&gt; Array
+		 0: &quot;items/Button&quot;
+		 1: &quot;button&quot;
+	[2] =&gt; Array
+		 0: &quot;items/Folder&quot;
+		 1: &quot;folder&quot;
+	[3] =&gt; Array
+		 0: &quot;items/Graphic&quot;
+		 1: &quot;graphic&quot;
+	[4] =&gt; Array
+		 0: &quot;items/MovieClip&quot;
+		 1: &quot;movie clip&quot;</pre>
+		<p>This example gets several properties of items in the library, but returns them as objects:</p>
+		<pre class="prettyprint lang-javascript">Utils.getValues(items, ['name','itemType'], true);</pre>
+		<pre>Inspect: Array (depth:4, objects:5, values:10, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; Object
+		 name: &quot;items&quot;
+		 itemType: &quot;folder&quot;
+	[1] =&gt; Object
+		 name: &quot;items/Button&quot;
+		 itemType: &quot;button&quot;
+	[2] =&gt; Object
+		 name: &quot;items/Folder&quot;
+		 itemType: &quot;folder&quot;
+	[3] =&gt; Object
+		 name: &quot;items/Graphic&quot;
+		 itemType: &quot;graphic&quot;
+	[4] =&gt; Object
+		 name: &quot;items/MovieClip&quot;
+		 itemType: &quot;movie clip&quot;</pre>
+		<p>The final example is in regard to using a <strong>callback</strong>, instead of a straight object property <strong>name</strong>.</p>
+		<p>You'd use a callback primarily when you want to get a sub-property of an object, for example, not an element's <strong>libraryItem</strong> instance, but the <strong>name</strong> of the libraryItem's instance, as passing &quot;libraryItem.name&quot; in as a key simply won't work.</p>
+		<p>This example uses a callback to an element's library item's (if it has one) name:</p>
+		<pre class="prettyprint lang-javascript">function getLibraryItemName(element)
+{
+    return element.libraryItem ? element.libraryItem.name : undefined;
+}
+Utils.getValues(elements, ['name', getLibraryItemName]);</pre>
+		<pre>Inspect: Array (depth:2, objects:4, values:8, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; Array
+		 0: &quot;green_star&quot;
+		 1: &quot;star&quot;
+	[1] =&gt; Array
+		 0: &quot;grey_oval&quot;
+		 1: &quot;oval&quot;
+	[2] =&gt; Array
+		 0: &quot;red_rectangle&quot;
+		 1: &quot;rectangle&quot;
+	[3] =&gt; Array
+		 0: &quot;purple_oval&quot;
+		 1: &quot;oval&quot;</pre>
+		<p>Note that if using callback functions, and returning an <strong>object</strong>, the <strong>function name</strong> will be used as the sub-property <strong>key</strong>. If supplying a closure, pass a named (rather than an anonymous function) like so:</p>
+		<pre class="prettyprint lang-javascript">
+Utils.getValues(elements, ['name', function libraryItem(element){return element.libraryItem ? element.libraryItem.name : undefined;}], true);</pre>
+		<pre>Inspect: Array (depth:4, objects:4, values:8, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; Object
+		 name: &quot;green_star&quot;
+		 libraryItem: &quot;star&quot;
+	[1] =&gt; Object
+		 name: &quot;grey_oval&quot;
+		 libraryItem: &quot;oval&quot;
+	[2] =&gt; Object
+		 name: &quot;red_rectangle&quot;
+		 libraryItem: &quot;rectangle&quot;
+	[3] =&gt; Object
+		 name: &quot;purple_oval&quot;
+		 libraryItem: &quot;oval&quot;		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getnearestvalue" name="getnearestvalue" href="#getnearestvalue">getNearestValue(values, value, returnIndex)</a></h3>
+		<p class="description">Gets the nearest value to a target value from an array of values</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">values</span> <span class="type">Array</span> <span class="comment">An Array of values</span>
+</li>
+					<li>
+<span class="name">value</span> <span class="type">Number</span> <span class="comment">A single numeric value</span>
+</li>
+					<li>
+<span class="name">returnIndex</span> <span class="type">Number</span> <span class="comment">An optional Boolean to return the index rather than the value</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Number</span> <span class="comment">A value or index</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example gets the nearest value to the correct value required for kbs for teh Flash publish profile:</p>
+	<pre class="prettyprint lang-javascript">var kbs	= [8, 16, 20, 24, 32, 48, 56, 64, 80, 112, 128, 160];
+var value = Utils.getNearestValue(kbs, 28);
+trace(value);</pre>
+	<pre>32	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getextremevalues" name="getextremevalues" href="#getextremevalues">getExtremeValues(elements, prop, returnElement)</a></h3>
+		<p class="description">Comparison function to get a max or min value within an array of objects</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">elements</span> <span class="type">Array</span> <span class="comment">An Array of objects with named properties</span>
+</li>
+					<li>
+<span class="name">prop</span> <span class="type">String</span> <span class="comment">The property to test</span>
+</li>
+					<li>
+<span class="name">returnElements</span> <span class="type">Boolean</span> <span class="comment">An optional flag to return the element, rather than the value</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">A 2-element Array containing the min and max values, or min and max elements</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example grabs the min and max widths from the selection:
+
+		</p>
+		<pre class="prettyprint lang-javascript">var values      = Utils.getExtremeValues($selection, 'width');
+inspect(values);	</pre>
+		<pre>Inspect: Array (depth:2, objects:0, values:2, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	 0: 4.9
+	 1: 78</pre>
+		<p>The following example grabs the widest and narrowest elements in the selection, then makes those elements the new selection:</p>
+		<pre class="prettyprint lang-javascript">var elements    = Utils.getExtremeValues($selection, 'width', true)
+$selection      = elements;</pre>
+		<pre>
+List: Array (depth:1, objects:0, values:2, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	 0: &quot;Item_04&quot;
+	 1: &quot;Item_01&quot;</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getdeepvalue" name="getdeepvalue" href="#getdeepvalue">getDeepValue(obj, path)</a></h3>
+		<p class="description">Gets properties from an object's namespace via a dot.syntax.path String</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">The root object from which to extract the deep value</span>
+</li>
+					<li>
+<span class="name">path</span> <span class="type">String</span> <span class="comment">The dot-path to an existing object property</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Value</span> <span class="comment">The value of the property, if it exists</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example gets the frame count of the first item in the library:</p>
+		<pre class="prettyprint lang-javascript">Utils.getDeepValue($library.items[0], 'timeline.frameCount');</pre>
+		<pre>45</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="setdeepvalue" name="setdeepvalue" href="#setdeepvalue">setDeepValue(obj, path, properties)</a></h3>
+		<p class="description">Add nested properties to an object's namespace via a dot.syntax.path String</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">The root object on which to create the deep value</span>
+</li>
+					<li>
+<span class="name">path</span> <span class="type">String</span> <span class="comment">A dot-syntax path to a new object property</span>
+</li>
+					<li>
+<span class="name">properties</span> <span class="type">Object</span> <span class="comment">An object or value to add to the new namespace</span>
+</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<p>This method safely extends any Object or instance with new properties, without first having to check each level for the existance of a parent object. It affords the developer a is a quick and safe way to build object hierarchies.</p>
+		<p>The following example extends a native Object with a new hierarchy and child properties:</p>
+		<pre class="prettyprint lang-javascript">var obj = {};
+Utils.setDeepValue(obj, 'a.b.c', {x:1, y:2, z:3});</pre>
+		<pre>Inspect: Object (depth:5, objects:3, values:3, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Object
+	[a] =&gt; Object
+		[b] =&gt; Object
+			[c] =&gt; Object
+				 x: 1
+				 y: 2
+				 z: 3</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="randomizevalue" name="randomizevalue" href="#randomizevalue">randomizeValue(value, modifier)</a></h3>
+		<p class="description">Randomnly modify a seed value with a secondary modifier component</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">Number</span> <span class="comment">A value to modify</span>
+</li>
+					<li>
+<span class="name">modifier</span> <span class="type">Number</span> <span class="comment">An optional modifier component with which to modify the original value</span>
+</li>
+					<li>
+<span class="name">modifier</span> <span class="type">String</span> <span class="comment">An optional modifier component with which to modify the original value, with optional leading +,-,* or a trailing %</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Number</span> <span class="comment">The modified value</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The randomize() method modifies the seed value using a numeric scalar, or String expression of the format <strong>operator</strong>, <strong>value</strong>, <strong>percent</strong>, for example:</p>
+		<pre class="prettyprint lang-javascript">
+10     // add or subtract up to 10, both + and -
+&quot;10&quot;   // add or subtract up to 10, overall
+&quot;+25&quot;  // add up to 25
+&quot;-1.3&quot; // subtract up to -1.3
+&quot;+25%&quot; // add up to 25% to the value
+&quot;*50%&quot; // multiply by up to 50%</pre>
+		<p>This expression is then used to modify the original value, as follows: </p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Numeric value format:</p>
+				<ul>
+					<li>
+<span class="name">n</span> <span class="type">25</span> <span class="comment">0 - 25 on either side of the original value</span>
+</li>
+					<li>
+<span class="name">-n</span> <span class="type">-25</span> <span class="comment">0 - 25 less than the original value</span>
+</li>
+				</ul>
+				<p>Numeric expression format:</p>
+				<ul>
+					<li>
+<span class="name">n</span> <span class="type">&quot;25&quot;</span> <span class="comment">0 - 12.5 on either side of the original value</span>
+</li>
+					<li>
+<span class="name">+n</span> <span class="type">&quot;+25&quot;</span> <span class="comment">0 - 25 more than the original value</span>
+</li>
+					<li>
+<span class="name">-n</span> <span class="type">&quot;-25&quot;</span> <span class="comment">0 - 25 less than the original value</span>
+</li>
+					<li>
+<span class="name">*n</span> <span class="type">&quot;*2&quot;</span> <span class="comment">0 - double the original value</span>
+</li>
+					<li>
+<span class="name">/n</span> <span class="type">&quot;/2&quot;</span> <span class="comment">0 - 1/2 of the original value</span>
+</li>
+				</ul>
+				<p>Percentage expression format:</p>
+				<ul>
+					<li>
+<span class="name">n%</span> <span class="type">&quot;25%&quot;</span> <span class="comment">75% - 125% of the original value (25% either side)</span>
+</li>
+					<li>
+<span class="name">+n%</span> <span class="type">&quot;+25%&quot;</span> <span class="comment">100% - 125% of the original value</span>
+</li>
+					<li>
+<span class="name">-n%</span> <span class="type">&quot;-25%&quot;</span> <span class="comment">75% - 100% of the original value</span>
+</li>
+					<li>
+<span class="name">*n%</span> <span class="type">&quot;*25%&quot;</span> <span class="comment">0% - 25% of than the original value</span>
+</li>
+					<li>
+<span class="name">/n%</span> <span class="type">&quot;/25%&quot;</span> <span class="comment">0% - 400% of the original value</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following are examples of modifying values:</p>
+		<pre class="prettyprint lang-javascript">
+// numeric value
+Utils.randomizeValue(100, 25);     // 116.36332936040048
+Utils.randomizeValue(100, -25);    // 83.36330620920405
+
+// numeric expressions
+Utils.randomizeValue(100, &quot;25&quot;);   // 111.75086500690269
+Utils.randomizeValue(100, &quot;+25&quot;);  // 119.05169580381472
+Utils.randomizeValue(100, &quot;-25&quot;);  // 78.89110620920405
+Utils.randomizeValue(100, &quot;*2&quot;);   // 191.11471736876952
+Utils.randomizeValue(100, &quot;/2&quot;);   // 20.64621360510172
+
+// percentage expressions
+Utils.randomizeValue(100, &quot;25%&quot;);  // 101.85976300353933
+Utils.randomizeValue(100, &quot;+25%&quot;); // 115.88694308440219
+Utils.randomizeValue(100, &quot;-25%&quot;); // 88.5689837135059
+Utils.randomizeValue(100, &quot;*25%&quot;); // 11.563594997061665
+Utils.randomizeValue(100, &quot;/25%&quot;); // 358.00429033663547		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="randomvalue" name="randomvalue" href="#randomvalue">randomValue(a, b, round)</a></h3>
+		<p class="description">Get a random value between 2 numbers</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">a</span> <span class="type">Array</span> <span class="comment">A 2-element array defining the lower and upper limits</span>
+</li>
+					<li>
+<span class="name">a</span> <span class="type">Number</span> <span class="comment">The lower limit of the range</span>
+</li>
+					<li>
+<span class="name">b</span> <span class="type">Number</span> <span class="comment">The lower limit of the range</span>
+</li>
+					<li>
+<span class="name">round</span> <span class="type">Number</span> <span class="comment">An optional Boolean to round to the nearest integer value</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Number</span> <span class="comment">A number between a and b</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example grabs a random number between 100 and 200:</p>
+		<pre class="prettyprint lang-javascript">Utils.randomValue(100, 200);</pre>
+		<pre>166.76074429449056</pre>
+	</div>
+		<h2><a id="string-methods" name="string-methods" href="#string-methods">String methods</a></h2>
+<ul>
+	<li><a href="#pad">pad(value, length, chr, right)</a></li>
+	<li><a href="#columnizetext">columnizeText(text, padding, delimiter, useSpaces, tabWidth)</a></li>
+	<li><a href="#parsevalue">parseValue(value, trim)</a></li>
+	<li><a href="#parseexpression">parseExpression(expression, delimiter, nestStart, nestEnd)</a></li>
+</ul>
+
+	<div class="method">
+		<h3 class="signature"><a id="pad" name="pad" href="#pad">pad(value, length, chr, right)</a></h3>
+		<p class="description">Pads a value to a certain length with a specific character</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">Value</span> <span class="comment">Any value</span>
+</li>
+					<li>
+<span class="name">length</span> <span class="type">Number</span> <span class="comment">An optional length, defaults to 6</span>
+</li>
+					<li>
+<span class="name">chr</span> <span class="type">String</span> <span class="comment">An optional padding character, defaults to 0</span>
+</li>
+					<li>
+<span class="name">right</span> <span class="type">Boolean</span> <span class="comment">An optional flag to pad to the right, rather than the left</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The padded value</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example uses the defaults to pad a number to 6 digits:</p>
+		<pre class="prettyprint lang-javascript">trace(Utils.pad(1, 5));		</pre>
+		<pre>00001		</pre>
+		<p>The following example pads a string with right-hand padding:</p>
+		<pre class="prettyprint lang-javascript">trace('&quot;' + Utils.pad('Hello', 20, ' ', true) + '&quot;');		</pre>
+		<pre>&quot;Hello               &quot;</pre>
+	</div>
+<div class="method">
+	<h3 class="signature"><a id="columnizetext" name="columnizetext" href="#columnizetext">columnizeText(text, padding, delimiter, useSpaces, tabWidth)</a></h3>
+		<p class="description">Converts a delimited block of text to tab-separated columns</p>
+		<p class="description">&nbsp;</p>
+	<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">text</span> <span class="type">String</span> <span class="comment">The block of text to tabify</span>
+</li>
+					<li>
+<span class="name">padding</span> <span class="type">Number</span> <span class="comment">An optional amount of tabs to pad each column by. Defaults to 0</span>
+</li>
+					<li>
+<span class="name">delimiter</span> <span class="type">String</span> <span class="comment">An optional delimiter (can also be a RegExp) to split the columns on. Defaults to '\t'</span>
+</li>
+					<li>
+<span class="name">useSpaces</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to use spaces instead of tabs. Defaults to false</span>
+</li>
+					<li>
+<span class="name">tabWidth</span> <span class="type">Number</span> <span class="comment">An optional system tab width. Defaults to 4</span>
+</li>
+				</ul>
+		</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The columnized output</span>
+</li>
+				</ul>
+			</div>
+</div>
+		<p>Sometimes when generating output, it's useful to have declarations in columns, such as CSV output or perhaps variable declarations,  and this method allows you to do that. </p>
+		<p>It takes a block of text (a string), and determines the columns based on a delimiter character, then outputs the same text with the space between the rows expanded to create a grid of text.</p>
+<p>The following example demonstrates taking some comma-delimited text and converting to tabular format:</p>
+	<pre class="prettyprint lang-javascript">
+var data = &lt;xml&gt;
+	Rank,Artist,Song,Year
+	1,Queen,Bohemian Rhapsody,1975
+	2,John Lennon,Imagine,1980
+	3,Robbie Williams,Angels,1997
+	4,Beatles,Hey Jude,1968
+	5,Nirvana,Smells Like Teen Spirit,1991
+	6,Oasis,Live Forever,1994
+	7,Oasis,Wonderwall,1995
+	8,U2,One,1992
+	9,Verve,Bitter Sweet Symphony,1997
+	10,U2,With Or Without You,1987
+&lt;/xml&gt;
+trace(Utils.columnizeText(data, 0, ','));</pre>
+
+<pre>Rank	Artist			Song					Year
+1		Queen			Bohemian Rhapsody		1975
+2		John Lennon		Imagine					1980
+3		Robbie Williams	Angels					1997
+4		Beatles			Hey Jude				1968
+5		Nirvana			Smells Like Teen Spirit	1991
+6		Oasis			Live Forever			1994
+7		Oasis			Wonderwall				1995
+8		U2				One						1992
+9		Verve			Bitter Sweet Symphony	1997
+10		U2				With Or Without You		1987</pre>
+<p>The following example (more relevent to coding!) generates ActionScript 3.0 declarations in columns, for Bitmap items in the library:</p>
+		<pre class="prettyprint lang-javascript">
+function process(element)
+{
+	var name	= element.shortName.replace(/\.\w+$/, '').toCamelCase();
+	var type	= ActionScript.getClass(element, true);
+	text     	+= 'var {name}\t:Sound\t= new {type}();\n'.inject(name, type);
+}
+
+var text = '';
+$$(':sound:exported').sort().each(process);
+
+trace('import sounds.*;\n')
+trace(Utils.columnizeText(text));</pre>
+	<pre>import sounds.*;
+
+var damage		:Sound	= new Damage();
+var explosion	:Sound	= new Explosion();
+var laserShoot	:Sound	= new Laser();
+var notify		:Sound	= new Notify();
+var powerUp		:Sound	= new PowerUp();</pre>
+<span class="description">Note that the above code demos in some browsers may show spaces; this is not the case in JSFL, unless the useSpaces parameter is set to true! </span>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="parsevalue" name="parsevalue" href="#parsevalue">parseValue(value, trim)</a></h3>
+		<p class="description">Parse any string into a real datatype. Supports Number, Boolean, hex (0x or #), XML, XMLList, Array notation, Object notation, JSON, Date, undefined, null</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">An input string</span>
+</li>
+					<li>
+<span class="name">trim</span> <span class="type">Boolean</span> <span class="comment">An optional flag to trim the string, on by default</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Mixed</span> <span class="comment">The parsed value of the original value</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Often when dealing with text files, XUL instances, XML, or other external sources, you need to parse text data into their correct datatypes. If you know the datatype you can cast or convert directly to the required type, but if you don't or you want a single function to do the casting, parseValue() is your best friend. It supports:</p>
+		<ul>
+			<li>Number</li>
+			<li>Boolean</li>
+			<li>hex (0x or #)</li>
+			<li>XML</li>
+			<li>Array notation</li>
+			<li>Object notation</li>
+			<li>JSON</li>
+			<li>Date</li>
+			<li>undefined</li>
+			<li>null</li>
+		</ul>
+		<p>The following example converts various strings to their real-word datatypes:</p>
+		<pre class="prettyprint lang-javascript">Utils.parseValue('2.1');            // 2.2
+Utils.parseValue('2.0');            // 2
+Utils.parseValue('TRUE');           // true
+Utils.parseValue('#FF0000');        // 16711680
+Utils.parseValue('0xFF0000');       // 16711680
+Utils.parseValue('&lt;xml a=&quot;1&quot; /&gt;');  // &lt;xml a=&quot;1&quot; /&gt;
+Utils.parseValue('[1,2,3]');        // [1, 2, 3]
+Utils.parseValue('{&quot;a&quot;:1}');        // {a:1}
+Utils.parseValue('Jan 01 2011');    // Sat Jan 01 20011 00:00:00 GMT+0000 (GMT Standard Time)
+Utils.parseValue('undefined');      // undefined
+Utils.parseValue('');               // null</pre>
+	</div>
+<div class="method">
+		<h3 class="signature"><a id="parseexpression" name="parseexpression" href="#parseexpression">parseExpression(expression, delimiter, nestStart, nestEnd)</a></h3>
+		<p class="description">Parses a compound CSS (or CSS-like) expression into single elements, respecting :nested(:tokens, [like=these,ones])</p>
+	<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">expression</span> <span class="type">String</span> <span class="comment">A CSS or otherwise comma-delimited string</span>
+</li>
+					<li>
+<span class="name">delimiter</span> <span class="type">String</span> <span class="comment">An optional delimiter character(s) to split the string on. Defaults to &quot;,&quot;</span>
+</li>
+					<li>
+<span class="name">nestStart</span> <span class="type">String</span> <span class="comment">An optional opening character(s) to start ignoring splits, i.e. &quot;(&quot;. Defaults to &quot;([{&quot;</span>
+</li>
+					<li>
+<span class="name">nestEnd</span> <span class="type">String</span> <span class="comment">An optional closing character(s) to stop ignoring splits, i.e. &quot;)&quot;. Defaults to &quot;}])&quot;</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of String elements</span>
+</li>
+				</ul>
+			</div>
+</div>
+		<p>The parseExpression function is mainly used internally to the framework to parse out discrete components from comma-delimited <a href="/support/api/elements/Selectors#the-anatomy-of-selection">CSS</a> and XUL Control <a href="/support/api/ui/XUL#adding-controls-via-shorthand">shorthand expressions</a>, which cannot reliably be accomplished with RegularExpressions because of nesting concerns.</p>
+		<p>The following example demonstrates splitting a complex XUL expression,	versus	parsing it:</p>
+		<pre class="prettyprint lang-javascript">var expression	= 'title:Create Bitmap definitions,columns:[120,200],dropdown:Options={one:1,two:2,three:3},checkbox:Selected Only=true'
+var controls1	= expression.split(',');
+var controls2	= Utils.parseExpression(expression);
+
+inspect(controls1, 'Split');
+inspect(controls2, 'Parse');</pre>
+<p>Splitting is bad, as it doesn't respect the nested groups:</p>
+		<pre>Split: Array (depth:4, objects:0, values:7, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "title:Create Bitmap definitions"
+	 1: "columns:[120"
+	 2: "200]"
+	 3: "dropdown:Options={one:1"
+	 4: "two:2"
+	 5: "three:3}"
+	 6: "checkbox:Selected Only=true"</pre>
+<p>However, parsing respects the nested identifiers such as <strong>()</strong>, <strong>[]</strong>, and <strong>{}</strong>:</p>
+<pre>Parse: Array (depth:4, objects:0, values:4, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "title:Create Bitmap definitions"
+	 1: "columns:[120,200]"
+	 2: "dropdown:Options={one:1,two:2,three:3}"
+	 3: "checkbox:Selected Only=true</pre>
+</div>
+<h2><a id="regexp-methods" name="regexp-methods" href="#regexp-methods">RegExp methods</a></h2>
+<ul>
+	<li><a href="#match">match(str, rxGlobal, matchNames, captureIndex)</a></li>
+	<li><a href="#rxescape">rxEscape(value)</a></li>
+	<li><a href="#rxunescape">rxUnescape(value)</a></li>
+	<li>
+<a href="#makewildcard">makeWildcard(value)</a>	</li>
+</ul>
+<div class="method">
+<h3 class="signature"><a id="match" name="match" href="#match">match(str, rxGlobal, matchNames, captureIndex)</a></h3>
+		<p class="description">Performs a global RegExp match but returns a 2D Array of local match Arrays, or Objects if matchNames are supplied</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">str</span> <span class="type">String</span> <span class="comment">The string to be matched</span>
+</li>
+					<li>
+<span class="name">rx</span> <span class="type">RegExp</span> <span class="comment">A  RegExp object or literal</span>
+</li>
+					<li>
+<span class="name">params</span> <span class="type">String</span> <span class="comment">An optional comma-delimited string of local match names</span>
+</li>
+					<li>
+<span class="name">params</span> <span class="type">Array</span> <span class="comment">An optional Array of local match names</span>
+</li>
+					<li>
+<span class="name">captureIndex</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to store the index of the global matches</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of local match Arrays or Objects</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This method saves you running 2 separate RegExp loops to extract both global and local matchs, and also packages assigning match values to named properties.</p>
+	<p>The following example matches object methods from the source of the Event.jsfl file in the framework core, and passes in names that the parameter:</p>
+	<pre class="prettyprint lang-javascript">var contents = new File('//core/jsfl/libraries/flash/Events.jsfl').contents;
+var rx       = /(\w+):function\((.*)\)/;
+
+var matches  = Utils.match(contents, rx, ['name', 'arguments']);
+inspect(matches);</pre>
+	<pre>
+Inspect: Array (depth:4, objects:6, values:18, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array =&gt; Array
+	[0] =&gt; Object
+		 match: &quot;add:function(type, callback, name, scope)&quot;
+		 name: &quot;add&quot;
+		 arguments: &quot;type, callback, name, scope&quot;
+	[1] =&gt; Object
+		 match: &quot;remove:function(type, name)&quot;
+		 name: &quot;remove&quot;
+		 arguments: &quot;type, name&quot;
+	[2] =&gt; Object
+		 match: &quot;removeAll:function(type)&quot;
+		 name: &quot;removeAll&quot;
+		 arguments: &quot;type&quot;
+	[3] =&gt; Object
+		 match: &quot;get:function(type, name)&quot;
+		 name: &quot;get&quot;
+		 arguments: &quot;type, name&quot;
+	[4] =&gt; Object
+		 match: &quot;toString:function()&quot;
+		 name: &quot;toString&quot;
+		 arguments: &quot;&quot;
+	[5] =&gt; Object
+		 match: &quot;fire:function(event)&quot;
+		 name: &quot;fire&quot;
+		 arguments: &quot;event&quot;</pre>
+<p>As you can see in this example, the returned 2D Array of match objects can be both iterated over, and the matches used, much more conveniently than numbered match indices:</p>
+<pre class="prettyprint lang-javascript">for each(var match in matches)
+{
+    format('{name} =&gt; {arguments}', match.name, match.arguments);
+}<br></pre>
+<pre>add =&gt; type, callback, name, scope
+remove =&gt; type, name
+removeAll =&gt; type
+get =&gt; type, name
+toString =&gt;
+fire =&gt; event
+</pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="rxescape" name="rxescape" href="#rxescape">rxEscape(value)</a></h3>
+		<p class="description">Escapes a string for use in RegExp constructors</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The string to be RegExp escaped</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The escaped string</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example escapes a string to be used in a RegExp constructor:</p>
+	<pre class="prettyprint lang-javascript">trace(Utils.rxEscape('/()[]{}^$.*+?'));</pre>
+	<pre>\/\(\)\[\]\{\}\^\$\.\*\+\?	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="rxunescape" name="rxunescape" href="#rxunescape">rxUnescape(value)</a></h3>
+		<p class="description">Unescapes a string used in RegExp constructors</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The string to be RegExp escaped</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The unescaped string</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example unescapes an escaped RegExp string:</p>
+	<pre class="prettyprint lang-javascript">trace(Utils.rxUnescape('\/\(\)\[\]\{\}\^\$\.\*\+\?'));	</pre>
+	<pre>/()[]{}^$.*+?	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="makewildcard" name="makewildcard" href="#makewildcard">makeWildcard(value)</a></h3>
+		<p class="description">Converts a wildcard (*) string into a non-greedy RegExp</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The wildcard string to convert</span>
+</li>
+					<li>
+<span class="name">exactMatch</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to force an exact match</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">RegExp</span> <span class="comment">The new RegExp</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example creates a RegExp match from a wildcard String, which could be used to match filenames:</p>
+	<pre class="prettyprint lang-javascript">var rx = Utils.makeWildcard('core/*.*', true);
+trace(rx);	</pre>
+	<pre>/^core\/.*?\..*?$/	</pre>
+	</div>
+		<h2><a id="file-and-uri-methods" name="file-and-uri-methods" href="#file-and-uri-methods">File and URI methods</a></h2>
+<ul>
+	<li><a href="#glob">glob(globPathOrURI, searchableOnly, asPaths, debug)</a></li>
+	<li><a href="#geturis">getURIs(folder, $depth, $filesOnly, $filter, $extensions)</a></li>
+	<li><a href="#getfirstvaliduri">getFirstValidURI(uris)</a></li>
+	<li><a href="#getsearchableuris">getSearchableURIs(pathOrURI, itemType, returnPaths)</a></li>
+	<li><a href="#issearchable">isSearchable(pathOrURI)</a></li>
+	<li><a href="#walkfolder">walkFolder(folder, $callback, $maxDepth, $returnURIs)</a></li>
+	<li>
+<a href="#maketree">makeTree(paths)</a>	</li>
+</ul>
+<div class="method">
+<h3 class="signature"><a id="glob" name="glob" href="#glob">glob(pathOrURI, pattern, searchableOnly, debug)</a></h3>
+	<p class="description">Returns a list of URIs for a glob string</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">globPathOrURI</span> <span class="type">String</span> <span class="comment">The path or URI to the folder to search, including the wildcard pattern, * = any character, ** = files recursive, ** / (no space!) folders recursive. Defaults to '*'</span>
+</li>
+					<li>
+<span class="name">searchableOnly</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to respect any folders with file manifests that set themselves as non-searchable</span>
+</li>
+					<li>
+<span class="name">asPaths</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to return paths not URIs</span>
+</li>
+					<li>
+<span class="name">debug</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to print debugging information about the generated RegExp</span>
+</li>
+					<li>
+<span class="name">debug</span> <span class="type">Object</span> <span class="comment">An optional Object to return debugging information about the generated RegExp</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of URI strings</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>Globbing is a powerful technique borrowed from <a href="http://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=2&amp;ved=0CF8QFjAB&amp;url=http%3A//en.wikipedia.org/wiki/Glob_(programming)&amp;ei=8W_pT4bNIeWm0AWwgO2pAQ&amp;usg=AFQjCNHBnZMjJjHIgTkACQjMrd_6A-ZQbQ&amp;sig2=Bs_H4XG8cL9ehAf8IReQjg">Unix</a> and <a href="http://www.google.co.uk/url?sa=t&amp;rct=j&amp;q=&amp;esrc=s&amp;source=web&amp;cd=1&amp;ved=0CF4QFjAA&amp;url=http%3A//php.net/manual/en/function.glob.php&amp;ei=8W_pT4bNIeWm0AWwgO2pAQ&amp;usg=AFQjCNFKwRgli8dtZj9U2W02RJON7Y7N6A&amp;sig2=_Ox66hLhImwEehFLfFAMfQ">PHP</a> in order to match file paths by way of wildcard pattern matching. It allows developers to match files, folders and subfolders with a fairly simple syntax.</p>
+		<p>xJSFL has a slightly simpler implementation than the full glob implementation, and uses only stars (*) and double-stars (**) to match same-level and recursive-level elements. Both stars and double-stars are &quot;expanded&quot; during the match, that is, they match all characters of a path, with the double-star token matching / characters as well.</p>
+	<p>Put simply, the syntax is:</p>
+	<pre>*				// a single star matches <strong>files and folders</strong>
+*.*				// a single star and a dot and a star matches <strong>files only</strong> (those with an extension)
+/				// a trailing slash matches <strong>folders only</strong>
+**				// a double-star matches <strong>all characters</strong> (including <strong>/</strong>), making the search <strong>recursive</strong></pre>
+	<p>These can be combined with each other as follows:</p>
+		<pre>*				// a single star matches <strong>files and folders</strong> in the <strong>current</strong> folder
+*/				// a single star and a trailing slash matches only <strong>folders</strong> in the <strong>current</strong> folder
+*.*				// a single star with a dot and a star matches all <strong>files</strong> in the <strong>current</strong> folder
+
+**				// double-stars match <strong>files and folders recursively</strong>
+**/				// double-stars and a trailing slash match only <strong>folders recursively</strong>
+**.*			// double-stars with a dot and a star match only <strong>files</strong> <strong>recursively</strong></pre>
+		<p>And they can (and should) also be mixed with other characters, to return more complex matches:</p>
+	<pre>*.jsfl			// match all jsfl files in the current folder
+t*/				// match only folders that start with &quot;t&quot; in the current folder
+*asset*			// match any files or folders that contain the word &quot;asset&quot; in the current folder
+
+**.png			// match all PNG files in the current and sub folders
+**/*.png		// match all PNG files in sub folders
+**/*assets/		// match all folders with the suffix &quot;assets&quot; in any sub folders
+assets/**.*		// match all files from the assets folder or its children</pre>
+	<p>Utils.glob() uses <a href="/support/api/file/uri#touri">URI.toURI()</a> internally, so supports all its functionality like placeholder tokens and relative paths, meaning that you can pass a variety of glob paths in:</p>
+	<pre class="prettyprint lang-javascript">Utils.glob('*');					// files and folders in the current file's folder
+Utils.glob('../*.*');				// files in the current file's parent folder
+Utils.glob('c:/temp/**/');			// all folders under the absolute path c:/temp/
+Utils.glob('file:///c|/temp/**');	// all files and folders under the absolute URI c:/temp/
+Utils.glob('{user}**');				// all files and folders in the xJSFL user folder</pre>
+	<p></p>
+<p>The following example creates a variety of simple glob patterns (all from the same root folder) and inspects their results:</p>
+<pre class="prettyprint lang-javascript">// define patterns
+	var patterns =
+	{
+		files:			'c:/test/*.*',
+		folders:		'c:/test/*/',
+		filesAndFolders:'c:/test/*',
+		allRecursive:	'c:/test/**',
+		allImages:		'c:/test/**.png',
+		allVideos:		'c:/test/**.flv',
+		allFolders:		'c:/test/**/',
+		allAssets:		'c:/test/assets/**.*',
+		allCustom:		'c:/test/**a*',
+	}
+
+// get results
+	var results = {};
+	for(var name in patterns)
+	{
+		var path	= patterns[name];
+		var pattern	= path.replace('c:/test/', '');
+		results[name + ': "' +pattern+ '"'] = Utils.glob(path, false, true);
+	}
+
+// inspect
+	inspect(results);</pre>
+<p class="prettyprint lang-javascript">In the following results, the glob patterns have been highlighted in red:<br>
+</p>
+	<pre>
+Inspect: Object (depth:4, objects:9, values:57, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+
+	[files: <strong>"*.*"</strong>] => Array
+		 0: "c:/test/read me.txt"
+
+	[folders: <strong>"*/"</strong>] => Array
+		 0: "c:/test/assets/"
+		 1: "c:/test/jsfl/"
+
+	[filesAndFolders:<strong> "*"</strong>] => Array
+		 0: "c:/test/assets/"
+		 1: "c:/test/jsfl/"
+		 2: "c:/test/read me.txt"
+
+	[allRecursive: <strong>"**"</strong>] => Array
+		 0: "c:/test/assets/"
+		 1: "c:/test/assets/images/"
+		 2: "c:/test/assets/images/image 1.png"
+		 3: "c:/test/assets/images/image 2.png"
+		 4: "c:/test/assets/images/image 3.png"
+		 5: "c:/test/assets/videos/"
+		 6: "c:/test/assets/videos/backup/"
+		 7: "c:/test/assets/videos/backup/video 4.flv"
+		 8: "c:/test/assets/videos/backup/video 5.flv"
+		 9: "c:/test/assets/videos/backup/video 6.flv"
+		 10: "c:/test/assets/videos/video 1.flv"
+		 11: "c:/test/assets/videos/video 2.flv"
+		 12: "c:/test/assets/videos/video 3.flv"
+		 13: "c:/test/jsfl/"
+		 14: "c:/test/jsfl/files.jsfl"
+		 15: "c:/test/jsfl/libraries/"
+		 16: "c:/test/jsfl/libraries/animation tools.jsfl"
+		 17: "c:/test/jsfl/libraries/custom functions.jsfl"
+		 18: "c:/test/jsfl/main.jsfl"
+		 19: "c:/test/jsfl/ui.jsfl"
+		 20: "c:/test/read me.txt"
+
+	[allImages: <strong>"**.png"</strong>] => Array
+		 0: "c:/test/assets/images/image 1.png"
+		 1: "c:/test/assets/images/image 2.png"
+		 2: "c:/test/assets/images/image 3.png"
+
+	[allVideos: <strong>"**.flv"</strong>] => Array
+		 0: "c:/test/assets/videos/backup/video 4.flv"
+		 1: "c:/test/assets/videos/backup/video 5.flv"
+		 2: "c:/test/assets/videos/backup/video 6.flv"
+		 3: "c:/test/assets/videos/video 1.flv"
+		 4: "c:/test/assets/videos/video 2.flv"
+		 5: "c:/test/assets/videos/video 3.flv"
+
+	[allFolders:<strong> "**/"</strong>] => Array
+		 0: "c:/test/assets/"
+		 1: "c:/test/assets/images/"
+		 2: "c:/test/assets/videos/"
+		 3: "c:/test/assets/videos/backup/"
+		 4: "c:/test/jsfl/"
+		 5: "c:/test/jsfl/libraries/"
+
+	[allAssets: <strong>"assets/**.*"</strong>] => Array
+		 0: "c:/test/assets/images/image 1.png"
+		 1: "c:/test/assets/images/image 2.png"
+		 2: "c:/test/assets/images/image 3.png"
+		 3: "c:/test/assets/videos/backup/video 4.flv"
+		 4: "c:/test/assets/videos/backup/video 5.flv"
+		 5: "c:/test/assets/videos/backup/video 6.flv"
+		 6: "c:/test/assets/videos/video 1.flv"
+		 7: "c:/test/assets/videos/video 2.flv"
+		 8: "c:/test/assets/videos/video 3.flv"
+
+	[allCustom: <strong>"**a*"</strong>] => Array
+		 0: "c:/test/assets/images/image 1.png"
+		 1: "c:/test/assets/images/image 2.png"
+		 2: "c:/test/assets/images/image 3.png"
+		 3: "c:/test/jsfl/libraries/animation tools.jsfl"
+		 4: "c:/test/jsfl/main.jsfl"
+		 5: "c:/test/read me.txt"</pre>
+	<p>The <strong>Code Examples</strong> module also has some sample glob code in: </p>
+	<pre>xJSFL/modules/Code Examples/jsfl/utils/glob.jsfl</pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="geturis" name="geturis" href="#geturis">getURIs(folder, $depth, $filesOnly, $filter, $extensions)</a></h3>
+		<p class="description">Returns a list of URIs for a given glob path, folder reference and optional condition</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">folder</span> <span class="type">String</span> <span class="comment">An absolute or relative folder path or URI (wildcards allowed)</span>
+</li>
+					<li>
+<span class="name">folder</span> <span class="type">Folder</span> <span class="comment">A valid Folder instance</span>
+</li>
+					<li>
+<span class="name">folder</span> <span class="type">URI</span> <span class="comment">A valid URI instance</span>
+</li>
+					<li>
+<span class="name">$depth</span> <span class="type">Number</span> <span class="comment">An optional max depth to search to</span>
+</li>
+					<li>
+<span class="name">$filesOnly</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to get files only</span>
+</li>
+					<li>
+<span class="name">$filter</span> <span class="type">RegExp</span> <span class="comment">A RegExp to match each URI</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of URIs</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Get URIs is used to grab URIs from a folder and its subfolders.</p>
+		<p>The following example :</p>
+	<pre class="prettyprint lang-javascript">Utils.getURIs(folder, $depth, $filesOnly, $filter, $extensions);</pre>
+	<pre></pre>
+	</div>
+<div class="method">
+		<h3 class="signature"><a id="getfirstvaliduri" name="getfirstvaliduri" href="#getfirstvaliduri">getFirstValidURI(uris)</a></h3>
+		<p class="description">Returns the first valid path or URI from an Array of paths and/or URIs</p>
+	<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathsOrURIs</span> <span class="type">Array</span> <span class="comment">An array of paths or URIs</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">A URI-formatted String</span>
+</li>
+
+				</ul>
+			</div>
+</div>
+		<p>This function is  useful when you're working across various machines in a studio, and you need to ensure to get a base path.</p>
+	<p>The following example checks 3 paths, and returns the last one:</p>
+	<pre class="prettyprint lang-javascript">var uris =
+[
+	'file:///E|/some/folder/',
+	'file:///X|/server/path to/another/folder/',
+	'file:///C|/temp/',
+];
+
+var uri = Utils.getFirstValidURI(uris);
+trace(uri);</pre>
+	<pre>file:///C|/temp/	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getsearchableuris" name="getsearchableuris" href="#getsearchableuris">getSearchableURIs(pathOrURI, itemType, returnPaths)</a></h3>
+		<p class="description">Returns URIs which are searchable as defined within manifest.xml files in parent folders</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrURI</span> <span class="type">String</span> <span class="comment">A valid path or URI</span>
+</li>
+					<li>
+<span class="name">itemType</span> <span class="type">String</span> <span class="comment">An optional String, 'files', 'folders' or 'all', defaults to 'all'</span>
+</li>
+					<li>
+<span class="name">returnPaths</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to return only the dowstream path segments</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">A URIList instance of the collected URIs / paths</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example gets all searchable folders from the Snippets folder. Note that the <strong>assets/icons/</strong> folder was skipped, as it contains a <strong>manifest.xml</strong> file with the <strong>folder.searchable</strong> node set to false:</p>
+	<pre class="prettyprint lang-javascript">var uris = Utils.getSearchableURIs('//modules/Snippets/', 'folders');
+inspect(uris);</pre>
+	<pre>Inspect: Array (depth:4, objects:0, values:11, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	 0: "file:///E|/Projects/xJSFL/modules/Snippets/"
+	 1: "file:///E|/Projects/xJSFL/modules/Snippets/assets/"
+	 2: "file:///E|/Projects/xJSFL/modules/Snippets/assets/templates/"
+	 3: "file:///E|/Projects/xJSFL/modules/Snippets/assets/templates/jsfl/"
+	 4: "file:///E|/Projects/xJSFL/modules/Snippets/config/"
+	 5: "file:///E|/Projects/xJSFL/modules/Snippets/config/snippets/"
+	 6: "file:///E|/Projects/xJSFL/modules/Snippets/flash/"
+	 7: "file:///E|/Projects/xJSFL/modules/Snippets/flash/WindowSWF/"
+	 8: "file:///E|/Projects/xJSFL/modules/Snippets/jsfl/"
+	 9: "file:///E|/Projects/xJSFL/modules/Snippets/jsfl/libraries/"
+	 10: "file:///E|/Projects/xJSFL/modules/Snippets/ui/"
+</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="issearchable" name="issearchable" href="#issearchable">isSearchable(pathOrURI)</a></h3>
+		<p class="description">Checks is a folder is searchable, depending on its manifest</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrURI</span> <span class="type">String</span> <span class="comment">A valid path or URI</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">true or false depending on the result</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example grabs the URIs within Snippets/assets/ and checks which of them are searchable (icons and source are both set to be non-searchable as they have so many files):</p>
+	<pre class="prettyprint lang-javascript">var uris = Utils.getURIs('//modules/Snippets/assets/');
+for each(uri in uris)
+{
+	format('{uri} => {state}', URI.toPath(uri, true), Utils.isSearchable(uri));
+}</pre>
+	<pre>E:/Projects/xJSFL/modules/Snippets/assets/icons/ => false
+E:/Projects/xJSFL/modules/Snippets/assets/source/ => false
+E:/Projects/xJSFL/modules/Snippets/assets/templates/ => true
+</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="walkfolder" name="walkfolder" href="#walkfolder">walkFolder(folder, $callback, $maxDepth, $returnURIs)</a></h3>
+		<p class="description">Recursively trawl a folder's contents, optionally calling a callback per element</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">folder</span> <span class="type">String</span> <span class="comment">The path or uri to a valid folder</span>
+</li>
+					<li>
+<span class="name">folder</span> <span class="type">Folder</span> <span class="comment">A valid Folder instance</span>
+</li>
+					<li>
+<span class="name">folder</span> <span class="type">URI</span> <span class="comment">A valid URI instance</span>
+</li>
+					<li>
+<span class="name">$callback</span> <span class="type">Function</span> <span class="comment">An optional callback of the format callback(element, index, depth, indent) to call on each element. Return false to skip processing of that element. Return true to cancel all iteration.</span>
+</li>
+					<li>
+<span class="name">$maxDepth</span> <span class="type">Number</span> <span class="comment">An optional max depth to recurse to, defaults to 100</span>
+</li>
+					<li>
+<span class="name">$returnURIs</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to return all parsed URIs</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The URI of the current element if the callback returns true</span>
+</li>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An array of URIs or paths if returnURIs is set as true</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Recurse folder provides a standard method to recurse folders, with its default functionality returning an Array of all file paths. It can also be passed a callback function in order to process each file and folder it iterates over.</p>
+		<p><span>Note that <strong>$</strong> arguments may passed in any order </span>as they are different data types.</p>
+		<h5>Default action</h5>
+		<p>The following example lists the contents of the <strong>c:/temp/test</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">var paths = Utils.walkFolder('c:/temp/test');
+trace(paths.join('\n'));</pre>
+		<pre>c:/temp/test
+c:/temp/test/a folder
+c:/temp/test/a folder/another folder
+c:/temp/test/a folder/another folder/test.jsfl
+c:/temp/test/a folder/test.fla
+c:/temp/test/a folder/test.txt
+c:/temp/test/document.doc
+c:/temp/test/some file.as
+c:/temp/test/test copy.txt</pre>
+		<h5>Using a callback</h5>
+		<p>The following example supplies a callback with which to process the items it iterates over:</p>
+		<pre class="prettyprint lang-javascript">function callback(element, index, level, indent)
+{
+	trace (indent + '/' + element.name);
+}
+
+Utils.walkFolder('c:/temp/test/', callback);</pre>
+		<pre>/test
+    /a folder
+        /another folder
+            /test.jsfl
+        /test.fla
+        /test.txt
+    /document.doc
+    /some file.as
+    /test copy.txt</pre>
+		<p><strong>Skipping file or folder items</strong></p>
+		<p>The following example shows how files and folders can be skipped by returning a Boolean false from the callback function, in this case if they have the letter &quot;a&quot; in their name (skipping a folder will also skip any files or folders in that folder):</p>
+		<pre class="prettyprint lang-javascript">function callback(element, index, level, indent)
+{
+    return element.name.indexOf('a') == -1;
+}
+
+var paths = Utils.walkFolder('c:/temp/test/', callback);
+trace(paths.join('\n'));</pre>
+		<pre>c:/temp/test
+c:/temp/test/document.doc
+c:/temp/test/test copy.txt</pre>
+		<p>Note that the <strong>element</strong> parameter of the callback will always be a <a href="/support/api/file/filesystem#File">File</a> or <a href="/support/api/file/filesystem#Folder">Folder</a> instance, so you can access any properties of those classes.</p>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="maketree" name="maketree" href="#maketree">makeTree(source)</a></h3>
+		<p class="description">Returns a multiline string, showing the file/folder hierarchy of an input array of paths or URIs</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">source</span> <span class="type">String</span> <span class="comment">A path or URI</span>
+</li>
+					<li>
+<span class="name">source</span> <span class="type">Array</span> <span class="comment">An array of paths or URIs</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The hierarchial representation</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example traces out a tree of the user's JSFL folder:</p>
+	<pre class="prettyprint lang-javascript">trace(Utils.makeTree('//user/jsfl/'));	</pre>
+	<pre>/libraries
+	/load-modules.jsfl
+	/readme.txt
+/snippets
+	/Animation
+		/PNG sequence to SWF.jsfl
+		/Propogate element names across frames.jsfl
+	/Development
+		/ActionScript
+			/Declare stage instances.jsfl
+			/Export SWC.jsfl
+			/Export class definitions.jsfl
+		/Tools
+			/Execute JSFL.jsfl
+			/Inspect built-in object.jsfl
+			/Inspect variable.jsfl
+		/xJSFL
+			/Change Module Panel publish location.jsfl
+			/Sync module SWFs.jsfl
+	/Library
+		/Delete empty folders.jsfl
+		/Export classes.jsfl
+		/Inspect selected items.jsfl
+		/Select items by property.jsfl
+		/Smooth bitmaps.jsfl
+		/Spreadsheet-edit properties.jsfl
+		/Wrap bitmaps in classes.jsfl
+	/Stage
+		/Apply tints.jsfl
+		/Assign unique names.jsfl
+		/Create test squares.jsfl
+		/Make circular.jsfl
+		/Randomize selected elements.jsfl
+		/Set 9-slice guides.jsfl
+	/Tools
+		/Find.jsfl
+	/_libraries
+		/manifest.xml
+		/uri.jsfl</pre>
+</div>
+		<h2><a id="framework-methods" name="framework-methods" href="#framework-methods">Framework methods</a></h2>
+<ul>
+	<li><a href="#getpanel">getPanel(name)</a></li>
+	<li>
+<a href="#getstack">getStack(error, shorten)</a>	</li>
+	<li><a href="#bind">bind(scope, fn)</a></li>
+</ul>
+<div class="method">
+<h3 class="signature"><a id="getpanel" name="getpanel" href="#getpanel">getPanel(name)</a></h3>
+		<p class="description">Returns the named SWF panel if it exists</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">The panel name</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">SWFPanel</span> <span class="comment">An SWFPanel object</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The following example grabs the xJSFL Snippets panel object:</p>
+		<pre class="prettyprint lang-javascript">var panel = Utils.getPanel('xJSFL Snippets');	</pre>
+		<pre>[object SWFPanel]</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="getstack" name="getstack" href="#getstack">getStack(error, shorten)</a></h3>
+		<p class="description">Returns an array of the the currently executing files, paths, lines, and code,</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">error</span> <span class="type">Error</span> <span class="comment">An optional error object</span>
+</li>
+					<li>
+<span class="name">shorten</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to shorten any core paths with {xjsfl}</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An array of the executing files, paths, lines and code</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>getStack() is used throughout xJSFL for debugging, finding callling file URIs, and many other things.</p>
+		<p>The following example dumps the current call stack when function c() is called (most-recent calls are first):</p>
+	<pre class="prettyprint lang-javascript">function a(){ b(); }
+function b(){ c(); }
+function c()
+{
+	inspect(Utils.getStack());
+}
+
+a();</pre>
+	<pre>
+Inspect: Array (depth:4, objects:4, values:20, time:0.0 seconds)
+--------------------------------------------------------------------------------
+array => Array
+	[0] => Object
+		 line: 12
+		 code: "c()"
+		 file: "test.jsfl"
+		 path: "E:/Projects/xJSFL/dev/"
+		 uri: "file:///E|/Projects/xJSFL/dev/test.jsfl"
+	[1] => Object
+		 line: 9
+		 code: "b()"
+		 file: "test.jsfl"
+		 path: "E:/Projects/xJSFL/dev/"
+		 uri: "file:///E|/Projects/xJSFL/dev/test.jsfl"
+	[2] => Object
+		 line: 8
+		 code: "a()"
+		 file: "test.jsfl"
+		 path: "E:/Projects/xJSFL/dev/"
+		 uri: "file:///E|/Projects/xJSFL/dev/test.jsfl"
+	[3] => Object
+		 line: 15
+		 code: ""
+		 file: "test.jsfl"
+		 path: "E:/Projects/xJSFL/dev/"
+		 uri: "file:///E|/Projects/xJSFL/dev/test.jsfl"
+</pre>
+	</div>
+<div class="method">
+		<h3 class="signature"><a id="bind" name="bind" href="#bind">bind(scope, fn)</a></h3>
+<p class="description">Binds the scope of a function to another object permanently</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">The new &quot;this&quot; scope for the function</span>
+</li>
+					<li>
+<span class="name">fn</span> <span class="type">Function</span> <span class="comment">The function to bind to the new scope</span>
+</li>
+					<li>
+<span class="name">...rest</span> <span class="type">Arguments</span> <span class="comment">Any arguments to curry</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Function</span> <span class="comment">The new bound function, or null if the function doesn't exist</span>
+</li>
+				</ul>
+			</div>
+</div>
+		<p>When referencing a function on another object dynamically, the scope that function will be in, when called, is the scope where the reference was first created. The way round this is to use function.apply() or function.call(), but both these methods are only temporary.</p>
+		<p>Utils.bind() returns an interim function that is permanently bound to the supplied scope, which makes it easier to call in future.</p>
+<p>The following example demonstrates 3 ways of calling a function, but the first two are called in the Window scope, not the object scope:</p>
+		<pre class="prettyprint lang-javascript">
+var object =
+{
+	value:1,
+	test:function()
+	{
+		trace('> ' + this.value)
+	}
+}
+func1	= object.test;
+func2	= object['test'];
+func3	= Utils.bind(object, object['test']);</pre>
+	<pre>&gt; undefined
+&gt; undefined
+&gt; 1
+</pre>
+	</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

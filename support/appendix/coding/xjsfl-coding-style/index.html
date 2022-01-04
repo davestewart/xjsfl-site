@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>xJSFL coding conventions | xJSFL</title>
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/appendix/coding/xjsfl-coding-style">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="xJSFL coding conventions | xJSFL">
+		<meta property="og:url" content="http://xjsfl.com/support/appendix/coding/xjsfl-coding-style">
+		<meta property="article:published_time" content="2011-07-06T01:02:00+00:00">
+		<meta property="article:modified_time" content="2012-06-26T18:57:28+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="xJSFL coding conventions | xJSFL">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/644">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=644">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fappendix%2Fcoding%2Fxjsfl-coding-style">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fappendix%2Fcoding%2Fxjsfl-coding-style&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-644 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/appendix/coding/xjsfl-coding-style" rel="bookmark" title="Permanent Link: xJSFL coding conventions">xJSFL coding conventions</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">06<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/appendix/coding" rel="category tag">Coding</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+	<h2>Code</h2>
+<h3>Layout</h3>
+<p>Related lines of code should be grouped into blocks</p>
+<p>Whatespace should be used to separate discrete units of functionality, and help make processes clear</p>
+<p> Strongly consider commenting each block with leading single-line <a href="#comments">comments</a></p>
+<p>Declarations should be lined up in columns. See the section on <a href="#declarations">declarations</a> below.</p>
+<pre lang="javascript">// parameters
+    a			= a || 1;
+    b			= b || 2;
+
+// variables
+    var c		= 3;
+    var d		= 4;
+
+// process
+    if(a &gt; b)
+	{
+		return a + b + c + d;
+	}</pre>
+<h3>Tabs</h3>
+<p>xJSFL's tab width is 4 spaces, expressed as a single tab character (which may not show here, depending on your browser):</p>
+<pre lang="javascript" xml:lang="javascript">'0 tabs in'
+	'1 tab in'
+		'2 tabs in'</pre>
+<h3>Operators</h3>
+<p>Operators should generally be surrounded by whitespace:</p>
+<pre lang="javascript" xml:lang="javascript">var value = (a + b) * (c - d);</pre>
+<p>The exception to this is string concatenation, where cuddled + operators around variables can make it easier to read:</p>
+<pre lang="javascript" xml:lang="javascript">var message = 'The product of (' +a+ ' + ' +b+ ') * (' +c+ ' - ' +d+ ') is ' +value;           // easier to read
+var message = 'The product of (' + a + ' + ' + b + ') * (' + c + ' - ' + d + ') is ' + value;  // harder to read</pre>
+<p>In cases with many values to concatenate, consider using <a href="/support/api/objects/string#inject">String.inject()</a>:</p>
+<pre lang="javascript" xml:lang="javascript">var message = 'The product of ({a} + {b}) * ({c} - {d}) is {value}'.inject(a, b, c, d, value); // easiest to read</pre>
+<h3>Braces</h3>
+<p>Braces should never be cuddled, and start and end braces should line up vertically:</p>
+<pre lang="javascript">function test(state)
+{
+	if(state)
+	{
+		var obj =
+		{
+			a:1,
+			b:2,
+			c:3
+		}
+	}
+}</pre>
+<h3>Quotes</h3>
+<p>Single quotes should be used in preference over double quotes:</p>
+<pre lang="javascript" xml:lang="javascript">var name = 'Bill';</pre>
+<p>The exception is when escaping single-quotes would become unreadable, then double quotes are fine:</p>
+<pre lang="javascript" xml:lang="javascript">var message = 'The dialog\'s members haven\'t been initialized';  // no so good
+var message = &quot;The dialog's members haven't been initialized&quot;;    // better, as more readable</pre>
+<h3>Comments</h3>
+<p>Inline comments should be outdented by a single tab, making it easy to scan the code:</p>
+<pre lang="javascript">// this is block 1
+    if(something)
+    {
+        doSomething(something);
+    }<br>
+// this is block 2
+    if(somethingElse)
+    {
+        doSomethingElse(somethingElse);
+    }</pre>
+<p>Block level comments should line up with the start of the declaration:</p>
+<pre lang="javascript">/**
+ * A test function that does something useful
+ * @param	{Number}	a	The a parameter
+ * @param	{Number}	b	The b parameter
+ * @param	{Number}	c	The c parameter
+ */
+Test = function(a, b, c)
+{
+	this.a = a;
+	this.b = b;
+	this.c = c;
+}</pre>
+<h3>Declarations</h3>
+<p>Variables names and values should be lined up in columns using tabs when more than one variable is being set, with the = operator ranged right, with a single space separating it from the assignment:</p>
+<pre lang="javascript">
+var name			= 'Something';
+var muchLongerName	= 'Something else';</pre>
+<p><strong>Note:</strong> In Komodo, you can hold down <strong>ALT</strong> and <strong>drag the mouse vertically</strong> to insert the cursor into multiple lines at once, making it easy to tab or un-tab blocks of text.</p>
+<p>If only one variable is being set, it is OK to use a single space either side of the = operator</p>
+<pre lang="javascript" xml:lang="javascript">if(state)
+{
+	var name = 'Something';
+}</pre>
+<p>If declaring object properties, endeavour to place them in columns:</p>
+<pre lang="javascript" xml:lang="javascript">var obj =
+{
+	value:		1,
+	property:	'blur',
+	date:		new Date()
+}</pre>
+<p>If declaring multiple blocks of variables or properties, endeavour to makes sure they all line up, even if the columns of one block are shorter than the other:</p>
+<pre lang="javascript" xml:lang="javascript">var foo =
+{
+	a:		1,
+	b:		2,
+	c:		3
+}
+
+var bar =
+{
+	one:	1,
+	two:	2,
+	three:	3
+}</pre>
+Colons may be lined cuddled with their object name, or lined up by the value, as long as the style is uniform within the file:
+<pre lang="javascript" xml:lang="javascript">// file 1
+var foo =
+{
+	a:		1,
+	b:		2,
+	c:		3
+}</pre>
+<pre lang="javascript" xml:lang="javascript">
+// file 2
+var bar =
+{
+	one		: 1,
+	two		: 2,
+	three	: 3
+}</pre>
+<h3>Variable naming</h3>
+<p>Variables should always be camelCase:</p>
+<pre lang="javascript" xml:lang="javascript">var value			= 1;
+var anotherValue	= 2;</pre>
+<p>If a variable name contains an acronym, it should be in upper case <strong>only</strong> when used after the first word:</p>
+<pre lang="javascript" xml:lang="javascript">var uri				= 'file:///c|/temp/';
+var flashURI		= fl.configURI;
+var someOtherURI	= xjsfl.uri;</pre>
+<p>Class constructors should always be capitalised CamelCase, and the class declaration should come before the function keyword (this is actually a technical constraint of the SpiderMonkey JavaScript engine):</p>
+<pre lang="javascript" xml:lang="javascript">Test = function()
+{
+	// constructor code
+}
+
+var test = new Test();</pre>
+<p>Constants should be capitalised underscore_case:</p>
+<pre lang="javascript" xml:lang="javascript">var SOME_VALUE = 10;</pre>
+<h2>Files</h2>
+<h3>Encoding</h3>
+<p>JSFL files should be encoded as UTF-8 with a BOM, as your files may be used on Japanese or Chinese machines if distributed.</p>
+<h3>File naming</h3>
+<p>&quot;Natural language&quot; filenames should be favoured over &quot;camelCased&quot; or &quot;hyphenated-file-naming&quot;</p>
+<pre>animation tools.jsfl</pre>
+<p>File names should generally be &quot;lower case&quot;:</p>
+<pre>
+/config
+	/animation tools.xml
+/jsfl
+	/functions.jsfl
+	/globals.jsfl
+	/settings.jsfl</pre>
+<p>Class files only should be named after the class, in &quot;CapitalizedCamelCase&quot; (this makes it simpler to work out file finding in class loads):</p>
+<pre>/jsfl
+	/libraries
+		/AnimationTools.jsfl
+		/ExportTools.jsfl</pre>
+<p>Module root folders should be &quot;Title Case&quot;:</p>
+<pre>/xJSFL
+	/modules
+		/Animation Tools
+			/config
+			/jsfl
+			/ui</pre>
+<p>Any files whose names appear directly in the Flash UI (i.e. SWF panels and Snippets) should be &quot;Title Case&quot; or &quot;Sentence case&quot;:</p>
+<pre>/flash
+	/WindowSWF
+		/Animation Tools.swf
+</pre>
+<pre>/jsfl
+	/Snippets
+		/Development
+			/Export AS3 class definitions</pre>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

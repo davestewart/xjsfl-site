@@ -1,0 +1,974 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>ItemCollection (class) | xJSFL</title>
+		<meta name="description" content="A powerful Array-like class for manipulating library items">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/elements/itemcollection">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="ItemCollection (class) | xJSFL">
+		<meta property="og:description" content="A powerful Array-like class for manipulating library items">
+		<meta property="og:url" content="http://xjsfl.com/support/api/elements/itemcollection">
+		<meta property="article:published_time" content="2011-07-04T02:06:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T16:24:17+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="ItemCollection (class) | xJSFL">
+		<meta name="twitter:description" content="A powerful Array-like class for manipulating library items">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; ItemCollection (class) Comments Feed" href="/support/api/elements/itemcollection/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/514">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=514">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Felements%2Fitemcollection">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Felements%2Fitemcollection&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-514 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/elements/itemcollection" rel="bookmark" title="Permanent Link: ItemCollection (class)">ItemCollection (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><a href="/support/api/elements/itemcollection#comments" class="comments-link"><strong>2</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/elements" rel="category tag">Elements</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The ItemCollection class is designed to group and manipulate library Item elements. </p>
+<p>It is a subclass of the <a href="/support/api/elements/collections">Collection</a> class, background information about which can be found in the <a href="/support/guides/working-with-flash/introduction-to-collections">Introduction to Collections</a> article.</p>
+<h3>Contents</h3>
+<ul>
+	<li>
+<a href="#overview">Overview</a>
+		<ul>
+			<li><a href="#summary">Summary</a></li>
+			<li><a href="#usage">Usage</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="#api">API</a>
+		<ul>
+			<li><a href="#ItemCollection">ItemCollection(items, dom)</a></li>
+			<li><a href="#inherited-members">Inherited members</a></li>
+
+			<li><a href="#standard-methods">Standard methods</a></li>
+			<ul>
+				<li><a href="#deleteitems">deleteItems()</a></li>
+			</ul>
+			<li><a href="#ui-methods">UI methods</a></li>
+			<ul>
+				<li><a href="#select">select()</a></li>
+				<li><a href="#expand">expand(state, recurse)</a></li>
+				<li><a href="#reveal">reveal()</a></li>
+			</ul>
+			<li><a href="#attribute-methods">Attribute methods</a></li>
+			<ul>
+				<li><a href="#rename">rename(baseName, padding, startIndex, separator)</a></li>
+				<li><a href="#move">move(path, replace, expand)</a></li>
+			</ul>
+			<li><a href="#editing-methods">Editing methods</a></li>
+			<ul>
+				<li><a href="#exec">exec(callback, params)</a></li>
+				<li><a href="#addtostage">addToStage(context, x, y)</a></li>
+			</ul>
+			<li><a href="#utility-methods">Utility methods</a></li>
+			<ul>
+				<li><a href="#sort">sort()</a></li>
+				<li><a href="#update">update()</a></li>
+			</ul>
+		</ul>
+	</li>
+</ul>
+<h3>Usage</h3>
+<p>The ItemCollection class expects an array of library Items as its only parameter, so is nearly always used in conjunction with the <a href="/support/api/elements/item-selector">Item Selector function</a> (although you can of course pass in elements manually). This allows you to abstract fairly complex selections into an easy-to-manage expression.</p>
+<p>The following example creates an ItemCollection using standard dom properties:</p>
+<pre class="prettyprint lang-javascript">var collection = new ItemCollection(dom.library.getSelectedItems());
+collection.list();</pre>
+<pre>[object ItemCollection length=4]: Array (depth:1, objects:0, values:4, time:0.0 seconds)
+----------------------------------------------------------------------------------------
+array => Array
+	 0: "3 - elements/other/intro text"
+	 1: "3 - elements/other/lengthDisplay"
+	 2: "3 - elements/other/imageTitle"
+	 3: "3 - elements/other/instructions"</pre>
+<p>An alternative would be to use  the <a href="/support/api/elements/item-selector">Item Selector function</a> and the <strong>:selected</strong> selector:</p>
+<pre class="prettyprint lang-javascript">var collection = $$(':button');
+</pre>
+<p>The following example again uses the <a href="/support/api/elements/item-selector">Item Selector function</a> to grab all button items from the library (which otherwise would have required some manual coding):</p>
+<pre class="prettyprint lang-javascript">var collection = $$(':button');
+collection.list();</pre>
+<pre escaped="true">
+[object ItemCollection length=14]: Array (depth:1, objects:0, values:14, time:0.0 seconds)
+------------------------------------------------------------------------------------------
+array => Array
+	 0: "2 - gfx/folder button"
+	 1: "3 - elements/buttons/btn next slide"
+	 2: "3 - elements/buttons/btn print"
+	 3: "3 - elements/buttons/btn save"
+	 4: "3 - elements/buttons/btn cancel"
+	 5: "3 - elements/buttons/btn flip"
+	 6: "3 - elements/buttons/btn restart"
+	 7: "3 - elements/buttons/btn prev slide"
+	 8: "3 - elements/measurements/AnchorStraight"
+	 9: "3 - elements/measurements/Anchor"
+	 10: "3 - elements/measurements/AnchorCurved"
+	 11: "3 - elements/measurements/AnchorCalibration"
+	 12: "3 - elements/measurements/Handle"
+	 13: "3 - elements/lock folder/lock button"</pre>
+<p>Note that a collection <strong>does not select</strong> the items in the library - it merely holds a <strong>reference</strong> to them. To physically select items in the library, see the <a href="#select">select()</a> method.</p>
+<h2>API</h2>
+<div class="property">
+	<h3 class="signature"><a id="ItemCollection" name="ItemCollection" href="#ItemCollection">ItemCollection(items, dom)</a></h3>
+	<p class="description">ItemCollection class enacpsulates and modifies Arrays of LibraryItems</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">items</span> <span class="type">Array</span> <span class="comment">An array of library items</span>
+</li>
+				<li>
+<span class="name">items</span> <span class="type">Item</span> <span class="comment">A single Library Item</span>
+</li>
+				<li>
+<span class="name">dom</span> <span class="type">Document</span> <span class="comment">An optional Document instance</span>. Defaults to the current Document</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates an ItemCollection using standard dom properties:</p>
+	<pre class="prettyprint lang-javascript">var collection = new ItemCollection(dom.library.getSelectedItems());
+collection.list();</pre>
+	<pre>[object ItemCollection length=4]: Array (depth:1, objects:0, values:4, time:0.0 seconds)
+----------------------------------------------------------------------------------------
+array =&gt; Array
+	 0: "3 - elements/other/intro text"
+	 1: "3 - elements/other/lengthDisplay"
+	 2: "3 - elements/other/imageTitle"
+	 3: "3 - elements/other/instructions"</pre>
+</div>
+<h2>Inherited members</h2>
+<p>ElementCollection is a subclass of the <a href="/support/api/elements/Collection">Collection</a> class:</p>
+<ul>
+	<li>
+<a href="/support/api/elements/Collection#api-properties">Properties</a>
+		<ul>
+			<li><a href="/support/api/elements/Collection#elements">element</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="/support/api/elements/Collection#standard-methods">Standard methods</a>
+		<ul>
+			<li><a href="/support/api/elements/Collection#each">each(callback, params, scope)</a></li>
+			<li><a href="/support/api/elements/Collection#reach">reach(callback, params, scope)</a></li>
+			<li><a href="/support/api/elements/Collection#indexof">indexOf(element, fromIndex)</a></li>
+			<li><a href="/support/api/elements/Collection#get">get(index)</a></li>
+			<li><a href="/support/api/elements/Collection#find">find(value, property)</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="/support/api/elements/Collection#manipulation-methods">Manipulation methods</a>
+		<ul>
+			<li><a href="/support/api/elements/Collection#add">add(elements)</a></li>
+			<li><a href="/support/api/elements/Collection#remove">remove(elementsOrValue, property)</a></li>
+			<li><a href="/support/api/elements/Collection#filter">filter(callback, thisObject)</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="/support/api/elements/Collection#editing-functions">Editing functions</a>
+		<ul>
+			<li><a href="/support/api/elements/Collection#attr">attr(prop, value)</a></li>
+		</ul>
+	</li>
+	<li>
+<a href="/support/api/elements/Collection#utility-methods">Utility methods</a>
+		<ul>
+			<li><a href="/support/api/elements/Collection#sort">sort()</a></li>
+			<li><a href="/support/api/elements/Collection#list">list()</a></li>
+			<li><a href="/support/api/elements/Collection#call">call(callback, …params)</a></li>
+			<li><a href="/support/api/elements/Collection#apply">apply(callback, params, scope)</a></li>
+			<li><a href="/support/api/elements/Collection#toString">toString()</a></li>
+		</ul>
+	</li>
+</ul>
+<h2>Standard methods</h2>
+<ul>
+<li><a href="#deleteitems">deleteItems()</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="deleteItems" name="deleteItems" href="#deleteItems">deleteItems()</a></h3>
+	<p class="description">Delete the items from the library</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example removes the assets/bitmap folder:</p>
+	<pre class="prettyprint lang-javascript">$$('assets/bitmap').deleteItems();
+</pre>
+</div>
+<h2>UI methods</h2>
+<ul>
+<li><a href="#select">select()</a></li>
+	<li><a href="#expand">expand(state, recurse)</a></li>
+	<li><a href="#reveal">reveal()</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="select" name="select" href="#select">select()</a></h3>
+	<p class="description">Select the item in the library</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Creating an ItemCollection instance does <strong>not</strong> select the items in the library - it merely creates a reference to them. to selct them, you need to call the select() method.</p>
+	<p>The following example creates a collection of all library items with the word '.jpg' in their name, and then physically selects them:</p>
+	<pre class="prettyprint lang-javascript">$$('*.jpg').select();</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="expand" name="expand" href="#expand">expand(state, recurse)</a></h3>
+	<p class="description">Visually expands or collapses folder items in the collection in the library panel</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example expands all folder items in the library panel:</p>
+	<pre class="prettyprint lang-javascript">$$(':folder').expand(true);	</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="reveal" name="reveal" href="#reveal">reveal()</a></h3>
+	<p class="description">Reveals the items in the library panel if any ancestor folders are closed</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example reveals, but not selects, all graphic items in the library:</p>
+	<pre class="prettyprint lang-javascript">$$(':graphic').reveal();
+</pre>
+</div>
+<p>&nbsp;</p>
+<h2>Attribute methods</h2>
+<ul>
+<li><a href="#rename">rename(baseName, padding, startIndex, separator)</a></li>
+	<li><a href="#move">move(path, replace, expand)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="rename" name="rename" href="#rename">rename(baseName, padding, startIndex, separator)</a></h3>
+	<p class="description">Rename the the items in the collection using a numerical pattern or callback</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">baseName</span> <span class="type">Function</span> <span class="comment">A callback of the format function(item, index, items, originalName) which should return a String name</span><br>
+					<br>
+				</li>
+				<li>
+<span class="name">baseName</span> <span class="type">String</span> <span class="comment">A single &quot;name_###&quot; name/number pattern string</span><br>
+					<br>
+				</li>
+				<li>
+<span class="name">baseName</span> <span class="type">String</span> <span class="comment">The basename for your objects</span>
+</li>
+				<li>
+<span class="name">padding</span> <span class="type">Number</span> <span class="comment">An optional padding length for the numeric part of the name</span>
+</li>
+				<li>
+<span class="name">padding</span> <span class="type">Boolean</span> <span class="comment">An optional flag to automatically pad the numeric part of the name to the correct length</span>
+</li>
+				<li>
+<span class="name">startIndex</span> <span class="type">Number</span> <span class="comment">An optional number to start renaming from. Defaults to 1</span>
+</li>
+				<li>
+<span class="name">separator</span> <span class="type">String</span> <span class="comment">An optional separator between the numeric part of the name. Defaults to '_'</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The rename method accepts 3 different renaming signatures:</p>
+	<ol>
+		<li>None, some or all the  parameters baseName, padding, startIndex and separator</li>
+		<li>A single alphanumeric pattern, i.e. &quot;Item ###&quot; or &quot;Item 015&quot; with the # symbols indicating numbers</li>
+		<li>A single callback function that should return a new String name</li>
+	</ol>
+	<p>The following example renames all the items in the <strong>assets/bitmaps</strong> folder, starting from 1, with ## indicating to pad to 2 characters </p>
+	<pre class="prettyprint lang-javascript">$$('assets/bitmap/*').rename('Bitmap ##');</pre>
+	<p><img src="/wp-content/uploads/item-collection-rename-01.png"></p>
+	<p lang="javascript" escaped="true" xml:lang="javascript">The following examples demonstrate various renaming techniques:</p>
+	<pre class="prettyprint lang-javascript">var items = $$(':selection');<br>
+items.rename();              // rename using defaults, &quot;Item 1&quot;, &quot;Item 2&quot;, &quot;Item 3&quot; ...
+items.rename('Item ##');     // rename, starting from 1, padding to 2 characters, &quot;Item 01&quot;, &quot;Item 02&quot;, &quot;Item 03&quot; ...
+items.rename('Item 025');    // rename, starting from 25, padding to 3 characters, &quot;Item 025&quot;, &quot;Item 026&quot;, &quot;Item 027&quot; ...
+items.rename('Item', 4, 25); // rename, starting from 25, padding to 4 characters, &quot;Item 0025&quot;, &quot;Item 0026&quot;, &quot;Item 0027&quot; ...	</pre>
+	<p>The following example uses a callback to rename any exported movieclips with their class name: </p>
+	<pre class="prettyprint lang-javascript">$$(':exported').rename( function(item){ return item.linkageClassName.split('.').pop(); } );
+</pre>
+	<p lang="javascript" escaped="true" xml:lang="javascript"><img src="/wp-content/uploads/item-collection-rename-02.png" alt=""></p>
+</div>
+<div class="method"></div>
+<div class="method">
+	<h3 class="signature"><a id="move" name="move" href="#move">move(path, replace, expand)</a></h3>
+	<p class="description">Move collection elements to a folder</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">path</span> <span class="type">String</span> <span class="comment">The path to move items to</span>
+</li>
+				<li>
+<span class="name">replace</span> <span class="type">Boolean</span> <span class="comment">Replace any items of the same name (set false to automatically rename)</span>
+</li>
+				<li>
+<span class="name">expand</span> <span class="type">Boolean</span> <span class="comment">Expand any newly-created folders</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example organises your library items into  subfolders per item type under the root folder <strong>assets/</strong>, then deletes empty folders:</p>
+	<pre class="prettyprint lang-javascript">
+// move assets depending on type
+    $$(':folder').expand();
+    for each(var type in ['movieclip', 'bitmap', 'graphic', 'button', 'sound'])
+    {
+        $$(':' + type).move('assets/' + type, false, true);
+    }<br>
+// delete empty folders
+    do{collection = $$(':folder:empty').deleteItems();}
+    while(collection.elements.length &gt; 0);</pre>
+	<p><img src="/wp-content/uploads/item-collection-move.png" class="border"></p>
+</div>
+<h2>Editing methods</h2>
+<ul>
+<li><a href="#exec">exec(callback, params)</a></li>
+	<li><a href="#addtostage">addToStage(context, x, y)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="exec" name="exec" href="#exec">exec(callback, params)</a></h3>
+	<p class="description">Run a function in each item in the collection by entering edit mode, running the function, then moving onto the next item</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">A function with a signature matching function(element, index, ...params), with &quot;this&quot; referring to the original ItemCollection</span>
+</li>
+				<li>
+<span class="name">params</span> <span class="type">Array</span> <span class="comment">An array of optional parameters to pass to the callback</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example iterates through all movieclips in the library, then aligns elements on their first frame to the nearest pixel using the element selector function and the ElementCollection class:</p>
+	<pre class="prettyprint lang-javascript">function alignElements(item, index)
+{
+    trace('Aligning elements in &quot;' + item.name + '&quot;');
+    $('*').toGrid(1);
+}
+
+$$(':movieclip').exec(alignElements);</pre>
+	<pre>Aligning elements in &quot;Folder 1/MovieClip 2&quot;
+Aligning elements in &quot;Folder 1/Sprite 1&quot;
+Aligning elements in &quot;Folder 3/Sprite 2&quot;
+Aligning elements in &quot;MovieClip 3&quot;
+Aligning elements in &quot;Folder 1/MovieClip 1&quot;</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="addToStage" name="addToStage" href="#addToStage">addToStage(x, y, context)</a></h3>
+	<p class="description">Adds the items in the collection to the stage, returning an ElementCollection of the newly-added elements</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">x</span> <span class="type">Number</span> <span class="comment">An optional x position to add the items at</span>
+</li>
+				<li>
+<span class="name">y</span> <span class="type">Number</span> <span class="comment">An optional y position to add the items at</span>
+</li>
+				<li>
+<span class="name">context</span> <span class="type">Context</span> <span class="comment">An optional context object of where to add the items</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ElementCollection</span> <span class="comment">A new ElementCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example adds selected items to the stage, then because the returned value is an ElementCollection, immediately runs some ElementCollection methods to lay out the items visually:</p>
+	<pre class="prettyprint lang-javascript">$$(':selected')<br>	.addToStage()<br>	.move(50, 50) // ElementCollection methods from here on...<br>	.distribute('horizontal');
+</pre>
+</div>
+<h2>Utility methods</h2>
+<ul>
+	<li><a href="#sort">sort()</a></li>
+	<li><a href="#update">update()</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="sort" name="sort" href="#sort">sort()</a></h3>
+	<p class="description">Fast sorting algorithm</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Because of the way Flash internally stores library items, when printing or modifying the <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7f93.html">library.items</a> array, it can appear to be <strong>unsorted</strong>, rather than sorted by folder / item as we might expect. The sort method allows yo to sort the collection's elements alphabetically before running any further methods which require a sorted input. This does not affect the library's reference to the items.</p>
+	<p>The following examples demonstrate  unsorted and then sorted output (note how aircraft.wav jumps from the bottom to the top of the list):</p>
+	<pre class="prettyprint lang-javascript">$$('*')
+    .list() // unsorted
+    .sort()
+    .list() // sorted;</pre>
+	<pre>[object ItemCollection length=21]: Array (depth:1, objects:0, values:21, time:0.0 seconds)
+------------------------------------------------------------------------------------------
+array => Array
+	 0: "Folder 1"
+	 1: "Folder 1/bitmaps"
+	 2: "Folder 3"
+	 3: "Folder 1/bitmaps/Graphic 1"
+	 4: "Folder 3/Graphic 2"
+	 5: "Folder 1/MovieClip 2"
+	 6: "Folder 1/Sprite 1"
+	 7: "Folder 3/Sprite 2"
+	 8: "MovieClip 3"
+	 9: "Folder 1/Button 3"
+	 10: "Folder 1/bitmaps/Button 1"
+	 11: "Button 2"
+	 12: "Folder 1/MovieClip 1"
+	 13: "Folder 1/bitmaps/001_000.jpg"
+	 14: "Folder 1/bitmaps/001_001.jpg"
+	 15: "Folder 1/bitmaps/001_002.jpg"
+	 16: "Folder 1/bitmaps/001_003.jpg"
+	 17: "Folder 1/bitmaps/001_004.jpg"
+	 18: "Folder 1/bitmaps/001_005.jpg"
+	 19: "Folder 1/bitmaps/001_006.jpg"
+	 20: "aircraft.wav"
+</pre>
+	<pre>[object ItemCollection length=21]: Array (depth:1, objects:0, values:21, time:0.0 seconds)
+------------------------------------------------------------------------------------------
+array => Array
+	 0: "aircraft.wav"
+	 1: "Button 2"
+	 2: "Folder 1"
+	 3: "Folder 1/bitmaps"
+	 4: "Folder 1/bitmaps/001_000.jpg"
+	 5: "Folder 1/bitmaps/001_001.jpg"
+	 6: "Folder 1/bitmaps/001_002.jpg"
+	 7: "Folder 1/bitmaps/001_003.jpg"
+	 8: "Folder 1/bitmaps/001_004.jpg"
+	 9: "Folder 1/bitmaps/001_005.jpg"
+	 10: "Folder 1/bitmaps/001_006.jpg"
+	 11: "Folder 1/bitmaps/Button 1"
+	 12: "Folder 1/bitmaps/Graphic 1"
+	 13: "Folder 1/Button 3"
+	 14: "Folder 1/MovieClip 1"
+	 15: "Folder 1/MovieClip 2"
+	 16: "Folder 1/Sprite 1"
+	 17: "Folder 3"
+	 18: "Folder 3/Graphic 2"
+	 19: "Folder 3/Sprite 2"
+	 20: "MovieClip 3"</pre>
+	<p>Note that the ItemCollection does <strong>not</strong> sort itself by default due to performance reasons, as sorting can take a few seconds on large collections.<br>
+	</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="update" name="update" href="#update">update()</a></h3>
+	<p class="description">Updates the elements from the hard disk</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">ItemCollection</span> <span class="comment">The original ItemCollection</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates all bitmaps in the library from the hard disk:</p>
+	<pre class="prettyprint lang-javascript">$$(':bitmap).update();	</pre>
+</div>
+<div class="method"></div>
+<div class="method"></div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">2 Responses to ItemCollection (class)</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-955">
+
+		<div id="comment-955">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/69a4fa5213fdf697f979c5ed4b38476a?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/69a4fa5213fdf697f979c5ed4b38476a?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Chelsea Hash</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/elements/itemcollection#comment-955">December 20, 2012 at 7:24 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Its unclear from this documentation for the rename whether or not any of the parameters support retaining the original file name.  Using an example that uses all the parameters would help.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-959">
+
+		<div id="comment-959">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/api/elements/itemcollection#comment-959">December 24, 2012 at 4:45 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Nope &#8211; library items only I&#8217;m afraid. To rename files, use the File class. I&#8217;ll add a note though, thanks for pointing that out.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

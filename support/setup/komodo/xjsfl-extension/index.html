@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Komodo xJSFL Extension | xJSFL</title>
+		<meta name="description" content="Instructions on how to get the most out of Komodo and the xJSFL extension">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/setup/komodo/xjsfl-extension">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Komodo xJSFL Extension | xJSFL">
+		<meta property="og:description" content="Instructions on how to get the most out of Komodo and the xJSFL extension">
+		<meta property="og:url" content="http://xjsfl.com/support/setup/komodo/xjsfl-extension">
+		<meta property="article:published_time" content="2011-07-01T02:04:00+00:00">
+		<meta property="article:modified_time" content="2013-04-07T22:30:18+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Komodo xJSFL Extension | xJSFL">
+		<meta name="twitter:description" content="Instructions on how to get the most out of Komodo and the xJSFL extension">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; Komodo xJSFL Extension Comments Feed" href="/support/setup/komodo/xjsfl-extension/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/778">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=778">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fsetup%2Fkomodo%2Fxjsfl-extension">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fsetup%2Fkomodo%2Fxjsfl-extension&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-778 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<ul class="slideshow"><li class="featured featured_container1" style="background:;"><img src="/wp-content/uploads/setup-komodo-extension.png" title="setup-komodo-extension" alt=""></li></ul>
+<span class="shadow-top"></span><span class="shadow-bottom"></span>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/setup/komodo/xjsfl-extension" rel="bookmark" title="Permanent Link: Komodo xJSFL Extension">Komodo xJSFL Extension</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">01<strong>Jul</strong>2011</span>
+					<span class="comment-container"><a href="/support/setup/komodo/xjsfl-extension#comments" class="comments-link"><strong>5</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/setup/komodo" rel="category tag">Komodo</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+			<h3>Overview</h3>
+<p>Komodo Edit is extremely customisable, and the xJSFL extension adds new functionality that makes it easier to than ever to develop great JSFL (special thanks to <a href="http://noiseandheat.com/">David Wagner</a> for his contribution to getting the Python component up and running!) :</p>
+<p style="text-align: center;"><img class="aligncenter size-full wp-image-798" title="komodo-xjsfl-extension" src="/wp-content/uploads/komodo-xjsfl-extension.png" alt="" width="550"></p>
+<p>The Extension comes in two flavours, the <strong>Basic</strong> extension, which features include:</p>
+<ul>
+<li>Full <a href="#jsfl-auto-complete">autocomplete</a> for the JSFL API</li>
+<li>JSFL language association</li>
+<li>Basic <a href="#basic-publishing-shortcuts">publishing shortcuts</a>
+</li>
+</ul>
+<p>And the <strong>Pro</strong> extension, which also includes:</p>
+<ul>
+<li>Advanced <a href="#advanced-publishing-shortcuts">publishing shortcuts</a>
+</li>
+<li>
+<a href="/support/setup/komodo/xjsfl-extension#abbreviations">Abbreviations</a>, which let you quickly insert code snippets by entering their name</li>
+<li>A JSFL <a href="#debugger">debugger</a>, which allows you to step through errors in your code</li>
+</ul>
+<h3>Installation</h3>
+<p>To install the basic extension:</p>
+<ol>
+<li>Make sure Komodo Edit is open</li>
+<li>Browse to your <strong>xJSFL/core/assets/install/Komodo/</strong> folder, or download from <a href="https://github.com/davestewart/xJSFL/tree/master/core/install/komodo">GitHub</a>
+</li>
+<li>Drag the extension onto Komodo Edit</li>
+<li>Restart Komodo Edit</li>
+</ol>
+<p>Upon restarting, you should open Komodo's preferences panel via<strong> Edit &gt; Preferences</strong>, and then:</p>
+<ul>
+<li>Go to <strong>xJSFL</strong> and set the path to your <strong>xJSFL installation folder</strong>
+</li>
+<li>Ensure the <strong>Publishing Shortcut</strong> checkboxes are checked, assuming you want to map these default keys to the publishing commands</li>
+<li>Go to <strong>Code Intelligence &gt; API Catalogs </strong>and make sure the <strong>JSFL</strong> entry is checked</li>
+</ul>
+<p>You may need to restart Komodo again for the publishing shortcuts to become active.</p>
+<h2>Basic Extension features</h2>
+<h3>JSFL Auto-complete</h3>
+<p>The extension provides full JSFL auto-complete for the entire CS4 JS API, including typed values from function returns, as you can see below. This auto-completion will work for all properties (excluding Array elements) and functions:</p>
+<p><img style="border: 1px solid #666;" src="/wp-content/uploads/komodo-editor.png" alt=""></p>
+<h3>Basic Publishing shortcuts</h3>
+<p>The xJSFL extension comes with standard keyboard shortcuts that provide 4 quick ways to run your JSFL scripts:</p>
+<h5>Run File (CTRL+Enter)</h5>
+<p>Saves and executes the current file<strong></strong>. Depending on the file extension (and sometimes content) the following will happen:</p>
+<ul>
+<li>
+<strong>*. jsfl</strong> - the file will run in Flash</li>
+<li>
+<strong>*.xul, *.xml</strong> - if the file starts with &lt;dialog&gt; the XUL dialog will be previewed in Flash, fields validated, and values output when OK is clicked or Enter is pressed</li>
+</ul>
+<h2>Pro Extension features</h2>
+<p>The Pro extension adds some more advanced features to the basic extension that makes it easier to develop larger or more complex scripts, as well as some tools to make everyday JSFL development that much speedier.</p>
+<p>Please note that the Pro extension is not yet available, but will be available for download for a small fee, shortly (price yet to be decided).</p>
+<h3>Advanced publishing shortcuts</h3>
+<h5>Debug File (ALT+Enter)</h5>
+<p>Attempts to debug the current file, as well as any subsequent files being loaded by that file.</p>
+<p>Traditionally, Flash returns <a href="/support/guides/debugging/strategies-for-debugging#deciphering-misleading-error-messages">misleading errors</a> when it encounters invalid code in loaded files, but xJSFL attempts to run external code via <a href="/support/api/core/xjsfl#debug.file">xjsfl.file.debug()</a>, and if it traps errors, the problem file will be opened in Komodo at the offending line.</p>
+<p>See the <a href="#debugger">Debugger</a> section for more info.</p>
+<h5>Run Project (CTRL+SHIFT+Enter)</h5>
+<p>Saves all files, then executes the file in the <strong>left-most</strong> tab.</p>
+<p>This allows you to work on a series of files such as libraries, but publish another, such as an initialization or module bootstrap file. Just make sure the initialization file is in the left-most tab.</p>
+<h5>Run Script on Selected Library Items (Ctrl+Alt+Shift+Return)</h5>
+<p>Saves the script, then opens Flash and executes the script in the timeline of each of the selected Library Items.</p>
+<p>This is useful when you have a library of similar items that need updating, as you can practice your script with just one item, then once perfected, run the script and update the other items in one go.</p>
+<h3>Abbreviations</h3>
+<p>Abbreviations are a standard Komodo feature that allow you to enter a single keyword in the editor pane, then expand that keyword into an editable code, with placeholder regions that you tab through to fill in values. It's perhaps easier illustrated with a sequence of images:</p>
+<p>Firstly, type a <strong>keyword</strong> corresponding to an abbreviation name, in this case "for":</p>
+<p><img class="left" src="/wp-content/uploads/abbreviation-01.png" alt=""></p>
+<p>Then, press <strong>CTRL+T</strong> (or <strong>tab</strong>, if you have the <a href="/support/setup/komodo/autocode">AutoCode Extension</a> installed) to trigger the abbreviation's template:</p>
+<p><img class="left" src="/wp-content/uploads/abbreviation-02.png" alt=""></p>
+<p>The template is inserted into the document, and the first placeholder is highlighted in each place in the template that it is used. You can alter it by simply <strong>typing</strong>, or accept the value and <strong>tab</strong> to the next placeholder. Here, we tab from "i" to "item" and type "element". Each placeholder in the template is updated simultaneously:</p>
+<p><img class="left" src="/wp-content/uploads/abbreviation-03.png" alt=""></p>
+<p>Finally, press <strong>tab</strong> one more time to finish and leave the caret in the next logical place to add code:</p>
+<p><img class="left" src="/wp-content/uploads/abbreviation-04.png" alt=""></p>
+<p>The xJSFL extension comes with built-in abbreviations and full templates for both <strong>JSFL</strong> and <strong>XUL</strong>:</p>
+<p><strong>JSFL:</strong></p>
+<ul>
+<li>
+<strong>Control structures:</strong> do, for, foreach, forin, if, switch, try, while</li>
+<li>
+<strong>Functions and classes:</strong> func, class, subclass, meth, namespace</li>
+<li>
+<strong>Comments:</strong> com, doc</li>
+<li>
+<strong>xJSFL:</strong> init, inspect, module</li>
+</ul>
+<p><strong>XUL:</strong></p>
+<ul>
+<li>
+<strong>Layout:</strong>  dialog, grid, hbox, vbox, separator, spacer, element</li>
+<li>
+<strong>Controls:</strong> button, checkbox, choosefile, colorchip, expression, flash, label, script, targetlist, textbox</li>
+<li>
+<strong>Compound Controls:</strong>  listbox, listitem, menulist, menuitem, popupslider, property, radiogroup, radio</li>
+</ul>
+<p>You can also add your own abbreviations in the Komodo Toolbox by creating a new named Snippet, and making sure it's in a folder called <strong>Abbreviations/JSFL/</strong> (Komodo picks the correct abbreviation for the language - if you want it for all languages, place it in <strong>Abbreviations/General/</strong>)</p>
+<h3>Debugger</h3>
+<p>The Pro extension also comes with a JSFL debugger, that attempts to trap errors generated in Flash, pass them to Komodo, and pop up a dialog that you may use to step through the offending lines of code.</p>
+<p><a href="/wp-content/uploads/komodo-xjsfl-debugger.png"><img loading="lazy" style="border: 1px solid #666;" title="komodo-xjsfl-debugger" src="/wp-content/uploads/komodo-xjsfl-debugger-580x205.png" alt="" width="580" height="205"></a></p>
+<h3>Next steps</h3>
+<ul>
+<li><a href="/support/setup/komodo/autocode">AutoCode Extension</a></li>
+</ul>
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">5 Responses to Komodo xJSFL Extension</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-826">
+
+		<div id="comment-826">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0603497a2ae9a20e42f0eb597fc2ce7a?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0603497a2ae9a20e42f0eb597fc2ce7a?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">tamt</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/xjsfl-extension#comment-826">August 17, 2012 at 3:31 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>seems that code auto complete doesn&#8217;t work in Komodo Edit 7.1.1</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-828">
+
+		<div id="comment-828">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/xjsfl-extension#comment-828">August 17, 2012 at 6:43 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Yeah, I know about this: <a href="https://twitter.com/xjsfl/status/236149833986084864" rel="nofollow ugc">https://twitter.com/xjsfl/status/236149833986084864</a></p>
+<p>(Might be worth me adding a note to the page till they fix the issue)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1078">
+
+		<div id="comment-1078">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/72accf7f2c015dfac163afdfb624b4eb?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/72accf7f2c015dfac163afdfb624b4eb?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">sameh</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/xjsfl-extension#comment-1078">March 12, 2013 at 11:37 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>When I followed these steps, I got:<br>
+&#8220;xJSFL is incompatible with Komodo Edit 8.0&#8221;<br>
+and the extension is disabled :(<br>
+the extension version is 1.01 (the latest @GitHub)</p>
+<p>Any idea?</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1079">
+
+		<div id="comment-1079">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/xjsfl-extension#comment-1079">March 12, 2013 at 12:15 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Ah, I&#8217;ll need to update it. Hopefully will be able to get that done this week. I&#8217;ll tweet when there&#8217;s an update!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1619">
+
+		<div id="comment-1619">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/80283f7332be29cfb809652d85bdb0df?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/80283f7332be29cfb809652d85bdb0df?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Juan Luis</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/xjsfl-extension#comment-1619">January 19, 2014 at 4:11 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hi! Same problem here, cannot make it run, but in this case is Komodo 7.0.0, any news on this? Maybe some alternative?</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

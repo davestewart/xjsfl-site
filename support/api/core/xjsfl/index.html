@@ -1,0 +1,1216 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>xjsfl (library) | xJSFL</title>
+		<meta name="description" content="The core class of the whole framework, defining multiple objects and methods that you can use in your day-to-day JSFL code">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/core/xjsfl">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="xjsfl (library) | xJSFL">
+		<meta property="og:description" content="The core class of the whole framework, defining multiple objects and methods that you can use in your day-to-day JSFL code">
+		<meta property="og:url" content="http://xjsfl.com/support/api/core/xjsfl">
+		<meta property="article:published_time" content="2011-07-04T01:02:00+00:00">
+		<meta property="article:modified_time" content="2012-06-11T16:17:04+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="xjsfl (library) | xJSFL">
+		<meta name="twitter:description" content="The core class of the whole framework, defining multiple objects and methods that you can use in your day-to-day JSFL code">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/504">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=504">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fcore%2Fxjsfl">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fcore%2Fxjsfl&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-504 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/core/xjsfl" rel="bookmark" title="Permanent Link: xjsfl (library)">xjsfl (library)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/core" rel="category tag">Core</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+	<h2>Overview</h2>
+
+
+	<h3>Summary</h3>
+<p>The core xJSFL class holds core framework settings, manages file loading, and provides error-trapping and debugging functionality. </p>
+<h3>Contents</h3>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+		<ul>
+			<li><a href="#summary">Summary</a></li>
+			<li><a href="#concept">Concept &amp; usage</a></li>
+		</ul>
+	<li><a href="#api">API</a></li>
+	<ul>
+		<li><a href="#initialisation">Initialisation</a></li>
+		<ul>
+			<li><a href="#init">init(scope, scopeName, classes)</a></li>
+			<li><a href="#reload">reload()</a></li>
+		</ul>
+		<li>
+<a href="#properties">Properties</a>
+<ul>
+				<li><a href="#uri">uri</a></li>
+</ul>
+		</li>
+		<li>
+<a href="#settings">Settings</a>
+			<ul>
+				<li><a href="#settings-app">app</a></li>
+				<li><a href="#settings-folders">folders</a></li>
+				<li>					<a href="#settings-uris">uris</a>
+</li>
+				<li><a href="#settings-newline">newLine</a></li>
+			</ul>
+</li>
+<li><a href="#file">File</a></li>
+		<ul>
+			<li><a href="#file-find">find(type, name, returnType)</a></li>
+			<li><a href="#file-load">load(pathOrName, type)</a></li>
+		</ul>
+	<li><a href="#classes">Classes</a></li>
+	<ul>
+			<li><a href="#classes-register">register(name, obj, uri)</a></li>
+			<li><a href="#classes-load">load(fileRef, reload)</a></li>
+			<li><a href="#classes-cache">cache</a></li>
+		</ul>
+		<li><a href="#modules">Modules</a></li>
+		<ul>
+			<li><a href="#modules-create">create(namespace, properties, window)</a></li>
+			<li><a href="#modules-find">find(uri, init)</a></li>
+			<li><a href="#modules-load">load(namespace)</a></li>
+		</ul>
+		<li><a href="#debug">Debug</a></li>
+		<ul>
+			<li><a href="#debug-func">func(fn, params, scope)</a></li>
+			<li><a href="#debug-file">file(path)</a></li>
+			<li><a href="#debug-error">error(error, testing)</a></li>
+		</ul>
+
+	</ul>
+</ul>
+
+<h3>Concept &amp; usage</h3>
+	<p>The majority of the interaction with the xjsfl library happens in the <a href="/support/guides/framework-basics/xjsfl-environment#load-process">bootstrap</a> process, such as setting up the environment and subsequently loading classes and files.</p>
+	<p>However, the xjsfl class is the glue that holds the rest of the framework together, so it's a good idea to at least familiarise yourself with its properties and functions as it will give you insight into the basic core of the framework.</p>
+<h2>API</h2>
+	<h2><a id="initialisation" name="initialisation" href="#initialisation">Initialisation</a></h2>
+	<p class="description">Functions to initialize and reload the framework</p>
+	<div class="method">
+		<h3 class="signature"><a id="init" name="init" href="#init">init(scope, scopeName, classes)</a></h3>
+		<p class="description">Initialize the environment by extracting variables / objects / functions to global scope,  optionally reloading  classes</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">The scope into which the framework should be extracted</span>
+</li>
+					<li>
+<span class="name">scopeName</span> <span class="type">String</span> <span class="comment">An optional id, which when supplied, traces a short message to the Output panel</span>
+</li>
+					<li>
+<span class="name">classes</span> <span class="type">Array</span> <span class="comment">An optional Array of class names / URIs to load</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>In order to use the framework's functionality, you will first need to initialize it. This is done via <strong>xjsfl.init()</strong>, which copies the loaded framework classes, functions and variables from the extension to the supplied scope. Once initialized, you are free to use any xJSFL functionality.</p>
+		<p>Note that for <strong>external</strong> calls (for example, publishing from Komodo, or simply running the JSFL fle manually)  xjsfl.init() will need to have been called<strong> before any xJSFL code is called</strong>, as external script calls are <strong>sandboxed</strong> between executions. </p>
+		<p>The Commands menu and Flash panels however, each have their own persistent scope, and init() only needs to be called once.</p>
+		<p>The following example initializes the calling scope, then runs the xJSFL inspection function:</p>
+		<pre class="prettyprint lang-javascript">xjsfl.init(this);
+inspect({a:1, b:2, c:3});</pre>
+		<pre>Inspect: Object (depth:4, objects:0, values:3, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+	 a: 1
+	 b: 2
+	 c: 3</pre>
+		<p>Note that when developing classes, you sometimes need to reload classes if you've made changes. In order not to reload the entire framework, you can simply supply the name of the changed classes, and they will be reloaded:</p>
+		<pre class="prettyprint lang-javascript">xjsfl.init(this, ['SomeClass']);</pre>
+		<pre>&gt; xjsfl: loading library: <span class="prettyprint lang-javascript">'SomeClass'</span></pre>
+		<p>Note that if you plan to use other classes that also use the re-loaded class, <strong>you will need to reload them as well</strong>, as they will still reference the original class. If you don't reload, it will appear that Flash (or xJSFL) has magically gobbled your changes, when in fact it's just that the composing class or object is referencing the old composed object.</p>
+		<p>In this example, the Collection class was updated, but the current ElementSelector function and ElementCollection class need to be updated as they will still be referencing the old Collection class by way of closures:</p>
+		<pre class="prettyprint lang-javascript">// add the doSomethingCool() method to the Collection class
+
+// reinitialise framework and reload Collection, plus dependancies
+xjsfl.init(this, ['Collection', 'ElementCollection', 'ElementSelector']);
+
+// use the new Collection method, via ElementSelector and ElementCollection
+var collection = $('*').doSomethingCool();	</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a href="#ui.reload" name="ui.reload" id="ui.reload">reload()</a></h3>
+		<p class="description">Reload the framework from disk</p>
+		<p>Sometimes, especially when developing your own libraries, you may need to reload the whole framework to reset dependancies. The following code reloads the entire framework from scratch:</p>
+		<pre class="prettyprint lang-javascript">xjsfl.reload();	</pre>
+	</div>
+	<h2>Properties</h2>
+<div class="property">
+<h3 class="signature"><a id="uri" name="uri" href="#uri">xjsfl.uri</a></h3>
+		<p class="description">The xJSFL installation uri </p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+			</ul>
+		</div>
+		<p>The xJSFL uri is the installation folder of your copy of xJSFL, and will be different, per machine, depending on where you installed it.</p>
+		<p>The following example traces the path to a file in the <strong>user/temp</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">trace(xjsfl.uri + 'user/temp/test.txt');</pre>
+		<pre>file:///E|/Projects/xJSFL/user/temp/test.txt
+</pre>
+xJSFL has much more advanced file handling than vanilla JSFL; see the section on <a href="/support/guides/framework-basics/file-handling">File handling</a> for more information.</div>
+<h2><a id="settings" name="settings" href="#settings">Settings</a></h2>
+		<p class="description">Core settings and cached variables</p>
+		<p>The xjsfl.settings object holds most of the variables and parameters needed to have the framework function. Usually, you won't need to touch these in your everyday xJSFL development, but they're included here for consistency.</p>
+	<div class="property">
+		<h3 class="signature"><a id="settings-app" name="settings-app" href="#settings-app">xjsfl.settings.app</a></h3>
+		<p class="description">Application data
+	Information about the Flash version the user is currently running</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Object</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+			</ul>
+			<p>The <strong>xjsfl.settings.app</strong> object holds the parsed properties of the fl.version string, as well as some platform (os) constants you can test against:</p>
+			<pre class="prettyprint lang-javascript">inspect(xjsfl.settings.app);</pre>
+			<pre>Inspect: Object (depth:4, objects:1, values:6, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+	 platform: "win"
+	[os] => Object
+		 mac: false
+		 win: true
+	 name: "CS4"
+	 version: 10
+	 csVersion: 4</pre>
+</div>
+
+</div>
+
+	<div class="property">
+		<h3 class="signature"><a id="settings-folders" name="settings-folders" href="#settings-folders">xjsfl.settings.folders</a></h3>
+		<p class="description">Common folders which may be used as placeholders in URI references, i.e. '{core}path/to/file.txt'</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Object</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+			</ul>
+			<p>The  <strong>xjsfl.settings.folders</strong> object stores the location of key folders in an easily-accessible hash. These values are added during the framework bootstrap, and when new modules are created.</p>
+			<p>The following code lists the currently registered folders:</p>
+<pre class="prettyprint lang-javascript">inspect(xjsfl.settings.folders);</pre>
+			<pre>Inspect: Object (depth:4, objects:0, values:9, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+	 xjsfl: "file:///E|/Projects/xJSFL/"
+	 core: "file:///E|/Projects/xJSFL/core/"
+	 modules: "file:///E|/Projects/xJSFL/modules/"
+	 user: "file:///E|/Projects/xJSFL/user/"
+	 flash: "file:///F|/Users/Dave%20Stewart/AppData/Local/Adobe/Flash%20CS4/en/Configuration/"
+	 swf: "file:///F|/Users/Dave%20Stewart/AppData/Local/Adobe/Flash%20CS4/en/Configuration/WindowSWF/"
+	 Sample: "file:///E|/Projects/xJSFL/modules/Sample%20Module/"
+	 Snippets: "file:///E|/Projects/xJSFL/modules/Snippets/"
+	 PGTools: "file:///H|/Perforce/Bolt%20Creative/dev_Mesh_Desktop/iPhone/BoltLib/xJSFL/modules/Pocket%20God%20Tools/"</pre>
+			<p>Each of the property names in the <strong>folders</strong> hash can be used as a <strong>placeholder variable</strong> in URIs, and will be swapped out by the system:</p>
+			<pre class="prettyprint lang-javascript">load('{user}jsfl/some script.jsfl'); </pre>
+			<pre><span class="prettyprint lang-javascript">// equivilent to: xjsfl.uri + 'user/jsfl/some script.jsfl'</span>
+</pre>
+			<p>These folders are set up automaticaly when the system starts, with modules setting their own shortcuts, but you can also manually add your own with <strong>xjsfl.settings.folders.set()</strong>:</p>
+			<pre class="prettyprint lang-javascript">// create a new custom folder reference
+	xjsfl.settings.folders.set('temp', 'c:/temp/');
+	trace(xjsfl.settings.folders.temp);
+
+// create a new URI using the custom placeholder
+	var uri = new URI('{temp}path/to/folder/');
+	trace(uri);			</pre>
+			<pre>file:///c|/temp/
+file:///c|/temp/path/to/folder/</pre>
+</div>
+
+	</div>
+
+	<div class="property">
+		<h3 class="signature"><a id="settings-uris" name="settings-uris" href="#settings-uris">xjsfl.settings.uris</a></h3>
+		<p class="description">URIs
+	An ordered list of base URIs which xJSFL uses when searching for files
+	module uris are updated automatically when new modules are added
+	</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Object</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+			</ul>
+			<p>xJSFL has a specialised file loading system, that allows:</p>
+			<ol>
+				<li>files to be loaded by name, without knowing their absolute URI</li>
+				<li>the end user to override settings in core or module folders with settings from their user folder</li>
+			</ol>
+			<p>In order to do this, xJSFL holds a list of core URIs where files can be seached for, which are in turn further broken down into core, module and user Arrays. Normally, user files are searched first, followed by module files, followed by core files. This allows you, the user, to override settings on module or core files, just by including the same-named file in your user folder.</p>
+			<p>Again, in everyday use, you won't need to worry about this, but it's included here for consistency. See the section on <a href="/support/guides/framework-basics/framework-structure#cascading-file-structure">Cascading file structure</a> for more info.</p>
+			<p>The following example dumps the stored URI, for demonstration purposess:</p>
+<pre class="prettyprint lang-javascript">inspect(xjsfl.settings.uris);</pre>
+			<pre>Inspect: Object (depth:4, objects:3, values:6, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object => Object
+	[core] => Array
+		 0: "file:///F|/Users/Dave%20Stewart/AppData/Local/Adobe/Flash%20CS4/en/Configuration/xJSFL/"
+		 1: "file:///E|/Projects/xJSFL/core/"
+	[module] => Array
+		 0: "file:///E|/Projects/xJSFL/modules/Sample%20Module/"
+		 1: "file:///E|/Projects/xJSFL/modules/Snippets/"
+		 2: "file:///H|/Perforce/Bolt%20Creative/dev_Mesh_Desktop/iPhone/BoltLib/xJSFL/modules/Pocket%20God%20Tools/"
+	[user] => Array
+		 0: "file:///E|/Projects/xJSFL/user/"</pre>
+		</div>
+
+	</div>
+
+	<div class="method">
+		<h3 class="signature"><a id="settings-uris-add" name="settings-uris-add" href="#settings-uris-add">xjsfl.settings.uris.add(pathOrURI, type)</a></h3>
+		<p class="description">Adds URIs to the URIs list</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrURI</span> <span class="type">String</span> <span class="comment">A valid path or URI</span>
+</li>
+					<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The type of URI to add. Valid types are 'user', 'module', or 'core'</span>. Defaults to 'user'</li>
+
+				</ul>
+			</div>
+
+		</div>
+		<p>There may be times when you want to add a new path to the URIs list.</p>
+		<p>The following example adds an 'extra libs' folder, which then allows you to load the 'CustomLib.jsfl' file by name only:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.settings.uris.add('f:/development/jsfl/extra libs/');
+xjsfl.classes.load('CustomLib');</pre>
+	<pre>// Loading 'Custom lib'</pre>
+	</div>
+	<div class="property">
+		<h3 class="signature"><a id="settings-newline" name="settings-newline" href="#settings-newline">xjsfl.settings.newline</a></h3>
+		<p class="description">Newline character depending on PC or Mac
+	</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+			</ul>
+		The <strong>xjsfl.settings.newline</strong> constant can be used to provide correct newlines per system.</div>
+
+	</div>
+	<h2><a id="file" name="file" href="#file">xjsfl.file</a></h2>
+<p class="description">Methods to load framework assets, or handle common filesystem functionality</p>
+	<div class="method">
+		<h3 class="signature"><a id="file-find" name="file-find" href="#file-find">find(type, name, returnType)</a></h3>
+		<p class="description">Finds all files of a particular type within the cascading file system</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The folder in which to look in to find the files, @see switch statement</span>
+</li>
+					<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">A file name (pass no extension to use default), or partial file path</span>
+</li>
+					<li>
+<span class="name">returnType</span> <span class="type">Number</span> <span class="comment">An optional 0, 1 or -1; 0: all files (default), -1: the last file (user), 1:the first file (core)</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">A single file path if found and return type is 1 or -1, or null if not</span>
+</li>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of file uris if found, and return type is 0, or null if not</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>Often, you can just load a file in xJSFL using a URI, or any of the methods outlined in the <a href="/support/guides/framework-basics/file-handling">File handling</a> section of the site.</p>
+		<p>However, due to the way the cascading file structure in XJSFL works (for example, you may have core, module and user config files), you may sometimes want to <em>find</em> the files you need, rather than accessing them directly, as you don't know in advance in which folder the right file will be.</p>
+		<p>You can search for files using the following arguments (note that the correct extension will be added for a file if you don't include it):</p>
+		<table style="margin-left:25px">
+			<col width="100">
+			<col width="200">
+			<col width="50">
+			<thead>
+				<tr>
+					<th width="150" style="width:150px;">Folder</th>
+					<th width="250" style="width:250px;">Function argument</th>
+					<th width="50" style="width:100px;">default .ext</th>
+					<th width="175" style="width:100px;">Returns</th>
+				</tr>
+				<tr>
+					<td>/jsfl</td>
+					<td>script, scripts, jsfl</td>
+					<td>jsfl</td>
+					<td>The last file</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td>/config</td>
+					<td>config, settings</td>
+					<td>xml</td>
+					<td>The last file</td>
+				</tr>
+				<tr>
+					<td>/assets/templates</td>
+					<td>template</td>
+					<td>txt</td>
+					<td>The last file</td>
+				</tr>
+				<tr>
+					<td>/jsfl/libraries</td>
+					<td>lib ,libs, library, libraries</td>
+					<td>jsfl</td>
+					<td>All files</td>
+				</tr>
+				<tr>
+					<td>any other folder</td>
+					<td>other</td>
+					<td>&nbsp;</td>
+					<td>All files</td>
+				</tr>
+			</tbody>
+		</table>
+		<p>The following example finds the main settings file <strong>xjsfl.xml</strong>, which has been overridden in the <strong>user</strong> folder, from the <strong>core</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">var file = xjsfl.file.find('settings', 'xjsfl');<br>trace(file);</pre>
+		<pre>'file:///E|/Projects/xJSFL/user/config/xjsfl.xml'</pre>
+</div>
+	<div class="method">
+		<h3 class="signature"><a id="file-load" name="file-load" href="#file-load">load(pathOrName, type)</a></h3>
+		<p class="description">Attempts to find and run or return files from the cascading file structure</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrName</span> <span class="type">String</span> <span class="comment">The relative or absolute path, or uri to the file</span>
+</li>
+					<li>
+<span class="name">pathOrName</span> <span class="type">String</span> <span class="comment">The name or path fragment to a file, with or without the file extension</span>
+</li>
+					<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The folder type in which to look (i.e. settings) for the file(s)</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">A Boolean indicating Whether the file was successfully found and loaded</span>
+</li>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">XML</span> <span class="comment">An XML object of the content of the file, if XML</span>
+</li>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">The string content of the file otherwise</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The load() method will directly load a file, or will attempt to first <em>find</em>, then load an existing file from within the cascading file structure, depending on the method arguments:</p>
+		<pre class="prettyprint lang-javascript">xjsfl.file.load('path/to/file.ext'); // load a file directly
+xjsfl.file.load(file, folder); // find and load a file within the framework folder structure</pre>
+		<p>For more information on finding files, see the sections on <a href="/support/guides/framework/framework-structure">folder structure</a> and <a href="/support/guides/framework/file-handling#automatic-file-finding">automatic file-finding</a>.</p>
+		<p>Also, depending on the file type, the file will be executed or returned as follows:</p>
+		<ul>
+			<li>jsfl files will be executed</li>
+			<li>xml files will have an XML object returned</li>
+			<li>All other files will return plain text</li>
+		</ul>
+		<p>The following examples load and return a file called user.xml ( returning an XML object) directly:</p>
+		<pre class="prettyprint lang-javascript">
+var xml = xjsfl.file.load(xjsfl.uri + 'user/settings/data/some file.xml');
+var xml = xjsfl.file.load('user/settings/data/some file.xml'); // defaults to xjsfl folder</pre>
+		<p>The following example finds, then loads and returns the same user XML file using the find file functionality:</p>
+		<pre class="prettyprint lang-javascript">var xml = xjsfl.file.load('some file', 'data');</pre>
+		<p>The following example finds and returns the contents of a text file:</p>
+		<pre class="prettyprint lang-javascript">var text = xjsfl.file.load('some file.txt', 'temp');		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="file-save" name="file-save" href="#file-save">save(pathOrURI, contents, force)</a></h3>
+		<p class="description">Saves data to file</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">pathOrURI</span> <span class="type">String</span> <span class="comment">The path or URI to save data to</span>
+</li>
+					<li>
+<span class="name">contents</span> <span class="type">String</span> <span class="comment">The data to save</span>
+</li>
+					<li>
+<span class="name">force</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to force overwriting of readonly files</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Boolean</span> <span class="comment">true or false depending on the result</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The save method is a shortcut to File's <a href="/support/api/file/FileSystem#file.save">save</a> method. The following example saves some text to the same folder the script is currently running in:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.file.save('test.txt', 'Hello there!');<br>trace(new File('test.txt').contents);</pre>
+	<pre><span class="prettyprint lang-javascript">Hello there!</span></pre>
+	</div>
+<h2><a id="classes" name="classes" href="#classes">xjsfl.classes</a></h2>
+		<p class="description">Core methods to load and register framework libraries and classes		</p>
+		<p>When creating a library, class or function that you want restored on framework initialization, the class needs to be loaded, registered and restored when needed. See the guide on <a href="/support/guides/extensibility/creating-libraries">Creating your own functions, libraries and classes</a> for more details.</p>
+<div class="method">
+	<h3 class="signature"><a id="classes-register" name="classes-register" href="#classes-register">register(name, obj, uri)</a></h3>
+	<p class="description">Registers a class/function for later retrieval</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">name</span> <span class="type">String</span> <span class="comment">The name of the class / function / object to register</span>
+</li>
+				<li>
+<span class="name">obj</span> <span class="type">Object</span> <span class="comment">The actual class / function / object</span>
+</li>
+				<li>
+<span class="name">uri</span> <span class="type">String</span> <span class="comment">An optional URI to the object's file, defaults to the calling file's URI</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">xjsfl</span> <span class="comment">The main xJSFL object</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>When creating a library, class or function that you want restored on framework initialization, you need to first register it with the xJSFL core then the library file is automatically restored each time the framework is initialized.</p>
+	<p>The following example registers a Test class with the xJSFL core so it is loaded on future <a href="#modules-getmanifest">xjsfl.init()</a>s:</p>
+	<pre class="prettyprint lang-javascript">
+function Test(value)
+{
+    this.value = value;
+}
+
+xjsfl.classes.register('Test', Test);</pre>
+</div>
+
+	<div class="method">
+		<h3 class="signature"><a id="classes-load" name="classes-load" href="#classes-load">load(fileRef, reload)</a></h3>
+		<p class="description">Load a class or array of classes from disk</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">fileRef</span> <span class="type">String</span> <span class="comment">A class name</span>
+</li>
+					<li>
+<span class="name">fileRef</span> <span class="type">String</span> <span class="comment">A class filename or path, relative to any jsfl/libraries folder</span>
+</li>
+					<li>
+<span class="name">fileRef</span> <span class="type">String</span> <span class="comment">A wildcard string pointing to a folder, i.e. '//user/jsfl/libraries/*.jsfl'</span>
+</li>
+					<li>
+<span class="name">fileRef</span> <span class="type">Array</span> <span class="comment">An Array of class filepaths</span>
+</li>
+					<li>
+<span class="name">reload</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to force a reload of loaded URIs</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">xjsfl</span> <span class="comment">The main xJSFL object</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>This method should only need to ever be called from the bootsrap files, but for the record, the syntax is documented here.</p>
+		<p>The following example loads the jsfl file <strong>Test.jsfl</strong> from the<strong> jsfl/libraries</strong> folder:</p>
+		<pre class="prettyprint lang-javascript">xjsfl.classes.load('Test');</pre>
+		<p lang="javascript" xml:lang="javascript">By default, xJSFL doesn't reload classes which have already been loaded, as so many classes rely on each other. To force a reload, pass <strong>true</strong> as the second parameter:</p>
+		<pre class="prettyprint lang-javascript">xjsfl.classes.load('Test', true);</pre>
+		<p lang="javascript" xml:lang="javascript">Alternatively, you can use the <strong>$classes</strong> parameter of the <a href="#init">xjsfl init()</a> method to reload classes as you initialize the framework (this is useful when developing classes, and needing to update just the class, or its dependencies, without reloading the whole framework).</p>
+		<p lang="javascript" xml:lang="javascript">in xJSFL, by convention, the there is one class (usually) per file, and the file name is named after the class (this makes it easier to track down classes when loading using the cascading file system and <a href="#file-find">file.find</a>)</p>
+<p lang="javascript" xml:lang="javascript">Note that if you get errors when loading external classes, you can check the xJSFL logs for more details, from <strong>Commands &gt; xJSFL &gt; View Log</strong>.	</p>
+	</div>
+	<div class="property">
+		<h3 class="signature"><a id="classes-cache" name="classes-cache" href="#classes-cache">cache</a></h3>
+		<p class="description">Cache of class definitions</p>
+		<div class="function-meta">
+			<ul>
+				<li>
+<span class="name">Type:</span> <span class="comment">Object</span>
+</li>
+				<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+			</ul>
+			<p>The class.cache property holds a cache of all the loaded classes, and can be used to access loaded classes directly, even when they haven't yet been loaded into the current scope:</p>
+			<pre class="prettyprint lang-javascript">
+// no need to call xjsfl.init(this) first...
+xjsfl.classes.cache.Output.inspect({a:1, b:2});</pre>
+			<pre>Inspect: Object (depth:4, objects:0, values:2, time:0.0 seconds)<br>--------------------------------------------------------------------------------<br>object =&gt; Object<br>	 a: 1<br>	 b: 2</pre>
+		</div>
+</div>
+<h2><a id="modules" name="modules" href="#modules">xjsfl.modules</a></h2>
+		<p class="description">Core methods to handle the initialization and loading of modules</p>
+		<div class="method">
+			<h3 class="signature"><a id="modules-create" name="modules-create" href="#modules-create">create(namespace, properties, window)</a></h3>
+			<p class="description">Factory method to create an xJSFL module instance</p>
+			<div class="function-meta">
+				<div class="params">
+					<p>Parameters:</p>
+					<ul>
+						<li>
+<span class="name">namespace</span> <span class="type">String</span> <span class="comment">The namespace of the module (should match the AS3 and manifest values)</span>
+</li>
+						<li>
+<span class="name">properties</span> <span class="type">Object</span> <span class="comment">The properties of the module</span>
+</li>
+						<li>
+<span class="name">window</span> <span class="type">Window</span> <span class="comment">A reference to the window the function was called from</span>
+</li>
+					</ul>
+				</div>
+				<div class="returns">
+					<p>Returns:</p>
+					<ul>
+						<li>
+<span class="name">&nbsp;</span> <span class="type">Module</span> <span class="comment">An xJSFL Module instance</span>
+</li>
+					</ul>
+				</div>
+			</div>
+			<p>Due to the way Flash and JSFL sandboxes data, <a href="/support/guides/extensibility/overview#modules">xJSFL Modules</a> need to be created, then internally stored in the xJSFL extension for future retrieval. This is done through the framework-centric <strong>xjsfl.modules.create()</strong> method.</p>
+<p>The following example :</p>
+			<pre class="prettyprint lang-javascript">Test =
+{
+	init:function()
+	{
+		trace(&quot;I'm a new Test Module!&quot;);
+	},
+
+	doSomething:function()
+	{
+		trace(&quot;Test module is doing something!&quot;);
+	}
+}
+Test = xjsfl.modules.create('Test', Test, this);			</pre>
+			<p>The next time flash loads, and assuming you have the correct <strong>manifest.xml</strong> file in the module's folder, you should see this:<br>
+			</p>
+			<pre>&gt; xjsfl: REGISTERING MODULE &quot;TEST&quot;<br>&gt; xjsfl: added 1 search paths for &quot;E:/Projects/xJSFL/modules/Test/&quot;			</pre>
+		</div>
+<p class="description">&nbsp;</p>
+	<div class="method">
+		<h3 class="signature"><a id="modules-find" name="modules-find" href="#modules-find">find(uri, init)</a></h3>
+		<p class="description">Finds and returns the base URIs of all modules in a given folder and sub folders</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">uri</span> <span class="type">String</span> <span class="comment">An optional folder URI to search in, defaults to xJSFL/modules/</span>
+</li>
+					<li>
+<span class="name">init</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to initialize any found modules</span>
+</li>
+
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Array</span> <span class="comment">An Array of module URIs</span>
+</li>
+
+				</ul>
+			</div>
+		</div>
+		<p>The find method is responsible for finding and initializing modules, and is called core bootstrap to ensure all modules have their search paths added, and are ready to run when their panels load.</p>
+		<p>However, you can also call find() manually (usually in the user bootstrap) to add modules from folders external to xJSFL. You might want to do this if you have a centralised repository of code that multiple developers are contributing to.</p>
+		<p>The following example attemps to find and initialize modules on an external development drive:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.find('f:/development/jsfl/xjsfl modules/', true);	</pre>
+	<pre class="prettyprint lang-javascript">&gt; xjsfl: REGISTERING MODULE &quot;ANIMATION TOOLS&quot;<br>&gt; xjsfl: added 1 search paths for &quot;f:/development/jsfl/xjsfl modules/Animation Tools/&quot;
+
+&gt; xjsfl: REGISTERING MODULE &quot;EXPORT TOOLS&quot;<br>&gt; xjsfl: added 1 search paths for &quot;f:/development/jsfl/xjsfl modules/Export Tools/&quot;</pre>
+	</div>
+<div class="method">
+		<h3 class="signature"><a id="modules-load" name="modules-load" href="#modules-load">load(namespace)</a></h3>
+		<p class="description">Loads the module's bootstrap to load code locally (usually into the host panel)</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">namespace</span> <span class="type">String</span> <span class="comment">The namespace of the module to initialize</span>
+</li>
+
+				</ul>
+			</div>
+
+</div>
+		<p>Usually, this method is only ever called (automatically) by the AS3 Module framework, and is used to load the module's bootstrap file, and thus the code therin, into a panel, however you can run it manually if you wish.</p>
+		<p>The following example runs the bootstrap file of the named module <strong>Test</strong> from from the <strong>modules</strong> folder:</p>
+	<pre class="prettyprint lang-javascript">xjsfl.modules.load('Test');</pre>
+		<pre class="prettyprint lang-javascript">Test bootstrap run!</pre>
+	</div>
+<h2><a id="debug" name="debug" href="#debug">xjsfl.debug</a></h2>
+	<p class="description">Debugging methods for file, function and errors</p>
+	<p>The xjsfl.debug object has been designed to help you debug your code by packaging boilerplate code into some handy methods, that are easy to call and provide clear Output Panel feedback on the results.</p>
+	<div class="method">
+		<h3 class="signature"><a id="debug-func" name="debug-func" href="#debug-func">func(fn, params, scope)</a></h3>
+		<p class="description">Tests a callback and outputs the error stack if the call fails</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">fn</span> <span class="type">Function</span> <span class="comment">The function to test</span>
+</li>
+					<li>
+<span class="name">params</span> <span class="type">Array</span> <span class="comment">An optional Array of arguments or Arguments object to pass to the function</span>
+</li>
+					<li>
+<span class="name">scope</span> <span class="type">Object</span> <span class="comment">An optional scope to run the function in</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Value</span> <span class="comment">The result of the function if successful</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example tests an erroneous function, where b is not defined:</p>
+		<pre class="prettyprint lang-javascript">function test(a)
+{
+	trace(b);
+}
+
+xjsfl.debug.func(test, [1])</pre>
+		<pre>ReferenceError: b is not defined
+--------------------------------------------------------------------------------
+
+	0 &gt; test([object Array])
+
+		line: 9
+		file: temp.jsfl
+		path: xJSFL/core/jsfl/temp/
+
+	1 &gt;
+
+		line: 12
+		file: temp.jsfl
+		path: xJSFL/core/jsfl/temp/</pre>
+		<p>If testing functions on objects, it is important to pass the scope through through as well, or else the function's <strong>this</strong> will point to the window object, and not the object on which the function resides:</p>
+		<pre class="prettyprint lang-javascript">var obj =<br>{<br>    settings:{a:1, b:2, c:3},<br>    test:function()<br>    {<br>        trace(this.settings.a);<br>    }<br>};<br>xjsfl.debug.func(obj.test); // TypeError: this.settings has no properties<br>xjsfl.debug.func(obj.test, [], obj); // 1</pre>
+		<p>Also see the MDN docs on <a href="https://developer.mozilla.org/en/JavaScript/Reference/Global_Objects#Errors">error types</a> for throwing your own errors.</p>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="file2" name="file" href="#debug-load">file(uriOrPath)</a></h3>
+		<p class="description">Attemps to run and trap errors in external script files</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">param</span> <span class="type">String</span> <span class="comment">uriOrPath		The URI or path of the file to load</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>One of the most annoying things in JSFL development is running files which seem to fail silently. The cause of this is <strong>always</strong> errors within the loaded file which <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fde.html" data-mce-href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fde.html">fl.runScript()</a> won't alert you to.</p>
+		<p>xjsfl.debug.file() attempts to work round this limitation by wrapping Flash's native <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fde.html">fl.runScript()</a>, and instead, <strong>reading</strong> and <strong>eval()</strong>ing the contents of both the target file and any subsequent JSFL files loaded (thorugh fl.runScript(), or any of xJSFL's file loading functions), trapping any errors and printed   the message to the output panel. </p>
+		<pre class="prettyprint lang-javascript">xjsfl.debug.file('user/jsfl/bad-file.jsfl');</pre>
+		<p>Upon encountering an error, the output panel will display something like the following:</p>
+		<pre class="">
+&gt; xjsfl: Debugging &quot;E:\projects\xJSFL\user\jsfl\bad-file.jsfl&quot; ...
+The following JavaScript error occurred:
+
+At line 7 of file &quot;error.jsfl&quot;:
+ReferenceError: a is not defined
+
+The following JavaScript error(s) occurred:
+
+At line 1603 of file &quot;xjsfl.jsfl&quot;:
+
+&gt; xjsfl: Script debugging halted</pre>
+		<p class="">Note that because debug.file() <strong>eval()</strong>s files rather than <strong>running</strong> them, the &quot;loaded&quot; files are not physically run from their location on disk so any URI-specific functions like <a href="/support/guides/framework/core-functionality#file-and-uri-functionality" data-mce-href="/support/guides/framework/core-functionality#file-and-uri-functionality">scriptDir</a> and <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fab.html" data-mce-href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fab.html">fl.scriptURI</a> will fail.</p>
+		<p class="">To turn on or off file debugging permanently, including for fl.runScript(), see the <a href="#debug.state">xjsfl.debug.state</a> flag.</p>
+	</div>
+<div class="method">
+		<h3 class="signature"><a id="debug-error" name="debug-error" href="#debug-error">error(error, testing)</a></h3>
+		<p class="description">Generates, logs and traces a human-readable error stack</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">error</span> <span class="type">Error</span> <span class="comment">A JavaScript Error object</span>
+</li>
+					<li>
+<span class="name">log</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to log the error</span>
+</li>
+					<li>
+<span class="name">testing</span> <span class="type">Boolean</span> <span class="comment">Internal use only. Removes test() stack items</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p class="description">Traces a human-readable error stack to the Output Panel</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">error</span> <span class="type">Error</span> <span class="comment">A javaScript Error object</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The example below is the longhand version of the example above, but uses a manual try/catch case to send the error to the debug function.</p>
+		<pre class="prettyprint lang-javascript">try
+{
+	test(1);
+}
+catch(err)
+{
+	xjsfl.debug.err(err);
+}</pre>
+	<p class="prettyprint lang-javascript"> Again, the output will be the error stack:</p>
+	<pre>ReferenceError: b is not defined
+--------------------------------------------------------------------------------
+
+	0 &gt; test([object Array])
+
+		line: 9
+		file: temp.jsfl
+		path: xJSFL/core/jsfl/temp/
+
+	1 &gt;
+
+		line: 12
+		file: temp.jsfl
+		path: xJSFL/core/jsfl/temp/
+</pre>
+</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

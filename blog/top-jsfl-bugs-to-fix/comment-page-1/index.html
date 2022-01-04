@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Top JSFL bugs to fix | xJSFL</title>
+		<meta name="description" content="I&#039;m lucky enough to be Beta testing the new CS7 version of Flash, and even luckier to get a very small amount of say regarding the JSFL implementation for the final release. I&#039;m under NDA, so that&#039;s pretty much all I can say here :) One of my main aims is to get Adobe to […]">
+		<meta name="robots" content="noindex, nofollow, max-image-preview:large">
+		<link rel="canonical" href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comments">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Top JSFL bugs to fix | xJSFL">
+		<meta property="og:description" content="I&#039;m lucky enough to be Beta testing the new CS7 version of Flash, and even luckier to get a very small amount of say regarding the JSFL implementation for the final release. I&#039;m under NDA, so that&#039;s pretty much all I can say here :) One of my main aims is to get Adobe to […]">
+		<meta property="og:url" content="http://xjsfl.com/blog/top-jsfl-bugs-to-fix/comment-page-1#comments">
+		<meta property="article:published_time" content="2012-09-15T17:53:00+00:00">
+		<meta property="article:modified_time" content="2012-09-19T20:57:14+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Top JSFL bugs to fix | xJSFL">
+		<meta name="twitter:description" content="I&#039;m lucky enough to be Beta testing the new CS7 version of Flash, and even luckier to get a very small amount of say regarding the JSFL implementation for the final release. I&#039;m under NDA, so that&#039;s pretty much all I can say here :) One of my main aims is to get Adobe to […]">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; Top JSFL bugs to fix Comments Feed" href="/blog/top-jsfl-bugs-to-fix/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/975">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=975">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fblog%2Ftop-jsfl-bugs-to-fix">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fblog%2Ftop-jsfl-bugs-to-fix&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-975 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/blog/top-jsfl-bugs-to-fix" rel="bookmark" title="Permanent Link: Top JSFL bugs to fix">Top JSFL bugs to fix</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">15<strong>Sep</strong>2012</span>
+					<span class="comment-container"><a href="/blog/top-jsfl-bugs-to-fix#comments" class="comments-link"><strong>11</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/blog" rel="category tag">Blog</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+			<p>I'm lucky enough to be Beta testing the new CS7 version of Flash, and even luckier to get a very small amount of say regarding the JSFL implementation for the final release. I'm under NDA, so that's pretty much all I can say here :)</p>
+<p>One of my main aims is to get Adobe to fix some of the show-stopping bugs in JSFL, so here’s my list, in order of importance:</p>
+<ol>
+<li>Fix all empty JSFL error messages, especially inside of fl.runScript() (<a title="/support/guides/debugging/strategies-for-debugging#deciphering-misleading-error-messages" href="/support/guides/debugging/strategies-for-debugging#deciphering-misleading-error-messages">link</a>)</li>
+<li>Make sure Timeline and Frame events fire in the correct order (<a title="/support/api/flash/Events#native-jsfl-event-model-limitations" href="/support/api/flash/Events#native-jsfl-event-model-limitations">link</a>)</li>
+<li>Ensure library item selection updates properly for library.setSelected()(<a title="/support/appendix/knowledgebase/jsfl-gotchas#library" href="/support/appendix/knowledgebase/jsfl-gotchas#library">link</a>)</li>
+<li>Fix frame and timeline setSelection bug, which seems to toggle, not set, selections (<a title="/support/appendix/knowledgebase/jsfl-gotchas#timeline" href="/support/appendix/knowledgebase/jsfl-gotchas#timeline">link</a>)</li>
+<li>Fix matrix bug in setCustomFill()(<a title="/support/appendix/knowledgebase/jsfl-gotchas#stage" href="/support/appendix/knowledgebase/jsfl-gotchas#stage">link</a>)</li>
+<li>Have all XUL elements dispatch change events</li>
+<li>Have all XUL element values be settable via JSFL</li>
+<li>Ensure running scripts do not timeout after 20 seconds or so when getting values from a XUL dialog (<a title="/support/appendix/knowledgebase/jsfl-gotchas#xul" href="/support/appendix/knowledgebase/jsfl-gotchas#xul">link</a>)</li>
+<li>Fix E4X pre-declarate filtering, so you don’t need to do this to use E4X filters: var b =  a.*.(function::attribute("id") == ’b’); (<a title="/support/appendix/knowledgebase/jsfl-gotchas#e4x" href="/support/appendix/knowledgebase/jsfl-gotchas#e4x">link</a>)</li>
+<li>Would be great if relative file paths worked! Relative to the JSFL file, ideally. (<a title="/support/guides/framework-basics/file-handling#uri-juggling" href="/support/guides/framework-basics/file-handling#uri-juggling">link</a>)</li>
+</ol>
+<p>And while we're at it, some feature requests:</p>
+<ol>
+<li>Access values in the middle of a tween</li>
+<li>Unlimited workspace area</li>
+<li>Add JSFL access to undo / redo or history states</li>
+<li>Add "begin undo" and "end undo" commands, with support for try/catch</li>
+<li>Make JSFL access on shapes less twitchy and crash-prone</li>
+<li>Access to stage pan as well as zoom (so we could zoom to object)</li>
+<li>Ability get the currently-edited-in-place timeline's path to top-most-parent timeline</li>
+<li>JSFL "PropertyChanged" event</li>
+<li>JSFL right-click menu item and registerable commands</li>
+</ol>
+<p>What do you think?</p>
+<p>I’m sure there’s some real gotchas I’ve forgotten, so please add to this list, along with the number in the list you think the fix should go at, and I'll see what I can do about raising them.</p>
+<p>Cheers,<br>
+Dave</p>
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">11 Responses to Top JSFL bugs to fix</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-910">
+
+		<div id="comment-910">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/f5428b7a3a594f2af0dd44e2c53ddadd?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/f5428b7a3a594f2af0dd44e2c53ddadd?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.pinkandaint.com/" rel="external nofollow ugc" class="url">David Hernston</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-910">October 19, 2012 at 6:01 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Erp! Fwip! I&#8217;ve been trying to get in on the Flash beta program for years, both in relation to animation an JSFL! I&#8217;ve run into so many bugs and annoyances that I&#8217;d LOVE to see fixed, though at the moment the only one that&#8217;s coming to mind is how in CS5 something changed with the screen update code which makes it so that the screen doesn&#8217;t update until a second or two after a JSFL command ends, unless a new one is started. It makes my persistent-selection frame forward and back commands much less useful, since you can&#8217;t see the animation as you go &#8212; you have to pause in your frame flipping to see what the frame looks like. That&#8217;s probably the biggest reasons I&#8217;m still using CS4.</p>
+<p>Anyway, if you haven&#8217;t already you should check out my web site. I have a bunch of Flash commands up there, including some real game-changers. Also, if you have any sway with the dev team I would LOVE to get in on the beta program.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-915">
+
+		<div id="comment-915">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-915">October 31, 2012 at 11:15 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>I&#8217;ll send you a mail!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1043">
+
+		<div id="comment-1043">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/4ddf46ea74893f3f6910a18a68cbd3a4?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/4ddf46ea74893f3f6910a18a68cbd3a4?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://pierrechamberlain.ca/blog" rel="external nofollow ugc" class="url">Pierre Chamberlain</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-1043">February 12, 2013 at 6:42 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>It&#8217;s a little bit funny to see the similarities of what I&#8217;ve experienced with JSFL so far, coming up in that list you&#8217;ve made!</p>
+<p>I definitely would love to see CS7 address issues:<br>
+1 &#8211; JSFL blank error messages<br>
+6 &#8211; XUL Dispatch Change Events, and also have the XUL element dispatch oncreate Event for all elements. AND&#8230; give access to XUL elements so that other declared JSFL methods and objects can be called from the XUL dialog box).<br>
+7 &#8211; Definitly provide a way to set XUL ahead of time. Creating dynamic XUL scripts is not fun!<br>
+8 &#8211; Timeouts should be configurable (and disabled, optionally).<br>
+9 &#8211; Fix for E4X, and so that we don&#8217;t need to use a find-and-replace method to strip out the  declaration line before Casting the string content to an XML object. (Might be a separate issue&#8230;)<br>
+10 &#8211; Relative paths would be a godsend indeed!</p>
+<p>Some other ones I&#8217;d like to add:<br>
+11 &#8211; Make all Flash functionality available in JSFL. No Exceptions! for example, there is currently no (documented) way to apply &#8220;Convert  to Frame by Frame animation&#8221; on Motion Objects like you can by right-clicking the framespan that is affected.<br>
+12 &#8211; If not all elements are to be made available, at least provide a contextMenu property (or class) that can access the options on a given object, or the main File menu (File, Edit, View, Insert, Modify, etc.). Sending Key-strokes too could be helpful to navigate through the options, basically like a Macro script engine (compatible for both Mac and PC though).</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1044">
+
+		<div id="comment-1044">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-1044">February 13, 2013 at 12:17 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Good news on some of these items: 1, 6 and 7 have been fixed! I&#8217;ve added some requests that have been deferred, but these have all made it in, which is great.</p>
+<p>We may get the ability to grab animation values between keyframes well &#8211; not sure what the status is on that one at the moment.</p>
+<p>Right-click menus (another request) have also been deferred, which is a shame, as have a more advanced event model. The Event bug with Timeline and Layer events HAS also been fixed though, so that&#8217;s a blessing at least.</p>
+<p>Adobe are definitely listening regarding extensibility. Hooray!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1048">
+
+		<div id="comment-1048">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/be25ff18f629cd4ccfacc9df12bb592c?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/be25ff18f629cd4ccfacc9df12bb592c?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.homegrownbyme.com/" rel="external nofollow ugc" class="url">Maor</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-1048">February 20, 2013 at 7:51 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Debugging swf panel!!! if it was possible to connect flash builder or some other debugger to the swf panel it would be awesome!!. </p>
+<p>only one ive manged to connect is monster debugger which doesn&#8217;t support stepping and watch expressions.</p>
+<p>this should be relatively easy  as the panel does run in debug mode and could connect to remote debugging quit easily&#8230;</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1050">
+
+		<div id="comment-1050">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-1050">February 20, 2013 at 8:14 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>How funny! I emailed Adobe last week about this, asking if it was possible for panels to run the debug player, and the answer I got was &#8220;Good question, but I don’t have an answer now. I’ll get back to you on this after talking to the relevant folks&#8221;.</p>
+<p>I mainly use the FlashDevelop debugger for testing panel SWFs in development, then MonsterDebugger when panels are live. It sure would be nice to catch breakpoints live though :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1051">
+
+		<div id="comment-1051">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/be25ff18f629cd4ccfacc9df12bb592c?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/be25ff18f629cd4ccfacc9df12bb592c?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.homegrownbyme.com/" rel="external nofollow ugc" class="url">Maor</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-1051">February 20, 2013 at 10:02 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>iv&#8217;e been dabbling with it for a week now, tracing capabilities.isDebugger from a loaded swf outputs true, also the System.pause/resume which are only for debugger version work and sockets work to&#8230;</p>
+<p>So by theory it should work&#8230; </p>
+<p>I would love to hear the answer  to this when you receive it!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1605">
+
+		<div id="comment-1605">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/b777108ea924eb7e85effe0fd4212a66?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/b777108ea924eb7e85effe0fd4212a66?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Michael</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-1605">January 3, 2014 at 8:13 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Please look at sorting an array of numbers.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-8575">
+
+		<div id="comment-8575">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/c8a76b13b6876c43da839f37ef3597a6?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/c8a76b13b6876c43da839f37ef3597a6?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">CuriousCoder</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-8575">September 29, 2016 at 6:37 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hey guys,</p>
+<p>Thanks for all the effforts here with fixing up flash.</p>
+<p>Has adobe fixed the setSelectedLayers bug?  Some of my commands stopped working after CS6. Are there any workarounds?</p>
+<p>Cheers<br>
+CC</p>
+<p>PS<br>
+Anyone else notice there are alot of Dave&#8217;s in this jsfl game?</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-8576">
+
+		<div id="comment-8576">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-8576">September 29, 2016 at 9:46 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hey CC,</p>
+<p>Hmmm&#8230; I wish I knew! </p>
+<p>I haven&#8217;t looked at this project or used JSFL for a good few years now.</p>
+<p>If you want to make a list of things that don&#8217;t work and send them my way, that could be useful. I can at least log them even if I don&#8217;t get round to providing workarounds!</p>
+<p>PS. Who are the other Daves :) ?</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-9210">
+
+		<div id="comment-9210">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/94d64d97a69d29a0d2df70151b49af5a?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/94d64d97a69d29a0d2df70151b49af5a?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="https://dj.quodlibase.org/" rel="external nofollow ugc" class="url">Ismael</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/top-jsfl-bugs-to-fix/comment-page-1#comment-9210">February 2, 2021 at 4:40 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>FLA-based components need a live preview SWF embedded in the FLA to have the component appear properly on stage when the user drags it there. As I mentioned, I can easily create that SWF with JSFL, but making my component use (or later update) that SWF is another story.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix" aria-current="page">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

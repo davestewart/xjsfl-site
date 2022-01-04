@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Logger (class) | xJSFL</title>
+		<meta name="description" content="Basic logging class with variable replacement and file management functionality">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/framework/logger">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Logger (class) | xJSFL">
+		<meta property="og:description" content="Basic logging class with variable replacement and file management functionality">
+		<meta property="og:url" content="http://xjsfl.com/support/api/framework/logger">
+		<meta property="article:published_time" content="2011-07-04T05:03:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T16:33:57+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Logger (class) | xJSFL">
+		<meta name="twitter:description" content="Basic logging class with variable replacement and file management functionality">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/539">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=539">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fframework%2Flogger">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fframework%2Flogger&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-539 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/framework/logger" rel="bookmark" title="Permanent Link: Logger (class)">Logger (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/framework" rel="category tag">Framework</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The Logger class provides a simple object-oriented approach to logging information, both to the Output panel and to file, including basic templating and substitution of placeholder variables.</p>
+<h3>Contents</h3>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<ul>
+		<li><a href="#summary">Summary</a></li>
+		<li><a href="#concept">Concept</a></li>
+		<li><a href="#usage">Usage</a></li>
+	</ul>
+	<li><a href="#api">API</a></li>
+	<ul>
+		<li><a href="#logger">Logger(template, uriOrPath, append)</a></li>
+		<li><a href="#properties">Properties</a></li>
+		<ul>
+			<li><a href="#template">template</a></li>
+			<li><a href="#file">file</a></li>
+			<li><a href="#count">count</a></li>
+		</ul>
+		<li><a href="#logging-methods">Logging methods</a></li>
+		<ul>
+			<li><a href="#log">log(message, $type, $params, $trace)</a></li>
+			<li><a href="#addtrigger">addTrigger(type, callback)</a></li>
+		</ul>
+		<li><a href="#file-related-methods">File-related methods</a></li>
+		<ul>
+			<li><a href="#write">write(message, trace)</a></li>
+			<li><a href="#clear">clear()</a></li>
+			<li><a href="#open">open()</a></li>
+			<li><a href="#reveal">reveal()</a></li>
+			<li><a href="#remove">remove()</a></li>
+		</ul>
+		<li><a href="#file-related-accessors">File-related accessors</a></li>
+		<ul>
+			<li><a href="#contents">contents</a></li>
+		</ul>
+		<li><a href="#utility-methods">Utility methods</a></li>
+		<ul>
+			<li><a href="#tostring">toString()</a></li>
+		</ul>
+	</ul>
+</ul>
+<h3>Concept</h3>
+<h4>Overview</h4>
+<p>Often in applications, you will want to log or report some kind of information, e.g. the intention or perhaps result of an action. Doing this with traces to the Output panel is fine, but in more complex applications, sometimes more structure or consistency is necessary.</p>
+<p>The Logger class has various features that make it suitable for such a task:</p>
+<ul>
+	<li>It can <a href="#log">log</a> messages to both the Output panel and to file</li>
+	<li>It uses a <a href="#template">template</a> into which log messages are formatted</li>
+	<li>It allows the use of <a href="#placeholder-variables">placeholder variables</a>, such as <strong>{date}</strong> or <strong>{time}</strong>
+</li>
+	<li>It has some <a href="#api-file-specific-methods">file-specific methods</a> that allow you to manage the log file</li>
+</ul>
+<h4>Template</h4>
+<p>The Logger constructor as its first argument takes a formatted <strong>string template</strong>, into which future log messages are formatted. A typical template string might look something like this:</p>
+<pre>&gt; xjsfl: {message}</pre>
+<p>This allows you to assign a consistent format to all log messages, and only pass in the message (formatted into the message <strong>placeholder variable</strong>) instead of the whole string each time you log:</p>
+<pre class="prettyprint">var log = new Logger('&gt; xjsfl: {message}', 'c:/temp/xjsfl log.txt');
+log.log('New message logged at {time}');</pre>
+<p>The above code would output to a file in the temp directory:</p>
+<pre>&gt; xjsfl: New message logged at 14:34:15</pre>
+<h4>Placeholder variables</h4>
+<p>Because Logger is based on a simple templating system,  placholder variables allow you keep things simple, yet flexible.</p>
+<p>As seen above, the main placeholder variable (and the default template, should you not supply one) is <strong>{message}</strong>:</p>
+<pre>{message}        The message passed to the log() function, i.e. &quot;Loading classes...&quot;</pre>
+<p>The following standard placeholder variables are recalculated internally each time you log, and can be used in both the template string, or the logged message:</p>
+<pre>{timestamp}      The current timestamp, i.e. &quot;Fri, 03 Feb 2012 01:38:16 GMT&quot;
+{date}           The current date, i.e. &quot;Fri, 03 Feb 2012&quot;
+{time}           The current time, i.e. &quot;01:38:16&quot;
+{millitime}      The current time with milliseconds, i.e. &quot;01:38:16:124&quot;
+{count}          An incremental count of the number of items logged since instantiation, i.e. &quot;34&quot;</pre>
+<p>The following placeholder variable can be used in both the template string or the logged message, but can  be passed in via the <a href="#log">log()</a> method only:</p>
+<pre>
+{type}           An optional log type, i.e. &quot;INFO&quot;
+	</pre>
+<p>Finally, you can pass in any custom variables you like, which you supply  via the <a href="#log">log()</a> method:</p>
+<pre>
+{foo}           Must be passed in via log(), i.e. template.log('hello', {foo:'Dave'})	</pre>
+<p>&nbsp;</p>
+<h3>Usage</h3>
+<h4>Template vs message variables</h4>
+<p>Standard variables in template:</p>
+<pre class="prettyprint">template:   '&gt; xjsfl: &quot;{message}&quot; logged at {time}'
+log():      'Hello there'</pre>
+<pre>
+result:     &gt; xjsfl: &quot;Hello there&quot; logged at 14:34:15'</pre>
+<p>Standard variables in template and log():</p>
+<pre class="prettyprint">template:   '&gt; xjsfl: &quot;{message}&quot;'
+log():      'Hello there logged at {time}'</pre>
+<pre>
+result:     &gt; xjsfl: &quot;Hello there logged at 14:34:15&quot;</pre>
+User variables in <a href="#log">log()</a>:
+<pre class="prettyprint">template:   '&gt; xjsfl: &quot;{message}&quot; logged at {time} by {name}'
+log():      'Hello there', {name:'Dave'}</pre>
+<pre>
+result:     &gt; xjsfl: &quot;Hello there&quot; logged at 14:34:15 by Dave</pre>
+<p>See the <a href="/support/api/text/simple-template">SimpleTemplate</a> class for further infomation on the templating functionality in the Logger class.</p>
+<h4>Debugging code</h4>
+<p>The logging class can be very useful when writing a complex application that crashes, or worse, hangs Flash. It's easy to add logging traces at key points in your code, then check the log file to see where the paper trail ends.</p>
+<p>Whilst writing and testing the URI class, a test URI was causing Flash to hang. Using the logger class, it was fairly easy to trace the error to the section of code that resolved relative-parent folders:</p>
+<pre class="prettyprint">
+// debug
+	logger.log(' &gt; correct() : doubleslashes');
+
+// replace double-slashes
+	path = path.replace(/\/+/g, '/');
+
+// debug
+	logger.log(' &gt; correct() : ../');
+
+// resolve ../
+	while(path.indexOf('../') &gt; -1)
+	{
+		logger.log(' &gt; correct() 1: ' + path);
+		path = path.replace(/(^|\/)[^\/]+\/\.\.\//, &quot;/&quot;);
+		logger.log(' &gt; correct() 2: ' + path);
+	}
+
+// debug
+	logger.log(' &gt; correct() : ./');</pre>
+<p>In the buggy version of the file, the RegEx that was supposed to be fully-resolving the <strong>../</strong> tokens was leaving one in, and so the while-loop never completed. The error log thus-contained many message of the same kind!</p>
+<p>The output of the final log can be seen here: <a href="/wp-content/uploads/file-debugging-log.txt">file-debugging-log.txt</a></p>
+<h2>API</h2>
+<div class="method">
+	<h3 class="signature"><a id="logger" name="logger" href="#logger">Logger(template, uriOrPath, append)</a></h3>
+	<p class="description">Logger constructor</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">template</span> <span class="type">String</span> <span class="comment">An optional input pattern</span>
+</li>
+				<li>
+<span class="name">uriOrPath</span> <span class="type">String</span> <span class="comment">An optional URI or path to which to save a log file</span>
+</li>
+				<li>
+<span class="name">uriOrPath</span> <span class="type">URI</span> <span class="comment">An optional URI instance to which to save a log file</span>
+</li>
+				<li>
+<span class="name">append</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to append (rather than clear) any existing file, defaults to false</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>An Output panel logger (with no file logging) is created by supplying only an input pattern to the constructor.</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger('{timestamp} - {message}';
+logger.log('Something happened');</pre>
+	<pre>Sun, 05 Feb 2012 00:41:47 GMT - Something happened	</pre>
+	<p>A file logger (with no output panel traces) is created by supplying both an input pattern, and a file path or URI:</p>
+	<pre class="prettyprint lang-javascript">
+var uri    = '{user}temp/logs/user.txt';
+var logger = new Logger('{timestamp} - {message}', uri);
+logger.log('Something happened');</pre>
+	<p>Note that a file logger does not by default trace to the output panel. To trace to the output panel you need to pass a Boolean true in the <a href="#log">log()</a> call: </p>
+	<pre class="prettyprint lang-javascript">
+logger.log('This message was written to both the file and the output panel...', true);</pre>
+	<p>It is also possible for multiple loggers to write to the same file:</p>
+	<pre class="prettyprint lang-javascript">var path = 'c:/temp/log.txt';
+var logger1 = new Logger('&gt; log1: {message}', path);
+var logger2 = new Logger('&gt; log2: {message}', path);
+
+logger1.log('This is from log 1')
+logger2.log('And this is from log 2')
+logger1.log('And this is from log 1 again')
+
+logger1.open();</pre>
+	<pre>&gt; log1: This is from log 1
+&gt; log2: And this is from log 2
+&gt; log1: And this is from log 1 again&nbsp;</pre>
+</div>
+<h2><a id="properties" name="properties" href="#properties">Properties</a></h2>
+<p class="description"></p>
+<div class="property">
+	<h3 class="signature"><a id="template" name="template" href="#template">template</a></h3>
+	<p class="description">The SimpleTemplate the Logger uses to create the log</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">SimpleTemplate</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+		</ul>
+	</div>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="file" name="file" href="#file">file</a></h3>
+	<p class="description">The File object that contains the log data</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">File</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+		</ul>
+	</div>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="count" name="count" href="#count">count</a></h3>
+	<p class="description">An incremental count that can be used within the Template as {count}</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Number</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read/write</span>
+</li>
+		</ul>
+	</div>
+</div>
+<h2><a id="logging-methods" name="logging-methods" href="#logging-methods">Logging methods</a></h2>
+<p class="description"></p>
+<div class="method">
+	<h3 class="signature"><a id="log" name="log" href="#log">log(message, $type, $params, $trace)</a></h3>
+	<p class="description">Log a message (note that the order of $ arguments may be swapped)</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">message</span> <span class="type">String</span> <span class="comment">The message to log</span>
+</li>
+				<li>
+<span class="name">$type</span> <span class="type">String</span> <span class="comment">An optional log type String that will be rendered into the {type} placeholders</span>
+</li>
+				<li>
+<span class="name">$params</span> <span class="type">Object</span> <span class="comment">An optional Object of name:value pairs that will be rendered into the user's custom placeholders</span>
+</li>
+				<li>
+<span class="name">$trace</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to additionally trace the result to the Output panel (File logging only)</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The log() method is the workhorse of the Logger class, and allows you to pass in a message, message type, and custom parameters should you wish. At its most basic level, you would simply log a message.</p>
+	<p>The following example logs a <strong>message</strong> to a file:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger('{time} - {message}', '{user}temp/logs/user.txt');
+logger.log('Something happened');</pre>
+	<pre>12:02:34 - Something happened</pre>
+	<p>The following example logs a message to a file, along with a <strong>message type</strong>:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger('{time} - {type} - {message}', '{user}temp/logs/user.txt');
+logger.log('Something happened', 'INFO');</pre>
+	<pre>12:02:34 - INFO - Something happened</pre>
+	<p>Note that you can also <strong>trigger callbacks</strong> by registering a certain log type using <a href="#addtrigger">addtrigger()</a>.</p>
+	<p>The following example logs a message to a file, along with some <strong>custom variables</strong>:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger('{time} - {a} {b} {c}', '{user}temp/logs/user.txt');
+logger.log('Something happened', {a:1, b:2, c:3});</pre>
+	<pre>12:02:34 - 1 2 3</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="addtrigger" name="addtrigger" href="#addtrigger">addTrigger(type, callback)</a></h3>
+	<p class="description">Add a callback function that should fire when a log with a certain type is logged</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">type</span> <span class="type">String</span> <span class="comment">The message type to register a callback for</span>
+</li>
+				<li>
+<span class="name">callback</span> <span class="type">Function</span> <span class="comment">The function to call when a log of that type is called</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The <a href="#log">log()</a> method of the logger class allows you to pass in an additional string you may use to assign types to your log messages, such as &quot;info&quot;, &quot;warn&quot;, &quot;error&quot;, etc. addTrigger() allows you to <strong>bind callbacks</strong> to these types, so if a message of a certain type is received, you can run some custom code, such as running a batch file that might send an email, or calling a panel that might connect to a server.</p>
+	<p>The following example demonstrates how to fire a custom action when a message of type &quot;error&quot; is logged:</p>
+	<pre class="prettyprint lang-javascript">/**
+ * Callback function to handle log trigger
+ * @param	{Logger}	logger	The logger instance
+ * @param	{String}	message	The log message
+ * @param	{Object}	data	The data passed to the log
+ */
+function onError(logger, message, data)
+{
+	alert('There is an error: ' + data.message);
+	logger.open();
+}
+
+// set up the logger
+var logger = new Logger('[{type}]\t{message}', '{user}temp/logs/new log.txt');
+logger.addTrigger('error', onError)
+
+// start logging
+logger
+	.log('Everything is fine...', 'info') // nothing will fire here, as &quot;info&quot; types are not registered
+	.log('Oh dear!', 'error');
+		</pre>
+	<pre>[info]  Everything is fine...<br>[error] Oh dear!		</pre>
+</div>
+<h2><a id="file-related-methods" name="file-related-methods" href="#file-related-methods">File-related methods</a></h2>
+<p class="description"></p>
+<div class="method">
+	<h3 class="signature"><a id="write" name="write" href="#write">write(message, trace)</a></h3>
+	<p class="description">Writes directly to the log file, if there is one</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">message</span> <span class="type">String</span> <span class="comment">The message to log</span>
+</li>
+				<li>
+<span class="name">trace</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to additionally trace the result to the Output panel</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Usually, you will use the log() method to write to the log file or output panel, but there may be times when you wish to write directly to the log file or output panel.</p>
+	<p>The following example logs two messages with a divider between them:</p>
+	<pre class="prettyprint lang-javascript">
+var logger = new Logger('{time} - {message}');
+logger
+    .log('This is a message...')
+    .write('\n------------------------------------------------------------\n')
+    .log('...and this is another message');</pre>
+	<pre><span class="prettyprint lang-javascript">12:32:51 - This is a message...
+
+------------------------------------------------------------
+
+12:32:51 - ...and this is another message</span></pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="clear" name="clear" href="#clear">clear()</a></h3>
+	<p class="description">Clears the log file</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates and clears an existing log file, then writes a new message to it:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger(null, 'user/temp/logs/user.txt');
+logger
+	.log('You will never read this...')
+	.clear()
+	.log('...but you will read this!')
+	.open();</pre>
+	<pre><span class="prettyprint lang-javascript">...but you will read this!</span></pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="open" name="open" href="#open">open()</a></h3>
+	<p class="description">Opens the log file in a text editor, if there is one</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates a log file, logs a message then opens the log in the user's default text editor:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger();
+logger
+	.log('You should now be reading this')
+	.open();		</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="reveal" name="reveal" href="#reveal">reveal()</a></h3>
+	<p class="description">Reveals the log file in the Explorer / Finder, if there is one</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates a log file, logs a message then reveals the log file in the user's Explorer / Finder:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger(null, 'user/temp/logs/user.txt');
+logger
+	.log('Hello there')
+	.reveal();</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="remove" name="remove" href="#remove">remove()</a></h3>
+	<p class="description">Revoves the log file on disk, if there is one</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Logger</span> <span class="comment">The current instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example creates a log file, logs a message then deletes the log from the user's hard drive:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger(null, 'user/temp/logs/user.txt');
+logger
+	.log('You will never read this!')
+	.remove();</pre>
+</div>
+<h2><a id="file-related-accessors" name="file-related-accessors" href="#file-related-accessors">File-related accessors</a></h2>
+<p class="description"></p>
+<div class="property">
+	<h3 class="signature"><a id="contents" name="contents" href="#contents">contents</a></h3>
+	<p class="description">Get the contents of the log file
+		Directly set the contents of the log file</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">String</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read and write</span>
+</li>
+		</ul>
+	</div>
+	<p>Sometimes you will just want to manipulate the contents of the log file manually.</p>
+	<p>The following example creates a log file, then both reads and wrotes directly to the contents property:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger('', 'user/temp/logs/user.txt');
+logger.log('This is some content');
+
+trace(logger.contents)
+logger.contents += 'This is some more content'
+trace(logger.contents)</pre>
+	<pre>This is some content
+
+This is some content
+This is some more content</pre>
+</div>
+<h2><a id="utility-methods" name="utility-methods" href="#utility-methods">Utility methods</a></h2>
+<p class="description"></p>
+<div class="method">
+	<h3 class="signature"><a id="tostring" name="tostring" href="#tostring">toString()</a></h3>
+	<p class="description">Returns a String representation of the instance</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">Description</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example traces the string represnetation of the logger instance:</p>
+	<pre class="prettyprint lang-javascript">var logger = new Logger('', '../temp/logs/user.txt');<br>trace(logger);	</pre>
+	<pre>[object Logger template=&quot;{message}&quot; path=&quot;E:/Projects/xJSFL/user/temp/logs/user.txt&quot;]	</pre>
+</div>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

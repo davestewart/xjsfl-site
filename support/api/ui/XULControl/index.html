@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>XULControl (class) | xJSFL</title>
+		<meta name="description" content="OO wrapper that represents a XUL dialog control">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/ui/xulcontrol">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="XULControl (class) | xJSFL">
+		<meta property="og:description" content="OO wrapper that represents a XUL dialog control">
+		<meta property="og:url" content="http://xjsfl.com/support/api/ui/xulcontrol">
+		<meta property="article:published_time" content="2011-07-04T09:02:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T10:15:16+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="XULControl (class) | xJSFL">
+		<meta name="twitter:description" content="OO wrapper that represents a XUL dialog control">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/535">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=535">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fui%2Fxulcontrol">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fui%2Fxulcontrol&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-535 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/ui/xulcontrol" rel="bookmark" title="Permanent Link: XULControl (class)">XULControl (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/ui" rel="category tag">UI</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+	<h2>Overview</h2>
+	<h3>Summary</h3>
+	<p>The XULControl class provides an object-oriented way to access and manipulate control elements in XMLUI dialogs.</p>
+<h3>Contents</h3>
+<ul>
+<li><a href="#overview">Overview</a></li>
+<ul>
+<li><a href="#summary">Summary</a></li>
+<li><a href="#concept">Concept</a></li>
+<li><a href="#usage">Usage</a></li>
+<li><a href="#the-anatomy-of-a-control">The anatomy of a control</a></li>
+</ul>
+<li>API
+	<ul>
+		<li>
+<a href="#api-properties">Properties </a>
+			<ul>
+				<li><a href="#id">id</a></li>
+				<li><a href="#type">type</a></li>
+				<li><a href="#value">value</a></li>
+				<li><a href="#enabled">enabled</a></li>
+				<li><a href="#visible">visible</a></li>
+			</ul>
+		</li>
+		<li>
+<a href="/support/api/ui/xulcontrol#api-properties-compund-controls-only">Properties, compound controls only</a>
+			<ul>
+				<li><a href="#selectedIndex">selectedIndex</a></li>
+				<li><a href="#values">values</a></li>
+			</ul>
+		</li>
+		<li>
+<a href="#api-methods">Methods</a>
+			<ul>
+				<li><a href="#getXML">getXML()</a></li>
+				<li><a href="#toString">toString()</a></li>
+			</ul>
+		</li>
+	</ul>
+</li>
+</ul>
+<h3>Concept</h3>
+<p>The class is essentially a wrapper class that provides:</p>
+	<ul>
+		<li>OO property access to XMLUI control values</li>
+		<li>a setter and getter for selectedIndex properties on compound controls (dropdowns, lists, etc)</li>
+		<li>a reference to the control's original XML definition</li>
+		<li>simple validation of the control's value</li>
+	</ul>
+<p>It is part of the XUL family, which is made up of 3 main classes:</p>
+	<ul>
+		<li>
+<a href="/support/api/ui/xul">XUL</a> - builds, creates and manages XUL dialogs</li>
+		<li>
+<a href="/support/api/ui/xul-control">XULControl</a> - an object-oriented way to interact with UI controls</li>
+		<li>
+<a href="/support/api/ui/xul-event">XULEvent</a> - an object-oriented Event class to handle system and user events in the XMLUI dialog</li>
+	</ul>
+<h3>Usage</h3>
+<p>XULControls are never manually instantiated, as creation is handled exclusively by the <a href="/support/api/ui/xul">XUL</a> dialog class, but references to controls are passed around by <a href="/support/api/ui/xulevent">XULEvents</a>, and made available directly on the XUL class via the <strong>controls</strong> property.</p>
+<p>In practice, as the only code that can run when dialogs are open is event handler code, you will normally only access control properties inside event handlers.</p>
+<h3>The anatomy of a control</h3>
+<p>Inspecting a XULControl will reveal the following properties and methods (note that elements and values will only be available on compound controls such as dropdowns or lists):</p>
+<pre class="prettyprint lang-javascript">Inspect: XULControl (depth:4, objects:8, values:29, time:0.0 seconds)
+---------------------------------------------------------------------
+object => XULControl
+     id: "options"
+     type: "listbox"
+     enumerable: true
+     compound: true
+     enabled: true
+     visible: true
+     value: 1
+     selectedIndex: 0
+    [values] => Array
+         0: 1
+         1: 2
+         2: 3
+    [elements] => Array
+        [0] => Object
+             label: "Label 1"
+             value: 1
+        [1] => Object
+             label: "Label 2"
+             value: 2
+        [2] => Object
+             label: "Label 3"
+             value: 3
+     getXUL: function ()
+     getXML: function ()
+     validate: function ()
+     toString: function ()</pre>
+<p lang="javascript" escaped="true">Some of the properties listed above won't really be relevant outside of the control's internal code, such as enumerable or compound, but the rest are described below.<br>
+</p>
+<h2>API - Properties </h2>
+
+<div class="property">
+	<h3 class="signature"><a id="id" name="id" href="#id">id</a></h3>
+	<p class="description">The node id attribute of the control</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Any value</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>When you create controls the id of the control is derived either from the API <strong>id</strong> argument, or the XML node <strong>id</strong> attribute, and is then used to uniquely identify the control. </p>
+	<p>Typically you use the id of a control when referring to it within the <a href="/support/api/ui/xul#controls">xul.controls</a> hash, as this example demonstrates by using the value of one control <strong>(options)</strong> to change the value of another <strong>(word)</strong>:</p>
+<pre class="prettyprint lang-javascript">function onChange(event)
+{
+   this.controls.word.value = words[event.control.value - 1];
+}
+
+var words = ['hello','there','squire'];
+var xul = XUL
+    .factory('dropdown:Options=[1,2,3],text:Word')
+    .addEvent('options', 'change', onChange)
+    .show();</pre>
+<p><img src="/wp-content/uploads/xulevent-xul.png" alt=""></p>
+</div>
+
+<div class="property">
+	<h3 class="signature"><a id="type" name="type" href="#type">type</a></h3>
+	<p class="description">The XML node type of the control</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Any value</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example grabs the value from one control (read) and assigns it to the value of another (write):</p>
+<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    this.controls.options2.value = this.controls.options1.value;
+}
+
+XUL
+    .factory()
+    .add('button:Click me,dropdown:Options 1=[1,2,3,4,5],dropdown:Options 2=[1,2,3,4,5]')
+    .addEvent('clickme', 'click', onClick)
+    .show();</pre>
+</div>
+
+<div class="property">
+	<h3 class="signature"><a id="value" name="value" href="#value">value</a></h3>
+	<p class="description">The actual value of the control, rather than just the string</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Any value</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read &amp; Write</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example grabs the value from one control (read) and assigns it to the value of another (write):</p>
+<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    this.controls.options2.value = this.controls.options1.value;
+}
+
+XUL
+    .factory()
+    .add('button:Click me,dropdown:Options 1=[1,2,3,4,5],dropdown:Options 2=[1,2,3,4,5]')
+    .addEvent('clickme', 'click', onClick)
+    .show();
+</pre>
+</div>
+
+
+
+<div class="property">
+	<h3 class="signature"><a id="enabled" name="enabled" href="#enabled">enabled</a></h3>
+	<p class="description">Enables or Gets or sets the enabled state of the control the control</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Boolean</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read and write</span>
+</li>
+</ul>
+</div>
+	<p>The following example enables and disables the dropdown as you click the Update button:</p>
+	<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    var control = this.controls.options;
+    control.enabled = ! control.enabled;
+}
+
+var xul = XUL
+    .factory()
+    .add('dropdown:Options={one:1,Two:2,Three:3},button:Update')
+    .addEvent('update', 'click', onClick)
+    .show();</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="visible" name="visible" href="#visible">visible</a></h3>
+	<p class="description">Gets or sets the visible state of the control</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Boolean</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read and write</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example makes the dropdown invisible or visible as you click the Update button:</p>
+	<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    var control = this.controls.options;
+    control.visible = ! control.visible;
+}
+
+var xul = XUL
+    .factory()
+    .add('dropdown:Options={one:1,Two:2,Three:3},button:Update')
+    .addEvent('update', 'click', onClick)
+    .show();</pre>
+</div>
+<h2>API - Properties, compund controls only</h2>
+<div class="property">
+	<h3 class="signature"><a id="selectedIndex" name="selectedIndex" href="#selectedIndex">selectedIndex</a></h3>
+	<p class="description">Gets or sets the selected index of the control</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Number</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read and write</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example uses a text field to set the <strong>selectedIndex</strong> of a dropdown:</p>
+	<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    this.controls.options.selectedIndex = this.controls.index.value;
+}
+
+var xul = XUL
+    .factory()
+    .add('dropdown:Options={one:1,Two:2,Three:3},text:Index=0,button:Update')
+    .addEvent('update', 'click', onClick)
+    .show();</pre>
+	<p>The more usual alternative would be to directly set the <strong>value</strong> of the dropdown:</p>
+	<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    this.controls.options.value = this.controls.value.value;
+}
+
+var xul = XUL
+    .factory()
+    .add('dropdown:Options={one:1,Two:2,Three:3},text:Value=1,button:Update')
+    .addEvent('update', 'click', onClick)
+    .show();</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="values" name="values" href="#values">values</a></h3>
+	<p class="description">Set or get the child-element values (and labels) of a listbox, dropdown or radiobuttongroup (get only)	</p>
+	<div class="function-meta">
+		<ul>
+			<li>
+<span class="name">Type:</span> <span class="comment">Array</span>
+</li>
+			<li>
+<span class="name">Access:</span> <span class="comment">Read and write</span>
+</li>
+		</ul>
+	</div>
+	<p>The following example give you two ways to set the values of a listbox, using both <strong>primitive values</strong> (i.e. Numbers or Strings), or an <strong>Array of Objects</strong> of the format {'label':value}:</p>
+<pre class="prettyprint lang-javascript">function onClick(event)
+{
+    var control = this.controls.options;
+    if(event.control.id == 'updateValues')
+    {
+        control.values = [1,2,3];
+    }
+    else
+    {
+        control.values = [{'Label 1':1},{'Label 2':2},{'Label 3':3}];
+    }
+}
+
+var xul = XUL
+    .factory()
+    .add('list:Options')
+    .addButton('Update with values', 'updateValues')
+    .addButton('Update with labels', 'updateLabels')
+    .addEvent('updateValues updateLabels', 'click', onClick)
+    .show();</pre>
+</div>
+<h2>API - Methods</h2>
+<div class="method">
+	<h3 class="signature"><a id="getXML" name="getXML" href="#getXML">getXML()</a></h3>
+	<p class="description">Gets the XML String that originally created the control</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">An XML String</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example shows the XML for an options control immediately on creation:</p>
+	<pre class="prettyprint lang-javascript">function onInitialize(event)
+{
+    trace(this.controls.options.getXML());
+}
+
+var xul = XUL
+    .factory()
+    .add('dropdown:Options={one:1,Two:2,Three:3}')
+    .addEvent('initialize', onInitialize)
+    .show();</pre>
+    <pre>&lt;row template="menulist"&gt;
+    &lt;label value="Options:"/&gt;
+    &lt;menulist class="control" id="options" editable="" width="" flex="1" tabindex="" oncreate="xjsfl.ui.handleEvent(0, 'create', 'options')" onsetfocus="xjsfl.ui.handleEvent(0, 'setfocus', 'options')" onchange="xjsfl.ui.handleEvent(0, 'change', 'options'
+        &lt;menupop class="control" id="menupop"&gt;
+            &lt;menuitem label="one" value="1" selected="true"/&gt;
+            &lt;menuitem label="Two" value="2" selected=""/&gt;
+            &lt;menuitem label="Three" value="3" selected=""/&gt;
+        &lt;/menupop&gt;
+    &lt;/menulist&gt;
+&lt;/row&gt;
+</pre>
+    <p>Note that the control has an xml <strong>method</strong> rather than an xml <strong>property</strong> solely in order not to flood the Output panel with XML when debugging controls using <a href="/support/api/text/output">Output.inspect()</a>.<br>
+	</p>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="toString2" name="toString" href="#toString">toString()</a></h3>
+	<p class="description">A string representation of the control</p>
+	<div class="function-meta">
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">String</span> <span class="comment">A string representation of the control</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example traces out a text control as the user types into it:</p>
+	<pre class="prettyprint lang-javascript">function onChange(event)
+{
+    trace(event.control);
+}
+
+var xul = XUL
+    .factory()
+    .add('text:Text')
+    .addEvent('text', 'change', onChange)
+    .show();</pre>
+	<pre>[object XULControl id="text" type="textbox" value="Hello there"]	</pre>
+</div>
+
+
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

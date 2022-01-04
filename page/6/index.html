@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>xJSFL - The rapid development framework for extending Adobe Flash - Part 6</title>
+		<meta name="description" content="xJSFL makes writing, managing and using JSFL easy. The core framework comprises powerful functionality for developers, whilst the modules repository provides a library of essential tools for designers and developers alike. - Part 6">
+		<meta name="robots" content="noindex, nofollow, max-image-preview:large">
+		<link rel="canonical" href="/">
+		<link rel="prev" href="/page/5">
+		<link rel="next" href="/page/7">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="website">
+		<meta property="og:title" content="xJSFL - The rapid development framework for extending Adobe Flash - Part 6">
+		<meta property="og:description" content="xJSFL makes writing, managing and using JSFL easy. The core framework comprises powerful functionality for developers, whilst the modules repository provides a library of essential tools for designers and developers alike. - Part 6">
+		<meta property="og:url" content="http://xjsfl.com/">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="xJSFL - The rapid development framework for extending Adobe Flash - Part 6">
+		<meta name="twitter:description" content="xJSFL makes writing, managing and using JSFL easy. The core framework comprises powerful functionality for developers, whilst the modules repository provides a library of essential tools for designers and developers alike. - Part 6">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="home blog paged paged-6">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-page" class="content grid8 first">
+
+
+		<div class="post-entry">
+
+			<h1 class="post-title">What is xJSFL?</h1>
+
+			<div class="entry-content">
+			<h3>xJSFL is an open source JSFL framework for creating tools for the Adobe Flash authoring environment</h3>
+<p>xJSFL combines the expressive nature and extensibility of a JavaScript framework like <a href="http://jquery.com/">jQuery</a> with the structure and file management features of PHP frameworks such as <a href="http://kohanaframework.org/">Kohana</a>, to make working with JSFL easy. Not only that but it comes with the brilliant open source IDE <a href="http://www.activestate.com/komodo-edit">Komodo Edit</a> supporting full JSFL auto-completion, templates, macros, publishing shortcuts and more.</p>
+<p><a href="/support/guides/framework/xjsfl-overview">Click here to get the full framework overview...</a></p>
+<h3>Who uses xJSFL?</h3>
+<p>From enterprise-sized companies such as <a href="https://zynga.com/">Zynga</a>, <a href="http://www.disney.co.uk/disneyinteractivestudios/">Disney</a>, <a href="http://developer.yahoo.com/flash/">Yahoo</a>, <a href="http://www.wunderman.co.uk/">Wunderman</a>, and <a href="http://www.mediamonks.com/">MediaMonks</a>, to smaller game developers like <a href="http://www.boltcreative.com/">Bolt Creative</a>, <a href="http://cloudkid.com/">Cloud Kid</a> and <a href="http://www.iscoolentertainment.com/en/">IsCool Entertainment</a>, right down to indie and freelance developers looking to support and automate their production pipelines.</p>
+<div id="logos"> <a href="http://www.boltcreative.com/"><img loading="lazy" src="/wp-content/uploads/logos/logo-bolt.png" width="156" height="125"></a> <a href="http://www.mindcandy.com/"><img loading="lazy" src="/wp-content/uploads/logos/logo-mind-candy.png" width="156" height="125"></a> <a href="https://zynga.com/"><img loading="lazy" src="/wp-content/uploads/logos/logo-zynga.png" width="156" height="125"></a> <a href="http://www.disney.co.uk/disney-games/"><img loading="lazy" src="/wp-content/uploads/logos/logo-disney.png" width="156" height="125"></a> <a href="http://amanita-design.net/"><img loading="lazy" src="/wp-content/uploads/logos/logo-amanita.png" width="156" height="125"></a> <a href="http://www.wunderman.co.uk/"><img loading="lazy" src="/wp-content/uploads/logos/logo-wunderman.png" width="156" height="125"></a> <a href="http://www.mediamonks.com/"><img loading="lazy" src="/wp-content/uploads/logos/logo-media-monks.png" width="156" height="125"></a> <a href="http://cloudkid.com/"><img loading="lazy" src="/wp-content/uploads/logos/logo-cloud-kid.png" width="156" height="125"></a> <a href="http://www.iscoolentertainment.com/"><img loading="lazy" src="/wp-content/uploads/logos/logo-is-cool.png" width="156" height="125"></a> <a href="http://developer.yahoo.com/flash/"><img loading="lazy" src="/wp-content/uploads/logos/logo-yahoo.png" width="156" height="125"></a> </div>
+<style>#logos a,
+	#logos img{
+		display:inline-block;
+		left: inherit;
+		margin: 0;
+		position: relative;
+		}</style>
+<p><a href="/case-studies">Click here to see how people are using xJSFL...</a></p>
+<h3>Featured Features</h3>
+<div id="template-portfolio-overview" class="nolinks" style="margin-top: 10px;">
+<div class="one_third">
+<p><a title="Permanent Link: Snippets Panel" href="/feature/snippets-panel" rel="bookmark"> <img style="left: 0pt;" title="Snippets Panel" src="/wp-content/uploads/features-snippets.png" alt=""></a></p>
+<h4 class="post-title">Snippets Panel</h4>
+<p>The Snippets panel makes it easy to manage and launch your day-to-day scripts. Categorise by folder, and customise with icons and tooltips.</p>
+</div>
+<div class="one_third">
+<p><a title="Permanent Link: Komodo Edit IDE" href="/feature/komodo-edit" rel="bookmark"><img style="left: 0pt;" title="Komodo Edit" src="/wp-content/uploads/features-komodo.png" alt=""></a></p>
+<h4 class="post-title">Komodo Edit</h4>
+<p>Komodo Edit is xJSFL’s open-source IDE of choice, with full JSFL auto-complete and many other features to turbo-charge your JSFL development</p>
+</div>
+<div class="one_third">
+<p><a title="Permanent Link: Selectors and Collections" href="/feature/selectors-collections" rel="bookmark"><img style="left: 0pt;" title="Selectors and Collections" src="/wp-content/uploads/features-collections.png" alt=""></a></p>
+<h4 class="post-title">Selectors and Collections</h4>
+<p>Selectors and Collections allow you to specify and manipulate elements in the Flash IDE in so few lines of code, you could swear it was done by magic</p>
+</div>
+</div>
+<div class="clearfix" style="visibility: hidden;">.</div>
+<p style="padding-top: 10px; padding-bottom: 20px; border-top: 1px dotted #dddddd; margin-top: 15px;"><a href="/features/">Click here to see all xJSFL's features...</a></p>
+<h3>What does xJSFL do?</h3>
+<p>It manipulates stage <a href="/support/api/elements/collections/elementcollection">elements</a> and library <a href="/support/api/elements/collections/itemcollection">items</a>, <a href="/support/guides/working-with-flash/moving-around-flash">iterates</a> over timelines, layers and frames, manages <a href="/support/guides/framework/file-handling">files</a>, user <a href="/support/api/oop/config">settings</a>, builds <a href="/support/api/ui/xul">interfaces</a>, and provides a host of <a href="/support/#api">libraries and classes</a> to accomplish <a href="/category/support/tutorials/workflow">everyday Flash tasks</a> with an <a href="/support/guides/framework/xjsfl-overview#what-does-xjsfl-code-look-like">easy to use syntax and grammar</a> you'll really enjoy writing.</p>
+<p><a href="/category/support/tutorials/workflow">Click here to see various workflow examples...</a></p>
+<h3>What does xJSFL code look like?</h3>
+<p>xJSFL has been designed from the bottom up to replace laborious syntax, and abstract repetitive tasks into elegant one-liners. Take the following example (something every designer has wanted to do at some point), smooth all bitmaps in the library:</p>
+<pre class="prettyprint lang-javascript" style="font-size: 15px;">$$(':bitmap').attr('allowSmoothing', true);</pre>
+<p><a href="/support/guides/framework/xjsfl-overview#what-does-xjsfl-code-look-like">Click here for more code examples...</a></p>
+<h3>What does the API look like?</h3>
+<p>The following schematic shows the various components, classes and scripts that come with the 1.0 release of the framework.</p>
+<p>It's broken into: <a href="/support/guides/framework-basics/globals-overview">Globals</a>, <a href="/support/api/core/xjsfl">Core</a>, <a href="/support#libraries">Libraries</a>, <a href="/feature/modules">Modules</a> and <a href="/feature/snippets-panel">Snippets</a>:</p>
+<p><a href="/wp-content/uploads/xjsfl-1-01-api.png"><img loading="lazy" title="xJSFL 1.0 API" src="/wp-content/uploads/xjsfl-1-01-api-580x377.png" alt="xJSFL 1.0 API" width="580" height="377"></a></p>
+<p><a href="/support">Click here to view the support index...</a></p>
+<h3>Why use xJSFL?</h3>
+<p>Developers can radically speed up their everyday JSFL development, gaining access to an <a href="/support#guides">eco-system</a> of <a href="/support/setup/komodo/xjsfl-extension">software</a>, production-tested <a href="/support#api">libraries</a>, classes, <a href="/support#working-with-flash">techniques</a> and best-practices to build more advanced, <a href="/support/tutorials/modules/module-basics">more powerful tools</a> in a fraction of the usual time.</p>
+<p>Designers can use the front-end features of xJSFL, such as the <a href="/support/tutorials/snippets/snippets-basics">Snippets Panel</a>, to more easily manage and run the commands they use daily, and gain access to a library of more powerful, <a href="/feature/ui-builder">interface-driven</a>, xJSFL scripts.</p>
+<h3>Download</h3>
+<p>You can download xJFSL from <a href="/download">www.xjsfl.com/download</a>.</p>
+<h3>Discuss</h3>
+<p>Chat to other JSFL users about xJSFL on the forum at <a href="/forum/">www.xjsfl.com/forum</a>.</p>
+
+			</div>
+
+		</div>
+
+
+
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

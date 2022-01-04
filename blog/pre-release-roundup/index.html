@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Pre-release roundup! | xJSFL</title>
+		<meta name="description" content="I only have a few more classes to finish writing before I release the framework, so I thought I would write a post to quickly highlight some of the cool things you can look forward to. Overview xJSFL notes The xJSFL core and libraries are around 9,000 lines of JavaScript, similar to jQuery which is […]">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/blog/pre-release-roundup">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Pre-release roundup! | xJSFL">
+		<meta property="og:description" content="I only have a few more classes to finish writing before I release the framework, so I thought I would write a post to quickly highlight some of the cool things you can look forward to. Overview xJSFL notes The xJSFL core and libraries are around 9,000 lines of JavaScript, similar to jQuery which is […]">
+		<meta property="og:url" content="http://xjsfl.com/blog/pre-release-roundup">
+		<meta property="article:published_time" content="2011-06-09T15:21:00+00:00">
+		<meta property="article:modified_time" content="2012-06-28T01:51:57+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Pre-release roundup! | xJSFL">
+		<meta name="twitter:description" content="I only have a few more classes to finish writing before I release the framework, so I thought I would write a post to quickly highlight some of the cool things you can look forward to. Overview xJSFL notes The xJSFL core and libraries are around 9,000 lines of JavaScript, similar to jQuery which is […]">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; Pre-release roundup! Comments Feed" href="/blog/pre-release-roundup/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/335">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=335">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fblog%2Fpre-release-roundup">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fblog%2Fpre-release-roundup&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-335 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/blog/pre-release-roundup" rel="bookmark" title="Permanent Link: Pre-release roundup!">Pre-release roundup!</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">09<strong>Jun</strong>2011</span>
+					<span class="comment-container"><a href="/blog/pre-release-roundup#comments" class="comments-link"><strong>3</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/blog" rel="category tag">Blog</a></span><span class="blog-tags"><strong>Tags: </strong><a href="/tag/release" rel="tag">release</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+			<p>I only have a few more classes to finish writing before I release the framework, so I thought I would write a post to quickly highlight some of the cool things you can look forward to.</p>
+<h3>Overview</h3>
+<h4>xJSFL notes</h4>
+<ul>
+<li>The xJSFL core and libraries are around 9,000 lines of JavaScript, similar to <a href="http://code.jquery.com/jquery-1.6.js">jQuery</a> which is around 8600. The Snippets module on top of that is about 1,300 lines</li>
+<li>The xJSFL ActionScript source (UI and framework code) is about 10,000 lines of ActionScript 3</li>
+</ul>
+<h4>Installation and setup</h4>
+<ul>
+<li>Install to any folder</li>
+<li>1-click installation</li>
+<li>Easy initialisation of all classes and functions via <strong>xjsfl.init(this)</strong>;</li>
+</ul>
+<h4>Usage</h4>
+<ul>
+<li>
+<strong>Snippets </strong>panel to mange and run scripts</li>
+<li>
+<strong>Console </strong>panel to quickly test JSFL code</li>
+</ul>
+<h4>Coding</h4>
+<ul>
+<li>Use <strong>Komodo IDE</strong> to manage projects and write larger JSFL scripts</li>
+<li>
+<strong>core</strong>, <strong>user</strong> and <strong>module</strong> folders keeps code separate</li>
+<li>
+<strong>assets</strong>, <strong>data</strong>,<strong> settings</strong>, <strong>templates</strong>, <strong>libraries</strong>, and <strong>scripts </strong>folders keeps things organised</li>
+</ul>
+<h3>API</h3>
+<h4>xJSFL Core</h4>
+<ul>
+<li>
+<strong>settings </strong>- access to common settings such as folders and paths</li>
+<li>
+<strong>utils </strong>- utility methods such as applyEach(), makeURI(), getValues(), unique(), parseValue()</li>
+<li>
+<strong>output </strong>- such as warn(), output(), and error()</li>
+<li>
+<strong>iterators </strong>- basic iteration for documents, items, layers, keyframes and elements</li>
+<li>
+<strong>file</strong> - file finding and loading</li>
+<li>Centralised management of all <strong>classes </strong>and <strong>modules</strong>
+</li>
+</ul>
+<h4>Stage / Library</h4>
+<ul>
+<li>
+<strong>Context</strong> - convenient access to the major DOM elements<strong></strong> (DOM, timeline, layers, frames)</li>
+<li>
+<strong>Collections </strong>- powerful Array-like classes for manipulating authoring-time elements, including:
+<ul>
+<li>
+<strong>ItemCollection </strong>- for Library items</li>
+<li>
+<strong>ElementCollection </strong>- for Stage elements</li>
+<li>Soon to come will be <strong>Document</strong>, <strong>Layer </strong>and <strong>Frame </strong>Collections.</li>
+</ul>
+</li>
+<li>
+<strong>Library </strong>($$) - CSS-style selection of items in the Libray panel</li>
+<li>
+<strong>Stage </strong>($) - CSS-style selection of layers, frames and elements</li>
+<li>
+<strong>Superdoc </strong>- logical routing to the expansive Document class' methods</li>
+</ul>
+<h4>User Interaction</h4>
+<ul>
+<li>
+<strong>XUL </strong>- OO library for creating and managing XUL dialogs</li>
+<li>
+<strong>Module </strong>- Base class used to create and manage xJSFL Modules (collections of files)</li>
+</ul>
+<h4>File / Data</h4>
+<ul>
+<li>
+<strong>Config </strong>- an object-oriented wrapper for easily saving and loading settings</li>
+<li>
+<strong>Events </strong>- handle JSAPI events like in AS3, including Event objects</li>
+<li>
+<strong>FileSystem </strong>- object-oriented File and Folder classes</li>
+<li>
+<strong>FLfile </strong>- adds FLfile platform-to-URI conversion compatibility for pre-CS4 versions of Flash</li>
+<li>
+<strong>JSFL </strong>- serialises values to XML for type-safe communication with Flash panels</li>
+<li>
+<strong>JSON</strong> - Standard JSON library</li>
+<li>
+<strong>XML</strong> - Some additional E4X methods to overcome some JSFL-specific bugs</li>
+</ul>
+<h4>Text I/O</h4>
+<ul>
+<li>
+<strong>Output </strong>- logging, introspection, and a variety of printing and formatting methods</li>
+<li>
+<strong>Source</strong> - utility methods for developers to parse source code</li>
+<li>
+<strong>Table </strong>- outputs 2D Array/Object arrays to easily-readable ASCII tables</li>
+<li>
+<strong>Template </strong>- loading and population of templates, including nesting &amp; auto-indentation</li>
+<li>
+<strong>Validation</strong> - validate user or other input</li>
+</ul>
+<h4>Utility</h4>
+<ul>
+<li>
+<strong>Class </strong>- a base class to create new classes and inherit prototype chains</li>
+<li>
+<strong>Data </strong>- a collection of methods for manipulating data, including hierarchies</li>
+<li>
+<strong>Geom</strong> - Geometric classes including Bounds</li>
+<li>
+<strong>Timer </strong>- simple timer class, used for benchmarking, etc</li>
+<li>
+<strong>Utils</strong> - Array, Object, String, Number and Color methods</li>
+</ul>
+<h3>Cool code examples</h3>
+<p>Smooth all bitmaps in the library:</p>
+<pre lang="javascript" escaped="true">$$(':bitmap').attr('allowSmoothing', true);</pre>
+<p>Rename any exported items after their classes, and select them:</p>
+<pre lang="javascript" escaped="true">function rename(name, index, item){
+    return item.linkageClassName.split('.').pop();
+}
+$$(':exported').rename(rename).select();</pre>
+<p>Organise library items into respective folders (<strong>assets/movie clip</strong>, <strong>assets/graphic</strong>, etc):</p>
+<pre lang="javascript" escaped="true">[':bitmap',':graphic',':button',':movieclip'].forEach
+(
+    function(e,i){ $$(e).move('assets/' + e + 's'); }
+);</pre>
+<p>Synchronize the animation of any tweens in your entire .fla (not yet committed in the repo):</p>
+<pre lang="javascript" escaped="true">function syncAnimation(timeline, index){
+    $frames(':animated', timeline).attr('motionTweenSync', true);
+}
+$$(':animated').exec(syncAnimation);</pre>
+<p>Rename, randomise, and select all Leaf items on the current frame (also, noy yet committed in the repo):</p>
+<pre lang="javascript" escaped="true">$(':Leaf')
+	.rename('leaf_###')
+	.randomize
+	(
+		{
+			position:['20', '20'],
+			width:[20, 100, 20],
+			rotation:360,
+			tint:{from:'green', to:'yellow', mode:'hsv'}
+		}
+	)
+	.select();</pre>
+<p>Inspect any object's properties, in this case, a library Item:</p>
+<pre lang="javascript" escaped="true">var item = $$('Movieclip 1').get(0);
+Output.inspect(item);
+
+/*
+Inspect: SymbolItem (objects:8, values:55, time:0.0 seconds)
+--------------------------------------------------------------------------
+object =&gt; SymbolItem
+	[timeline] =&gt; Timeline
+		 name: "MovieClip 2"
+		[layers] =&gt; Array
+			[0] =&gt; Layer
+				 name: "Layer 1"
+				 layerType: "normal"
+				 visible: true
+				 locked: false
+				 frameCount: 1
+				[frames] =&gt; Array
+					[0] =&gt; Frame
+						 name: ""
+						 actionScript: ""
+						[elements] =&gt; Array
+						 startFrame: 0
+						 duration: 1
+						 soundLibraryItem: null
+						 soundEffect: "none"
+						 soundName: ""
+						 soundSync: "stream"
+						 soundLoopMode: "repeat"
+						 soundLoop: 1
+						 tweenType: "none"
+						 tweenEasing: 0
+						 motionTweenScale: true
+						 motionTweenRotate: "auto"
+						 motionTweenRotateTimes: 0
+						 motionTweenOrientToPath: false
+						 motionTweenSync: false
+						 motionTweenSnap: false
+						 shapeTweenBlend: "distributive"
+						 labelType: "none"
+						 hasCustomEase: false
+						 useSingleEaseCurve: true
+				 color: "#4fff4f"
+				 height: 100
+				 outline: false
+				 parentLayer: null
+		 frameCount: 1
+		 currentFrame: 0
+		 layerCount: 1
+		 currentLayer: 0
+		[bindings] =&gt; Array
+	 symbolType: "movie clip"
+	 sourceFilePath: ""
+	 sourceLibraryName: undefined
+	 sourceAutoUpdate: undefined
+	 scalingGrid: true
+	[scalingGridRect] =&gt; Object
+		 left: -12.749
+		 top: -12.749
+		 right: 12.75
+		 bottom: 12.75
+	 itemType: "movie clip"
+	 name: "Folder 1/MovieClip 2"
+	 linkageExportForAS: true
+	 linkageExportForRS: false
+	 linkageImportForRS: undefined
+	 linkageExportInFirstFrame: true
+	 linkageIdentifier: ""
+	 linkageClassName: "display.MyClass"
+	 linkageBaseClass: ""
+	 linkageURL: undefined
+*/</pre>
+<p>Inspect the properties of several library items in table format:</p>
+<pre lang="javascript" escaped="true">var elements = $$(':movieclip').sort().elements;
+Table.print(elements, 'symbolType,name,linkageClassName,linkageBaseClass');
+
+/*
++------------+----------------------+-------------------+----------------------+
+| symbolType | name                 | linkageClassName  | linkageBaseClass     |
++------------+----------------------+-------------------+----------------------+
+| movie clip | Folder 1/MovieClip 1 | display.YourClass |                      |
+| movie clip | Folder 1/MovieClip 2 | display.MyClass   |                      |
+| movie clip | Folder 1/Sprite 1    | Sprite1           | flash.display.Sprite |
+| movie clip | Folder 3/Sprite 2    | Sprite2           | flash.display.Sprite |
+| movie clip | MovieClip 3          |                   |                      |
++------------+----------------------+-------------------+----------------------+
+*/</pre>
+<p>Read a file's contents:</p>
+<pre lang="javascript" escaped="true">var text = new File('assets/text.txt').contents;</pre>
+<p>Populate a template and output it, retaining indentation <strong>{&gt;...}</strong>, rendering nested templates <strong>{...}</strong>, and removing optional non-populated variables <strong>{...?}</strong>:</p>
+<pre lang="javascript" escaped="true">// input: object.txt
+/*
+  {doc?}
+  {name} =
+  {
+  	  {&gt;content}
+  }
+*/
+
+var methodTemplate = new Template('method.txt', methodData);
+var objectData     = {name:'TestClass', content:methodTemplate};
+var objectTemplate = new Template('object.txt', objectData);
+objectTemplate.render(true);
+
+// output
+/*
+TestClass =
+{
+	set color:function(color)
+	{
+		document.setFillColor(color);
+	}
+}
+*/</pre>
+<p>Count the total lines of code for all files in a folder (and subfolders):</p>
+<pre lang="javascript" escaped="true">var lines  = 0;
+var folder = new Folder(xjsfl.utils.makeURI('core'));
+countLines = function(file){
+    lines += file.contents.split('\n').length;
+};
+
+Data.recurseFolder(folder, countLines);
+
+// 8522</pre>
+<p>Output the hierarchical structure of a folder:</p>
+<pre lang="javascript" escaped="true">Output.folder('core', true); // relative paths are relative to the xJSFL root
+
+/*
+/core
+	/docs
+	/jsfl
+		/bootstrap.jsfl
+		/install
+			/External Libraries
+				/xjsfl.dll
+				/xjsfl
+			/install.jsfl
+			/xJSFL Loader.jsfl
+			/xJSFL Splash.txt
+			/xJSFL.ini
+		/libraries
+			/class.jsfl
+			/collections.jsfl
+			/config.jsfl
+			/data.jsfl
+			/events.jsfl
+			/filesystem.jsfl
+			/flfile.jsfl
+			/jsfl.jsfl
+			/library.jsfl
+			/module.jsfl
+			/output.jsfl
+			/simple-template.jsfl
+			/stage.jsfl
+			/superdoc.jsfl
+			/table.jsfl
+			/template.jsfl
+			/timer.jsfl
+			/xjsfl.jsfl
+		/run
+			/exec.jsfl
+			/file.jsfl
+			/lib.jsfl
+*/</pre>
+<p>Test a function and output the error stack if it fails:</p>
+<pre lang="javascript" escaped="true">function demo()
+{
+	var settings = XUL.create('xcolorchip:Color,numeric:Frame rate,Title');
+}
+
+xjsfl.utils.test(demo);
+
+/*
+Error: XUL.add(): Undefined control type "xcolorchip"
+----------------------------------------------------------------------------------------------------
+
+	0 &gt; ("xcolorchip:Color,numeric:Frame rate,Title")
+
+		line: 1088
+		file: xul.jsfl
+		path: xJSFL/core/jsfl/libraries/
+
+	1 &gt; XUL("xcolorchip:Color,numeric:Frame rate,Title")
+
+		line: 96
+		file: xul.jsfl
+		path: xJSFL/core/jsfl/libraries/
+
+	2 &gt; ("xcolorchip:Color,numeric:Frame rate,Title")
+
+		line: 239
+		file: xul.jsfl
+		path: xJSFL/core/jsfl/libraries/
+
+	3 &gt; demo()
+
+		line: 1429
+		file: xul.jsfl
+		path: xJSFL/core/jsfl/libraries/
+
+	4 &gt; (demo)
+
+		line: 684
+		file: xjsfl.jsfl
+		path: xJSFL/core/jsfl/libraries/
+
+	5 &gt;
+
+		line: 1497
+		file: xul.jsfl
+		path: xJSFL/core/jsfl/libraries/
+*/</pre>
+<p>Anyway, you get the general idea.</p>
+<p>Once you get your hands on Komodo and have a look at the source code, you'll be into writing proper classes as well.</p>
+<p>Laters,</p>
+<p>Dave</p>
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">3 Responses to Pre-release roundup!</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-199">
+
+		<div id="comment-199">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/c9c4c7cf8d8eb4ddfd8137a86418d256?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/c9c4c7cf8d8eb4ddfd8137a86418d256?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Ash</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/pre-release-roundup#comment-199">July 8, 2011 at 2:32 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hi Dave,<br>
+I can&#8217;t find a description of $frames function.<br>
+If I execute your example with synchronization of tweens, error ocured:</p>
+<p>The following JavaScript error(s) occurred:<br>
+At line 280 of file &#8220;library.jsfl&#8221;:<br>
+TypeError: xjsfl.iterators has no properties</p>
+<p>Also my Komodo Edit 6 doesn&#8217;t show autocompletion. But I&#8217;ve made all steps that you described.</p>
+<p>Thanks.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-200">
+
+		<div id="comment-200">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/pre-release-roundup#comment-200">July 8, 2011 at 2:44 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Best you ask this question in the forum, then everyone gets to benefit from the answers, OK?</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-201">
+
+		<div id="comment-201">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.davestewart.co.uk/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/blog/pre-release-roundup#comment-201">July 8, 2011 at 2:48 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>And sorry, $frames is not yet committed! Still working on some of that bit of the framework. As I said, jump in on the forum, and I&#8217;ll discuss some workarounds in the meantime.</p>
+<p>PS. Sorry about the iterators error &#8211; that&#8217;s a bug! I just pushed a fix, so pull / download again and you should be good (no need to reinstall, just update the files)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

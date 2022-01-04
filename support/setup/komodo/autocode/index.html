@@ -1,0 +1,1591 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Komodo AutoCode Extension | xJSFL</title>
+		<meta name="description" content="The AutoCode extension adds some extra functionality to Komodo, including tab auto-completion on abbreviations and doc-comments, as well as JavaScript console functionality.">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/setup/komodo/autocode">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Komodo AutoCode Extension | xJSFL">
+		<meta property="og:description" content="The AutoCode extension adds some extra functionality to Komodo, including tab auto-completion on abbreviations and doc-comments, as well as JavaScript console functionality.">
+		<meta property="og:url" content="http://xjsfl.com/support/setup/komodo/autocode">
+		<meta property="article:published_time" content="2011-07-01T02:05:00+00:00">
+		<meta property="article:modified_time" content="2012-05-10T10:44:14+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Komodo AutoCode Extension | xJSFL">
+		<meta name="twitter:description" content="The AutoCode extension adds some extra functionality to Komodo, including tab auto-completion on abbreviations and doc-comments, as well as JavaScript console functionality.">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+<link rel="alternate" type="application/rss+xml" title="xJSFL &raquo; Komodo AutoCode Extension Comments Feed" href="/support/setup/komodo/autocode/feed">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/799">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=799">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fsetup%2Fkomodo%2Fautocode">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fsetup%2Fkomodo%2Fautocode&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-799 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<ul class="slideshow"><li class="featured featured_container1" style="background:;"><img src="/wp-content/uploads/setup-autocode-extension.png" title="setup-autocode-extension" alt=""></li></ul>
+<span class="shadow-top"></span><span class="shadow-bottom"></span>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/setup/komodo/autocode" rel="bookmark" title="Permanent Link: Komodo AutoCode Extension">Komodo AutoCode Extension</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">01<strong>Jul</strong>2011</span>
+					<span class="comment-container"><a href="/support/setup/komodo/autocode#comments" class="comments-link"><strong>33</strong> Comments</a>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/setup/komodo" rel="category tag">Komodo</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+<h2 class="cufon_headings">Setup</h2>
+<!--<p><img src="/wp-content/documentation/html/other/autocode/assets/autocode-logo.png" width="300" alt="AutoCode Logo" class="left" style="padding:20px 0px 0px 0px"></p>-->
+<h3 class="cufon_headings">Overview</h3>
+<p>The AutoCode extension adds some extra functionality to Komodo, that makes it easier to write (and test) code. Its features include:</p>
+	<ul>
+		<li><a href="#auto-abbreviations">Tab-complete on abbreviations</a></li>
+		<li><a href="#doccomment-generation">DocComment generation</a></li>
+		<li><a href="#places-integration">Places integration</a></li>
+		<li><a href="#javascript-console">JavaScript console functionality</a></li>
+		<li><a href="#autocomplete">Auto-Complete customisation</a></li>
+	</ul>
+<h3>Download and intallation</h3>
+<p>Download the AutoCode .xpi from <a href="http://support.activestate.com/node/7280">support.activestate.com/node/7280</a> then install using the following instuctions:</p>
+	<ol>
+		<li>Make sure Komodo  is open</li>
+		<li>Drag the <strong>.xpi</strong> file onto Komodo</li>
+		<li>Restart Komodo</li>
+	</ol>
+	<h3>Preferences</h3>
+<p>Ensure that the extension's functionality is enabled by going to <strong>Preferences &gt; Editor &gt; AutoCode</strong>, and making sure that the relevant checkboxes are checked.</p>
+	<p><img class="aligncenter" title="komodo-autocode-extension" src="/wp-content/documentation/html/other/autocode/assets/autocode-prefs.png" alt="" width="600"></p>
+	<p>For more information see the section on <a href="/support/setup/komodo/komodo-installation">Komodo installation</a>.</p>
+	<h2>Auto-Abbreviations</h2>
+	<h3 class="cufon_headings">Intro</h3>
+	<p>Abbreviations are a standard Komodo feature that allow you to enter a single keyword in the editor pane, then expand that keyword into an editable code, with placeholder regions that you tab through to fill in values.</p>
+	<p>AutoCode Abbreviations allows you to use the <strong>tab</strong> key, instead of the default <strong>CTRL+T</strong> to enter an abbreviation.</p>
+	<h3>Overview</h3>
+	<p>The concept is perhaps easier illustrated with a sequence of images. Firstly, type a <strong>keyword</strong> corresponding to an abbreviation name, in this case "for":</p>
+	<p><img src="/wp-content/documentation/html/other/autocode/assets/abbreviation-01.png" alt=""></p>
+	<p>Then, press <strong>tab</strong> (as opposed to the more cumbersome default, CTRL+T) to trigger the abbreviation's template:</p>
+	<p><img src="/wp-content/documentation/html/other/autocode/assets/abbreviation-02.png" alt=""></p>
+	<p>The template is inserted into the document, and the first place holder is highlighted in each place in the template that it is used. You can alter it by simply <strong>typing</strong>, or accept the value and <strong>tab</strong> to the next placeholder.</p>
+	<h3>Snippets folders</h3>
+<p>In order to expand a keyword, you'll need a named Snippet in your Toolbox's <strong>Abbreviations</strong> folder. The Snippet name should match the keyword typed, and should sit somewhere within a folder matching the language:</p>
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/abbreviation-snippets.png" alt="" height="423" width="245"></p>
+	<p>There are some more rules on how Snippets are selected, so see the Komodo help for further information.</p>
+	<h3>Ignoring identifiers following keywords</h3>
+	<p>Occasionally, pressing tab can trigger an insertion when you don't want one, for example, when declaring a variable and then tabbing to place values in columns.</p>
+	<p>For these cases, AutoCode Preferences allows you to set a list of keywords, for which when a word immediately after is tabbed, the abbreviation will be ignored:</p>
+	<p><img class="aligncenter size-full" src="/wp-content/documentation/html/other/autocode/assets/autocode-prefs-snippets.png"></p>
+	<p>So for example, if you typed...</p>
+	<pre>var func
+</pre>
+	<p>		...and then a <strong>Tab</strong> character, the ActiveState-provided &quot;func&quot;, insertion of the Snippet would be skipped, as the word <strong>func</strong> came immediately after the ignored keyword <strong>var</strong>.</p>
+	<p>However, typing just...</p>
+	<pre>func
+</pre>
+	<p>...would insert the Snippet as expected.</p>
+	<p>Note that AutoCode also skips inserting abbreviations if it detects the caret is currently in an inline comment or DocComment block.</p>
+	<h2>DocComment generation</h2>
+<h3>Overview</h3>
+	<p>Komodo uses the <a href="http://en.wikipedia.org/wiki/JSDoc">JSDoc</a> and <a href="http://en.wikipedia.org/wiki/PHPDoc">PHPDoc</a> syntax to document JavaScript and PHP code, as well as hint param and return types.</p>
+	<p>With the Auto-Comment checkbox enabled in the preferences, all you need to do comment a function or method is to type <code>/**</code> just above the function declaration...</p>
+	<p><img class="aligncenter size-full wp-image-803" title="auto-comment-01" src="/wp-content/documentation/html/other/autocode/assets/auto-comment-01.png" alt="" height="82" width="599"></p>
+	<p>...then press the TAB key:</p>
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/auto-comment-02.png" alt="" height="189" width="599"></p>
+	<p>The comment will be completed, and placeholders will be entered, allowing you to tab through the values.</p>
+	<p>Note that a <strong>return(s)</strong> value is added and automatically highlighted in full, so if there's no return value on your function, you can simply press delete when highlighted, and the entire line will be removed.</p>
+<h3>Customising formatting</h3>
+	<p>You'll notice that the entries are also nicely formatted into columns. There are more options in the Preferences for this, including fixed-width columns, and padding:</p>
+	<p><img src="/wp-content/documentation/html/other/autocode/assets/autocode-prefs-comments.png" alt="" width="600" height="188" class="aligncenter size-full wp-image-810" title="auto-comment-prefs"></p>
+	<h3>Customising content</h3>
+	<p>To add your own (global) custom text or parameters to class and function comments (such as @author information), locate the relevant Snippets inside AutoCode's own Toolbox...</p>
+	<p><img class="aligncenter size-full wp-image-811" title="auto-comment-custom" src="/wp-content/documentation/html/other/autocode/assets/auto-comment-custom.png" alt="" height="167" width="332"></p>
+	<p>...then add your own parameters as you wish:</p>
+	<p><img class="aligncenter size-full wp-image-811" title="auto-comment-custom" src="/wp-content/documentation/html/other/autocode/assets/auto-comment-custom-dialog.png" alt="" height="335" width="489"></p>
+<p>The code therein will be insterted automatically into the appropriate comment types as they are created.</p>
+	<h2>Places integration</h2>
+	<h3 class="cufon_headings">Intro</h3>
+	<p>The Places integration is  the most powerful feature of AutoCode, and automates the process of inserting file paths, or even complete blocks of code including file paths, project variables, and image widths and heights, into a document.</p>
+	<p>Note that athough everyday usage of places integration is actually really easy, the level of customisation hides a lot of power, so it's recomended to read through the Places help at least once, just to get a brief understanding of how the various options and rules work together.</p>
+	<p>The various sections are:</p>
+	<ul>
+		<li><a href="#overview">Overview</a></li>
+		<li><a href="#using-snippets-to-generate-code">Using snippets to generate code</a></li>
+		<li><a href="#snippet-variables">Snippet variables</a></li>
+		<li><a href="#grouping-file-extensions-under-a-common-snippet">Grouping file extensions under a common Snippet</a></li>
+		<li><a href="#snippet-folders">Snippet folders</a></li>
+		<li><a href="#code-generation-rules">Code generation rules</a></li>
+		<li><a href="#default-snippets">Default Snippets</a></li>
+	</ul>
+<h3>Overview</h3>
+	<p>At its simplest level, Places integration  enables you to simply <strong>ALT+click</strong> a file or folder in the Places panel to insert the item's relative or absolute path into the current document:</p>
+<p><img class="aligncenter size-full wp-image-803" title="auto-comment-01" src="/wp-content/documentation/html/other/autocode/assets/places-text.png" alt="" height="66" width="599">However, as well as just inserting the path, you can also use the Komodo Snippets  system to customize the insertion, to insert full snippets of code that include the URL of the file being inserted. This insertion is  based on both the inserted <strong>file's type</strong> and the document's <strong>current language</strong> (but can be overridden in other ways).</p>
+<div class="avia-box info rounded full">
+	<p class="avia-innerbox"><strong>Linux users</strong>, note that ALT+Click is reserved for moving windows - you will need to either disable this functionality using the information on <a href="http://askubuntu.com/questions/118151/disable-alt-for-window-move-in-gnome-shell">this page</a>, or click files with the <strong>middle mouse</strong> button only.</p>
+</div>
+<p>For example,  if you are in an HTML document,  and you ALT+click an <strong>image file</strong>, an HTML img tag will be insterted, including the actual width and height of the image:</p>
+	<p><img class="aligncenter size-full wp-image-803" title="auto-comment-01" src="/wp-content/documentation/html/other/autocode/assets/places-html-img.png" alt="" height="119" width="599"></p>
+	<p>Or if in the JavaScript part of the HTML document, ALT+clicking will insert some image-specific JavaScript code:</p>
+	<p><img class="aligncenter size-full wp-image-803" title="auto-comment-01" src="/wp-content/documentation/html/other/autocode/assets/places-javascript-img.png" alt="" height="172" width="599"></p>
+	<p>Or if in a PHP document, you could set up custom PHP code to insert images using your own code:</p>
+	<p><img class="aligncenter size-full wp-image-803" title="auto-comment-01" src="/wp-content/documentation/html/other/autocode/assets/places-php-img.png" alt="" height="160" width="599"></p>
+	<p>AutoCode comes with a variety of Snippets already set up for use, but you're more than free to add your own, directly to the <strong>AutoCode Toolbox</strong>.</p>
+<h3>Using snippets to generate code</h3>
+	<p>As seen above, all insertions are fully-customisable by the user, as each of them is a standard, physical, Snippet in your Komodo Toolbox. You may edit as you see fit, even adding your own language &amp; file type combinations.</p>
+	<p>AutoCode uses some basic rules and a standard Snippets folder structure in order to locate the correct Snippet to use:</p>
+	<pre>AutoCode &gt; Places &gt; <strong>Root Folder</strong> &gt; <strong>Sub-Folder</strong> (optional) &gt; <strong>Language</strong> &gt; <strong>extension</strong></pre>
+	<p>At the most basic level, when just working in a language such as HTML, and without any special Project settings,  the folder structure to insert an <strong>image</strong> Snippet  would be:</p>
+	<pre>AutoCode &gt; Places &gt; <strong>Languages</strong> &gt; <strong>HTML</strong> &gt; <strong>image</strong></pre>
+In the actual Snippet panel, that looks like this:
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/places-snippet-location.png" alt="" height="365" width="332"></p>
+<p>The code inside the actual Snippet itself, with the AutoCode Places <strong>path</strong> variable being swapped out on insertion, is:</p>
+<pre>&lt;img src=&quot;[[%tabstop:<strong>path</strong>]]&quot; width=&quot;[[%tabstop:<strong>width</strong>]]&quot; height=&quot;[[%tabstop:<strong>height</strong>]]&quot; /&gt;</pre>
+<p>As you see here, AutoCode Places uses standard Snippet tab stops for the AutoCode Places variables, which is discussed in more detail next.</p>
+<h3>Snippet variables</h3>
+<h4>AutoCode  variables</h4>
+<p>The <strong>path</strong> variable is the default variable used for inserting paths into your documents, and is determined by the file's location relative to the document, and your AutoCode Places setting on whether that path should be relative or absolute.</p>
+<p>However, the following path variables are  available to use within your Snippets:</p>
+<table cellspacing="4" cellpadding="0">
+	<col width="85">
+	<col width="399">
+	<thead>
+		<tr>
+			<th width="120">Variable</th>
+			<th width="530">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>file</td>
+			<td>the full filename, including the extension</td>
+		</tr>
+		<tr>
+			<td>filename</td>
+			<td>the filename only (without the extension)</td>
+		</tr>
+		<tr>
+			<td>fileext</td>
+			<td>the file extension only</td>
+		</tr>
+		<tr>
+			<td>path</td>
+			<td>the full path to (and including) the file (as determined by preferences)</td>
+		</tr>
+		<tr>
+			<td>relpath</td>
+			<td>the relative path to (and including) the file</td>
+		</tr>
+		<tr>
+			<td>abspath</td>
+			<td>the absolute path to (and including) the file from the project root</td>
+		</tr>
+		<tr>
+			<td>folderpath</td>
+			<td>the full path to the folder (as determined by preferences)</td>
+		</tr>
+		<tr>
+			<td>relfolderpath</td>
+			<td>the relative path to the folder</td>
+		</tr>
+		<tr>
+			<td>absfolderpath</td>
+			<td>the absolute path to the folder from the project root</td>
+		</tr>
+		<tr>
+			<td>uri</td>
+			<td>the URI to the file</td>
+		</tr>
+		<tr>
+			<td>folderuri</td>
+			<td>the URI to the folder</td>
+		</tr>
+	</tbody>
+</table>
+<p>Also available are the following special variables:</p>
+<table cellspacing="4" cellpadding="0">
+	<col width="85">
+	<col width="399">
+	<thead>
+		<tr>
+			<th width="120">Variable</th>
+			<th width="530">Description</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>varname</td>
+			<td>any variable you have set in your project's Environment Variables</td>
+		</tr>
+		<tr>
+			<td>width</td>
+			<td>the image height</td>
+		</tr>
+		<tr>
+			<td>height</td>
+			<td>the image height</td>
+		</tr>
+	</tbody>
+</table>
+<p>Variables are inserted into the snippet using the standard Interpolation Shortcuts mechanism, which also allows you to add snippets manually, should you so wish:</p>
+<pre>[[%tabstop:<strong>VARNAME</strong>]]</pre>
+<p>You can use these values in combination with other code, and even other tabstops (including <strong>numbered</strong> tabstops) to form  fairly advanced code insertion (note that variables are case-sensitive):</p>
+<pre>@font-face {<br>	font-family: &quot;[[%tabstop:<strong>name</strong>]]&quot;;<br>	src: url(&quot;[[%tabstop1:<strong>folderpath</strong>]][[%tabstop2:<strong>filename</strong>]]&quot;);<br>	src: local(&quot;&#9786;&quot;),<br>		url(&quot;[[%tabstop1:<strong>folderpath</strong>]][[%tabstop2:<strong>filename</strong>]].woff&quot;) format(&quot;woff&quot;),<br>		url(&quot;[[%tabstop1:<strong>folderpath</strong>]][[%tabstop2:<strong>filename</strong>]].otf&quot;) format(&quot;opentype&quot;),<br>		url(&quot;[[%tabstop1:<strong>folderpath</strong>]][[%tabstop2:<strong>filename</strong>]].svg&quot;) format(&quot;svg&quot;);<br>	}</pre>
+<h4>Project Environment variables</h4>
+<p>Note that you can also use Project Environment variables to customise paths per project. In the following example, the  Project Environment variable <strong>EXTENSION NAME</strong> has been set up:</p>
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/places-proj-pref-variable.png" alt="" height="283" width="681"></p>
+<p>Then, in the following Snippet, the tabstop variable <strong>EXTENSION NAME</strong> has been used, along with the Places variable <strong>abspath</strong>:</p>
+<pre>chrome://[[%tabstop:<strong>EXTENSION NAME</strong>]][[%tabstop:<strong>abspath</strong>]]</pre>
+<p>Which looks like this in the Snippets dialog:</p>
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/places-snippet-dialog.png" alt="" height="335" width="489"></p>
+<p>This would (in the case of the AutoCode extension project) result in the following path being inserted:</p>
+<pre>chrome://<strong>autocode</strong>/absolute/path/to/file.ext
+</pre>
+<p>This allows the developer to fully-customise paths or URLs per project. Examine the sample snippets that ship with AutoCode to get an idea, and add your own as you see fit.</p>
+<h3>Grouping file extensions under a common Snippet</h3>
+<p>Sometimes, you'll want to treat various file extensions the same, such as image extensions (jpg, png, etc) in HTML.</p>
+<p>As such, AutoCode allows you to associate groups of extensions with a single Snippet name. if you look in the AutoCode Preferences you'll find a text box where you can edit these associations, and add your own if you wish:</p>
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/autocode-prefs-places-groups.png" alt="" height="210" width="560"></p>
+Note that Snippets matching <strong>extensions</strong> take precedance over Snippets matching <strong>groups</strong> when inserting code into a document.
+<h3>Snippet folders</h3>
+<p>If you look at the <strong>Autocode/Places/Snippets</strong> folder, you will see that apart from the <strong>Languages</strong> sub-folder, there are also 3 other sub-folders:<strong>Custom, </strong><strong>Documents</strong> and <strong>Projects</strong>. Each of these folders allows the developer another level of granularity when it comes to determining the selection of code snippets.</p>
+<h4>Languages</h4>
+<p>The <strong>Languages</strong> folder is the default folder where AutoCode looks for matching snippets. Simply set up your language-specific snippets underneath this folder.</p>
+<h4>Projects</h4>
+<p>The <strong>Projects</strong> folder is where you can add folders with the names of current Komodo Projects you want to use custom code for. Simply add the project name as a top level folder (or set the Project Environment variable <strong>AUTOCODE PROJECT</strong>, then use that value as the folder name), then set up your language folders beneath:</p>
+<pre>AutoCode &gt; Places &gt; Projects &gt; <strong>My Project</strong> &gt; HTML &gt; image</pre>
+<p>This can be especially useful when you have projects that require custom paths, but you don't want to edit your default Languages snippets.</p>
+<h4>Custom</h4>
+<p>The <strong>Custom</strong> folder is where you can set up completely custom snippets to be used by AutoCode, which are made available by adding the Project Environment variable <strong>AUTOCODE PLACE</strong>, then use that value), then set up your language folders beneath.</p>
+<p>For example, you may decide to use a particular framework (in this case, <a href="http://kohanaframework.org/">Kohana</a>) and want to set up image-specific snippets for one of your Kohana helper classes. </p>
+<p> You simply set the Project Environment's <strong>AUTOCODE PLACE</strong> variable to Kohana:<img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/places-proj-pref-custom.png" alt="" height="283" width="681"></p>
+<p>Create the new <strong>image</strong> Snippet:</p>
+<pre>AutoCode &gt; Places &gt; Custom &gt; <strong>Kohana</strong> &gt; PHP &gt; image
+</pre>
+<p>Then edit the code in the snippet and insert using ALT+click:</p>
+<p><img class="aligncenter size-full wp-image-803" title="auto-comment-01" src="/wp-content/documentation/html/other/autocode/assets/places-php-img.png" alt="" height="160" width="599"></p>
+<h4>Documents</h4>
+<p>The <strong>Documents</strong> folder allows you to override the the <strong>Languages</strong> settings with <strong>Document-specific</strong> settings. This is useful when you're dealing with a document that <strong>always</strong> inserts file paths in a set format.</p>
+<p>For example, the Mozilla <strong>.manifest</strong> format requires that paths to files be expressed as absolute <strong>chrome://</strong> URIs:</p>
+<pre>chrome://absolute/path/to/file.ext</pre>
+<p> By specifying a <strong>Document</strong> Snippet for .manifest files, you can ensure that the format is always the same, no matter what kind of file is ALT+clicked.</p>
+<p>In this example, the Snippet <strong>AutoCode/Places/Documents/manifest</strong> is created, and an absolute URI is set:</p>
+<p><img class="aligncenter size-full wp-image-804" title="auto-comment-02" src="/wp-content/documentation/html/other/autocode/assets/places-snippet-dialog.png" alt="" height="335" width="489"></p>
+<h3>Code generation rules</h3>
+<p>With all these different ways of generating path insertions, it might seem a little confusing. Well, the order of decision-making in order to determine which Snippet to use (or not use) is quite specific, and is outlined below.</p>
+<p> Note that the list below is the <em>exact</em> order AutoCode determines which Snippet to use; the first successful match stops the process, and the Snippet is inserted: </p>
+<div style="margin-left:60px;">
+	<h6 style="border-bottom:1px dotted #CCC;">Unmodified </h6>
+	<p> Add the  path only (based on the AutoCode Places preferences) if: </p>
+	<ol>
+		<li>There's already a <strong>document selection</strong>, or</li>
+		<li>The caret is <strong>between 2 matching quotes</strong>
+</li>
+	</ol>
+	<h6 style="border-bottom:1px dotted #CCC;"> Document override</h6>
+	<p> Use the Snippet <code>Documents/&lt;snippet&gt;</code> if it exists, and: </p>
+	<ol start="3">
+		<li>The document's <strong>extension</strong> matches the snippet <strong>name</strong>, and
+			<ol style="list-style-type:lower-alpha">
+				<li>The document's current <strong>language</strong> and file <strong>extension</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> and file <strong>group</strong> matches</li>
+			</ol>
+		</li>
+	</ol>
+	<h6 style="border-bottom:1px dotted #CCC;">Project environment &quot;AUTOCODE PLACE&quot; variable</h6>
+	<p> Use the Snippet <code>Custom/&lt;folder&gt;/&lt;language&gt;/&lt;snippet&gt;</code> if it exists, and: </p>
+	<ol start="4">
+		<li> The project <strong>variable</strong> <code>AUTOCODE PLACE</code> and Custom <strong>folder</strong> matches, and
+			<ol style="list-style-type:lower-alpha">
+				<li>The document's current <strong>language</strong> and file <strong>extension</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> and file <strong>group</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> is  found, and there is a <strong>default</strong> snippet</li>
+			</ol>
+		</li>
+	</ol>
+	<h6 style="border-bottom:1px dotted #CCC;">Project environment &quot;AUTOCODE PROJECT&quot; variable</h6>
+	<p>Use the Snippet <code>Projects/&lt;folder&gt;/&lt;language&gt;/&lt;snippet&gt;</code> if it exists, and:</p>
+	<ol start="5">
+		<li>The project <strong>variable</strong> <code>AUTOCODE PROJECT</code> and  Projects <strong>folder</strong> matches, and
+			<ol style="list-style-type:lower-alpha">
+				<li>The document's current <strong>language</strong> and file <strong>extension</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> and file <strong>group</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> is  found, and there is a <strong>default</strong> snippet</li>
+			</ol>
+		</li>
+	</ol>
+	<h6 style="border-bottom:1px dotted #CCC;">Project name</h6>
+	<p>Use the Snippet <code>Projects/&lt;folder&gt;/&lt;language&gt;/&lt;snippet&gt;</code> if: </p>
+	<ol start="6">
+		<li>The project<strong> name</strong> and Projects <strong>folder</strong> matches, and
+			<ol style="list-style-type:lower-alpha">
+				<li>The document's current <strong>language</strong> and file <strong>extension</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> and file <strong>group</strong> matches, or</li>
+				<li>The document's current <strong>language</strong> is  found, and there is a <strong>default</strong> snippet</li>
+			</ol>
+		</li>
+	</ol>
+	<h6 style="border-bottom:1px dotted #CCC;">Document language +  file-type combination</h6>
+	<p> Use the Snippet <code>Languages/&lt;language&gt;/&lt;snippet&gt;</code> if: </p>
+	<ol start="7">
+		<li>The document's current <strong>language</strong> and file <strong>extension</strong> matches, or</li>
+		<li>The document's current <strong>language</strong> and file <strong>group</strong> matches, or</li>
+		<li>The document's current <strong>language</strong> is  found, and there is a <strong>default</strong> snippet</li>
+	</ol>
+	<h6 style="border-bottom:1px dotted #CCC;"> Defaults</h6>
+	<p> Final defaults:</p>
+	<ol start="10">
+		<li> Fall back to <code>Languages/default</code> if it <strong>exists</strong>, or</li>
+		<li> Enter the path as-is if it <strong>doesn't</strong>
+</li>
+	</ol>
+</div>
+<p>Note that whilst the abovelist <em>looks</em> complex, it's not - it's just a specific order so that the more specific overrides the more general.</p>
+<h3>Defaults and overrides</h3>
+<p>So, as written above, AutoCode Places nearly always looks to insert a custom path Snippet, however, there are a few times where it doesn't:</p>
+<p>Firstly, as soon as a file is ALT+clicked, <strong>only the path</strong> (and not a Snippet) is inserted if:</p>
+<ul>
+	<li>there is a current document selection, or</li>
+	<li>the caret is between two matching quotes</li>
+</ul>
+<p>Finally, AutoCode Places has a system of <strong>defaults</strong>, which are sought if none of the extensions or groups match.</p>
+<p>In each of the main <strong>Places</strong> folders, as well as the <strong>Language</strong> sub-folders, you can optionally place a Snippet named <strong>default</strong>, which AutoCode Places will fall back to.</p>
+<p>The hierarchy of defaults is:</p>
+<pre>1: Places/&lt;folder&gt;/&lt;language&gt;/default
+2: Places/default</pre>
+<p>For example, the Snippet <strong>Languages &gt; HTML &gt; default</strong> contains  HTML that inserts the file path as a basic link:</p>
+<pre>&lt;a href=&quot;[[%tabstop:<strong>path</strong>]]&quot; /&gt;[[%tabstop:<strong>filename</strong>]]&lt;/a&gt;
+</pre>
+<p>The final default is in the main Places folder. You can edit this if you have a different preference perhaps for &quot;double&quot; or 'single' quoted paths:</p>
+<pre>&quot;[[%tabstop:<strong>path</strong>]]&quot;
+</pre>
+<p>This system allows you to create single Snippets that will cover various eventualities in your code. See the existing examples for a better understanding if you are unclear.</p>
+<h2>JavaScript Console</h2>
+<h3 class="cufon_headings">Overview</h3>
+<p>Enabling the JavaScript console in AutoCode allows you to edit and run JavaScript code directly in Komodo.</p>
+<h3>Operation</h3>
+<p>With a JavaScript file open (the extension must be <strong>.js</strong>), you can use the <strong>CTRL+Enter</strong> (Mac users: <strong>Apple+Enter</strong>) shortcut key to evaluate the JavaScript currently in the editor window. (Note that you can also execute Windows .bat files by pressing CTRL+Enter).</p>
+<p> If the code is valid, it will execute. If not, an error message will pop up, and Komodo will move the cursor to the line of the error.</p>
+<p>The following commands are also available when using the Console, which allow you test values and output in the Command Output panel as you develop:</p>
+<ul>
+	<li>
+<strong>trace(value)</strong>: Traces the value to the command output</li>
+	<li>
+<strong>inspect(value)</strong>: Traces a hierarchical representation of the value to the command output.								More info about inspect()'s arguments can be found <a href="/support/api/text/output#inspect">here</a>.</li>
+	<li>
+<strong>clear()</strong>: Clears the command output</li>
+</ul>
+<p>Below you can see the result of an inspect:</p>
+<p><img class="aligncenter size-full wp-image-807" title="autocode-console" src="/wp-content/documentation/html/other/autocode/assets/autocode-console.png" alt="" height="686" width="600"></p>
+<h2>AutoComplete</h2>
+<h3 class="cufon_headings">Overview</h3>
+<p>The simplest functionality in AutoCode allows you to change the height of the AutoComplete dropdown from the default 5 lines.</p>
+<p><img src="/wp-content/documentation/html/other/autocode/assets/autocode-prefs-autocomplete.png" alt="" class="aligncenter" title="auto-comment-prefs"></p>
+<p>&nbsp;</p>
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+
+			<h4 id="comments">33 Responses to Komodo AutoCode Extension</h4>
+
+
+			<ol class="commentlist">
+
+	<li class="comment even thread-even depth-1" id="li-comment-478">
+
+		<div id="comment-478">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/a0eb241c88720b6df2cd8544a7d6c4be?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/a0eb241c88720b6df2cd8544a7d6c4be?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Michael Passalacqua</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-478">February 23, 2012 at 7:37 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Auto-Abbreviations does not work in Komodo 7.  I have it checked in Preferences.  The Tab key still functions as standard auto-complete even tho I have abbreviations set.  Only the cumbersome ctrl-T works.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-479">
+
+		<div id="comment-479">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-479">February 24, 2012 at 12:47 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hmm&#8230; OK, no idea why that would be. Email me and we&#8217;ll see if  we can sort it out.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-480">
+
+		<div id="comment-480">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/2070ff0b89b3047894aca38d947adc77?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/2070ff0b89b3047894aca38d947adc77?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Stephen Reay</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-480">February 24, 2012 at 4:47 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Is there any way to turn off the &#8220;auto columns&#8221; formatting, so that it appears like this:</p>
+<p>/**<br>
+ * Summary<br>
+ * @param {Type} name description<br>
+ */</p>
+<p>rather than </p>
+<p>/**<br>
+ * Summary<br>
+ * @param    {Type}    name    description<br>
+ */</p>
+<p>Otherwise, I love this plugin!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-481">
+
+		<div id="comment-481">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/2070ff0b89b3047894aca38d947adc77?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/2070ff0b89b3047894aca38d947adc77?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Stephen Reay</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-481">February 24, 2012 at 4:51 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Bah, it removed the extra spaces, see here: <a href="https://gist.github.com/1897857" rel="nofollow ugc">https://gist.github.com/1897857</a></p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-482">
+
+		<div id="comment-482">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/2070ff0b89b3047894aca38d947adc77?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/2070ff0b89b3047894aca38d947adc77?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Stephen Reay</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-482">February 24, 2012 at 4:59 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Also I&#8217;ve just noticed that this doesn&#8217;t handle PHP methods with type hints. See <a href="https://gist.github.com/1897888" rel="nofollow ugc">https://gist.github.com/1897888</a></p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-483">
+
+		<div id="comment-483">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-483">February 24, 2012 at 8:41 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hey Stephen, thanks for picking up those two issues,and for providing examples. I&#8217;ll look to address them in the the next week or two, so keep your eye on the Git repo!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-505">
+
+		<div id="comment-505">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.thecodingbox.com/" rel="external nofollow ugc" class="url">bluepicaso</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-505">April 10, 2012 at 4:10 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Yes this does not work with komodo edit 7,<br>
+I have tried uninstalling the same and tried different things,<br>
+But discovered I&#8217;m not the only one.<br>
+Please provide an update soon</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-506">
+
+		<div id="comment-506">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.thecodingbox.com/" rel="external nofollow ugc" class="url">bluepicaso</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-506">April 10, 2012 at 4:25 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>and what is the direct link to GIT REPO</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-507">
+
+		<div id="comment-507">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-507">April 10, 2012 at 4:57 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Yeah, sorry about that.</p>
+<p>Try the latest 0.62 increment I just uploaded now to the Active State site: <a href="http://community.activestate.com/node/7280" rel="nofollow">http://community.activestate.com/node/7280</a></p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-513">
+
+		<div id="comment-513">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-513">April 21, 2012 at 6:17 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>OK, Autocode got a BIG update this week.</p>
+<p>Bugs fixed, new features, and a bunch of internal improvements. Stephen, I added the option for no columns as well.</p>
+<p>Will be releasing in the next week or so.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-544">
+
+		<div id="comment-544">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/7d2a79ff33af40fd33d3fcc041747a95?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7d2a79ff33af40fd33d3fcc041747a95?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">gast</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-544">June 11, 2012 at 6:26 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>could you make the same features for actionscript 3.0? would be great i think there is still room for flash even when people say flash will die &#8211; im not buying it. it is still in use and i think it is a shame that komodo edit doesn&#8217;t support it by default( only actionscript 1.0 i guess?).</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-545">
+
+		<div id="comment-545">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-545">June 11, 2012 at 6:35 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hey Gast. AutoCode is language independent actually (apart from the JS Console), so not sure what you mean by &#8220;the same features for AS3&#8221;. If I was coding straight AS3, I would probably use FlashDevelop anyway :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-822">
+
+		<div id="comment-822">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/ff595ce5f6fe34a641e6671b047f111e?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/ff595ce5f6fe34a641e6671b047f111e?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Jim</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-822">August 10, 2012 at 4:17 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Why isn&#8217;t this the top featured komodo add-on ever? It&#8217;s bloody brilliant!</p>
+<p>The features here make komodo so much more intelligent, they should really merge your addon into the komodo source.</p>
+<p>More people need to know about this!<br>
+Many thanks!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-823">
+
+		<div id="comment-823">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-823">August 10, 2012 at 7:20 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Thanks Jim!</p>
+<p>Yeah, it&#8217;s pretty darn useful, which is why I ended up writing it. I&#8217;m just pleased Komodo allows me to actually do that :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-848">
+
+		<div id="comment-848">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/d51c2fd41c9d611d0c8b46e8c0ba388d?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/d51c2fd41c9d611d0c8b46e8c0ba388d?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Macarthur</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-848">September 20, 2012 at 11:36 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hey just wanted to say this thing _seemed_ awesome but it&#8217;s _completely_ inconsistent as to when it decides to work with func in JS/PHP. the _other_ ones work just how they should, except one thing. I have to press TAB twice, then they insert what&#8217;s needed. But seriously, func works sometimes, othertimes it doesn&#8217;t. It&#8217;s IDE/Edit 7, and it just plain is completely infuriating!</p>
+<p>I found this AMAZING! BRILLIANT! Addon that seemed to be a godsend for making the mundane and oft repeated things be nothing more than a few characters, but now, it does not seem to be, for one of the biggest things I do, cannot work as it should, functions.</p>
+<p>Here&#8217;s the info it gives me(does the same thing with try in JS)<br>
+SyntaxError:  function statement requires a name: (on column 1)<br>
+                                         Thu Sep 20 2012 08:29:34 GMT-0400 (EDT)</p>
+<p>But! It allows me to press tab once more, and then it just works, which is what I expect. I imagine that the try example is only because it doesn&#8217;t fill out the name with komodo&#8217;s built in thing(whatever it is) that is overriding it, if there&#8217;s any way to force it to disable it&#8217;s own word complete I&#8217;m all for it, because otherwise I&#8217;m going to go crazy trying to figure out why it&#8217;s not working as it should.</p>
+<p>I can&#8217;t remember if func was only js or only php before. Either way I basically added the other myself, made sure that it worked(with no warnings from the thing) and it works&#8230; sometimes. Other times I just get the word &#8220;function&#8221; and it throws that nice quant little info which makes no sense since it works sometimes others no way.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-861">
+
+		<div id="comment-861">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-861">September 28, 2012 at 1:15 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hmm. Sounds annoying. Sorry about that. </p>
+<p>Feel free to email me privately, or continue this discussion at <a href="http://community.activestate.com/node/7280?page=1" rel="nofollow">http://community.activestate.com/node/7280?page=1</a>, which is more the place for discussion on bugs.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-945">
+
+		<div id="comment-945">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://thecodingbox.com/" rel="external nofollow ugc" class="url">bluepicaso</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-945">December 11, 2012 at 1:56 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>hey,<br>
+i have a problem,<br>
+none of the tags work as listed in he image<br>
+<a href="http://i.imm.io/OKyz.jpeg" rel="nofollow ugc">http://i.imm.io/OKyz.jpeg</a><br>
+Previously anchor tag&#8217;s poup window asking for links input, did work. but nothing now.</p>
+<p>I love this addons and have been using it, since it ever came.</p>
+<p>thank you</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-960">
+
+		<div id="comment-960">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-960">December 24, 2012 at 4:58 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Abbreviations need to be *in* the Abbreviations folder! Your HTML folder is only in the Samples folder, and looks like it&#8217;s not named correctly for abbreviations to work anyway.</p>
+<p>For example, if you have a &lt;ul&gt; snippet, it should be named &#8220;ul&#8221; so you just type ul + TAB, and the abbreviation is inserted</p>
+<p>:D</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1070">
+
+		<div id="comment-1070">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/963807e1f94e402d21ac07fe565fb4a8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://thecodingbox.me/" rel="external nofollow ugc" class="url">bluepicaso</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1070">March 7, 2013 at 5:36 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>updates for  komodo edit 8??</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1161">
+
+		<div id="comment-1161">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1161">April 10, 2013 at 7:41 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Updated now. Check the main download link.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1251">
+
+		<div id="comment-1251">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/7348080f928242111dc5cd1de3289712?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7348080f928242111dc5cd1de3289712?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Niels</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1251">May 29, 2013 at 10:54 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>It seems i can not use the ALT key at all, running Komodo 8 on a Mountain Lion. Nothing happens if i klick. Know bug? Is there a solution, would love to use the addon :)</p>
+<p>Niels</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1252">
+
+		<div id="comment-1252">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1252">May 29, 2013 at 10:56 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Yeah&#8230; I thought the extension worked on Komodo 8, but it doesn&#8217;t. I&#8217;ve known about this for a while, just haven&#8217;t got round to finding the time to getting a fix up and running. My sincere apologies! Got some time between jobs next week, so I will promote this up my to do list :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1268">
+
+		<div id="comment-1268">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1268">June 20, 2013 at 10:36 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>OK, updated for Komodo 8 now: <a href="http://community.activestate.com/node/7280" rel="nofollow ugc">http://community.activestate.com/node/7280</a></p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1280">
+
+		<div id="comment-1280">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/7348080f928242111dc5cd1de3289712?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/7348080f928242111dc5cd1de3289712?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://www.nielsloew.de/" rel="external nofollow ugc" class="url">Niels</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1280">July 4, 2013 at 10:48 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hi Dave,</p>
+<p>late reply, still wanted to say thanks! Works now like a charm :) Having developed a JSFL Flash extension (in case someone wants it, it is free <a href="http://nielsloew.de/littlebighelper/" rel="nofollow ugc">http://nielsloew.de/littlebighelper/</a>) on my own i know it can be tedious to fix things &#8211; to more my thanks :)</p>
+<p>Have a good time<br>
+Niels</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1281">
+
+		<div id="comment-1281">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1281">July 4, 2013 at 11:44 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Nice one Neils! Glad it&#8217;s working for you. FYI, your link appears to be down. Cheers, Dave</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1282">
+
+		<div id="comment-1282">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/8c97ded2707638c1a58354b9f5bb54e7?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/8c97ded2707638c1a58354b9f5bb54e7?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Marek</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1282">July 4, 2013 at 12:29 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>I will second to other posters, overall &#8211; killer extension &#8211; helps Komodo not to die that fast to other IDE ^^<br>
+Is there any way to <b>customize CTRL+Enter</b> hotkey for js execution? Also there is other small issue, that it also catches CTRL+ALT+Enter hotkey, etc. and for that i have i.e. create bookmark actually, so it collides.</p>
+<p>Looking forward for your reply,<br>
+And thanks for that awsome extension and contributing community :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-1283">
+
+		<div id="comment-1283">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1283">July 4, 2013 at 12:48 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Thanks very much Marek; your kind words are appreciated :)</p>
+<p>The key bindings code within Komodo is a little gnarly, so the keyboard shortcuts are hard-coded. I should probably look into how to make them follow prefs. I&#8217;ll add that to the top of the to-do list!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-1285">
+
+		<div id="comment-1285">
+			<div class="gravatar">
+				<img alt="" src="http://2.gravatar.com/avatar/8c97ded2707638c1a58354b9f5bb54e7?s=48&#038;d=mm&#038;r=g" srcset="http://2.gravatar.com/avatar/8c97ded2707638c1a58354b9f5bb54e7?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Marek</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1285">July 5, 2013 at 9:05 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Thank you very much for response, that will be cool :)</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-1390">
+
+		<div id="comment-1390">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/6579bbf0455a96ca0f89d7f6097d6e23?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/6579bbf0455a96ca0f89d7f6097d6e23?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Brian J. Cohen</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1390">October 1, 2013 at 9:07 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>PHPDoc / DocComment generation appears to be unable to parse a function/method signature that contains a line break.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor odd alt thread-odd thread-alt depth-1" id="li-comment-1398">
+
+		<div id="comment-1398">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-1398">October 10, 2013 at 12:46 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Hmm, good point Brian. I&#8217;ll look at that at some point. Cheers for flagging it.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment even thread-even depth-1" id="li-comment-6267">
+
+		<div id="comment-6267">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/784463bcde64c2e3bd09bab215a40116?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/784463bcde64c2e3bd09bab215a40116?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading">Kevin Shoultz</cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-6267">May 27, 2015 at 12:35 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Is there any support for this capability in Komodo 9? Or another plugin? I&#8217;m trying to get some autocomplete for ExtJS in Komodo.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment odd alt thread-odd thread-alt depth-1" id="li-comment-7727">
+
+		<div id="comment-7727">
+			<div class="gravatar">
+				<img alt="" src="http://1.gravatar.com/avatar/403f5130fbb3ffc47009e5a8e72c3f03?s=48&#038;d=mm&#038;r=g" srcset="http://1.gravatar.com/avatar/403f5130fbb3ffc47009e5a8e72c3f03?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="http://thecodingbox.com/" rel="external nofollow ugc" class="url">harpreet</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-7727">October 14, 2015 at 5:53 am</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>The toolbox panel does not show Autocode snippets.<br>
+There is no way to edit any of the snippet.<br>
+Please help. I even reported a bug on github, but seem to ignore well.</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+
+	<li class="comment byuser comment-author-admin bypostauthor even thread-even depth-1" id="li-comment-7738">
+
+		<div id="comment-7738">
+			<div class="gravatar">
+				<img alt="" src="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=48&#038;d=mm&#038;r=g" srcset="http://0.gravatar.com/avatar/0ae19c4ab859cdb2efa38719ed5682b8?s=96&#038;d=mm&#038;r=g 2x" class="avatar avatar-48 photo" height="48" width="48" loading="lazy">			</div>
+
+			<!-- display the comment -->
+			<div class="comment_content">
+						<cite class="author_name heading"><a href="/" rel="external nofollow ugc" class="url">Dave Stewart</a></cite> <span class="says">says:</span>
+			<!-- display the comment metadata like time and date-->
+			<div class="comment-meta commentmetadata">
+			<a href="/support/setup/komodo/autocode#comment-7738">October 14, 2015 at 7:28 pm</a>
+			</div>
+
+			<!-- display the comment text -->
+			<div class="comment_text">
+			<p>Sorry Harpreet, </p>
+<p>I&#8217;ve not looked at this project for ages and I&#8217;ve switched editors.</p>
+<p>I&#8217;m just in the process of moving to Mac, but I&#8217;ll check back in with this in a couple of weeks as I have some heavy work deadlines on.</p>
+<p>Sorry to ignore you!</p>
+						</div>
+
+		</div>
+	</div>
+</li>
+<!-- #comment-## -->
+			</ol>
+
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>

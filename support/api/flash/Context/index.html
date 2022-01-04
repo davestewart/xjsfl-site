@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="en-US" prefix="og: https://ogp.me/ns#">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="index, follow">
+
+
+<!-- page title, displayed in your browser bar -->
+
+<link rel="shortcut icon" href="/favicon.png">
+
+<!-- add feeds, pingback and stuff-->
+<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
+<link rel="pingback" href="/xmlrpc.php">
+
+
+<!-- add css stylesheets -->
+<link rel="stylesheet" type="text/css" media="all" href="/wp-content/themes/broadscope/style.css">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/js/prettyPhoto/css/prettyPhoto.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/light-skin.css" type="text/css" media="screen">
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/shortcodes.css" type="text/css" media="screen">
+
+<!-- add google prettyprint code -->
+
+<link href="/wp-content/themes/broadscope/js/google-code-prettify/css/prettify.css" type="text/css" rel="stylesheet">
+<script src="/wp-content/themes/broadscope/js/google-code-prettify/js/prettify.js"></script>
+
+
+<!-- plugin and theme output with wp_head() -->
+
+		<!-- All in One SEO 4.1.5.3 -->
+		<title>Context (class) | xJSFL</title>
+		<meta name="description" content="Provides convenient access to the major DOM elements">
+		<meta name="robots" content="max-image-preview:large">
+		<link rel="canonical" href="/support/api/flash/context">
+		<meta property="og:locale" content="en_US">
+		<meta property="og:site_name" content="xJSFL | The rapid development framework for extending Adobe Flash">
+		<meta property="og:type" content="article">
+		<meta property="og:title" content="Context (class) | xJSFL">
+		<meta property="og:description" content="Provides convenient access to the major DOM elements">
+		<meta property="og:url" content="http://xjsfl.com/support/api/flash/context">
+		<meta property="article:published_time" content="2011-07-04T04:02:00+00:00">
+		<meta property="article:modified_time" content="2012-06-06T15:47:43+00:00">
+		<meta name="twitter:card" content="summary">
+		<meta name="twitter:domain" content="xjsfl.com">
+		<meta name="twitter:title" content="Context (class) | xJSFL">
+		<meta name="twitter:description" content="Provides convenient access to the major DOM elements">
+		<script type="text/javascript">
+			window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+			ga('create', "UA-603607-7", 'auto');
+			ga('send', 'pageview');
+		</script>
+		<script async src="https://www.google-analytics.com/analytics.js"></script>
+		<!-- All in One SEO -->
+
+<link rel="dns-prefetch" href="//s.w.org">
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/72x72\/","ext":".png","svgUrl":"https:\/\/s.w.org\/images\/core\/emoji\/13.1.0\/svg\/","svgExt":".svg","source":{"concatemoji":"http:\/\/xjsfl.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=5.8.2"}};
+			!function(e,a,t){var n,r,o,i=a.createElement("canvas"),p=i.getContext&&i.getContext("2d");function s(e,t){var a=String.fromCharCode;p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,e),0,0);e=i.toDataURL();return p.clearRect(0,0,i.width,i.height),p.fillText(a.apply(this,t),0,0),e===i.toDataURL()}function c(e){var t=a.createElement("script");t.src=e,t.defer=t.type="text/javascript",a.getElementsByTagName("head")[0].appendChild(t)}for(o=Array("flag","emoji"),t.supports={everything:!0,everythingExceptFlag:!0},r=0;r<o.length;r++)t.supports[o[r]]=function(e){if(!p||!p.fillText)return!1;switch(p.textBaseline="top",p.font="600 32px Arial",e){case"flag":return s([127987,65039,8205,9895,65039],[127987,65039,8203,9895,65039])?!1:!s([55356,56826,55356,56819],[55356,56826,8203,55356,56819])&&!s([55356,57332,56128,56423,56128,56418,56128,56421,56128,56430,56128,56423,56128,56447],[55356,57332,8203,56128,56423,8203,56128,56418,8203,56128,56421,8203,56128,56430,8203,56128,56423,8203,56128,56447]);case"emoji":return!s([10084,65039,8205,55357,56613],[10084,65039,8203,55357,56613])}return!1}(o[r]),t.supports.everything=t.supports.everything&&t.supports[o[r]],"flag"!==o[r]&&(t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&t.supports[o[r]]);t.supports.everythingExceptFlag=t.supports.everythingExceptFlag&&!t.supports.flag,t.DOMReady=!1,t.readyCallback=function(){t.DOMReady=!0},t.supports.everything||(n=function(){t.readyCallback()},a.addEventListener?(a.addEventListener("DOMContentLoaded",n,!1),e.addEventListener("load",n,!1)):(e.attachEvent("onload",n),a.attachEvent("onreadystatechange",function(){"complete"===a.readyState&&t.readyCallback()})),(n=t.source||{}).concatemoji?c(n.concatemoji):n.wpemoji&&n.twemoji&&(c(n.twemoji),c(n.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}</style>
+	<link rel="stylesheet" id="wp-block-library-css" href="/wp-includes/css/dist/block-library/style.min.css?ver=5.8.2" type="text/css" media="all">
+<link rel="stylesheet" id="page-list-style-css" href="/wp-content/plugins/sitemap/css/page-list.css?ver=4.3" type="text/css" media="all">
+<link rel="stylesheet" id="newsletter-css" href="/wp-content/plugins/newsletter/style.css?ver=7.3.4" type="text/css" media="all">
+<style id="newsletter-inline-css" type="text/css">font-family:Arial, Verdana, Sans-Serif;</style>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery.min.js?ver=3.6.0" id="jquery-core-js"></script>
+<script type="text/javascript" src="/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2" id="jquery-migrate-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/tabsize.jquery.js?ver=5.8.2" id="tabsize-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/avia.js?ver=1" id="avia-default-js"></script>
+<script type="text/javascript" src="/wp-content/themes/broadscope/js/prettyPhoto/js/jquery.prettyPhoto.js?ver=3.0.1" id="avia-prettyPhoto-js"></script>
+<link rel="https://api.w.org/" href="/wp-json/">
+<link rel="alternate" type="application/json" href="/wp-json/wp/v2/posts/520">
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="/xmlrpc.php?rsd">
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="/wp-includes/wlwmanifest.xml">
+<meta name="generator" content="WordPress 5.8.2">
+<link rel="shortlink" href="/?p=520">
+<link rel="alternate" type="application/json+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fflash%2Fcontext">
+<link rel="alternate" type="text/xml+oembed" href="/wp-json/oembed/1.0/embed?url=http%3A%2F%2F%2Fsupport%2Fapi%2Fflash%2Fcontext&#038;format=xml">
+<script type="text/javascript"><!--//--><![CDATA[//><!--
+function prepareTargetBlank() {
+	var className = 'wpsi-blank';
+	var as = document.getElementsByTagName('a');
+	for(i=0;i<as.length;i++) {
+		var a = as[i];
+		r=new RegExp("(^| )"+className+"($| )");
+		if(r.test(a.className)) {
+			a.onclick = function() {
+				window.open(this.href);
+				return false;
+			}
+		}
+	}
+}
+window.onload = prepareTargetBlank;
+//--><!]]>
+</script>
+<!-- custom styles set at your backend-->
+<style type="text/css">.bg-logo a, .contentSlideControlls .activeItem, .contentSlideControlls a:hover, #top .avia_mega ul ul li, #top .avia_mega >li >ul li, .widget_links li, .widget_meta li, .widget_archive li,  .widget_categories li, .widget_pages li, #top .more-link, .pagination .current, .pagination a, .button, .dropcap2, .featured, #commentform #submit{
+background-color:#bf0b0b;
+}
+
+#top .more-link, .pagination .current, .pagination a, .button, #commentform #submit{
+border-color:#bf0b0b;
+}
+
+a, .news-link:hover, .widget_archive li a:hover, #reply-title small a{
+color:#bf0b0b;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+background-color:#1c8bba;
+}
+
+#top .more-link:hover, .pagination a:hover, .button:hover, #commentform #submit:hover{
+border-color:#1c8bba;
+}
+
+a:hover{
+color:#1c8bba;
+}
+
+
+body{
+background-color:#f8f8f8;
+}
+
+body{
+background-position:top left;
+}
+
+body{
+background-repeat:no-repeat;
+}
+
+body{
+background-attachment:scroll;
+}</style>
+
+<!-- end custom styles-->
+
+
+<!-- @font-face stylesheets -->
+<link href="/wp-content/themes/broadscope/framework/fonts/droidsans/stylesheet.css" rel="stylesheet" type="text/css">
+
+<!-- custom.css file: use this file to add your own styles and overwrite the theme defaults -->
+<link rel="stylesheet" href="/wp-content/themes/broadscope/css/custom.css" type="text/css" media="screen">
+</head>
+
+
+
+<body id="top" class="post-template-default single single-post postid-520 single-format-standard">
+
+	<div id="wrap_all" class="boxed">
+
+	<!-- ####### HEAD CONTAINER ####### -->
+			<div class="container_wrap" id="header">
+
+				<div class="container">
+
+					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
+<form action="http://xjsfl.com/" id="searchform" method="get">
+	<div>
+		<input type="submit" value="" id="searchsubmit" class="button">
+		<input type="text" id="s" name="s" value="">
+	</div>
+</form>
+<!-- end searchform-->
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+					<!-- end social_bookmarks-->
+
+					<div class=" megaWrapper"><ul id="menu-main" class="avia_mega">
+<li id="menu-item-400" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home"><a href="/home">Home</a></li>
+<li id="menu-item-738" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/features">Features</a></li>
+<li id="menu-item-954" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/case-studies">Case Studies</a></li>
+<li id="menu-item-395" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/support">Support</a></li>
+<li id="menu-item-946" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/roadmap">Roadmap</a></li>
+<li id="menu-item-553" class="menu-item menu-item-type-custom menu-item-object-custom"><a href="/category/blog">Blog</a></li>
+<li id="menu-item-398" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/contact">Contact</a></li>
+<li id="menu-item-399" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="/download">Download</a></li>
+</ul></div>
+
+
+				</div>
+				<!-- end container-->
+
+			</div>
+			<!-- end container_wrap_header -->
+
+			<!-- ####### END HEAD CONTAINER ####### -->
+
+			<div class="container_wrap" id="featured">	<div class="container slideshow_container">
+<div class="fullwidth_no_image"></div>	</div>
+</div>
+		<!-- ####### MAIN CONTAINER ####### -->
+		<div class="container_wrap" id="main">
+
+			<div class="container">
+
+				<div id="template-blog" class="content grid8 first">
+
+
+		<div class="post-entry">
+			<h1 class="post-title">
+				<a href="/support/api/flash/context" rel="bookmark" title="Permanent Link: Context (class)">Context (class)</a>
+			</h1>
+
+			<!--meta info-->
+	        <div class="blog-meta one_fifth">
+
+				<span class="post-date-comment-container">
+					<span class="date-container">04<strong>Jul</strong>2011</span>
+					<span class="comment-container"><span class="comments-link"><strong></strong> Comments<br>Off</span>					</span>
+
+				</span>
+
+				<span class="blog-categories"><strong>Categories:</strong><a href="/category/support/api/flash" rel="category tag">Flash</a></span>						</div>
+<!--end meta info-->
+
+
+			<div class="entry-content four_fifth">
+
+
+
+<h2>Overview</h2>
+<h3>Summary</h3>
+<p>The Context class provides convenient access to the major DOM elements, and serves to replace cumbersome <strong>fl.getDocumentDOM()</strong> calls, as well as all related code regarding timelines, layers, frames, etc.</p>
+<h3>Contents</h3>
+<div class="avia-box error   rounded full"><span class="avia-innerbox">Note that Context is currently in flux, and some of the intended functionality is (unfortunately) still buggy</span></div>
+<ul>
+	<li><a href="#overview">Overview</a></li>
+	<ul>
+		<li><a href="#summary">Summary</a></li>
+		<li><a href="#usage">Usage</a></li>
+	</ul>
+	<li>API
+		<ul>
+			<li>
+<a href="#instantiation">Instantiation</a>
+				<ul>
+					<li><a href="#Context">Context(dom, timeline, layer, frame, element)</a></li>
+					<li><a href="#create">create(dom, timeline, layer, frame)</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#properties">Properties</a>
+				<ul>
+					<li><a href="#dom">dom</a></li>
+					<li><a href="#item">item</a></li>
+					<li><a href="#timeline">timeline</a></li>
+					<li><a href="#layer">layer</a></li>
+					<li><a href="#layerIndex">layerIndex</a></li>
+					<li><a href="#frame">frame</a></li>
+					<li><a href="#keyframes">keyframes</a></li>
+					<li><a href="#context">context</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#set">Set / update methods</a>
+				<ul>
+					<li><a href="#setDOM">setDOM(value)</a></li>
+					<li><a href="#setTimeline">setTimeline(value)</a></li>
+					<li><a href="#setLayer">setLayer(value)</a></li>
+					<li><a href="#setFrame">setFrame(value)</a></li>
+					<li><a href="#setKeyframe">setKeyframe(keyframeIndex, layer)</a></li>
+					<li><a href="#update">update(dom, timeline, layer, frame, element)</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#manipulation-methods">Manipulation methods </a>
+				<ul>
+					<li><a href="#goto">goto()</a></li>
+					<li><a href="#select">select()</a></li>
+					<li><a href="#selectLayer">selectLayer(addToSelection)</a></li>
+					<li><a href="#selectFrame">selectFrame(addToSelection)</a></li>
+				</ul>
+			</li>
+			<li>
+<a href="#utility-methods">Utility methods</a>
+				<ul>
+					<li><a href="#clone">clone()</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+</ul>
+<h3>Usage</h3>
+<p>Context objects hold the following properties by default:</p>
+<ul>
+	<li>document</li>
+	<li>timeline</li>
+	<li>layer</li>
+	<li>keyframes</li>
+	<li>frame</li>
+</ul>
+<p>Thus in xJSFL terms, "context" will always refer a location in the Flash IDE with regards to these properties.</p>
+<p>The simplest usage of context is via <a href="#create">Context.create()</a>,a static method which returns a Context instance referring to the user's current location in the document:</p>
+<pre class="prettyprint lang-javascript">var context = Context.create();
+trace(context);</pre>
+<pre>[object Context dom="Untitled-1" timeline="Symbol 1" layer[2]="Layer 1" keyframe[1]=2]	</pre>
+<p>This is in direct contrast to writing JSFL boilerplate code, such as:</p>
+<pre class="prettyprint lang-javascript">var doc = fl.getDocumentDOM();
+if(doc)
+{
+    var timeline  = dom.getTimeline();
+    var layer     = timeline.layers[timeline.currentLayer];
+    var frame     = layer.frames[timeline.currentFrame];
+    // code for getting layer keyframes not included
+}</pre>
+<p>As you can see, the Context instance is fully inspectable, gathering all the major DOM elements in one place:</p>
+<pre class="prettyprint lang-javascript">Output.inspect(context, {'function':false, 'string':false, 'number':false}, 1);	</pre>
+<pre>Inspect: Context (depth:1, objects:6, values:5, time:0.0 seconds)
+--------------------------------------------------------------------------------
+object =&gt; Context
+    [dom] =&gt; Document
+    [timeline] =&gt; Timeline
+    [item] =&gt; SymbolItem
+    [layer] =&gt; Layer
+    [keyframes] =&gt; Array
+    [frame] =&gt; Frame</pre>
+<p>The properties on the Context instance can then be accessed directly, or  manipulated using Context-specific methods as needed:</p>
+<pre class="prettyprint lang-javascript">
+context.dom.path
+context.frame.elements;
+context.selectFrames();
+context.goto();</pre>
+<p>Context instances can also be passed around, <a href="#update">updated</a>, <a href="#clone">cloned</a>, <a href="#set">set</a>, <a href="#properties">got</a>, <a href="#goto">navigated-to</a>, (and soon, serialized and deserialized) making them an extremely powerful tool for manipulating and traversing the  Flash IDE. </p>
+<p>Note that for reasons of simplicity, Context objects do not yet support multiple layer or frame selections. For multiple selections, you can simply use the standard Flash methods:</p>
+<pre class="prettyprint lang-javascript">
+var layers = context.timeline.getSelectedLayers();
+var frames = context.timeline.getSelectedFrames();</pre>
+<h2>Instantiation</h2>
+<ul>
+	<li> <a href="#Context">Context(dom, timeline, layer, frame, element)</a>
+</li>
+	<li><a href="#create">create(dom, timeline, layer, frame)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="Context" name="Context" href="#Context">Context(dom, timeline, layer, frame, element)</a></h3>
+	<p class="description">Context object provides convenient access to the major DOM elements </p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">dom</span> <span class="type">Context</span> <span class="comment">A Context object with a valid dom property</span>
+</li>
+				<li>
+<span class="name">dom</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current Document DOM</span>
+</li>
+				<li>
+<span class="name">dom</span> <span class="type">Number</span> <span class="comment">The 0-based index of the Document</span>
+</li>
+				<li>
+<span class="name">dom</span> <span class="type">String</span> <span class="comment">The name of the Document</span>
+</li>
+				<li>
+<span class="name">dom</span> <span class="type">File</span> <span class="comment">A valid .fla file</span>
+</li>
+				<li style="margin-bottom:15px">
+<span class="name">dom</span> <span class="type">Document</span> <span class="comment">A Document</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Context</span> <span class="comment">A Context object with a valid timeline property</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current timeline</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">String</span> <span class="comment">The name of (path to) an item in the library</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Number</span> <span class="comment">The 0-based index of an item in the library</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">SymbolInstance</span> <span class="comment">A Symbol Instance</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">SymbolItem</span> <span class="comment">A SymbolItem</span>
+</li>
+				<li style="margin-bottom:15px">
+<span class="name">timeline</span> <span class="type">Timeline</span> <span class="comment">A Symbol Item's timeline reference</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Context</span> <span class="comment">A Context object with a valid layer property</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current layer</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">String</span> <span class="comment">The name of the layer</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Number</span> <span class="comment">The 0-based index of the layer</span>
+</li>
+				<li style="margin-bottom:15px">
+<span class="name">layer</span> <span class="type">Layer</span> <span class="comment">A Layer</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">Context</span> <span class="comment">A Context object with a valid frame property</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current frame</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">String</span> <span class="comment">The name of the frame</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">Number</span> <span class="comment">The 0-based index of the frame</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">RegExp</span> <span class="comment">The keyframe index of the frame, i.e. /2/</span>
+</li>
+				<li style="margin-bottom:15px">
+<span class="name">frame</span> <span class="type">Frame</span> <span class="comment">A Frame</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The first thing you'll notice about the Context constructor is that it can take a <strong>huge</strong> variety of instantiation parameters. All Context methods are extremely flexible, allowing you to pass in Booleans, indices, names, objects or even other Context instances from which to grab related properties.</p>
+	<p>Also, all constructor parameters are optional, the default being to snapshot the <strong>current state</strong> of the Flash IDE, as the following example shows:</p>
+	<pre class="prettyprint lang-javascript">var context = new Context();
+trace(context);</pre>
+	<pre>[object Context dom="Untitled-1" timeline="Scene 1" layer[0]="Layer 1" keyframe[0]=0]
+</pre>
+	<p>The following example creates a new Context instance, but with a saved document, in a movieclip with multiple layers and frames. Note the layer index/layer name and keyframe index/frame index:</p>
+	<pre class="prettyprint lang-javascript">var context = new Context();
+trace(context);</pre>
+	<pre>[object Context dom="Measurements 09.fla" timeline="instructions" layer[13]="controls" keyframe[2]=5]
+</pre>
+	<p>The following example creates a new Context instance, but explicitly specifies the parameters, in this case, another open document:</p>
+	<pre class="prettyprint lang-javascript">var context = new Context('game level 01', 'bridge', 0, 0);</pre>
+	<pre>[object Context dom="game level 01" timeline="bridge" layer[0]="Layer 1" keyframe[0]=0]</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="create" name="create" href="#create">create(dom, timeline, layer, frame)</a></h3>
+	<p class="description">Factory method provides the quickest way to get the current context</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">dom</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not create a dom context</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not create a timeline context</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not create a layer context</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not create a frame context</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">A new Context instance</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>Context.create() is a static method on the Context class that allows for chaining, and is the easiest way to create a Context in everyday development. The following example creates a Context instance the immediately selects the current layer:</p>
+	<pre class="prettyprint lang-javascript">var context = Context
+    .create()
+    .selectLayer();</pre>
+</div>
+<h2>Properties</h2>
+<p>The properties in this section are available on any Context instance, assuming that they have been set.</p>
+<p>The following examples assume the existence of a context instance like so:</p>
+<pre class="prettyprint lang-javascript">var context = Context.create();</pre>
+<ul>
+	<li><a href="#dom">dom</a></li>
+	<li><a href="#item">item</a></li>
+	<li><a href="#timeline">timeline</a></li>
+	<li><a href="#layer">layer</a></li>
+	<li><a href="#layerIndex">layerIndex</a></li>
+	<li><a href="#frame">frame</a></li>
+	<li><a href="#keyframes">keyframes</a></li>
+	<li>
+<a href="#context">context</a><br>
+	</li>
+</ul>
+<div class="property">
+	<h3 class="signature"><a id="dom" name="dom" href="#dom">dom</a></h3>
+	<p class="description">A Document object</p>
+	<p>The <strong>dom</strong> property of a Context instance is an actual <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7ffa.html">Document</a> object, on which you can access properties and methods:</p>
+	<pre class="prettyprint lang-javascript">context.dom.frameRate = 25;
+context.dom.arrange('forward');
+context.dom.convertLinesToFills();</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="item" name="item" href="#item">item</a></h3>
+	<p class="description">A Library Item instance</p>
+	<p>The <strong>item</strong> property of a Context instance is the Library <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7f92.html">Item</a> object associated with the Context's <a href="#timeline">timeline</a>, on which you can access properties and methods: </p>
+	<pre class="prettyprint lang-javascript">context.item.name;
+context.item.itemType = 'graphic';
+context.item.item.addData('data', 'string', 'Some data...')</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="timeline" name="timeline" href="#timeline">timeline</a></h3>
+	<p class="description">A Timeline object</p>
+	<p>The <strong>timeline</strong> property of a Context instance is an actual <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7f8f.html">Timeline</a> object, on which you can access properties and methods:</p>
+	<pre class="prettyprint lang-javascript">context.timeline.frameCount;
+context.timeline.copyMotion();
+context.timeline.pasteMotion(); </pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="layer" name="layer" href="#layer">layer</a></h3>
+	<p class="description">A Layer object</p>
+	<p>The <strong>layer</strong> property of a Context instance is a single <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7f70.html">Layer</a> object, on which you can access properties and methods:</p>
+	<pre class="prettyprint lang-javascript">context.layer.frameCount;
+context.layer.name = 'Animation';
+context.layer.locked = false;</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="layerIndex" name="layerIndex" href="#layerIndex">layerIndex</a></h3>
+	<p class="description">The current layer's index</p>
+	<p>The <strong>layerIndex</strong> property of a Context instance is the index of the Context's current <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7f70.html">Layer</a> in its parent timeline:</p>
+	<pre class="prettyprint lang-javascript">trace(context.layerIndex);</pre>
+	<pre>3</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="frame" name="frame" href="#frame">frame</a></h3>
+	<p class="description">A Frame object</p>
+	<p>The <strong>frame</strong> property of a Context instance is a single <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7f6e.html">Frame</a> object on the  Context's current <a href="#layer">layer</a>, on which you can access properties and methods:</p>
+	<pre class="prettyprint lang-javascript">context.frame.actionScript;
+context.frame.soundName = "assets/sounds/laser.mp3";
+context.frame.getCustomEase("position");</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="keyframes" name="keyframes" href="#keyframes">keyframes</a></h3>
+	<p class="description">An Array of Frame objects</p>
+	<p>The <strong>keyframes</strong> property of a Context instance is a special getter property, that returns an Array of the Context's current <a href="#layer">layer</a>'s keyframe objects:</p>
+	<pre class="prettyprint lang-javascript">trace('frames: ' + context.layer.frames.length);
+trace('keyframes: ' + context.keyframes);</pre>
+	<pre>frames: 50
+keyframes: [object Frame],[object Frame],[object Frame],[object Frame],[object Frame]</pre>
+</div>
+<div class="property">
+	<h3 class="signature"><a id="context" name="context" href="#context">context</a></h3>
+	<p class="description">A String representing the internal context of the Context object</p>
+	<p>When creating a Context instance, or updating the existing properties of a Context instance, a property called context keeps track of the last operation:</p>
+	<pre class="prettyprint lang-javascript">context.setFrame(0);
+trace(context.context);</pre>
+	<pre>frame</pre>
+</div>
+<h2><a id="set" name="set" href="#set">Set / update methods</a></h2>
+<p>The following methods update the current state of the Context object without needing to create a new one.</p>
+<ul>
+	<li><a href="#setDOM">setDOM(value)</a></li>
+	<li><a href="#setTimeline">setTimeline(value)</a></li>
+	<li><a href="#setLayer">setLayer(value)</a></li>
+	<li><a href="#setFrame">setFrame(value)</a></li>
+	<li><a href="#setKeyframe">setKeyframe(keyframeIndex, layer)</a></li>
+	<li><a href="#update">update(dom, timeline, layer, frame, element)</a></li>
+</ul>
+<div class="method">
+	<h3 class="signature"><a id="setDOM" name="setDOM" href="#setDOM">setDOM(value)</a></h3>
+	<p class="description">Set the DOM of the Context object</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">value</span> <span class="type">Context</span> <span class="comment">A Context object with a valid dom property</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current Document DOM</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Number</span> <span class="comment">The 0-based index of an open Document</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The name of an open Document, or  path or URI to an existing .fla</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">File</span> <span class="comment">An existing .fla file</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Document</span> <span class="comment">A Document</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates the <strong>dom</strong> of the current Context object using another open document's name:</p>
+	<pre class="prettyprint lang-javascript">context.setDOM('some other document');
+</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="setTimeline" name="setTimeline" href="#setTimeline">setTimeline(value)</a></h3>
+	<p class="description">Set the Timeline of the Context object</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">value</span> <span class="type">Context</span> <span class="comment">A Context object with a valid timeline property</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current timeline</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The name of (path to) an item in the library</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Number</span> <span class="comment">The 0-based Scene index</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">SymbolItem</span> <span class="comment">A SymbolItem</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">SymbolInstance</span> <span class="comment">A Symbol Instance</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Timeline</span> <span class="comment">A Symbol's timeline reference</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">null</span> <span class="comment">The document root</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates the <strong>timeline</strong> of the current Context object using the current timeline:</p>
+	<pre class="prettyprint lang-javascript">context.setTimeline(true);	</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="setLayer" name="setLayer" href="#setLayer">setLayer(value)</a></h3>
+	<p class="description">Set the Layer of the Context object</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">value</span> <span class="type">Context</span> <span class="comment">A Context object with a valid layer property</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current layer</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The name of the layer</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Number</span> <span class="comment">The 0-based index of the layer</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Layer</span> <span class="comment">A Layer</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates the <strong>layer</strong> of the current Context object using a layer index:</p>
+	<pre class="prettyprint lang-javascript">context.setLayer(2);	</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="setFrame" name="setFrame" href="#setFrame">setFrame(value)</a></h3>
+	<p class="description">Set the Frame of the Context object</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">value</span> <span class="type">Context</span> <span class="comment">A Context object with a valid frame property</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current frame</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">String</span> <span class="comment">The name of the frame</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Number</span> <span class="comment">The 0-based index of the frame</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">RegExp</span> <span class="comment">A numeric RegExp indicating the keyframe index, i.e. /2/</span>
+</li>
+				<li>
+<span class="name">value</span> <span class="type">Frame</span> <span class="comment">A Frame</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates the <strong>frame</strong> and <strong>layer</strong> of the current Context object using a frame label:</p>
+	<pre class="prettyprint lang-javascript">context.setFrame('end');		</pre>
+	<p>The following example updates the <strong>frame</strong> of the current Context object by indicating the 2nd keyframe on the current layer, using a numeric Regular Expression:</p>
+	<pre class="prettyprint lang-javascript">context.setFrame(/2/);</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="setKeyframe" name="setKeyframe" href="#setKeyframe">setKeyframe(keyframeIndex, layer)</a></h3>
+	<p class="description">Set the Keyframe of the Context object</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">keyframeIndex</span> <span class="type">Number</span> <span class="comment">The 0-based index of the keyframe you want to target (i.e. passing 1 would select the 2nd keyframe, which might be on frame 12)</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Context</span> <span class="comment">A Context object with a valid layer property</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Boolean</span> <span class="comment">Pass true to grab the current layer</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">String</span> <span class="comment">The name of the layer</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Number</span> <span class="comment">The 0-based index of the layer</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Layer</span> <span class="comment">A Layer</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates the <strong>frame</strong> of the current Context object using a keyframe index (note that the layer parameter is optional):</p>
+	<pre class="prettyprint lang-javascript">setKeyframe(4);	</pre>
+</div>
+<div class="method">
+	<h3 class="signature"><a id="update" name="update" href="#update">update(dom, timeline, layer, frame, element)</a></h3>
+	<p class="description">Updates all parameters of the Context Object with the current IDE state</p>
+	<div class="function-meta">
+		<div class="params">
+			<p>Parameters:</p>
+			<ul>
+				<li>
+<span class="name">dom</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not update the dom context</span>
+</li>
+				<li>
+<span class="name">timeline</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not update the timeline context</span>
+</li>
+				<li>
+<span class="name">layer</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not update the layer context</span>
+</li>
+				<li>
+<span class="name">frame</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not update the frame context</span>
+</li>
+				<li>
+<span class="name">element</span> <span class="type">Boolean</span> <span class="comment">An optional flag to not update the element context</span>
+</li>
+			</ul>
+		</div>
+		<div class="returns">
+			<p>Returns:</p>
+			<ul>
+				<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">Itself</span>
+</li>
+			</ul>
+		</div>
+	</div>
+	<p>The following example updates the <strong>dom</strong>, <strong>timeline</strong> and <strong>layer</strong> only, of the current Context object:</p>
+	<pre class="prettyprint lang-javascript">context.update(true, true, true, false, false);
+trace(context);</pre>
+	<pre>[object Context dom="Measurements 09.fla" timeline="instructions" layer[12]="text" keyframe[3]=5]	</pre>
+</div>
+<h2>Manipulation methods </h2>
+<p>The following methods provide ways to interact with the Contexts you'll create.</p>
+<ul>
+	<li><a href="#goto">goto()</a></li>
+	<li><a href="#select">select()</a></li>
+	<li><a href="#selectLayer">selectLayer(addToSelection)</a></li>
+	<li><a href="#selectFrame">selectFrame(addToSelection)</a></li>
+</ul>
+<div class="method">
+	<div class="method"></div>
+	<div class="method">
+		<h3 class="signature"><a id="goto" name="goto" href="#goto">goto()</a></h3>
+		<p class="description">Updates the document focus, timeline, layer, frame and playhead to the current context</p>
+		<div class="function-meta">
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">Itself</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example sets a context then goes to it:</p>
+		<pre class="prettyprint lang-javascript">
+// create a context
+    var context = Context.create();
+    var item = context.dom.library.addNewItem('movie clip');
+    context.dom.library.editItem();
+
+// swap documents
+    fl.createDocument();
+
+// go back to old context
+	alert('Swapping back to original context...');
+    context.goto();		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="select" name="select" href="#select">select()</a></h3>
+		<p class="description">Select the current context of the Context object</p>
+		<div class="function-meta">
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">Itself</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>Whenever you call a <a href="#set">set</a> or <a href="#update">update</a> operation, the Context instance makes a reference internally as to what was updated, i.e. document, timeline, layer, or frame. Subsequently calling a select() will attempt to select (using the Flash UI) at least the layer, frame or keyframe that was just updated:</p>
+		<p>The following example creates a Context, sets the keyframe, and selects it in one line of code:</p>
+		<pre class="prettyprint lang-javascript">Context.create()
+    .setKeyframe(4, 'Animation')
+    .select();		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="selectLayer" name="selectLayer" href="#selectLayer">selectLayer(addToSelection)</a></h3>
+		<p class="description">Explicitly select the current Layer of the Context object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">addToSelection</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to add to, rather than replace the current layer selection</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">Itself</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example sets 2 layers and explicitly selects them in the Flash UI:</p>
+		<pre class="prettyprint lang-javascript">Context
+    .create()
+    .selectLayer()
+    .setLayer(0)
+    .selectLayer(true);		</pre>
+	</div>
+	<div class="method">
+		<h3 class="signature"><a id="selectFrame" name="selectFrame" href="#selectFrame">selectFrame(addToSelection)</a></h3>
+		<p class="description">Select the current Frame of the Context object</p>
+		<div class="function-meta">
+			<div class="params">
+				<p>Parameters:</p>
+				<ul>
+					<li>
+<span class="name">addToSelection</span> <span class="type">Boolean</span> <span class="comment">An optional Boolean to add to, rather than replace the current frame selection</span>
+</li>
+				</ul>
+			</div>
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">Itself</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>The following example selects two keyframes on the timeline, then reverses them using standard JSFL:</p>
+		<pre class="prettyprint lang-javascript">var context = Context
+    .create()
+    .setKeyframe(0)
+    .selectFrame()
+    .setKeyframe(1)
+    .selectFrame(true);
+
+context.timeline.reverseFrames();</pre>
+	</div>
+	<h2>Utility methods</h2>
+	<ul>
+		<li><a href="#clone">clone()</a></li>
+	</ul>
+	<div class="method">
+		<h3 class="signature"><a id="clone" name="clone" href="#clone">clone()</a></h3>
+		<p class="description">Returns a copy of the Context object</p>
+		<div class="function-meta">
+			<div class="returns">
+				<p>Returns:</p>
+				<ul>
+					<li>
+<span class="name">&nbsp;</span> <span class="type">Context</span> <span class="comment">A new Context instance</span>
+</li>
+				</ul>
+			</div>
+		</div>
+		<p>There are times when you might want to work on a copy of a Context, rather than the original Context; perhaps you want to pass separate instances into different functions.</p>
+		<p>The following example demonstrates cloning an original Context instance, then selecting the frames of each one independently:</p>
+		<pre class="prettyprint lang-javascript">var context1 = Context
+    .create()
+    .setKeyframe(0);
+
+var context2 = context1
+	.clone()
+    .setKeyframe(1);
+
+dom.selectNone();
+
+alert("Selecting Context 1's frame...");
+context1.selectFrame();
+
+alert("Selecting Context 2's frame...");
+context2.selectFrame();		</pre>
+	</div>
+</div>
+
+
+
+
+			</div>
+
+
+
+	</div>
+<!--end post-entry-->
+
+
+
+
+
+<div class="comment-entry post-entry">
+
+	<p>Comments are closed.</p>
+
+
+
+</div>
+
+				<!--end content-->
+				</div>
+
+				<div class="sidebar sidebar1 grid3">
+<span class="sidebar_top"><!-- needed for smooth start of sidebar background--></span><span class="sidebar_bottom"><!-- needed for smooth end of sidebar background--></span><div id="text-4" class="widget widget_text">			<div class="textwidget"></div>
+		</div>
+</div>
+			</div>
+<!--end container-->
+
+	</div>
+	<!-- ####### END MAIN CONTAINER ####### -->
+
+
+			<script src="/wp-content/themes/broadscope/js/custom.js"></script>
+
+
+<!-- some parameters set in the backend and necessary for avia.js to work-->
+<script type="text/javascript">
+	var avia_autoplay = 'slideshow_autoplay';
+	var avia_slideshow_controlls = 'slideshow_controlls';
+	var avia_autoplay_duration   = '8';
+</script>
+
+			<!-- ####### FOOTER CONTAINER ####### -->
+			<div class="container_wrap" id="footer">
+				<div class="container">
+
+					<div class="one_fifth first">
+						<span class="arrow-down"></span>
+
+		<div id="recent-posts-3" class="widget widget_recent_entries">
+		<h4 class="widgettitle">Recent Posts</h4>
+		<ul>
+											<li>
+					<a href="/blog/custom-icons-in-snippets-panel">Custom Icons in Snippets panel</a>
+									</li>
+											<li>
+					<a href="/blog/publish-hooks-library-for-flash">Publish Hooks library for Flash</a>
+									</li>
+											<li>
+					<a href="/support/tutorials/workflow/managing-code">Managing code</a>
+									</li>
+											<li>
+					<a href="/blog/top-jsfl-bugs-to-fix">Top JSFL bugs to fix</a>
+									</li>
+											<li>
+					<a href="/blog/xjsfl-developer-questionnaire">xJSFL Developer Questionnaire</a>
+									</li>
+					</ul>
+
+		</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="pages-2" class="widget widget_pages">
+<h4 class="widgettitle">Pages</h4>
+			<ul>
+				<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+			</ul>
+
+			</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Pages</h3>
+<ul>
+<li class="page_item page-item-955"><a href="/case-studies">Case Studies</a></li>
+<li class="page_item page-item-846"><a href="/license">Licensing</a></li><li class="page_item page-item-945"><a href="/roadmap">Roadmap</a></li>
+<li class="page_item page-item-711"><a href="/features">xJSFL Features</a></li>
+<li class="page_item page-item-380"><a href="/support">Support</a></li>
+<li class="page_item page-item-328"><a href="/forum">Forum</a></li>
+<li class="page_item page-item-2"><a href="/download">Download</a></li>
+<li class="page_item page-item-275"><a href="/contact">Contact</a></li>
+</ul>
+</div>					</div>
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div class="widget widget_archive">
+<h3>Bookmarks</h3>
+<ul>
+<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
+</ul>
+</div>					</div>
+
+					<div class="one_fifth">
+						<span class="arrow-down"></span>
+						<div id="meta-2" class="widget widget_meta">
+<h4 class="widgettitle">Meta</h4>
+		<ul>
+						<li><a href="/wp-login.php">Log in</a></li>
+			<li><a href="/feed">Entries feed</a></li>
+			<li><a href="/comments/feed">Comments feed</a></li>
+
+			<li><a href="https://wordpress.org/">WordPress.org</a></li>
+		</ul>
+
+		</div>					</div>
+				</div>
+
+			</div>
+		<!-- ####### END FOOTER CONTAINER ####### -->
+
+		<!-- ####### SOCKET CONTAINER ####### -->
+			<div class="container_wrap" id="socket">
+				<div class="container">
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+
+					<ul class="social_bookmarks">
+						<li class="rss"><a href="/feed">RSS</a></li>
+						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+					</ul>
+<!-- end social_bookmarks-->
+
+				</div>
+			</div>
+			<!-- ####### END SOCKET CONTAINER ####### -->
+
+		</div>
+<!-- end wrap_all -->
+
+<script type="text/javascript">  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-603607-7']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
+</body>
+</html>
