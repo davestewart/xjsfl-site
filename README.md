@@ -20,7 +20,7 @@ Visit the site at [xjsfl.com](https://xjsfl.com).
 Clone or download this repo then serve using your preferred method ([npx](https://nodejs.dev/learn/the-npx-nodejs-package-runner) is simple if you have Node installed):
 
 ```bash
-npx serve
+npx serve site
 ```
 
 Then access the site at the URL shown in the terminal, usually:
