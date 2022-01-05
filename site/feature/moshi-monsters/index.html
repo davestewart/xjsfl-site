@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="/favicon.png">
 
 <!-- add feeds, pingback and stuff-->
-<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
 <link rel="pingback" href="/xmlrpc.php">
 
@@ -39,7 +39,7 @@
 		<meta property="og:type" content="article">
 		<meta property="og:title" content="Moshi Monsters | xJSFL">
 		<meta property="og:description" content="Mind Candy recently made the decision to switch over from various custom tools to use xJSFL for their iOS production pipeline">
-		<meta property="og:url" content="http://xjsfl.com/feature/moshi-monsters">
+		<meta property="og:url" content="https://xjsfl.vercel.app/feature/moshi-monsters">
 		<meta property="article:published_time" content="2012-09-18T11:36:10+00:00">
 		<meta property="article:modified_time" content="2012-09-18T12:16:16+00:00">
 		<meta name="twitter:card" content="summary">
@@ -170,7 +170,7 @@ background-attachment:scroll;
 				<div class="container">
 
 					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
-<form action="http://xjsfl.com/" id="searchform" method="get">
+<form action="/" id="searchform" method="get">
 	<div>
 		<input type="submit" value="" id="searchsubmit" class="button">
 		<input type="text" id="s" name="s" value="">
@@ -180,7 +180,7 @@ background-attachment:scroll;
 
 					<ul class="social_bookmarks">
 						<li class="rss"><a href="/feed">RSS</a></li>
-						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+						<li class="twitter"><a href="https://twitter.com/xjsfl">Twitter</a></li>
 					</ul>
 					<!-- end social_bookmarks-->
 
@@ -236,12 +236,12 @@ background-attachment:scroll;
 
 			<div class="entry-content four_fifth">
 			<h3>Intro</h3>
-<p>One of the interesting challenges that the <a href="http://www.mindcandy.com/">Mind Candy</a> mobile team have been faced with is what is the best way to reuse the vast array of Flash assets that have been created during the 4+ years of  <a href="http://www.moshimonsters.com/">Moshi Monsters</a> in a way that's compatible with iOS devices.</p>
+<p>One of the interesting challenges that the <a href="https://www.mindcandy.com/">Mind Candy</a> mobile team have been faced with is what is the best way to reuse the vast array of Flash assets that have been created during the 4+ years of  <a href="https://www.moshimonsters.com/">Moshi Monsters</a> in a way that's compatible with iOS devices.</p>
 <p><img loading="lazy" class="alignnone size-full wp-image-981" title="Mind Candy &amp; Moshi Monsters" src="/wp-content/uploads/splash.png" alt="" width="580" height="189" srcset="/wp-content/uploads/splash.png 580w, /wp-content/uploads/splash-150x48.png 150w, /wp-content/uploads/splash-300x97.png 300w" sizes="(max-width: 580px) 100vw, 580px"></p>
 <p>Our first approach was to convert the flash animations into an intermediate file format that could be loaded and rendered using Core Graphics in iOS. This was a successful method however generating each frame was fairly expensive and had quite a hit on the frame rate.</p>
 <p>We also looked at the more traditional approach of frame by frame animation with spritesheets but it didn't take long to realise the vast amount of texture memory that would be consumed to create the rich, smooth animations we desired was unacceptable!</p>
 <h3>Next steps</h3>
-<p>It became apparent that we needed a more custom approach, something that would allow us to take a spritesheet that contained separate parts of a larger sprite and define various animations that bring those pieces to life. There are a few tools being developed amongst the <a href="http://www.cocos2d-iphone.org/">Cocos2D</a> community with this goal, <a href="http://www.kickstarter.com/projects/539087245/spriter">Spriter</a> being the most talked about. These tools however are in the early stages of development and lacked the maturity required for us to confidently turn them over to the artists as a decent animation creation tool. The battle is always to allow our awesome artists the freedom to create whatever they want but still in a format which can be easily exported.</p>
+<p>It became apparent that we needed a more custom approach, something that would allow us to take a spritesheet that contained separate parts of a larger sprite and define various animations that bring those pieces to life. There are a few tools being developed amongst the <a href="https://www.cocos2d-iphone.org/">Cocos2D</a> community with this goal, <a href="https://www.kickstarter.com/projects/539087245/spriter">Spriter</a> being the most talked about. These tools however are in the early stages of development and lacked the maturity required for us to confidently turn them over to the artists as a decent animation creation tool. The battle is always to allow our awesome artists the freedom to create whatever they want but still in a format which can be easily exported.</p>
 <p><a href="/wp-content/uploads/screenshot-spriter.png"><img loading="lazy" class="alignnone size-Page width wp-image-978" title="TexturePacker" src="/wp-content/uploads/screenshot-spriter-580x353.png" alt="" width="580" height="353" srcset="/wp-content/uploads/screenshot-spriter-580x353.png 580w, /wp-content/uploads/screenshot-spriter-150x91.png 150w, /wp-content/uploads/screenshot-spriter-300x182.png 300w, /wp-content/uploads/screenshot-spriter-1024x624.png 1024w, /wp-content/uploads/screenshot-spriter-240x145.png 240w, /wp-content/uploads/screenshot-spriter.png 1437w" sizes="(max-width: 580px) 100vw, 580px"></a></p>
 <p>What we really needed was a way for the artists to leverage the animation creating ability of Flash assets but with bitmap objects instead of vectors. It was incredibly fortunate that at this point Dave Stewart, the creator of xJSFL, was visiting Mind Candy to show us the framework and discuss how it could be useful to us.</p>
 <p><a href="/wp-content/uploads/screenshot-flash.png"><img loading="lazy" class="alignnone size-Page width wp-image-979" src="/wp-content/uploads/screenshot-flash-580x354.png" alt="" width="580" height="354" srcset="/wp-content/uploads/screenshot-flash-580x354.png 580w, /wp-content/uploads/screenshot-flash-150x91.png 150w, /wp-content/uploads/screenshot-flash-300x183.png 300w, /wp-content/uploads/screenshot-flash-1024x625.png 1024w, /wp-content/uploads/screenshot-flash-240x145.png 240w, /wp-content/uploads/screenshot-flash.png 1431w" sizes="(max-width: 580px) 100vw, 580px"></a></p>
@@ -257,7 +257,7 @@ background-attachment:scroll;
 </ol>
 <p><img loading="lazy" class="alignnone size-Page width wp-image-980" src="/wp-content/uploads/screenshot-iphone-580x308.png" alt="" width="580" height="308" srcset="/wp-content/uploads/screenshot-iphone-580x308.png 580w, /wp-content/uploads/screenshot-iphone-150x79.png 150w, /wp-content/uploads/screenshot-iphone-300x159.png 300w, /wp-content/uploads/screenshot-iphone.png 747w" sizes="(max-width: 580px) 100vw, 580px"></p>
 <p>Although this pipeline is still in early days it is proving to be very useful in adding the extra flourishes we desire to our applications.</p>
-<p>Ben Christey is a senior developer at <a href="http://www.mindcandy.com/">Mind Candy</a>.</p>
+<p>Ben Christey is a senior developer at <a href="https://www.mindcandy.com/">Mind Candy</a>.</p>
 
 			</div>
 
@@ -360,8 +360,8 @@ background-attachment:scroll;
 						<div class="widget widget_archive">
 <h3>Bookmarks</h3>
 <ul>
-<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
-<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="https://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
 <li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
 </ul>
 </div>					</div>
@@ -387,11 +387,11 @@ background-attachment:scroll;
 		<!-- ####### SOCKET CONTAINER ####### -->
 			<div class="container_wrap" id="socket">
 				<div class="container">
-					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="https://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
 
 					<ul class="social_bookmarks">
 						<li class="rss"><a href="/feed">RSS</a></li>
-						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+						<li class="twitter"><a href="https://twitter.com/xjsfl">Twitter</a></li>
 					</ul>
 <!-- end social_bookmarks-->
 
@@ -408,7 +408,7 @@ background-attachment:scroll;
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>

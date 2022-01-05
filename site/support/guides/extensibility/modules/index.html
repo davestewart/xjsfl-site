@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="/favicon.png">
 
 <!-- add feeds, pingback and stuff-->
-<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
 <link rel="pingback" href="/xmlrpc.php">
 
@@ -39,7 +39,7 @@
 		<meta property="og:type" content="article">
 		<meta property="og:title" content="Combining multiple scripts into stand-alone Modules | xJSFL">
 		<meta property="og:description" content="A brief introduction to what a module is, the types of files that make up a module, and some module examples">
-		<meta property="og:url" content="http://xjsfl.com/support/guides/extensibility/modules">
+		<meta property="og:url" content="https://xjsfl.vercel.app/support/guides/extensibility/modules">
 		<meta property="article:published_time" content="2011-07-02T04:03:00+00:00">
 		<meta property="article:modified_time" content="2012-08-01T09:27:45+00:00">
 		<meta name="twitter:card" content="summary">
@@ -170,7 +170,7 @@ background-attachment:scroll;
 				<div class="container">
 
 					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
-<form action="http://xjsfl.com/" id="searchform" method="get">
+<form action="/" id="searchform" method="get">
 	<div>
 		<input type="submit" value="" id="searchsubmit" class="button">
 		<input type="text" id="s" name="s" value="">
@@ -180,7 +180,7 @@ background-attachment:scroll;
 
 					<ul class="social_bookmarks">
 						<li class="rss"><a href="/feed">RSS</a></li>
-						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+						<li class="twitter"><a href="https://twitter.com/xjsfl">Twitter</a></li>
 					</ul>
 					<!-- end social_bookmarks-->
 
@@ -285,7 +285,7 @@ background-attachment:scroll;
 <p>These components will be discussed next.</p>
 <h3>Module components</h3>
 <h4>XML manifest</h4>
-<p>It is a requirement of each module to have a <strong>manifest</strong> file in its root folder, as they are searched for and registered by the system at startup. This file (borrowed from <a href="http://en.wikipedia.org/wiki/Manifest_file">Java methodology</a>) defined the module's root folder, and provides is a single location where common module information can be accessed from all module-related environments:</p>
+<p>It is a requirement of each module to have a <strong>manifest</strong> file in its root folder, as they are searched for and registered by the system at startup. This file (borrowed from <a href="https://en.wikipedia.org/wiki/Manifest_file">Java methodology</a>) defined the module's root folder, and provides is a single location where common module information can be accessed from all module-related environments:</p>
 <ul>
 <li>The JSFL authoring environment (via xjsfl.file.load())</li>
 <li>The AS3 authoring environment (via URLRequest())</li>
@@ -427,7 +427,7 @@ protected function onTestClick(event:MouseEvent):void
 {
 	SampleModule.test('Goodbye'); // access SampleModule statically
 }</pre>
-<p>Note that the public API in the AS3 class <strong>contains no JSFL</strong>. Typically, developers tend to use long, concatenated strings of JSFL inside their ActionScript, which is then passed to the JSFL environment via <a href="http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/adobe/utils/package.html#MMExecute%28%29">MMExecute()</a>, but this makes for fragile and hard-to-maintain code.</p>
+<p>Note that the public API in the AS3 class <strong>contains no JSFL</strong>. Typically, developers tend to use long, concatenated strings of JSFL inside their ActionScript, which is then passed to the JSFL environment via <a href="https://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/adobe/utils/package.html#MMExecute%28%29">MMExecute()</a>, but this makes for fragile and hard-to-maintain code.</p>
 <p>xJSFL promotes <strong>clear separation</strong> of JSFL and AS3 code, in the same way that you wouldn't send PHP code to a server from a client, you shouldn't send JSFL code from AS3 to the Flash authoring environment; instead you call a defined public API (your JSFL module instance) and have values returned, just like the web.</p>
 <p>If you have too many methods for your main JSFL module instance, then simply break down the calls into smaller objects:</p>
 <pre lang="javascript">// SampleModule class
@@ -544,8 +544,8 @@ public function test():String
 						<div class="widget widget_archive">
 <h3>Bookmarks</h3>
 <ul>
-<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
-<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="https://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
 <li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
 </ul>
 </div>					</div>
@@ -571,11 +571,11 @@ public function test():String
 		<!-- ####### SOCKET CONTAINER ####### -->
 			<div class="container_wrap" id="socket">
 				<div class="container">
-					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="https://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
 
 					<ul class="social_bookmarks">
 						<li class="rss"><a href="/feed">RSS</a></li>
-						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+						<li class="twitter"><a href="https://twitter.com/xjsfl">Twitter</a></li>
 					</ul>
 <!-- end social_bookmarks-->
 
@@ -592,7 +592,7 @@ public function test():String
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>

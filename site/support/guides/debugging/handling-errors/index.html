@@ -10,7 +10,7 @@
 <link rel="shortcut icon" href="/favicon.png">
 
 <!-- add feeds, pingback and stuff-->
-<link rel="profile" href="http://gmpg.org/xfn/11">
+<link rel="profile" href="https://gmpg.org/xfn/11">
 <link rel="alternate" type="application/rss+xml" title="xJSFL RSS2 Feed" href="/feed">
 <link rel="pingback" href="/xmlrpc.php">
 
@@ -39,7 +39,7 @@
 		<meta property="og:type" content="article">
 		<meta property="og:title" content="Handling errors | xJSFL">
 		<meta property="og:description" content="Techniques and methods to use to help track down errors">
-		<meta property="og:url" content="http://xjsfl.com/support/guides/debugging/handling-errors">
+		<meta property="og:url" content="https://xjsfl.vercel.app/support/guides/debugging/handling-errors">
 		<meta property="article:published_time" content="2011-07-02T03:02:00+00:00">
 		<meta property="article:modified_time" content="2011-09-26T16:06:54+00:00">
 		<meta name="twitter:card" content="summary">
@@ -170,7 +170,7 @@ background-attachment:scroll;
 				<div class="container">
 
 					<h1 class="logo"><a href="/"><img src="/wp-content/uploads/icon-wide-with-strap.png" alt=""></a></h1>
-<form action="http://xjsfl.com/" id="searchform" method="get">
+<form action="/" id="searchform" method="get">
 	<div>
 		<input type="submit" value="" id="searchsubmit" class="button">
 		<input type="text" id="s" name="s" value="">
@@ -180,7 +180,7 @@ background-attachment:scroll;
 
 					<ul class="social_bookmarks">
 						<li class="rss"><a href="/feed">RSS</a></li>
-						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+						<li class="twitter"><a href="https://twitter.com/xjsfl">Twitter</a></li>
 					</ul>
 					<!-- end social_bookmarks-->
 
@@ -295,8 +295,8 @@ catch(error)
 xjsfl.debug.func(object.method, [1, 2, 3, 4]);</pre>
 <p>The error stack will be printed to the listener as before.</p>
 <h4>xjsfl.debug.file()</h4>
-<p>Loading files, or more specifically <em>running</em> files, in Flash is a principle cause of frustration due to the little-known fact that syntax or runtime errors inside files that are run with <a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fde.html">fl.runScript()</a> will fail silently!</p>
-<p>To get around this, xJSFL provides functionality via <a href="/support/api/core/xjsfl#debug.file">xjsfl.debug.file()</a> which wraps the native fl.runScript() and instead of directly running the file, loads the contents of the file then <a href="http://www.w3schools.com/jsref/jsref_eval.asp">eval()</a>s it, which has the result of outputting any errors to the Output panel. Whilst this technique should never be used in <em>production</em> code, it can be useful for tracking down otherwise frustratingly silent errors.</p>
+<p>Loading files, or more specifically <em>running</em> files, in Flash is a principle cause of frustration due to the little-known fact that syntax or runtime errors inside files that are run with <a href="https://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/WS5b3ccc516d4fbf351e63e3d118a9024f3f-7fde.html">fl.runScript()</a> will fail silently!</p>
+<p>To get around this, xJSFL provides functionality via <a href="/support/api/core/xjsfl#debug.file">xjsfl.debug.file()</a> which wraps the native fl.runScript() and instead of directly running the file, loads the contents of the file then <a href="https://www.w3schools.com/jsref/jsref_eval.asp">eval()</a>s it, which has the result of outputting any errors to the Output panel. Whilst this technique should never be used in <em>production</em> code, it can be useful for tracking down otherwise frustratingly silent errors.</p>
 <p>To trigger this functionality load files via xjsfl.debug.file(), or turn debugging on explicitly before any file loading:</p>
 <pre lang="javascript">// option 1: load and debug only this file, and any files that it loads
 xjsfl.debug.file(uri);</pre>
@@ -409,8 +409,8 @@ xjsfl.debug.state = true;</pre>
 						<div class="widget widget_archive">
 <h3>Bookmarks</h3>
 <ul>
-<li><a href="http://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
-<li><a href="http://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
+<li><a href="https://help.adobe.com/en_US/Flash/10.0_ExtendingFlash/index.html">Adobe JSFL API</a></li>
+<li><a href="https://www.adobe.com/devnet/flash/articles/invisible_button_02.html">Creating and packaging a professional JSFL command</a></li>
 <li><a href="https://developer.mozilla.org/en/XUL_Reference">Mozilla XUL Reference</a></li>
 </ul>
 </div>					</div>
@@ -436,11 +436,11 @@ xjsfl.debug.state = true;</pre>
 		<!-- ####### SOCKET CONTAINER ####### -->
 			<div class="container_wrap" id="socket">
 				<div class="container">
-					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="http://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
+					<span class="copyright">&copy; Copyright - <a href="/">xJSFL</a> - <a href="https://www.kriesi.at/">Theme Design by Kriesi.at</a></span>
 
 					<ul class="social_bookmarks">
 						<li class="rss"><a href="/feed">RSS</a></li>
-						<li class="twitter"><a href="http://twitter.com/xjsfl">Twitter</a></li>
+						<li class="twitter"><a href="https://twitter.com/xjsfl">Twitter</a></li>
 					</ul>
 <!-- end social_bookmarks-->
 
@@ -457,7 +457,7 @@ xjsfl.debug.state = true;</pre>
 
   (function() {
     var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'https://www') + '.google-analytics.com/ga.js';
     var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
   })();
 </script><script type="text/javascript" src="/wp-includes/js/wp-embed.min.js?ver=5.8.2" id="wp-embed-js"></script>
