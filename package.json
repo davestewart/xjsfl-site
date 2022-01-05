@@ -1,0 +1,27 @@
+{
+  "name": "xjsfl-site",
+  "version": "1.0.0",
+  "description": "Static version of the xJSFL WordPress site",
+  "scripts": {
+    "serve": "npx serve site"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/davestewart/xjsfl-site.git"
+  },
+  "keywords": [
+    "jsfl",
+    "xjsfl",
+    "flash",
+    "adobe-animate",
+    "animation",
+    "javascript",
+    "actionscript"
+  ],
+  "author": "Dave Stewart",
+  "license": "MIT",
+  "homepage": "https://xjsfl.vercel.app",
+  "bugs": {
+    "url": "https://github.com/davestewart/xjsfl-site/issues"
+  }
+}
