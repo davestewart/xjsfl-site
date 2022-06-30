@@ -256,10 +256,26 @@ function processElement(element, index, elements, context)
 	<p>Note that many of the Iterator methods accept a <a href="/support/api/flash/context">Context</a> object as their first parameter, as a reference from which to start iteration from. See the Context API for more information.</p>
 <h3>Concept</h3>
 <p>To demonstrate the differences between the two approaches in code, here is a typical JSFL <strong>Layers</strong> &gt; <strong>Frames</strong> &gt; <strong>Elements</strong> loop:</p>
-<pre class="prettyprint lang-javascript">var timeline = fl.getDocumentDOM().getTimeline();
-for(var i = 0; i
+			<pre class="prettyprint lang-javascript">var timeline = fl.getDocumentDOM().getTimeline();
+for(var i = 0; i < timeline.layers.length; i++)
+{
+    var layer = timeline.layers[i];
+    for(var j = 0; j < layer.frames.length; j++)
+    {
+        var frame = layer.frames[j];
+        if(j == frame.startFrame)
+        {
+            var elements = frame.elements;
+            for(var k = 0; k < elements.length; k++)
+            {
+                var element = elements[k];
+                // do something with element
+            }
+        }
+    }
+}</pre>
 <p>This kind of code is probably familiar to most Flash developers, and although it looks pretty sstandard; it's not particularly flexible, and is impossible to reuse in an object oriented manner.</p>
-<p>Using the Iterators API however, we delegate the drill down through the DOM to the librray, whilst we handle only the processing, with a simple callback:</p>
+<p>Using the Iterators API however, we delegate the drill down through the DOM to the library, whilst we handle only the processing, with a simple callback:</p>
     <pre class="prettyprint lang-javascript">
 function processElement(element, index, elements, context)
 {
